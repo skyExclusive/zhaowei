@@ -10,43 +10,31 @@
 	<string>YouCarMyCar</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8502FD39D3588780CCB9DF8A14CDBA5AD93AAE23</key>
-		<string>https://github.com/skyExclusive/MyCarYourCar.git</string>
-		<key>F086A16EB0B111B0791F54F57184B340F09A9967</key>
-		<string>https://github.com/skyExclusive/YourCarMyCar.git</string>
+		<key>26A63B5A6B43A7D71DF2C2037F485C7D81B99F7A</key>
+		<string>https://github.com/skyExclusive/zhaowei.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>YouCarMyCar/YouCarMyCar.xcodeproj</string>
+	<string>YouCarMyCar 2/YouCarMyCar.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8502FD39D3588780CCB9DF8A14CDBA5AD93AAE23</key>
+		<key>26A63B5A6B43A7D71DF2C2037F485C7D81B99F7A</key>
 		<string>../../..</string>
-		<key>F086A16EB0B111B0791F54F57184B340F09A9967</key>
-		<string>../../../../YourCarMyCar</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/skyExclusive/MyCarYourCar.git</string>
+	<string>https://github.com/skyExclusive/zhaowei.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8502FD39D3588780CCB9DF8A14CDBA5AD93AAE23</string>
+	<string>26A63B5A6B43A7D71DF2C2037F485C7D81B99F7A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8502FD39D3588780CCB9DF8A14CDBA5AD93AAE23</string>
+			<string>26A63B5A6B43A7D71DF2C2037F485C7D81B99F7A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>liang</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F086A16EB0B111B0791F54F57184B340F09A9967</string>
-			<key>IDESourceControlWCCName</key>
-			<string>YourCarMyCar</string>
+			<string>ZHAO_Y</string>
 		</dict>
 	</array>
 </dict>

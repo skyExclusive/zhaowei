@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A9E684E1B43B6D600A71D88 /* ListFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9E684C1B43B6D600A71D88 /* ListFirstTableViewCell.m */; };
-		0A9E684F1B43B6D600A71D88 /* ListFirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E684D1B43B6D600A71D88 /* ListFirstTableViewCell.xib */; };
 		0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68511B43BDDC00A71D88 /* 白背景.png */; };
 		0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */; };
+		0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */; };
+		0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */; };
 		0ACAF1B11B411E300029ACC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B01B411E300029ACC9 /* main.m */; };
 		0ACAF1B41B411E300029ACC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B31B411E300029ACC9 /* AppDelegate.m */; };
 		0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B81B411E300029ACC9 /* Main.storyboard */; };
@@ -129,11 +129,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A9E684B1B43B6D600A71D88 /* ListFirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFirstTableViewCell.h; sourceTree = "<group>"; };
-		0A9E684C1B43B6D600A71D88 /* ListFirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFirstTableViewCell.m; sourceTree = "<group>"; };
-		0A9E684D1B43B6D600A71D88 /* ListFirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListFirstTableViewCell.xib; sourceTree = "<group>"; };
 		0A9E68511B43BDDC00A71D88 /* 白背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "白背景.png"; sourceTree = "<group>"; };
 		0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页cell背景.png"; sourceTree = "<group>"; };
+		0AC346481B450D25005D6A39 /* MyListFirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyListFirstTableViewCell.h; sourceTree = "<group>"; };
+		0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyListFirstTableViewCell.m; sourceTree = "<group>"; };
+		0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowDetalViewController.h; sourceTree = "<group>"; };
+		0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowDetalViewController.m; sourceTree = "<group>"; };
 		0ACAF1AB1B411E300029ACC9 /* YouCarMyCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouCarMyCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACAF1AF1B411E300029ACC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACAF1B01B411E300029ACC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -360,9 +361,8 @@
 		0A9E68471B43B4ED00A71D88 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0A9E684B1B43B6D600A71D88 /* ListFirstTableViewCell.h */,
-				0A9E684C1B43B6D600A71D88 /* ListFirstTableViewCell.m */,
-				0A9E684D1B43B6D600A71D88 /* ListFirstTableViewCell.xib */,
+				0AC346481B450D25005D6A39 /* MyListFirstTableViewCell.h */,
+				0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -662,6 +662,8 @@
 				95E5AC901B437D4600904602 /* NowViewController.m */,
 				95E5AC921B437D5200904602 /* WillViewController.h */,
 				95E5AC931B437D5200904602 /* WillViewController.m */,
+				0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */,
+				0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -925,7 +927,6 @@
 				9554F8EF1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
-				0A9E684F1B43B6D600A71D88 /* ListFirstTableViewCell.xib in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
@@ -961,7 +962,6 @@
 			files = (
 				0ACAF24A1B411E830029ACC9 /* MJRefreshAutoNormalFooter.m in Sources */,
 				95D661BA1B44D44500E9992E /* ButtonTableViewCell.m in Sources */,
-				0A9E684E1B43B6D600A71D88 /* ListFirstTableViewCell.m in Sources */,
 				0ACAF2561B411E830029ACC9 /* UIView+MJExtension.m in Sources */,
 				0ACAF2451B411E830029ACC9 /* MJRefreshBackFooter.m in Sources */,
 				95D4A44D1B44DDB5005F5ABF /* CollectionCell.m in Sources */,
@@ -1005,7 +1005,9 @@
 				95D661BE1B44D44500E9992E /* TouxiangTableViewCell.m in Sources */,
 				0ACAF2481B411E830029ACC9 /* MJRefreshHeader.m in Sources */,
 				0ACAF25C1B411E830029ACC9 /* SDWebImageDownloader.m in Sources */,
+				0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */,
 				0ACAF24E1B411E830029ACC9 /* MJRefreshBackStateFooter.m in Sources */,
+				0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */,
 				95D661BC1B44D44500E9992E /* TongyongTableViewCell.m in Sources */,
 				0ACAF2581B411E830029ACC9 /* NSData+ImageContentType.m in Sources */,
 				0ACAF26D1B411EB90029ACC9 /* FirstViewController.m in Sources */,

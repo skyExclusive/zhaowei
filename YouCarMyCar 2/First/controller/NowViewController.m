@@ -8,7 +8,8 @@
 
 #import "NowViewController.h"
 #import "PrefixHeader.pch"
-#import "ListFirstTableViewCell.h"
+#import "MyListFirstTableViewCell.h"
+#import "NowDetalViewController.h"
 
 @interface NowViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *mytable;
@@ -25,15 +26,8 @@
     [self.view addSubview:self.mytable
      ];
     self.mytable.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self cell];//注册cell
 
 
-}
--(void)cell
-{
-    [self.mytable registerNib:[UINib nibWithNibName:@"ListFirstTableViewCell" bundle:nil] forCellReuseIdentifier:@"first1cell"];
-    
-    
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -49,26 +43,46 @@
 {
     
     
-    return (self.view.frame.size.height - 64 - 44 - 40)/ 3;
+    return 170;
 }
 
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    
-//}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    ListFirstTableViewCell *cell = [self.mytable dequeueReusableCellWithIdentifier:@"first1cell" forIndexPath:indexPath];
+    
+    static NSString *cell = @"index";
+    
+    
+    MyListFirstTableViewCell *mycell = [self.mytable dequeueReusableCellWithIdentifier:cell];
+    
+    
+    if (!mycell) {
+        
+        mycell = [[MyListFirstTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cell];
+        mycell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        
+        
+    }
+    
+    return mycell;
     
     
     
     
-    return cell;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NowDetalViewController *detal = [[NowDetalViewController alloc]init];
+    [self.navigationController pushViewController:detal animated:YES];
+    
+    
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
