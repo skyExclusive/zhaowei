@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A67ECE95-BDE2-41A9-AB4B-593C3FC20CFC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>YouCarMyCar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8502FD39D3588780CCB9DF8A14CDBA5AD93AAE23</key>
+		<string>https://github.com/skyExclusive/MyCarYourCar.git</string>
+		<key>F086A16EB0B111B0791F54F57184B340F09A9967</key>
+		<string>https://github.com/skyExclusive/YourCarMyCar.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>YouCarMyCar/YouCarMyCar.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8502FD39D3588780CCB9DF8A14CDBA5AD93AAE23</key>
+		<string>../../..</string>
+		<key>F086A16EB0B111B0791F54F57184B340F09A9967</key>
+		<string>../../../../YourCarMyCar</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/skyExclusive/MyCarYourCar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8502FD39D3588780CCB9DF8A14CDBA5AD93AAE23</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8502FD39D3588780CCB9DF8A14CDBA5AD93AAE23</string>
+			<key>IDESourceControlWCCName</key>
+			<string>liang</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F086A16EB0B111B0791F54F57184B340F09A9967</string>
+			<key>IDESourceControlWCCName</key>
+			<string>YourCarMyCar</string>
+		</dict>
+	</array>
+</dict>
+</plist>
