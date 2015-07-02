@@ -25,6 +25,7 @@
     [self addSubview:view];
     view.layer.cornerRadius = 15;
     view.layer.masksToBounds = 15;
+    view.backgroundColor = [UIColor grayColor];
     
     [view addSubview:self.myimageView];
     [view addSubview:self.mylabel];
@@ -53,7 +54,7 @@
     
     //调用父类的方法
     [super layoutSubviews];
-    [self.mylabel setFrame:CGRectMake(10, 140, 150,20 )];
-    [self.myimageView setFrame:CGRectMake(10, 10, 150, 150)];
+    [self.mylabel setFrame:CGRectMake(kMainWidth*1/37.5, kMainWidth*1/2.65, kMainWidth*1/2.5,kMainWidth*1/18.75 )];
+    [self.myimageView setFrame:CGRectMake(kMainWidth*1/37.5, kMainWidth*1/37.5, kMainWidth*1/2.5, kMainWidth*1/2.5)];
 }
 @end

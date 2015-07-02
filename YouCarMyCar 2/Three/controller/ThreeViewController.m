@@ -30,6 +30,7 @@
     
 //布局view
     [self layoutView];
+    
 
 
 }
