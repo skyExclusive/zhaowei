@@ -35,11 +35,13 @@
     self.view.backgroundColor = [UIColor purpleColor];
     self.navigationItem.title = @"免费体验商品";
     
+
+    
      //布局
     [self costom];
     
-    
-   }
+
+}
 
 -(void)costom
 {

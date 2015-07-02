@@ -100,6 +100,9 @@
 		0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE701B422A8600C3C98B /* 2.jpg */; };
 		9554F8EE1B44D535000131F6 /* 20150418072826995_easyicon_net_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 9554F8EC1B44D535000131F6 /* 20150418072826995_easyicon_net_1024.png */; };
 		9554F8EF1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 9554F8ED1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png */; };
+		955E92571B4535FD008447B7 /* sdf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92541B4535FD008447B7 /* sdf.jpg */; };
+		955E92581B4535FD008447B7 /* sdfs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92551B4535FD008447B7 /* sdfs.jpg */; };
+		955E92591B4535FD008447B7 /* fdssfsf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92561B4535FD008447B7 /* fdssfsf.jpg */; };
 		95B83E191B44D32A007ECAA8 /* XiangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B83E181B44D32A007ECAA8 /* XiangViewController.m */; };
 		95C8DED21B422ECF00FA1FDD /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8DED11B422ECF00FA1FDD /* 3.png */; };
 		95D4A4491B44DDAB005F5ABF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D4A4461B44DDAB005F5ABF /* SecondViewController.m */; };
@@ -283,6 +286,9 @@
 		0AFBFE701B422A8600C3C98B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../2.jpg; sourceTree = "<group>"; };
 		9554F8EC1B44D535000131F6 /* 20150418072826995_easyicon_net_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20150418072826995_easyicon_net_1024.png; sourceTree = "<group>"; };
 		9554F8ED1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20150418072910824_easyicon_net_1024.png; sourceTree = "<group>"; };
+		955E92541B4535FD008447B7 /* sdf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sdf.jpg; sourceTree = "<group>"; };
+		955E92551B4535FD008447B7 /* sdfs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sdfs.jpg; sourceTree = "<group>"; };
+		955E92561B4535FD008447B7 /* fdssfsf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fdssfsf.jpg; sourceTree = "<group>"; };
 		95B83E171B44D32A007ECAA8 /* XiangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiangViewController.h; sourceTree = "<group>"; };
 		95B83E181B44D32A007ECAA8 /* XiangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiangViewController.m; sourceTree = "<group>"; };
 		95C8DED11B422ECF00FA1FDD /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../3.png; sourceTree = "<group>"; };
@@ -385,6 +391,9 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				955E92541B4535FD008447B7 /* sdf.jpg */,
+				955E92551B4535FD008447B7 /* sdfs.jpg */,
+				955E92561B4535FD008447B7 /* fdssfsf.jpg */,
 				9554F8EC1B44D535000131F6 /* 20150418072826995_easyicon_net_1024.png */,
 				9554F8ED1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png */,
 				0AFBFE6F1B422A8600C3C98B /* 1.jpg */,
@@ -924,8 +933,10 @@
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
 				9554F8EF1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
+				955E92571B4535FD008447B7 /* sdf.jpg in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
 				0A9E684F1B43B6D600A71D88 /* ListFirstTableViewCell.xib in Resources */,
+				955E92581B4535FD008447B7 /* sdfs.jpg in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
@@ -941,6 +952,7 @@
 				0ACAF2521B411E830029ACC9 /* MJRefresh.bundle in Resources */,
 				0ACAF1BC1B411E300029ACC9 /* Images.xcassets in Resources */,
 				0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */,
+				955E92591B4535FD008447B7 /* fdssfsf.jpg in Resources */,
 				0ACAF2AF1B411EE50029ACC9 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
