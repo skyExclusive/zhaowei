@@ -28,7 +28,7 @@
     //布局view
     [self layoutView];
     
-    //轻怕手势
+    //轻怕手势   老夫到此一游  66666666 
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(remove:)];
     self.view.userInteractionEnabled = YES;
     [self.view addGestureRecognizer:tap1];
@@ -95,11 +95,10 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0 && indexPath.section == 0) {
-        return kMainHeight*5
-        /22;
+        return 155;
         
     }else{
-        return kMainHeight*4/55;
+        return 50;
     }
 }
 //- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -128,7 +127,7 @@
         cell.backimage.image = self.myimage;
         
         UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-        visualEfView.frame = cell.backimage.frame;
+        visualEfView.frame = CGRectMake(cell.backimage.frame.origin.x, cell.backimage.frame.origin.y-2, cell.backimage.frame.size.width, cell.backimage.frame.size.height+2);
         visualEfView.alpha = 1.0;
         [cell.backimage addSubview:visualEfView];
         cell.photoImage.userInteractionEnabled = YES;
