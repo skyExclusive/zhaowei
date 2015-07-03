@@ -92,11 +92,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0 && indexPath.section == 0) {
-        return kMainHeight*5
-        /22;
+        return 155;
+        
         
     }else{
-        return kMainHeight*4/55;
+        return 50;
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -123,7 +123,7 @@
         cell.photoImage.image = [UIImage imageNamed:@"2.png"];
         cell.backimage.image = [UIImage imageNamed:@"2.png"];
         UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-        visualEfView.frame = cell.backimage.frame;
+        visualEfView.frame = CGRectMake(cell.backimage.frame.origin.x, cell.backimage.frame.origin.y-2, cell.backimage.frame.size.width, cell.backimage.frame.size.height+2);
         visualEfView.alpha = 1.0;
         [cell.backimage addSubview:visualEfView];
         cell.photoImage.userInteractionEnabled = YES;
