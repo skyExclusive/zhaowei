@@ -8,12 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+@protocol mylistFirstbleDelegate <NSObject>
+
+@end
+
+
 @interface MyListFirstTableViewCell : UITableViewCell
 
 @property (nonatomic ,strong)UIImageView *myGoodImageVeiw;
 @property (nonatomic ,strong)UILabel *mydescritionLable;
 @property (nonatomic)CGFloat cellheight;
 @property (nonatomic )CGFloat cellweight;
+@property (nonatomic,strong)UIImageView *mybuttonImageView;
+
+
 
 
 @end

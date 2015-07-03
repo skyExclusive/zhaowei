@@ -8,19 +8,18 @@
 
 #import "WillViewController.h"
 #import "PrefixHeader.pch"
-
 #import "MyListFirstTableViewCell.h"
-
 @interface WillViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *willtable;
 @end
 
 @implementation WillViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.willtable = [[UITableView alloc]initWithFrame:CGRectMake(kMainX, kMainY, kMainWidth, kMainHeight-150)];
+    self.willtable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     self.willtable.delegate = self;
     self.willtable.dataSource = self;
     [self.view addSubview:self.willtable];
@@ -47,6 +46,11 @@
     if (!cell) {
         cell = [[MyListFirstTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellIdentifier];
     }
+    
+    cell.mydescritionLable.text = @"即将开启的商品的 描述";
+    
+    cell.myGoodImageVeiw.image = [UIImage   imageNamed:@"3.jpg"];
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     

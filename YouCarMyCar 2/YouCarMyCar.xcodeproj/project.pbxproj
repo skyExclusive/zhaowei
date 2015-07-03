@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68511B43BDDC00A71D88 /* 白背景.png */; };
 		0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */; };
+		0AB91FA71B46171300552824 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AB91FA61B46171300552824 /* 3.jpg */; };
 		0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */; };
 		0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */; };
 		0ACAF1B11B411E300029ACC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B01B411E300029ACC9 /* main.m */; };
@@ -134,6 +135,7 @@
 /* Begin PBXFileReference section */
 		0A9E68511B43BDDC00A71D88 /* 白背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "白背景.png"; sourceTree = "<group>"; };
 		0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页cell背景.png"; sourceTree = "<group>"; };
+		0AB91FA61B46171300552824 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		0AC346481B450D25005D6A39 /* MyListFirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyListFirstTableViewCell.h; sourceTree = "<group>"; };
 		0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyListFirstTableViewCell.m; sourceTree = "<group>"; };
 		0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowDetalViewController.h; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				0AB91FA61B46171300552824 /* 3.jpg */,
 				955E92541B4535FD008447B7 /* sdf.jpg */,
 				955E92551B4535FD008447B7 /* sdfs.jpg */,
 				955E92561B4535FD008447B7 /* fdssfsf.jpg */,
@@ -408,10 +411,10 @@
 		0ACAF1A21B411E300029ACC9 = {
 			isa = PBXGroup;
 			children = (
-				95D4A4411B44DD93005F5ABF /* Second */,
 				0A9E68501B43BDDC00A71D88 /* image */,
-				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
 				0ACAF2751B411ED30029ACC9 /* Three */,
+				95D4A4411B44DD93005F5ABF /* Second */,
+				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
 				0ACAF2671B411EB90029ACC9 /* First */,
 				0ACAF1D71B411E820029ACC9 /* 工具类 */,
 				0ACAF1AD1B411E300029ACC9 /* YouCarMyCar */,
@@ -936,8 +939,8 @@
 				9554F8EF1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
 				955E92571B4535FD008447B7 /* sdf.jpg in Resources */,
+				0AB91FA71B46171300552824 /* 3.jpg in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
-				0A9E684F1B43B6D600A71D88 /* ListFirstTableViewCell.xib in Resources */,
 				955E92581B4535FD008447B7 /* sdfs.jpg in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
