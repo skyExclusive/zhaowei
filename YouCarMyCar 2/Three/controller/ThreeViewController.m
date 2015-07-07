@@ -10,7 +10,7 @@
 
 #import "ThreeViewController.h"
 #import "TouxiangTableViewCell.h"
-#import "ButtonTableViewCell.h"
+
 #import "TongyongTableViewCell.h"
 #import "PrefixHeader.pch"
 #import "XiangViewController.h"
@@ -31,8 +31,6 @@
 //布局view
     [self layoutView];
     
-
-
 }
 
 //布局view
@@ -57,7 +55,6 @@
     self.tableView.dataSource = self;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"TouxiangTableViewCell" bundle:nil] forCellReuseIdentifier:@"imageCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"ButtonTableViewCell" bundle:nil] forCellReuseIdentifier:@"buttonCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TongyongTableViewCell" bundle:nil] forCellReuseIdentifier:@"tongCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -145,6 +142,7 @@
         if (indexPath.section == 1  && indexPath.row < 4) {
             cell.myView.alpha = 1;
         }
+        
         
         return cell;
     }
