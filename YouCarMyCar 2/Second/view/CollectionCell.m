@@ -49,6 +49,7 @@
     return _myimageView;
 }
 
+//当 父类的farm  设置的时候 走的这个方法
 -(void)layoutSubviews
 {
     
