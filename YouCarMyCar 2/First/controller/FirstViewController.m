@@ -17,6 +17,8 @@
 #import <WeChatConnection/WeChatConnection.h>
 #import "NowViewController.h"
 #import "WillViewController.h"
+#import "LoginViewController.h"
+
 
 #import <QZoneConnection/QZoneConnection.h>
 #define kseGmentHeight 40
@@ -73,9 +75,29 @@
     [self.myscrollView addSubview:self.willVC.view];
     
     
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    button.frame = CGRectMake(0, 0, 45, 25);
+    [button setTitle:@"登录" forState:(UIControlStateNormal)];
+    UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = right;
+    [button addTarget:self action:@selector(login:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    
     
 }
 
+-(void)login:(UIButton *)button
+{
+    
+    LoginViewController *login = [[LoginViewController alloc]init];
+    [self.navigationController pushViewController:login animated:YES];
+    
+    
+    NSLog(@"登录");
+    
+    
+    
+}
 -(void)segmentAction:(UISegmentedControl *)segmeng
 {
     if (segmeng.selectedSegmentIndex == 0) {

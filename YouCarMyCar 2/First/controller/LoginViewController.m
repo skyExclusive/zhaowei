@@ -1,25 +1,23 @@
 //
-//  NowDetalViewController.m
+//  LoginViewController.m
 //  YouCarMyCar
 //
-//  Created by LLY on 15/7/2.
+//  Created by LLY on 15/7/4.
 //  Copyright (c) 2015年 LLY. All rights reserved.
 //
 
-#import "NowDetalViewController.h"
+#import "LoginViewController.h"
 
-@interface NowDetalViewController ()
+@interface LoginViewController ()
 
 @end
 
-@implementation NowDetalViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"商品详情";
+    self.title = @"登录界面";
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
@@ -27,10 +25,14 @@
     [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
-
+    
+    
+    
+    // Do any additional setup after loading the view.
 }
 -(void)pop
 {
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
     
 }

@@ -67,30 +67,41 @@
         
     }
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+    
+    
+    [mycell.mybuttonImageView addGestureRecognizer:tap];
+    
+    
+    
+    mycell.mybuttonImageView.tag = 100 + indexPath.row;
+    
+    
     return mycell;
     
     
     
     
 }
+-(void)tapAction:(UITapGestureRecognizer *)sent
 
+{
+    
+    UIImageView *iamge = (UIImageView *)sent.view;
+    NSLog(@"%ld",(long)iamge.tag - 100);
+    
+}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NowDetalViewController *detal = [[NowDetalViewController alloc]init];
     [self.navigationController pushViewController:detal animated:YES];
     
-    
-    
-    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].

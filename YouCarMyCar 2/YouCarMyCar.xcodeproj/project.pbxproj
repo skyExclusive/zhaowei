@@ -97,6 +97,8 @@
 		0ACAF2C91B4120820029ACC9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2C81B4120820029ACC9 /* MessageUI.framework */; };
 		0ACAF2CB1B41208E0029ACC9 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2CA1B41208E0029ACC9 /* libstdc++.dylib */; };
 		0ACAF2CD1B4120980029ACC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2CC1B4120980029ACC9 /* libsqlite3.dylib */; };
+		0ADD51C31B477F4300FADACD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD51C21B477F4300FADACD /* LoginViewController.m */; };
+		0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD51C41B47810800FADACD /* 向左白色箭头.png */; };
 		0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE6F1B422A8600C3C98B /* 1.jpg */; };
 		0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE701B422A8600C3C98B /* 2.jpg */; };
 		9554F8EE1B44D535000131F6 /* 20150418072826995_easyicon_net_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 9554F8EC1B44D535000131F6 /* 20150418072826995_easyicon_net_1024.png */; };
@@ -285,6 +287,9 @@
 		0ACAF2C81B4120820029ACC9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0ACAF2CA1B41208E0029ACC9 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		0ACAF2CC1B4120980029ACC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0ADD51C11B477F4300FADACD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0ADD51C21B477F4300FADACD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0ADD51C41B47810800FADACD /* 向左白色箭头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向左白色箭头.png"; sourceTree = "<group>"; };
 		0AFBFE6F1B422A8600C3C98B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../1.jpg; sourceTree = "<group>"; };
 		0AFBFE701B422A8600C3C98B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../2.jpg; sourceTree = "<group>"; };
 		9554F8EC1B44D535000131F6 /* 20150418072826995_easyicon_net_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20150418072826995_easyicon_net_1024.png; sourceTree = "<group>"; };
@@ -393,6 +398,7 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				0ADD51C41B47810800FADACD /* 向左白色箭头.png */,
 				0AB91FA61B46171300552824 /* 3.jpg */,
 				955E92541B4535FD008447B7 /* sdf.jpg */,
 				955E92551B4535FD008447B7 /* sdfs.jpg */,
@@ -676,6 +682,8 @@
 				95E5AC931B437D5200904602 /* WillViewController.m */,
 				0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */,
 				0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */,
+				0ADD51C11B477F4300FADACD /* LoginViewController.h */,
+				0ADD51C21B477F4300FADACD /* LoginViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -936,6 +944,7 @@
 			files = (
 				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
+				0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */,
 				9554F8EF1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
 				955E92571B4535FD008447B7 /* sdf.jpg in Resources */,
@@ -1020,6 +1029,7 @@
 				0ACAF2551B411E830029ACC9 /* UIScrollView+MJRefresh.m in Sources */,
 				95D661BE1B44D44500E9992E /* TouxiangTableViewCell.m in Sources */,
 				0ACAF2481B411E830029ACC9 /* MJRefreshHeader.m in Sources */,
+				0ADD51C31B477F4300FADACD /* LoginViewController.m in Sources */,
 				0ACAF25C1B411E830029ACC9 /* SDWebImageDownloader.m in Sources */,
 				0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */,
 				0ACAF24E1B411E830029ACC9 /* MJRefreshBackStateFooter.m in Sources */,
