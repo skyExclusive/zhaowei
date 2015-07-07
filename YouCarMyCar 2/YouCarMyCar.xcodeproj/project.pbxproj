@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68511B43BDDC00A71D88 /* 白背景.png */; };
 		0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */; };
+		0AB91FA71B46171300552824 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AB91FA61B46171300552824 /* 3.jpg */; };
 		0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */; };
 		0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */; };
 		0ACAF1B11B411E300029ACC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B01B411E300029ACC9 /* main.m */; };
@@ -96,6 +97,14 @@
 		0ACAF2C91B4120820029ACC9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2C81B4120820029ACC9 /* MessageUI.framework */; };
 		0ACAF2CB1B41208E0029ACC9 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2CA1B41208E0029ACC9 /* libstdc++.dylib */; };
 		0ACAF2CD1B4120980029ACC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2CC1B4120980029ACC9 /* libsqlite3.dylib */; };
+		0ADD51C31B477F4300FADACD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD51C21B477F4300FADACD /* LoginViewController.m */; };
+		0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD51C41B47810800FADACD /* 向左白色箭头.png */; };
+		0AE102331B4B6DDD00BB23BB /* sns_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE1022F1B4B6DDD00BB23BB /* sns_icon_24.png */; };
+		0AE102341B4B6DDD00BB23BB /* sns_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102301B4B6DDD00BB23BB /* sns_icon_24.png */; };
+		0AE102351B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102311B4B6DDD00BB23BB /* sns_icon_24@2x.png */; };
+		0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */; };
+		0AE102381B4B6F7C00BB23BB /* sdk_weibo_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102371B4B6F7C00BB23BB /* sdk_weibo_logo@3x.png */; };
+		0AE1023A1B4B70C900BB23BB /* weixin.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102391B4B70C900BB23BB /* weixin.png */; };
 		0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE6F1B422A8600C3C98B /* 1.jpg */; };
 		0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE701B422A8600C3C98B /* 2.jpg */; };
 		954F0A4E1B4B5E46002598C5 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 954F0A4D1B4B5E46002598C5 /* 5.png */; };
@@ -133,6 +142,7 @@
 /* Begin PBXFileReference section */
 		0A9E68511B43BDDC00A71D88 /* 白背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "白背景.png"; sourceTree = "<group>"; };
 		0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页cell背景.png"; sourceTree = "<group>"; };
+		0AB91FA61B46171300552824 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		0AC346481B450D25005D6A39 /* MyListFirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyListFirstTableViewCell.h; sourceTree = "<group>"; };
 		0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyListFirstTableViewCell.m; sourceTree = "<group>"; };
 		0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowDetalViewController.h; sourceTree = "<group>"; };
@@ -282,6 +292,15 @@
 		0ACAF2C81B4120820029ACC9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0ACAF2CA1B41208E0029ACC9 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		0ACAF2CC1B4120980029ACC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0ADD51C11B477F4300FADACD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0ADD51C21B477F4300FADACD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0ADD51C41B47810800FADACD /* 向左白色箭头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向左白色箭头.png"; sourceTree = "<group>"; };
+		0AE1022F1B4B6DDD00BB23BB /* sns_icon_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sns_icon_24.png; path = ShareSDK/Core/Resource.bundle/Icon/sns_icon_24.png; sourceTree = SOURCE_ROOT; };
+		0AE102301B4B6DDD00BB23BB /* sns_icon_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sns_icon_24.png; path = ShareSDK/Core/Resource.bundle/Icon_7/sns_icon_24.png; sourceTree = SOURCE_ROOT; };
+		0AE102311B4B6DDD00BB23BB /* sns_icon_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sns_icon_24@2x.png"; path = "ShareSDK/Core/Resource.bundle/Icon/sns_icon_24@2x.png"; sourceTree = SOURCE_ROOT; };
+		0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sns_icon_24@2x.png"; path = "ShareSDK/Core/Resource.bundle/Icon_7/sns_icon_24@2x.png"; sourceTree = SOURCE_ROOT; };
+		0AE102371B4B6F7C00BB23BB /* sdk_weibo_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdk_weibo_logo@3x.png"; sourceTree = "<group>"; };
+		0AE102391B4B70C900BB23BB /* weixin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weixin.png; sourceTree = "<group>"; };
 		0AFBFE6F1B422A8600C3C98B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../1.jpg; sourceTree = "<group>"; };
 		0AFBFE701B422A8600C3C98B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../2.jpg; sourceTree = "<group>"; };
 		954F0A4D1B4B5E46002598C5 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
@@ -389,6 +408,8 @@
 			isa = PBXGroup;
 			children = (
 				954F0A4D1B4B5E46002598C5 /* 5.png */,
+				0ADD51C41B47810800FADACD /* 向左白色箭头.png */,
+				0AB91FA61B46171300552824 /* 3.jpg */,
 				955E92541B4535FD008447B7 /* sdf.jpg */,
 				955E92551B4535FD008447B7 /* sdfs.jpg */,
 				955E92561B4535FD008447B7 /* fdssfsf.jpg */,
@@ -399,6 +420,12 @@
 				0AFBFE701B422A8600C3C98B /* 2.jpg */,
 				0A9E68511B43BDDC00A71D88 /* 白背景.png */,
 				0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */,
+				0AE1022F1B4B6DDD00BB23BB /* sns_icon_24.png */,
+				0AE102301B4B6DDD00BB23BB /* sns_icon_24.png */,
+				0AE102311B4B6DDD00BB23BB /* sns_icon_24@2x.png */,
+				0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */,
+				0AE102371B4B6F7C00BB23BB /* sdk_weibo_logo@3x.png */,
+				0AE102391B4B70C900BB23BB /* weixin.png */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -406,10 +433,10 @@
 		0ACAF1A21B411E300029ACC9 = {
 			isa = PBXGroup;
 			children = (
-				95D4A4411B44DD93005F5ABF /* Second */,
 				0A9E68501B43BDDC00A71D88 /* image */,
-				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
 				0ACAF2751B411ED30029ACC9 /* Three */,
+				95D4A4411B44DD93005F5ABF /* Second */,
+				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
 				0ACAF2671B411EB90029ACC9 /* First */,
 				0ACAF1D71B411E820029ACC9 /* 工具类 */,
 				0ACAF1AD1B411E300029ACC9 /* YouCarMyCar */,
@@ -671,6 +698,8 @@
 				95E5AC931B437D5200904602 /* WillViewController.m */,
 				0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */,
 				0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */,
+				0ADD51C11B477F4300FADACD /* LoginViewController.h */,
+				0ADD51C21B477F4300FADACD /* LoginViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -928,23 +957,32 @@
 			files = (
 				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
+				0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */,
+				0AE102381B4B6F7C00BB23BB /* sdk_weibo_logo@3x.png in Resources */,
 				9554F8EF1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
 				955E92571B4535FD008447B7 /* sdf.jpg in Resources */,
+				0AB91FA71B46171300552824 /* 3.jpg in Resources */,
+				0AE102341B4B6DDD00BB23BB /* sns_icon_24.png in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
 				955E92581B4535FD008447B7 /* sdfs.jpg in Resources */,
+				0AE102331B4B6DDD00BB23BB /* sns_icon_24.png in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
 				9554F8EE1B44D535000131F6 /* 20150418072826995_easyicon_net_1024.png in Resources */,
 				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
+				0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */,
 				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				95D661B81B44D44500E9992E /* 1.png in Resources */,
+				0AE102351B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */,
 				0ACAF2AD1B411EE50029ACC9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */,
 				95D661BD1B44D44500E9992E /* TongyongTableViewCell.xib in Resources */,
+				0AE1023A1B4B70C900BB23BB /* weixin.png in Resources */,
+				95D661BB1B44D44500E9992E /* ButtonTableViewCell.xib in Resources */,
 				0ACAF2521B411E830029ACC9 /* MJRefresh.bundle in Resources */,
 				0ACAF1BC1B411E300029ACC9 /* Images.xcassets in Resources */,
 				0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */,
@@ -1010,6 +1048,7 @@
 				0ACAF2551B411E830029ACC9 /* UIScrollView+MJRefresh.m in Sources */,
 				95D661BE1B44D44500E9992E /* TouxiangTableViewCell.m in Sources */,
 				0ACAF2481B411E830029ACC9 /* MJRefreshHeader.m in Sources */,
+				0ADD51C31B477F4300FADACD /* LoginViewController.m in Sources */,
 				0ACAF25C1B411E830029ACC9 /* SDWebImageDownloader.m in Sources */,
 				0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */,
 				0ACAF24E1B411E830029ACC9 /* MJRefreshBackStateFooter.m in Sources */,

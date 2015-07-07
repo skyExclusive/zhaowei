@@ -17,9 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"往期详细";
+    
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
+    
+    button.frame =CGRectMake(0, 0, 15, 25);
+    [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = lift;
+    
+
 }
 
+-(void)pop
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

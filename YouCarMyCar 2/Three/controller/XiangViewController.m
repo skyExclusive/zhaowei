@@ -32,7 +32,23 @@
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(remove:)];
     self.view.userInteractionEnabled = YES;
     [self.view addGestureRecognizer:tap1];
+    
+    
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
+    
+    button.frame =CGRectMake(0, 0, 15, 25);
+    [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = lift;
+    
 
+
+}
+-(void)pop
+{
+    [self.navigationController  popToRootViewControllerAnimated:YES];
 }
 
 -(void)remove:(UITapGestureRecognizer *)tap
@@ -66,8 +82,14 @@
     self.myimage = [UIImage imageNamed:@"2.png"];
     
     //右item
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:(UIBarButtonItemStyleDone) target:self action:@selector(bianji)];
-    self.navigationItem.rightBarButtonItem = item;
+    
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        button.frame =CGRectMake(0, 0, 45, 25);
+    [button setTitle:@"编辑" forState:(UIControlStateNormal)];
+    [button addTarget:self action:@selector(bianji) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = right;
     
     
 }
