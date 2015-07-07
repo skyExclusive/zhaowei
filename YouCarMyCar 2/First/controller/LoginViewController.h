@@ -10,4 +10,11 @@
 
 @interface LoginViewController : UIViewController
 
+@property (nonatomic ,strong)UILabel *otherLoginLable;
+@property (nonatomic ,strong)UIImageView *qqImageView;
+@property (nonatomic ,strong)UIImageView *weixinImageView;
+@property (nonatomic ,strong)UIImageView *xinlangImageView;
+
+
+
 @end

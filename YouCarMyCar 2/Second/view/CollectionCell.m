@@ -38,7 +38,6 @@
     if (!_mylabel) {
         _mylabel = [[UILabel alloc]init];
     }
-    
     return _mylabel;
 }
 -(UIImageView *)myimageView
