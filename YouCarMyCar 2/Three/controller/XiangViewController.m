@@ -315,10 +315,6 @@
 }
 
 
-
-
-
-
 // 点击图片触发
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
