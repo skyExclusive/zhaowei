@@ -11,7 +11,6 @@
 @implementation MyListFirstTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    
     self.cellheight = 170;
     self.cellweight = [UIScreen mainScreen].bounds.size.width;
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -24,6 +23,11 @@
 }
 -(void)costom
 {
+    
+    NSDictionary *dic = @{@"abc":@"aa"};
+    
+    
+    
     //俩个底背景
     UIImageView *image1 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.cellweight, self.cellheight)];
     image1.image = [UIImage imageNamed:@"首页cell背景.png"];
@@ -31,7 +35,6 @@
     UIImageView *image2 = [[UIImageView alloc]initWithFrame:CGRectMake(5, 4, self.cellweight - 10, self.cellheight - 4)];
     image2.image = [UIImage imageNamed:@"白背景.png"];
     [self addSubview:image2];
-    
     //商品
     self.myGoodImageVeiw  = [[UIImageView alloc]initWithFrame:CGRectMake(6, 6, (self.cellheight - 12 )/51 *44,self.cellheight - 12 )];
     self.myGoodImageVeiw.image = [UIImage imageNamed:@"1.jpg"];
