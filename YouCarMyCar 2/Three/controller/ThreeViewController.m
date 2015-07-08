@@ -42,7 +42,6 @@
     self.dic = [[NSMutableDictionary alloc]init];
     NSArray *array1 = [[NSArray alloc]initWithObjects:@"我的参与",@"活动介绍",@"关于我们",@"用户反馈",@"版本更新", nil];
     NSArray *array2 = [[NSArray alloc]initWithObjects:@"退出登录", nil];
-    
     [self.dic  setValue:array1 forKey:@"1"];
     [self.dic  setValue:array2 forKey:@"2"];
     
@@ -131,24 +130,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
-    
     NSString *str = array[indexPath.row];
-    
-    
     if (indexPath.row == 0 && indexPath.section == 0) {
         
-        TouxiangTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
+        TouxiangTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell"forIndexPath:indexPath];
         cell.photoImage.layer.cornerRadius = cell.photoImage.frame.size.height/2;
         cell.photoImage.layer.masksToBounds = YES;
-        cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.photoImage.image = [UIImage imageNamed:@"2.png"];
         cell.backimage.image = [UIImage imageNamed:@"2.png"];
+        
+        //毛玻璃效果
         UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
         visualEfView.frame = CGRectMake(cell.backimage.frame.origin.x, cell.backimage.frame.origin.y-2, cell.backimage.frame.size.width, cell.backimage.frame.size.height+2);
         visualEfView.alpha = 1.0;
         [cell.backimage addSubview:visualEfView];
         cell.photoImage.userInteractionEnabled = YES;
         cell.superview.superview.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         //轻怕手势
         UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(push:)];
         self.view.userInteractionEnabled = YES;
@@ -161,9 +161,10 @@
     }else{
         
         TongyongTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tongCell" forIndexPath:indexPath];;
-//        cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.lableText.text = str;
         cell.lableText.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         if (indexPath.section == 1  && indexPath.row < 4) {
             cell.myView.alpha = 1;
         }
@@ -171,6 +172,9 @@
             [cell.iconImage removeFromSuperview];
             [cell.boultImage removeFromSuperview];
             [cell.lableText removeFromSuperview];
+            
+            
+            
             UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(kMainWidth/2-36, 0, kMainWidth, 50)];;
             lable.text = @"退出登陆";
             [cell addSubview:lable];

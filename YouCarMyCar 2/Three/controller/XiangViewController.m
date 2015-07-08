@@ -16,7 +16,7 @@
 @property (nonatomic,retain)UIView *myView;
 @property (nonatomic,retain)UIImage *myimage;
 @property (nonatomic,retain)UIView *viewNM;
-@property (nonatomic,strong)UIView *backView;
+@property (nonatomic,retain)UITextField *textField;
 @end
 
 @implementation XiangViewController
@@ -92,12 +92,6 @@
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = right;
     
-    
-    self.backView = [[UIView alloc]initWithFrame:self.view.bounds];
-    self.backView.backgroundColor = [UIColor blueColor];
-    self.backView.alpha = 0;
-    [self.view addSubview:self.backView];
-    
 }
 
 //编辑的点击事件
@@ -144,6 +138,7 @@
     NSString *str = array[indexPath.row];
     
     
+    
     if (indexPath.row == 0 && indexPath.section == 0) {
         
         TouxiangTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
@@ -169,12 +164,42 @@
         
     }else{
         
+        
         TongyongTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tongCell" forIndexPath:indexPath];;
         //        cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.lableText.text = str;
         cell.lableText.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
+        [cell.iconImage removeFromSuperview];
+        cell.frame = CGRectMake(20, 0, 60, 50);
+        
+        self.textField = [[UITextField alloc]initWithFrame:CGRectMake(kMainWidth - 250, 0, 200, 50)];
+        self.textField.textAlignment = NSTextAlignmentRight;
+        [cell addSubview:self.textField];
+        
+        if (indexPath.row == 4) {
+            self.textField.text = @"修改密码";
+        }
+        
+        
         if (indexPath.section == 1  && indexPath.row < 4) {
             cell.myView.alpha = 1;
+        }
+        if (indexPath.section == 1  && indexPath.row < 2) {
+            [cell.boultImage removeFromSuperview];
+            self.textField.frame = CGRectMake(kMainWidth - 250, 0, 230, 50);
+            if (indexPath.row == 0) {
+                self.textField.text = @"蒸蒸日上";
+            }else if (indexPath.row == 1){
+                self.textField.text = @"18031935432";
+            }
+        }
+        if (indexPath.section == 1  && indexPath.row > 1 && indexPath.row < 4) {
+
+            if (indexPath.row == 2) {
+                self.textField.text = @"男";
+            }else if (indexPath.row == 3) {
+                self.textField.text = @"北京市房山区良乡大学城";
+            }
         }
         
         return cell;
@@ -185,57 +210,75 @@
 -(void)push:(UITapGestureRecognizer *)tap
 {
     
-//    self.backView.alpha = 0.07;
-//
-//    self.myView = [[UIView alloc]initWithFrame:CGRectMake(80, 200, 215, 130)];
-//    [_myView setBackgroundColor:[UIColor colorWithRed:148 green:148 blue:148 alpha:1]];
-//    _myView.layer.cornerRadius =10;
-//    //_myView.layer.masksToBounds = 10;
-//    _myView.clipsToBounds = YES;
-//    UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 215, 40)];
-//    myLabel.backgroundColor = [UIColor grayColor];
-//    
-//    myLabel.text = @"设置你的靓照";
-//    myLabel.textAlignment = NSTextAlignmentCenter;
-//    [_myView addSubview:myLabel];
-//    
-//    UIButton *zhaoBT = [UIButton buttonWithType:UIButtonTypeSystem];
-//    zhaoBT.frame = CGRectMake(34, 45, 60, 60);
-//    //[zhaoBT setBackgroundColor:[UIColor grayColor]];
-//    zhaoBT.layer.cornerRadius = 30;
-//    [zhaoBT addTarget:self action:@selector(zhaoxiang:) forControlEvents:UIControlEventTouchDown];
-//    [zhaoBT setBackgroundImage:[UIImage imageNamed:@"20150418072910824_easyicon_net_1024.png"] forState:UIControlStateNormal];
-//    [_myView addSubview:zhaoBT];
-//    UILabel *zhaolb = [[UILabel alloc]initWithFrame:CGRectMake(34, 100, 60, 30)];
-//    zhaolb.text = @"照相";
-//    zhaolb.font = [UIFont systemFontOfSize:13];
-//    zhaolb.textAlignment = NSTextAlignmentCenter;
-//    [_myView addSubview:zhaolb];
-//    
-//    UIButton *xiangBT = [UIButton buttonWithType:UIButtonTypeSystem];
-//    xiangBT.frame = CGRectMake(120, 45, 60, 60);
-//    [xiangBT setBackgroundImage:[UIImage imageNamed:@"20150418072826995_easyicon_net_1024.png"] forState:UIControlStateNormal];
-//    // [xiangBT setBackgroundColor:[UIColor grayColor]];
-//    xiangBT.layer.cornerRadius = 30;
-//    [xiangBT addTarget:self action:@selector(xiangce:) forControlEvents:UIControlEventTouchDown];
-//    [_myView addSubview:xiangBT];
-//    
-//    UILabel *xianglb = [[UILabel alloc]initWithFrame:CGRectMake(120, 100, 60, 30)];
-//    xianglb.text = @"相册";
-//    xianglb.font = [UIFont systemFontOfSize:13];
-//    xianglb.textAlignment = NSTextAlignmentCenter;
-//    [_myView addSubview:xianglb];
-//    
-//    [self.view addSubview:_myView];
-    
-
     UIAlertController  *view=   [UIAlertController
                                  alertControllerWithTitle:nil
                                  message:nil
                                  preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDestructive handler:nil];
-    UIAlertAction *archiveAction = [UIAlertAction actionWithTitle:@"从相册中选取" style:UIAlertActionStyleDefault handler:nil];
+    
+    UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;//设置UIImagePickerController的代理，同时要遵循UIImagePickerControllerDelegate，UINavigationControllerDelegate协议
+            picker.allowsEditing = YES;//设置拍照之后图片是否可编辑，如果设置成可编辑的话会在代理方法返回的字典里面多一些键值。PS：如果在调用相机的时候允许照片可编辑，那么用户能编辑的照片的位置并不包括边角。
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;//UIImagePicker选择器的类型，UIImagePickerControllerSourceTypeCamera调用系统相机
+            [self presentViewController:picker animated:YES completion:nil];
+        }
+        else{
+            //如果当前设备没有摄像头
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"哎呀，当前设备没有摄像头。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alertView show];
+        }
+
+    }];
+    UIAlertAction *archiveAction = [UIAlertAction actionWithTitle:@"从相册中选取" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+            UIImagePickerController * picker = [[UIImagePickerController alloc]init];
+            picker.delegate = self;
+            picker.allowsEditing = YES;//是否可以对原图进行编辑
+            
+            //打开相册选择照片
+            picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            [self presentViewController:picker animated:YES completion:nil];
+        }
+        else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"图片库不可用" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alertView show];
+        }
+        self.viewNM = [[UIView alloc]initWithFrame:CGRectMake(0, 620, 375, 48)];
+        
+        
+        [self.view addSubview:_viewNM];
+        UIButton *sureBT = [UIButton buttonWithType:UIButtonTypeSystem];
+        sureBT.frame = CGRectMake(184.5, 0, 188.5, 48);
+        sureBT.backgroundColor = [UIColor colorWithRed:95/255.0 green:68/255.0 blue:56/255.0 alpha:1];
+        [sureBT addTarget:self action:@selector(sure:) forControlEvents:UIControlEventTouchUpInside];
+        sureBT.layer.cornerRadius = 10;
+        [_viewNM addSubview:sureBT];
+        
+        UIButton *cancelBT = [UIButton buttonWithType:UIButtonTypeSystem];
+        cancelBT.frame = CGRectMake(5, 0, 173.5, 48);
+        cancelBT.backgroundColor = [UIColor colorWithRed:95/255.0 green:68/255.0 blue:56/255.0 alpha:1];
+        cancelBT.layer.cornerRadius = 10;
+        
+        [cancelBT addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
+        [_viewNM addSubview:cancelBT];
+        
+        
+        
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(65, 3, 48, 43)];
+        [imageView setImage:[UIImage imageNamed:@"cancel.png"]];
+        [cancelBT addSubview:imageView];
+        
+        UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(65, 3, 48, 43)];
+        [imageView2 setImage:[UIImage imageNamed:@"sure.png"]];
+        [sureBT addSubview:imageView2];
+        
+        [self.myView removeFromSuperview];
+        
+
+    }];
     [view addAction:cancelAction];
     [view addAction:deleteAction];
     [view addAction:archiveAction];
@@ -243,71 +286,7 @@
 }
 
 
--(void)zhaoxiang:(UIButton *)button
-{
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;//设置UIImagePickerController的代理，同时要遵循UIImagePickerControllerDelegate，UINavigationControllerDelegate协议
-        picker.allowsEditing = YES;//设置拍照之后图片是否可编辑，如果设置成可编辑的话会在代理方法返回的字典里面多一些键值。PS：如果在调用相机的时候允许照片可编辑，那么用户能编辑的照片的位置并不包括边角。
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;//UIImagePicker选择器的类型，UIImagePickerControllerSourceTypeCamera调用系统相机
-        [self presentViewController:picker animated:YES completion:nil];
-    }
-    else{
-        //如果当前设备没有摄像头
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"哎呀，当前设备没有摄像头。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alertView show];
-    }
-    
-}
--(void)xiangce:(UIButton *)button
-{
-    
-    
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-        UIImagePickerController * picker = [[UIImagePickerController alloc]init];
-        picker.delegate = self;
-        picker.allowsEditing = YES;//是否可以对原图进行编辑
-        
-        //打开相册选择照片
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [self presentViewController:picker animated:YES completion:nil];
-    }
-    else{
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"图片库不可用" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alertView show];
-    }
-    self.viewNM = [[UIView alloc]initWithFrame:CGRectMake(0, 620, 375, 48)];
-    
-    
-    [self.view addSubview:_viewNM];
-    UIButton *sureBT = [UIButton buttonWithType:UIButtonTypeSystem];
-    sureBT.frame = CGRectMake(184.5, 0, 188.5, 48);
-    sureBT.backgroundColor = [UIColor colorWithRed:95/255.0 green:68/255.0 blue:56/255.0 alpha:1];
-    [sureBT addTarget:self action:@selector(sure:) forControlEvents:UIControlEventTouchUpInside];
-    sureBT.layer.cornerRadius = 10;
-    [_viewNM addSubview:sureBT];
-    
-    UIButton *cancelBT = [UIButton buttonWithType:UIButtonTypeSystem];
-    cancelBT.frame = CGRectMake(5, 0, 173.5, 48);
-    cancelBT.backgroundColor = [UIColor colorWithRed:95/255.0 green:68/255.0 blue:56/255.0 alpha:1];
-    cancelBT.layer.cornerRadius = 10;
-    
-    [cancelBT addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
-    [_viewNM addSubview:cancelBT];
-    
 
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(65, 3, 48, 43)];
-    [imageView setImage:[UIImage imageNamed:@"cancel.png"]];
-    [cancelBT addSubview:imageView];
-    
-    UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(65, 3, 48, 43)];
-    [imageView2 setImage:[UIImage imageNamed:@"sure.png"]];
-    [sureBT addSubview:imageView2];
-    
-    [self.myView removeFromSuperview];
-    
-}
 //确定选择的照片
 -(void)sure:(UIButton *)button
 {
