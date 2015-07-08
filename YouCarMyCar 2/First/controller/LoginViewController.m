@@ -12,17 +12,12 @@
 @interface LoginViewController ()
 
 @end
-
 @implementation LoginViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"登录界面";
-    
-    
     [self coustom];//布局
-    
     
     
     // Do any additional setup after loading the view.
@@ -70,19 +65,20 @@
     self.xinlangImageView.tag = 103;
     self.xinlangImageView.userInteractionEnabled = YES;
     
-    
-    
     [self.view addSubview:self.xinlangImageView];
     
     
 }
-
 -(void)login:(UITapGestureRecognizer *)sent
 {
     UIImageView *image = (UIImageView *)sent.view;
         if (image.tag == 101) {
         NSLog(@"QQ登录");
-        [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
+            id<ISSQZoneApp> app =(id<ISSQZoneApp>)[ShareSDK getClientWithType:ShareTypeQQSpace];
+           
+                [app setIsAllowWebAuthorize:YES];
+            
+                   [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
             if (result) {
                 NSLog(@"授权登陆成功，已获取用户信息");
                 NSString *uid = [userInfo uid];
@@ -131,7 +127,6 @@
         id<ISSQZoneApp> app =(id<ISSQZoneApp>)[ShareSDK getClientWithType:ShareTypeQQSpace];
         [app setIsAllowWebAuthorize:YES];
         
-        
         [ShareSDK getUserInfoWithType:ShareTypeSinaWeibo authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
             if (result) {
                 NSLog(@"授权登陆成功，已获取用户信息");
@@ -142,8 +137,6 @@
                 [alert show];
                 NSLog(@"source:%@",[userInfo sourceData]);
                 NSLog(@"uid:%@",[userInfo uid]);
-                
-                
             }else{
                 NSLog(@"分享失败,错误码:%ld,错误描述%@",(long)[error errorCode],[error errorDescription]);
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"授权失败，请看日记错误描述" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -169,7 +162,6 @@
 
 /*
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
