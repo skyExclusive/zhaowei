@@ -25,7 +25,7 @@
                         <rect key="frame" x="8" y="49" width="359" height="1"/>
                         <color key="backgroundColor" red="0.89882358955251296" green="0.9463394205806186" blue="0.95523595328282829" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyb-zh-ol2">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyb-zh-ol2">
                         <rect key="frame" x="60" y="14" width="72" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="VCX-lX-K3W"/>
@@ -35,7 +35,7 @@
                         <color key="textColor" red="0.98127761989999995" green="0.98127761989999995" blue="0.98127761989999995" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" highlightedImage="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-vL-eUs">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-vL-eUs">
                         <rect key="frame" x="338" y="15" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="L3o-x0-gST"/>
@@ -53,6 +53,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="boultImage" destination="NtC-vL-eUs" id="R4r-KL-FFX"/>
                 <outlet property="iconImage" destination="oYa-ud-8kS" id="fcB-Wi-zbv"/>
                 <outlet property="lableText" destination="Nyb-zh-ol2" id="caI-u9-ece"/>
                 <outlet property="myView" destination="Q9f-Cl-j8P" id="cEA-0k-SOX"/>
@@ -61,7 +62,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="1.jpg" width="640" height="887"/>
         <image name="1.png" width="49" height="43"/>
     </resources>
 </document>

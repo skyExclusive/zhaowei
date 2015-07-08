@@ -10,7 +10,7 @@
 
 #import "ThreeViewController.h"
 #import "TouxiangTableViewCell.h"
-
+#import "ClickViewController.h"
 #import "TongyongTableViewCell.h"
 #import "PrefixHeader.pch"
 #import "XiangViewController.h"
@@ -58,6 +58,8 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"TongyongTableViewCell" bundle:nil] forCellReuseIdentifier:@"tongCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+
+    
     
 ////右item
 //    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:(UIBarButtonItemStyleDone) target:self action:@selector(bianji)];
@@ -104,6 +106,28 @@
         return 5;
     }
 }
+//cell 的点击事件
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ClickViewController *clichVC = [[ClickViewController alloc]init];
+    clichVC.i = 0;
+   
+    if (indexPath.section ==1 && indexPath.row <4) {
+        for (int a = 0; a <5; a ++) {
+        if (indexPath.section == 1 && indexPath.row == a) {
+            clichVC.i = a;
+        }
+    }
+    [self.navigationController pushViewController:clichVC animated:YES];
+    }else if (indexPath.section ==1 && indexPath.row == 4) {
+        UIAlertView *alterView = [[UIAlertView alloc] initWithTitle:nil message:@"已经是最新版本" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        alterView.backgroundColor = [UIColor redColor];
+        [alterView show];
+    }else {
+        NSLog(@"退出登陆");
+    }
+    
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
@@ -129,6 +153,7 @@
         UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(push:)];
         self.view.userInteractionEnabled = YES;
         [cell.photoImage addGestureRecognizer:tap1];
+        
 
         return cell;
         
@@ -141,6 +166,17 @@
         cell.lableText.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
         if (indexPath.section == 1  && indexPath.row < 4) {
             cell.myView.alpha = 1;
+        }
+        if (indexPath.section == 2  && indexPath.row == 0) {
+            [cell.iconImage removeFromSuperview];
+            [cell.boultImage removeFromSuperview];
+            [cell.lableText removeFromSuperview];
+            UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(kMainWidth/2-36, 0, kMainWidth, 50)];;
+            lable.text = @"退出登陆";
+            [cell addSubview:lable];
+            lable.textColor = [UIColor whiteColor];
+            cell.backgroundColor = [UIColor redColor];
+            
         }
         
         

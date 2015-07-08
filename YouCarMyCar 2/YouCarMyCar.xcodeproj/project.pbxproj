@@ -113,6 +113,7 @@
 		955E92571B4535FD008447B7 /* sdf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92541B4535FD008447B7 /* sdf.jpg */; };
 		955E92581B4535FD008447B7 /* sdfs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92551B4535FD008447B7 /* sdfs.jpg */; };
 		955E92591B4535FD008447B7 /* fdssfsf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92561B4535FD008447B7 /* fdssfsf.jpg */; };
+		958178311B4BB1BD001AA514 /* ClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958178301B4BB1BD001AA514 /* ClickViewController.m */; };
 		95B83E191B44D32A007ECAA8 /* XiangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B83E181B44D32A007ECAA8 /* XiangViewController.m */; };
 		95C8DED21B422ECF00FA1FDD /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8DED11B422ECF00FA1FDD /* 3.png */; };
 		95D4A4491B44DDAB005F5ABF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D4A4461B44DDAB005F5ABF /* SecondViewController.m */; };
@@ -309,6 +310,8 @@
 		955E92541B4535FD008447B7 /* sdf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sdf.jpg; sourceTree = "<group>"; };
 		955E92551B4535FD008447B7 /* sdfs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sdfs.jpg; sourceTree = "<group>"; };
 		955E92561B4535FD008447B7 /* fdssfsf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fdssfsf.jpg; sourceTree = "<group>"; };
+		9581782F1B4BB1BD001AA514 /* ClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickViewController.h; sourceTree = "<group>"; };
+		958178301B4BB1BD001AA514 /* ClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickViewController.m; sourceTree = "<group>"; };
 		95B83E171B44D32A007ECAA8 /* XiangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiangViewController.h; sourceTree = "<group>"; };
 		95B83E181B44D32A007ECAA8 /* XiangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiangViewController.m; sourceTree = "<group>"; };
 		95C8DED11B422ECF00FA1FDD /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../3.png; sourceTree = "<group>"; };
@@ -719,6 +722,8 @@
 			children = (
 				0ACAF2771B411ED30029ACC9 /* ThreeViewController.h */,
 				95D661C01B44D46600E9992E /* ThreeViewController.m */,
+				9581782F1B4BB1BD001AA514 /* ClickViewController.h */,
+				958178301B4BB1BD001AA514 /* ClickViewController.m */,
 				95B83E171B44D32A007ECAA8 /* XiangViewController.h */,
 				95B83E181B44D32A007ECAA8 /* XiangViewController.m */,
 			);
@@ -982,7 +987,6 @@
 				0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */,
 				95D661BD1B44D44500E9992E /* TongyongTableViewCell.xib in Resources */,
 				0AE1023A1B4B70C900BB23BB /* weixin.png in Resources */,
-				95D661BB1B44D44500E9992E /* ButtonTableViewCell.xib in Resources */,
 				0ACAF2521B411E830029ACC9 /* MJRefresh.bundle in Resources */,
 				0ACAF1BC1B411E300029ACC9 /* Images.xcassets in Resources */,
 				0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */,
@@ -1038,6 +1042,7 @@
 				0ACAF2401B411E830029ACC9 /* AFURLConnectionOperation.m in Sources */,
 				0ACAF2541B411E830029ACC9 /* UIScrollView+MJExtension.m in Sources */,
 				0ACAF23F1B411E830029ACC9 /* AFSecurityPolicy.m in Sources */,
+				958178311B4BB1BD001AA514 /* ClickViewController.m in Sources */,
 				0ACAF24B1B411E830029ACC9 /* MJRefreshAutoStateFooter.m in Sources */,
 				0ACAF2661B411E830029ACC9 /* UIView+WebCacheOperation.m in Sources */,
 				0ACAF2511B411E830029ACC9 /* MJRefreshStateHeader.m in Sources */,

@@ -16,6 +16,7 @@
 @property (nonatomic,retain)UIView *myView;
 @property (nonatomic,retain)UIImage *myimage;
 @property (nonatomic,retain)UIView *viewNM;
+@property (nonatomic,strong)UIView *backView;
 @end
 
 @implementation XiangViewController
@@ -91,6 +92,11 @@
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = right;
     
+    
+    self.backView = [[UIView alloc]initWithFrame:self.view.bounds];
+    self.backView.backgroundColor = [UIColor blueColor];
+    self.backView.alpha = 0;
+    [self.view addSubview:self.backView];
     
 }
 
@@ -178,48 +184,62 @@
 //头像的点击事件
 -(void)push:(UITapGestureRecognizer *)tap
 {
-    self.myView = [[UIView alloc]initWithFrame:CGRectMake(80, 200, 215, 130)];
-    [_myView setBackgroundColor:[UIColor colorWithRed:148 green:148 blue:148 alpha:1]];
-    _myView.layer.cornerRadius =10;
-    //_myView.layer.masksToBounds = 10;
-    _myView.clipsToBounds = YES;
-    UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 215, 40)];
-    myLabel.backgroundColor = [UIColor grayColor];
     
-    myLabel.text = @"设置你的靓照";
-    myLabel.textAlignment = NSTextAlignmentCenter;
-    [_myView addSubview:myLabel];
-    
-    UIButton *zhaoBT = [UIButton buttonWithType:UIButtonTypeSystem];
-    zhaoBT.frame = CGRectMake(34, 45, 60, 60);
-    //[zhaoBT setBackgroundColor:[UIColor grayColor]];
-    zhaoBT.layer.cornerRadius = 30;
-    [zhaoBT addTarget:self action:@selector(zhaoxiang:) forControlEvents:UIControlEventTouchDown];
-    [zhaoBT setBackgroundImage:[UIImage imageNamed:@"20150418072910824_easyicon_net_1024.png"] forState:UIControlStateNormal];
-    [_myView addSubview:zhaoBT];
-    UILabel *zhaolb = [[UILabel alloc]initWithFrame:CGRectMake(34, 100, 60, 30)];
-    zhaolb.text = @"照相";
-    zhaolb.font = [UIFont systemFontOfSize:13];
-    zhaolb.textAlignment = NSTextAlignmentCenter;
-    [_myView addSubview:zhaolb];
-    
-    UIButton *xiangBT = [UIButton buttonWithType:UIButtonTypeSystem];
-    xiangBT.frame = CGRectMake(120, 45, 60, 60);
-    [xiangBT setBackgroundImage:[UIImage imageNamed:@"20150418072826995_easyicon_net_1024.png"] forState:UIControlStateNormal];
-    // [xiangBT setBackgroundColor:[UIColor grayColor]];
-    xiangBT.layer.cornerRadius = 30;
-    [xiangBT addTarget:self action:@selector(xiangce:) forControlEvents:UIControlEventTouchDown];
-    [_myView addSubview:xiangBT];
-    
-    UILabel *xianglb = [[UILabel alloc]initWithFrame:CGRectMake(120, 100, 60, 30)];
-    xianglb.text = @"相册";
-    xianglb.font = [UIFont systemFontOfSize:13];
-    xianglb.textAlignment = NSTextAlignmentCenter;
-    [_myView addSubview:xianglb];
-    
-    [self.view addSubview:_myView];
+//    self.backView.alpha = 0.07;
+//
+//    self.myView = [[UIView alloc]initWithFrame:CGRectMake(80, 200, 215, 130)];
+//    [_myView setBackgroundColor:[UIColor colorWithRed:148 green:148 blue:148 alpha:1]];
+//    _myView.layer.cornerRadius =10;
+//    //_myView.layer.masksToBounds = 10;
+//    _myView.clipsToBounds = YES;
+//    UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 215, 40)];
+//    myLabel.backgroundColor = [UIColor grayColor];
+//    
+//    myLabel.text = @"设置你的靓照";
+//    myLabel.textAlignment = NSTextAlignmentCenter;
+//    [_myView addSubview:myLabel];
+//    
+//    UIButton *zhaoBT = [UIButton buttonWithType:UIButtonTypeSystem];
+//    zhaoBT.frame = CGRectMake(34, 45, 60, 60);
+//    //[zhaoBT setBackgroundColor:[UIColor grayColor]];
+//    zhaoBT.layer.cornerRadius = 30;
+//    [zhaoBT addTarget:self action:@selector(zhaoxiang:) forControlEvents:UIControlEventTouchDown];
+//    [zhaoBT setBackgroundImage:[UIImage imageNamed:@"20150418072910824_easyicon_net_1024.png"] forState:UIControlStateNormal];
+//    [_myView addSubview:zhaoBT];
+//    UILabel *zhaolb = [[UILabel alloc]initWithFrame:CGRectMake(34, 100, 60, 30)];
+//    zhaolb.text = @"照相";
+//    zhaolb.font = [UIFont systemFontOfSize:13];
+//    zhaolb.textAlignment = NSTextAlignmentCenter;
+//    [_myView addSubview:zhaolb];
+//    
+//    UIButton *xiangBT = [UIButton buttonWithType:UIButtonTypeSystem];
+//    xiangBT.frame = CGRectMake(120, 45, 60, 60);
+//    [xiangBT setBackgroundImage:[UIImage imageNamed:@"20150418072826995_easyicon_net_1024.png"] forState:UIControlStateNormal];
+//    // [xiangBT setBackgroundColor:[UIColor grayColor]];
+//    xiangBT.layer.cornerRadius = 30;
+//    [xiangBT addTarget:self action:@selector(xiangce:) forControlEvents:UIControlEventTouchDown];
+//    [_myView addSubview:xiangBT];
+//    
+//    UILabel *xianglb = [[UILabel alloc]initWithFrame:CGRectMake(120, 100, 60, 30)];
+//    xianglb.text = @"相册";
+//    xianglb.font = [UIFont systemFontOfSize:13];
+//    xianglb.textAlignment = NSTextAlignmentCenter;
+//    [_myView addSubview:xianglb];
+//    
+//    [self.view addSubview:_myView];
     
 
+    UIAlertController  *view=   [UIAlertController
+                                 alertControllerWithTitle:nil
+                                 message:nil
+                                 preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDestructive handler:nil];
+    UIAlertAction *archiveAction = [UIAlertAction actionWithTitle:@"从相册中选取" style:UIAlertActionStyleDefault handler:nil];
+    [view addAction:cancelAction];
+    [view addAction:deleteAction];
+    [view addAction:archiveAction];
+    [self presentViewController:view animated:YES completion:nil];
 }
 
 
