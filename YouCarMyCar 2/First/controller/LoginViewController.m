@@ -7,7 +7,8 @@
 //
 
 #import "LoginViewController.h"
-
+#import <ShareSDK/ShareSDK.h>
+#import <QZoneConnection/ISSQZoneApp.h>
 @interface LoginViewController ()
 
 @end
@@ -79,17 +80,77 @@
 -(void)login:(UITapGestureRecognizer *)sent
 {
     UIImageView *image = (UIImageView *)sent.view;
-    
-    if (image.tag == 101) {
+        if (image.tag == 101) {
         NSLog(@"QQ登录");
+        [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
+            if (result) {
+                NSLog(@"授权登陆成功，已获取用户信息");
+                NSString *uid = [userInfo uid];
+                NSString *nickname = [userInfo nickname];
+                NSString *profileImage = [userInfo profileImage];
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:[NSString stringWithFormat:@"授权登陆成功,用户ID:%@,昵称:%@,头像:%@",uid,nickname,profileImage] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                NSLog(@"source:%@",[userInfo sourceData]);
+                NSLog(@"uid:%@",[userInfo uid]);
+                
+                
+            }else{
+                NSLog(@"分享失败,错误码:%ld,错误描述%@",(long)[error errorCode],[error errorDescription]);
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"授权失败，请看日记错误描述" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+        }];
+
         
     }else if (image.tag == 102){
         
         NSLog(@"微信登录");
+        [ShareSDK getUserInfoWithType:ShareTypeWeixiSession authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
+            if (result) {
+                NSLog(@"授权登陆成功，已获取用户信息");
+                NSString *uid = [userInfo uid];
+                NSString *nickname = [userInfo nickname];
+                NSString *profileImage = [userInfo profileImage];
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:[NSString stringWithFormat:@"授权登陆成功,用户ID:%@,昵称:%@,头像:%@",uid,nickname,profileImage] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                NSLog(@"source:%@",[userInfo sourceData]);
+                NSLog(@"uid:%@",[userInfo uid]);
+                
+                
+            }else{
+                NSLog(@"分享失败,错误码:%ld,错误描述%@",(long)[error errorCode],[error errorDescription]);
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"授权失败，请看日记错误描述" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+        }];
+
         
     }else if (image.tag == 103){
         
         NSLog(@"微博登录");
+        id<ISSQZoneApp> app =(id<ISSQZoneApp>)[ShareSDK getClientWithType:ShareTypeQQSpace];
+        [app setIsAllowWebAuthorize:YES];
+        
+        
+        [ShareSDK getUserInfoWithType:ShareTypeSinaWeibo authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
+            if (result) {
+                NSLog(@"授权登陆成功，已获取用户信息");
+                NSString *uid = [userInfo uid];
+                NSString *nickname = [userInfo nickname];
+                NSString *profileImage = [userInfo profileImage];
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:[NSString stringWithFormat:@"授权登陆成功,用户ID:%@,昵称:%@,头像:%@",uid,nickname,profileImage] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                NSLog(@"source:%@",[userInfo sourceData]);
+                NSLog(@"uid:%@",[userInfo uid]);
+                
+                
+            }else{
+                NSLog(@"分享失败,错误码:%ld,错误描述%@",(long)[error errorCode],[error errorDescription]);
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"授权失败，请看日记错误描述" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+        }];
+
         
     }
     
