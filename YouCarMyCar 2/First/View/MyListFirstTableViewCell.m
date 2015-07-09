@@ -24,7 +24,6 @@
 -(void)costom
 {
     
-    NSDictionary *dic = @{@"abc":@"aa"};
     
     
     
@@ -58,7 +57,6 @@
 - (void)awakeFromNib {
     // Initialization code
 }
-
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
