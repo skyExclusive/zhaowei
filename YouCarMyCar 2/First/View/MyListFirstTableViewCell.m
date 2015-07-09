@@ -24,6 +24,7 @@
 -(void)costom
 {
     
+
     
     
     //俩个底背景
@@ -56,7 +57,6 @@
 - (void)awakeFromNib {
     // Initialization code
 }
-
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
