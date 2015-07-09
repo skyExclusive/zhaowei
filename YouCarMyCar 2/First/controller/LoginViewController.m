@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import <ShareSDK/ShareSDK.h>
 #import <QZoneConnection/ISSQZoneApp.h>
-@interface LoginViewController ()
+@interface LoginViewController ()<UIActionSheetDelegate>
 
 @end
 @implementation LoginViewController
@@ -18,12 +18,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"登录界面";
     [self coustom];//布局
-    
-    
-    // Do any additional setup after loading the view.
 }
 -(void)coustom
 {
+    
+    
     
     //返回的箭头
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -37,7 +36,6 @@
     self.otherLoginLable.text = @"其他登录";
     self.otherLoginLable.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.otherLoginLable];
-    
     self.qqImageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, 250, (self.view.frame.size.width - 40 ) / 3 - 20, (self.view.frame.size.width - 40 ) / 3 - 20)];
     self.qqImageView.image = [UIImage imageNamed:@"sns_icon_24.png"];
     [self.view addSubview:self.qqImageView];
@@ -56,7 +54,6 @@
     self.weixinImageView.image = [UIImage imageNamed:@"weixin.png"];
     UITapGestureRecognizer *tapweixin = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(login:)];
     [self.weixinImageView addGestureRecognizer:tapweixin];
-    
     [self.view addSubview:self.weixinImageView];
     self.xinlangImageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 30 - (self.view.frame.size.width - 40 ) / 3 + 20 , 250, (self.view.frame.size.width - 40 ) / 3 - 20, (self.view.frame.size.width - 40 ) / 3 - 20)];
     self.xinlangImageView.image = [UIImage imageNamed:@"sdk_weibo_logo.png"];
@@ -68,6 +65,44 @@
     [self.view addSubview:self.xinlangImageView];
     
     
+    UIButton *share = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [share setTitle:@"一键分享" forState:(UIControlStateNormal)];
+    share.frame = CGRectMake(150, 150, 80, 30);
+    share.backgroundColor = [UIColor purpleColor];
+    [share addTarget:self action:@selector(share:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:share ];
+    
+    
+}
+-(void)share:(UIButton *)share
+{
+    //1.定制分享的内容
+    NSString* path = [[NSBundle mainBundle]pathForResource:@"ShareSDK" ofType:@"jpg"];
+    id<ISSContent> publishContent = [ShareSDK content:@"Hello,Code4App.com!" defaultContent:nil image:[ShareSDK imageWithPath:path] title:@"This is title" url:@"http://mob.com" description:@"This is description" mediaType:SSPublishContentMediaTypeText];
+    
+    
+    
+    //2.调用分享菜单分享
+    [ShareSDK showShareActionSheet:nil shareList:nil content:publishContent statusBarTips:YES authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+        //如果分享成功
+        if (state == SSResponseStateSuccess) {
+            NSLog(@"分享成功");
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"分享成功" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+        //如果分享失败
+        if (state == SSResponseStateFail) {
+            NSLog(@"分享失败,错误码:%ld,错误描述%@",(long)[error errorCode],[error errorDescription]);
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"分享失败，请看日记错误描述" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+        if (state == SSResponseStateCancel){
+            NSLog(@"分享取消");
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"进入了分享取消状态" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+    }];
+
 }
 -(void)login:(UITapGestureRecognizer *)sent
 {
@@ -77,7 +112,6 @@
             id<ISSQZoneApp> app =(id<ISSQZoneApp>)[ShareSDK getClientWithType:ShareTypeQQSpace];
            
                 [app setIsAllowWebAuthorize:YES];
-            
                    [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
             if (result) {
                 NSLog(@"授权登陆成功，已获取用户信息");
@@ -149,6 +183,7 @@
     
     
 }
+
 -(void)pop
 {
     

@@ -28,16 +28,12 @@
 //title 字体白色
     NSDictionary * dict=[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
     [[UINavigationBar appearance] setTitleTextAttributes:dict];
-    
-    
 //最上面字体白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
-    
 //设置navigationbar 的颜色为蓝色
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:48/255.0 green:166/255.0 blue:241/255.0 alpha:1]];
     //1.初始化ShareSDK应用
     [ShareSDK registerApp:@"89fd18586698"];
-    
     [self initPlat];//初始化平台
     
     return YES;
@@ -45,26 +41,56 @@
 
 -(void)initPlat
 {
+    
+    //初始化新浪，在新浪微博开放平台上申请应用
     [ShareSDK connectSinaWeiboWithAppKey:@"568898243" appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3" redirectUri:@"http://www.sharesdk.cn" weiboSDKCls:[WeiboSDK class]];
+    //上面的方法会又客户端跳客户端，没客户端条web.
     
+    //下面这方法，如果不想用新浪客户端授权只用web的话就可以使用。
+    //[ShareSDK connectSinaWeiboWithAppKey:<#(NSString *)#> appSecret:<#(NSString *)#> redirectUri:<#(NSString *)#>]
+    /**---------------------------------------------------------**/
+    //初始化腾讯微博，请在腾讯微博开放平台申请
+    [ShareSDK connectTencentWeiboWithAppKey:@"801307650"
+                                  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
+                                redirectUri:@"http://www.sharesdk.cn"
+                                   wbApiCls:[WeiboApi class]];
+    /**
+     跟新浪一样如要求只用web授权那么用下面的
+     [ShareSDK connectTencentWeiboWithAppKey:<#(NSString *)#> appSecret:<#(NSString *)#> redirectUri:<#(NSString *)#>]
+     **/
     
-    //初始化微信，微信开放平台上注册应用
+    /**---------------------------------------------------------**/
+        //初始化微信，微信开放平台上注册应用
     [ShareSDK connectWeChatWithAppId:@"wx4868b35061f87885"
                            appSecret:@"64020361b8ec4c99936c0e3999a9f249"
                            wechatCls:[WXApi class]];
     
-    
+    //如果在分享菜单中想取消微信收藏，可以初始化微信及微信朋友圈，取代上面整体初始化的方法
+    //微信好友[ShareSDK connectWeChatSessionWithAppId:<#(NSString *)#> appSecret:<#(NSString *)#> wechatCls:<#(__unsafe_unretained Class)#>]
+    //微信朋友圈[ShareSDK connectWeChatTimelineWithAppId:<#(NSString *)#> appSecret:<#(NSString *)#> wechatCls:<#(__unsafe_unretained Class)#>]
+    /**---------------------------------------------------------**/
+    //初始化QQ,QQ空间，使用同样的key，请在腾讯开放平台上申请，注意导入头文件：
+    /**
+     #import <TencentOpenAPI/QQApiInterface.h>
+     #import <TencentOpenAPI/TencentOAuth.h>
+     **/
     
     //连接QQ应用
-//   // [ShareSDK connectQQWithQZoneAppKey:@"100371282"
-//                     qqApiInterfaceCls:[QQApiInterface class]
-//                       tencentOAuthCls:[TencentOAuth class]];
+    [ShareSDK connectQQWithQZoneAppKey:@"100371282"
+                     qqApiInterfaceCls:[QQApiInterface class]
+                       tencentOAuthCls:[TencentOAuth class]];
     //连接QQ空间应用
     [ShareSDK connectQZoneWithAppKey:@"100371282"
                            appSecret:@"aed9b0303e3ed1e27bae87c33761161d"
                    qqApiInterfaceCls:[QQApiInterface class]
                      tencentOAuthCls:[TencentOAuth class]];
     
+    
+    //连接邮件
+    [ShareSDK connectMail];
+    //连接短信
+    [ShareSDK connectSMS];
+
 
 }
 //添加两个回调方法,return的必须要ShareSDK的方法
