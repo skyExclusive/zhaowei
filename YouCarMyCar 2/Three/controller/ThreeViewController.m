@@ -60,18 +60,19 @@
 
     
     
-////右item
-//    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:(UIBarButtonItemStyleDone) target:self action:@selector(bianji)];
-//    self.navigationItem.rightBarButtonItem = item;
+//右item
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:@"设置" style:(UIBarButtonItemStyleDone) target:self action:@selector(bianji)];
+    self.navigationItem.rightBarButtonItem = item;
     
     
 }
 
-//编辑的点击事件
-//-(void)bianji
-//{
-//    NSLog(@"---------------------编辑---------------------");
-//}
+//设置的点击事件
+-(void)bianji
+{
+    XiangViewController *xiangVC = [[XiangViewController alloc]init];
+    [self.navigationController pushViewController:xiangVC animated:YES];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -169,7 +170,6 @@
             cell.myView.alpha = 1;
         }
         if (indexPath.section == 2  && indexPath.row == 0) {
-            [cell.iconImage removeFromSuperview];
             [cell.boultImage removeFromSuperview];
             [cell.lableText removeFromSuperview];
             
@@ -190,8 +190,7 @@
 //头像的点击事件
 -(void)push:(UITapGestureRecognizer *)tap
 {
-    XiangViewController *xiangVC = [[XiangViewController alloc]init];
-    [self.navigationController pushViewController:xiangVC animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {

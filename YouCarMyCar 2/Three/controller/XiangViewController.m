@@ -10,7 +10,8 @@
 #import "TouxiangTableViewCell.h"
 #import "TongyongTableViewCell.h"
 #import "PrefixHeader.pch"
-@interface XiangViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+#import "ClickViewController.h"
+@interface XiangViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableDictionary *dic;
 @property (nonatomic,retain)UIView *myView;
@@ -43,6 +44,8 @@
     
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
+    self.textField.delegate = self;
+    
     
 
 
@@ -86,18 +89,21 @@
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
         button.frame =CGRectMake(0, 0, 45, 25);
-    [button setTitle:@"编辑" forState:(UIControlStateNormal)];
-    [button addTarget:self action:@selector(bianji) forControlEvents:(UIControlEventTouchUpInside)];
+    [button setTitle:@"完成" forState:(UIControlStateNormal)];
+    [button addTarget:self action:@selector(wancheng) forControlEvents:(UIControlEventTouchUpInside)];
     
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = right;
     
 }
 
-//编辑的点击事件
--(void)bianji
+
+//完成的点击事件
+-(void)wancheng
 {
-    NSLog(@"---------------------编辑---------------------");
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -131,6 +137,28 @@
 //        return 5;
 //    }
 //}
+
+//cell的点击事件
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ClickViewController *clichVC = [[ClickViewController alloc]init];
+    clichVC.i = 10;
+    
+    if (indexPath.section ==1 && indexPath.row <4 && indexPath.row > 2) {
+        self.textField.userInteractionEnabled = NO;
+        for (int a = 0; a <2; a ++) {
+            if (indexPath.section == 1 && indexPath.row == a) {
+                clichVC.i = a;
+            }
+        }
+        [self.navigationController pushViewController:clichVC animated:YES];
+    }else if (indexPath.section ==1 && indexPath.row == 2) {
+        self.textField.userInteractionEnabled = YES;
+        
+        
+        
+    }
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
@@ -145,7 +173,7 @@
         cell.photoImage.layer.cornerRadius = cell.photoImage.frame.size.height/2;
         cell.photoImage.layer.masksToBounds = YES;
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
-        
+    
         cell.photoImage.image = self.myimage;
         cell.backimage.image = self.myimage;
         
@@ -169,14 +197,18 @@
         //        cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.lableText.text = str;
         cell.lableText.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
-        [cell.iconImage removeFromSuperview];
         cell.frame = CGRectMake(20, 0, 60, 50);
         
         self.textField = [[UITextField alloc]initWithFrame:CGRectMake(kMainWidth - 250, 0, 200, 50)];
         self.textField.textAlignment = NSTextAlignmentRight;
+        
+        
+        
+        
         [cell addSubview:self.textField];
         
         if (indexPath.row == 4) {
+            self.textField.userInteractionEnabled = YES;
             self.textField.text = @"修改密码";
         }
         
@@ -335,7 +367,24 @@
     
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 
+{
+    
+    //回收键盘,取消第一响应者
+    
+    [textField resignFirstResponder];
+    
+    return YES;
+    
+}
+
+//点击空白处收回键盘
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.textField resignFirstResponder];
+    
+}
 
 
 

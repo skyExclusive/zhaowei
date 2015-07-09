@@ -24,8 +24,6 @@
 -(void)costom
 {
     
-    NSDictionary *dic = @{@"abc":@"aa"};
-    
     
     
     //俩个底背景
