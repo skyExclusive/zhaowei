@@ -7,8 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tongCell" id="KGk-i7-Jjw" customClass="TongyongTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tongCell" rowHeight="120" id="KGk-i7-Jjw" customClass="TongyongTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -16,7 +16,7 @@
                 <subviews>
                     <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9f-Cl-j8P">
                         <rect key="frame" x="8" y="49" width="359" height="1"/>
-                        <color key="backgroundColor" red="0.89882358955251296" green="0.9463394205806186" blue="0.95523595328282829" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-vL-eUs">
                         <rect key="frame" x="338" y="15" width="20" height="20"/>
@@ -25,33 +25,44 @@
                             <constraint firstAttribute="width" constant="20" id="Xwn-Jb-mAn"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyb-zh-ol2">
-                        <rect key="frame" x="29" y="14" width="72" height="21"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20150418072910824_easyicon_net_1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="9w9-9u-h8h">
+                        <rect key="frame" x="8" y="10" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="EdA-UZ-207"/>
-                            <constraint firstAttribute="width" constant="72" id="aLM-Hy-Nk3"/>
+                            <constraint firstAttribute="width" constant="30" id="4kq-Wj-3qX"/>
+                            <constraint firstAttribute="height" constant="30" id="X2H-62-jL3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyb-zh-ol2">
+                        <rect key="frame" x="46" y="14" width="72" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="8AJ-7U-czO"/>
+                            <constraint firstAttribute="width" constant="72" id="LqH-tG-Vtk"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" red="0.98127761989999995" green="0.98127761989999995" blue="0.98127761989999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.52167515519999996" green="1" blue="0.69370800480000006" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="NtC-vL-eUs" secondAttribute="trailing" constant="9" id="C06-QP-cQV"/>
-                    <constraint firstItem="Nyb-zh-ol2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="CVR-xa-OQH"/>
-                    <constraint firstItem="Nyb-zh-ol2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="21" id="G1W-6B-NbM"/>
                     <constraint firstItem="NtC-vL-eUs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="Ok6-yi-MLR"/>
+                    <constraint firstItem="9w9-9u-h8h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="SYQ-Bt-Vzw"/>
+                    <constraint firstItem="Nyb-zh-ol2" firstAttribute="leading" secondItem="9w9-9u-h8h" secondAttribute="trailing" constant="8" id="bdo-3G-GwV"/>
+                    <constraint firstItem="9w9-9u-h8h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hnq-rC-8XV"/>
+                    <constraint firstItem="Nyb-zh-ol2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="sYz-rU-O4T"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="boultImage" destination="NtC-vL-eUs" id="R4r-KL-FFX"/>
+                <outlet property="boultImage" destination="NtC-vL-eUs" id="t8W-n4-zVB"/>
+                <outlet property="iconImage" destination="9w9-9u-h8h" id="ui2-hW-FHF"/>
                 <outlet property="lableText" destination="Nyb-zh-ol2" id="caI-u9-ece"/>
                 <outlet property="myView" destination="Q9f-Cl-j8P" id="cEA-0k-SOX"/>
             </connections>
-            <point key="canvasLocation" x="-284.5" y="166"/>
+            <point key="canvasLocation" x="-284.5" y="201"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="1.png" width="49" height="43"/>
+        <image name="20150418072910824_easyicon_net_1024.png" width="1024" height="1024"/>
     </resources>
 </document>

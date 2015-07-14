@@ -75,7 +75,7 @@
     CollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIndentifier" forIndexPath:indexPath];
    
     cell.backgroundColor = [UIColor clearColor];
-    cell.mylabel.text = @"----04期----";
+    cell.mylabel.text = @"06期";
     cell.myimageView.image = [UIImage imageNamed:@"2.jpg"];
  
 

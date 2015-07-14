@@ -11,4 +11,5 @@
 @interface CollectionCell : UICollectionViewCell
 @property (nonatomic,strong)UILabel *mylabel;
 @property (nonatomic,strong)UIImageView *myimageView;
+@property (nonatomic,strong)UIView *myView;
 @end

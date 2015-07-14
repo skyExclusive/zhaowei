@@ -30,6 +30,7 @@
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
     
+    
 
 }
 
