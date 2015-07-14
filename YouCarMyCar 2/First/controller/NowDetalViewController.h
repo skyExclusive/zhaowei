@@ -10,4 +10,5 @@
 
 @interface NowDetalViewController : UIViewController
 
+
 @end
