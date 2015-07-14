@@ -123,7 +123,7 @@
         UIAlertView *alterView = [[UIAlertView alloc] initWithTitle:nil message:@"已经是最新版本" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         alterView.backgroundColor = [UIColor redColor];
         [alterView show];
-    }else {
+    }else if (indexPath.section == 2 && indexPath.row == 0 ){
         NSLog(@"退出登陆");
     }
     
@@ -149,13 +149,6 @@
         cell.superview.superview.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        //轻怕手势
-        UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(push:)];
-        self.view.userInteractionEnabled = YES;
-        [cell.photoImage addGestureRecognizer:tap1];
-        
-
         return cell;
         
         
@@ -172,25 +165,18 @@
         if (indexPath.section == 2  && indexPath.row == 0) {
             [cell.boultImage removeFromSuperview];
             [cell.lableText removeFromSuperview];
-            
-            
+            [cell.iconImage removeFromSuperview];
             
             UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(kMainWidth/2-36, 0, kMainWidth, 50)];;
             lable.text = @"退出登陆";
             [cell addSubview:lable];
             lable.textColor = [UIColor whiteColor];
             cell.backgroundColor = [UIColor redColor];
-            
         }
         
         
         return cell;
     }
-}
-//头像的点击事件
--(void)push:(UITapGestureRecognizer *)tap
-{
-
 }
 
 - (void)didReceiveMemoryWarning {

@@ -114,6 +114,10 @@
 		955E92581B4535FD008447B7 /* sdfs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92551B4535FD008447B7 /* sdfs.jpg */; };
 		955E92591B4535FD008447B7 /* fdssfsf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92561B4535FD008447B7 /* fdssfsf.jpg */; };
 		958178311B4BB1BD001AA514 /* ClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958178301B4BB1BD001AA514 /* ClickViewController.m */; };
+		95A532481B53B72C002D2D0F /* DataNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A532461B53B72C002D2D0F /* DataNameTableViewCell.m */; };
+		95A532491B53B72C002D2D0F /* DataNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A532471B53B72C002D2D0F /* DataNameTableViewCell.xib */; };
+		95A5324D1B53B744002D2D0F /* DataSexTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5324B1B53B744002D2D0F /* DataSexTableViewCell.m */; };
+		95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A5324C1B53B744002D2D0F /* DataSexTableViewCell.xib */; };
 		95B83E191B44D32A007ECAA8 /* XiangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B83E181B44D32A007ECAA8 /* XiangViewController.m */; };
 		95C8DED21B422ECF00FA1FDD /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8DED11B422ECF00FA1FDD /* 3.png */; };
 		95D4A4491B44DDAB005F5ABF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D4A4461B44DDAB005F5ABF /* SecondViewController.m */; };
@@ -126,6 +130,7 @@
 		95D661BE1B44D44500E9992E /* TouxiangTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D661B61B44D44500E9992E /* TouxiangTableViewCell.m */; };
 		95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D661B71B44D44500E9992E /* TouxiangTableViewCell.xib */; };
 		95D661C11B44D46600E9992E /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D661C01B44D46600E9992E /* ThreeViewController.m */; };
+		95DAF6DE1B4F60ED00B891DC /* 形状 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DAF6DD1B4F60ED00B891DC /* 形状 1.png */; };
 		95E5AC911B437D4600904602 /* NowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E5AC901B437D4600904602 /* NowViewController.m */; };
 		95E5AC941B437D5200904602 /* WillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E5AC931B437D5200904602 /* WillViewController.m */; };
 /* End PBXBuildFile section */
@@ -312,6 +317,12 @@
 		955E92561B4535FD008447B7 /* fdssfsf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fdssfsf.jpg; sourceTree = "<group>"; };
 		9581782F1B4BB1BD001AA514 /* ClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickViewController.h; sourceTree = "<group>"; };
 		958178301B4BB1BD001AA514 /* ClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickViewController.m; sourceTree = "<group>"; };
+		95A532451B53B72C002D2D0F /* DataNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataNameTableViewCell.h; sourceTree = "<group>"; };
+		95A532461B53B72C002D2D0F /* DataNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataNameTableViewCell.m; sourceTree = "<group>"; };
+		95A532471B53B72C002D2D0F /* DataNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataNameTableViewCell.xib; sourceTree = "<group>"; };
+		95A5324A1B53B744002D2D0F /* DataSexTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSexTableViewCell.h; sourceTree = "<group>"; };
+		95A5324B1B53B744002D2D0F /* DataSexTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSexTableViewCell.m; sourceTree = "<group>"; };
+		95A5324C1B53B744002D2D0F /* DataSexTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataSexTableViewCell.xib; sourceTree = "<group>"; };
 		95B83E171B44D32A007ECAA8 /* XiangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiangViewController.h; sourceTree = "<group>"; };
 		95B83E181B44D32A007ECAA8 /* XiangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiangViewController.m; sourceTree = "<group>"; };
 		95C8DED11B422ECF00FA1FDD /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../3.png; sourceTree = "<group>"; };
@@ -331,6 +342,7 @@
 		95D661B61B44D44500E9992E /* TouxiangTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouxiangTableViewCell.m; sourceTree = "<group>"; };
 		95D661B71B44D44500E9992E /* TouxiangTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouxiangTableViewCell.xib; sourceTree = "<group>"; };
 		95D661C01B44D46600E9992E /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
+		95DAF6DD1B4F60ED00B891DC /* 形状 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "形状 1.png"; sourceTree = "<group>"; };
 		95E5AC8F1B437D4600904602 /* NowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowViewController.h; sourceTree = "<group>"; };
 		95E5AC901B437D4600904602 /* NowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowViewController.m; sourceTree = "<group>"; };
 		95E5AC921B437D5200904602 /* WillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WillViewController.h; sourceTree = "<group>"; };
@@ -410,6 +422,7 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				95DAF6DD1B4F60ED00B891DC /* 形状 1.png */,
 				954F0A4D1B4B5E46002598C5 /* 5.png */,
 				0ADD51C41B47810800FADACD /* 向左白色箭头.png */,
 				0AB91FA61B46171300552824 /* 3.jpg */,
@@ -875,6 +888,12 @@
 				95D661B51B44D44500E9992E /* TouxiangTableViewCell.h */,
 				95D661B61B44D44500E9992E /* TouxiangTableViewCell.m */,
 				95D661B71B44D44500E9992E /* TouxiangTableViewCell.xib */,
+				95A532451B53B72C002D2D0F /* DataNameTableViewCell.h */,
+				95A532461B53B72C002D2D0F /* DataNameTableViewCell.m */,
+				95A532471B53B72C002D2D0F /* DataNameTableViewCell.xib */,
+				95A5324A1B53B744002D2D0F /* DataSexTableViewCell.h */,
+				95A5324B1B53B744002D2D0F /* DataSexTableViewCell.m */,
+				95A5324C1B53B744002D2D0F /* DataSexTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -968,7 +987,9 @@
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
 				955E92571B4535FD008447B7 /* sdf.jpg in Resources */,
 				0AB91FA71B46171300552824 /* 3.jpg in Resources */,
+				95A532491B53B72C002D2D0F /* DataNameTableViewCell.xib in Resources */,
 				0AE102341B4B6DDD00BB23BB /* sns_icon_24.png in Resources */,
+				95DAF6DE1B4F60ED00B891DC /* 形状 1.png in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
 				955E92581B4535FD008447B7 /* sdfs.jpg in Resources */,
 				0AE102331B4B6DDD00BB23BB /* sns_icon_24.png in Resources */,
@@ -979,6 +1000,7 @@
 				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
 				0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */,
+				95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */,
 				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				95D661B81B44D44500E9992E /* 1.png in Resources */,
@@ -1023,6 +1045,7 @@
 				0ACAF2531B411E830029ACC9 /* MJRefreshConst.m in Sources */,
 				0ACAF2631B411E830029ACC9 /* UIImage+WebP.m in Sources */,
 				0ACAF25B1B411E830029ACC9 /* SDWebImageDecoder.m in Sources */,
+				95A5324D1B53B744002D2D0F /* DataSexTableViewCell.m in Sources */,
 				95D661C11B44D46600E9992E /* ThreeViewController.m in Sources */,
 				95E5AC911B437D4600904602 /* NowViewController.m in Sources */,
 				0ACAF2621B411E830029ACC9 /* UIImage+MultiFormat.m in Sources */,
@@ -1060,6 +1083,7 @@
 				0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */,
 				95D661BC1B44D44500E9992E /* TongyongTableViewCell.m in Sources */,
 				0ACAF2581B411E830029ACC9 /* NSData+ImageContentType.m in Sources */,
+				95A532481B53B72C002D2D0F /* DataNameTableViewCell.m in Sources */,
 				0ACAF26D1B411EB90029ACC9 /* FirstViewController.m in Sources */,
 				95E5AC941B437D5200904602 /* WillViewController.m in Sources */,
 				0ACAF2411B411E830029ACC9 /* AFURLRequestSerialization.m in Sources */,

@@ -8,16 +8,17 @@
 
 #import "XiangViewController.h"
 #import "TouxiangTableViewCell.h"
-#import "TongyongTableViewCell.h"
 #import "PrefixHeader.pch"
 #import "ClickViewController.h"
-@interface XiangViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate>
+#import "DataNameTableViewCell.h"
+#import "DataSexTableViewCell.h"
+@interface XiangViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableDictionary *dic;
 @property (nonatomic,retain)UIView *myView;
 @property (nonatomic,retain)UIImage *myimage;
 @property (nonatomic,retain)UIView *viewNM;
-@property (nonatomic,retain)UITextField *textField;
+
 @end
 
 @implementation XiangViewController
@@ -44,7 +45,6 @@
     
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
-    self.textField.delegate = self;
     
     
 
@@ -79,8 +79,10 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"TouxiangTableViewCell" bundle:nil] forCellReuseIdentifier:@"imageCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"TongyongTableViewCell" bundle:nil] forCellReuseIdentifier:@"tongCell"];
+     [self.tableView registerNib:[UINib nibWithNibName:@"TouxiangTableViewCell" bundle:nil] forCellReuseIdentifier:@"imageCell"];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"DataNameTableViewCell" bundle:nil] forCellReuseIdentifier:@"nameCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"DataSexTableViewCell" bundle:nil] forCellReuseIdentifier:@"sexCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.myimage = [UIImage imageNamed:@"2.png"];
@@ -129,36 +131,31 @@
         return 50;
     }
 }
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    if (section == 1 || section  ==0) {
-//        return 0;
-//    }else{
-//        return 5;
-//    }
-//}
+
 
 //cell的点击事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ClickViewController *clichVC = [[ClickViewController alloc]init];
-    clichVC.i = 10;
+//    ClickViewController *clichVC = [[ClickViewController alloc]init];
+//    clichVC.i = 10;
+//    if (indexPath.section == 1 && indexPath.row == 2 ) {
+//        NSLog(@"改变性格");
+//        
+//    }else if (indexPath.section == 1 && indexPath.row == 3) {
+//        clichVC.i = 11;
+//        NSLog(@"改变性格");
+//        [self.navigationController pushViewController:clichVC animated:YES];
+//    }else if (indexPath.section == 1 && indexPath.row == 4) {
+//        clichVC.i = 12;
+//        NSLog(@"改变性格");
+//        [self.navigationController pushViewController:clichVC animated:YES];
+//    }
+    NSLog(@"aaaaa");
     
-    if (indexPath.section ==1 && indexPath.row <4 && indexPath.row > 2) {
-        self.textField.userInteractionEnabled = NO;
-        for (int a = 0; a <2; a ++) {
-            if (indexPath.section == 1 && indexPath.row == a) {
-                clichVC.i = a;
-            }
-        }
-        [self.navigationController pushViewController:clichVC animated:YES];
-    }else if (indexPath.section ==1 && indexPath.row == 2) {
-        self.textField.userInteractionEnabled = YES;
-        
-        
-        
-    }
+    
 }
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
@@ -190,50 +187,26 @@
         return cell;
         
         
-    }else{
+    }else if (indexPath.section == 1 && indexPath.row < 2){
         
         
-        TongyongTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tongCell" forIndexPath:indexPath];;
+        DataNameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell" forIndexPath:indexPath];
         //        cell.selectionStyle =UITableViewCellSelectionStyleNone;
-        cell.lableText.text = str;
-        cell.lableText.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
+        cell.nameLable.text = str;
+        cell.nameLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
         cell.frame = CGRectMake(20, 0, 60, 50);
         
-        self.textField = [[UITextField alloc]initWithFrame:CGRectMake(kMainWidth - 250, 0, 200, 50)];
-        self.textField.textAlignment = NSTextAlignmentRight;
+   
         
-        
-        
-        
-        [cell addSubview:self.textField];
-        
-        if (indexPath.row == 4) {
-            self.textField.userInteractionEnabled = YES;
-            self.textField.text = @"修改密码";
+        return cell;
+    }else {
+        DataSexTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"sexCell" forIndexPath:indexPath];
+        cell.sexLable.text = str;
+        cell.sexLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
+        cell.frame = CGRectMake(20, 0, 60, 50);
+        if (indexPath.section == 1 && indexPath.row == 4) {
+            cell.back.alpha = 0 ;
         }
-        
-        
-        if (indexPath.section == 1  && indexPath.row < 4) {
-            cell.myView.alpha = 1;
-        }
-        if (indexPath.section == 1  && indexPath.row < 2) {
-            [cell.boultImage removeFromSuperview];
-            self.textField.frame = CGRectMake(kMainWidth - 250, 0, 230, 50);
-            if (indexPath.row == 0) {
-                self.textField.text = @"蒸蒸日上";
-            }else if (indexPath.row == 1){
-                self.textField.text = @"18031935432";
-            }
-        }
-        if (indexPath.section == 1  && indexPath.row > 1 && indexPath.row < 4) {
-
-            if (indexPath.row == 2) {
-                self.textField.text = @"男";
-            }else if (indexPath.row == 3) {
-                self.textField.text = @"北京市房山区良乡大学城";
-            }
-        }
-        
         return cell;
     }
 }
@@ -366,28 +339,6 @@
     
     
 }
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-
-{
-    
-    //回收键盘,取消第一响应者
-    
-    [textField resignFirstResponder];
-    
-    return YES;
-    
-}
-
-//点击空白处收回键盘
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    [self.textField resignFirstResponder];
-    
-}
-
-
-
 
 
 - (void)didReceiveMemoryWarning {
