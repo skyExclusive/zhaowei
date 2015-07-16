@@ -265,6 +265,17 @@
 {
     NSLog(@"忘记密码");
     
+    [self.userPassWordTextField resignFirstResponder];
+    [self.userNameTextField resignFirstResponder];
+
+    //设置时间
+    [UIView setAnimationDuration:0.5f];
+    self.view.transform = CGAffineTransformMakeTranslation(0, 0);
+    self.view.transform = CGAffineTransformScale(self.view.transform, 1.01, 1.01);
+    [UIView commitAnimations];
+    
+
+    
     ForgetViewController *forget = [[ForgetViewController alloc]init];
     [self.navigationController pushViewController:forget animated:YES];
     
