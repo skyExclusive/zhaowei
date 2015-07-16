@@ -12,13 +12,16 @@
 #import "ClickViewController.h"
 #import "DataNameTableViewCell.h"
 #import "DataSexTableViewCell.h"
-@interface XiangViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface XiangViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableDictionary *dic;
-@property (nonatomic,retain)UIView *myView;
-@property (nonatomic,retain)UIImage *myimage;
-@property (nonatomic,retain)UIView *viewNM;
-
+@property (nonatomic,strong)UIView *myView;
+@property (nonatomic,strong)UIImage *myimage;
+@property (nonatomic,strong)UIView *viewNM;
+@property (nonatomic,strong)UIPickerView *mypicker;
+@property (nonatomic,strong)NSArray *sexArray;
+@property (nonatomic,strong)UIButton *mybutton;
+@property (nonatomic,copy)NSString *str;
 @end
 
 @implementation XiangViewController
@@ -28,6 +31,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     //布局view
+    
     
     [self layoutView];
 
@@ -90,9 +94,79 @@
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = right;
     
+    //初始化 mypickerView
+    self.mypicker = [[UIPickerView alloc]initWithFrame:CGRectMake(0, 490, kMainWidth, kMainWidth * 0.2)];
+    self.mypicker.delegate = self;
+    self.mypicker.dataSource = self;
+    self.mypicker.userInteractionEnabled = YES;
+    self.sexArray = [NSArray arrayWithObjects:@"男",@"女",@"保密", nil];
+    self.mybutton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    [self.mybutton setTitle:@"确定" forState:(UIControlStateNormal)];
+    [self.mybutton addTarget:self action:@selector(remove1:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.mybutton setTintColor:[UIColor grayColor]];
+    [self.mybutton  setFrame:CGRectMake(kMainWidth - 60, kMainHeight*0.70, 60, 30)];
+    
+    
+}
+-(void)remove1:(UIButton *)button
+{
+    [self.mypicker removeFromSuperview];
+    [self.mybutton removeFromSuperview];
+}
+//mypickerView 代理方法实现
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
 }
 
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return _sexArray.count;
+}
 
+-(CGFloat )pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
+{
+    return 30;
+}
+
+-(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)componentpic
+{
+    return kMainWidth;
+}
+
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    if (!view) {
+        view = [[UIView alloc]init];
+    }
+    UILabel *text = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
+    text.textAlignment = NSTextAlignmentCenter;
+    text.text = [self.sexArray objectAtIndex:row];
+    [view addSubview:text];
+    return view;
+}
+
+//显示的标题
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *str = [_sexArray objectAtIndex:row];
+    return  str;
+}
+
+//显示标题的字体 颜色合属性
+-(NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *str = [_sexArray objectAtIndex:row];
+    NSMutableAttributedString *AttributeString = [[NSMutableAttributedString alloc]initWithString:str];
+    [AttributeString addAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]} range:NSMakeRange(0, [AttributeString length])];
+    return AttributeString;
+}
+
+//被选择的行
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    self.str = [_sexArray objectAtIndex:row];
+}
 //完成的点击事件
 -(void)wancheng
 {
@@ -127,21 +201,22 @@
 //cell的点击事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    ClickViewController *clichVC = [[ClickViewController alloc]init];
-//    clichVC.i = 10;
-//    if (indexPath.section == 1 && indexPath.row == 2 ) {
-//        NSLog(@"改变性格");
-//        
-//    }else if (indexPath.section == 1 && indexPath.row == 3) {
-//        clichVC.i = 11;
-//        NSLog(@"改变性格");
-//        [self.navigationController pushViewController:clichVC animated:YES];
-//    }else if (indexPath.section == 1 && indexPath.row == 4) {
-//        clichVC.i = 12;
-//        NSLog(@"改变性格");
-//        [self.navigationController pushViewController:clichVC animated:YES];
-//    }
-    NSLog(@"aaaaa");
+    ClickViewController *clichVC = [[ClickViewController alloc]init];
+    clichVC.i = 10;
+    if (indexPath.section == 1 && indexPath.row == 2 ) {
+        [self.view addSubview:self.mypicker];
+        [self.view addSubview:self.mybutton];
+        
+    }else if (indexPath.section == 1 && indexPath.row == 3) {
+        clichVC.i = 11;
+        NSLog(@"改变性格");
+        [self.navigationController pushViewController:clichVC animated:YES];
+    }else if (indexPath.section == 1 && indexPath.row == 4) {
+        clichVC.i = 12;
+        NSLog(@"改变性格");
+        [self.navigationController pushViewController:clichVC animated:YES];
+    }
+
     
     
 }
@@ -160,12 +235,23 @@
         NSLog(@"就是这个");
         
         TouxiangTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         cell.photoImage.layer.cornerRadius = cell.photoImage.frame.size.height/2;
         cell.photoImage.layer.masksToBounds = YES;
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
     
         cell.photoImage.image = self.myimage;
         cell.backimage.image = self.myimage;
+        
+        [cell.xiaoImage removeFromSuperview];
+        [cell.rankLable removeFromSuperview];
+        [cell.integralLable removeFromSuperview];
+        [cell.dengLable removeFromSuperview];
+        [cell.jiLable removeFromSuperview];
+        
+       
         
         UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
         visualEfView.frame = CGRectMake(cell.backimage.frame.origin.x, cell.backimage.frame.origin.y-2, cell.backimage.frame.size.width, cell.backimage.frame.size.height+2);
@@ -190,6 +276,15 @@
         cell.nameLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
 
 
+        cell.frame = CGRectMake(20, 0, 60, 50);
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        if (indexPath.row == 0) {
+            cell.nameField.text = @"你车我车";
+        }else if (indexPath.row == 1) {
+            cell.nameField.text = @"18031935432";
+        }
+        
+   
         
         return cell;
     }else {
@@ -200,6 +295,18 @@
             cell.back.alpha = 0 ;
         }
 
+        cell.frame = CGRectMake(20, 0, 60, 50);
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        if (indexPath.row == 4) {
+            cell.back.alpha = 0 ;
+        }
+        if ( indexPath.row == 2) {
+            cell.myLable.text = @"男";
+        }else if (indexPath.row == 3){
+            cell.myLable.text = @"北京市 房山区 拱辰街 ";
+        }else if ( indexPath.row == 4) {
+            cell.myLable.text = @"修改密码";
+        }
         return cell;
     }
 }
