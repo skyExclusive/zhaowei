@@ -27,15 +27,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
     //布局view
+    
     [self layoutView];
-    
-    //轻怕手势   老夫到此一游  66666666 
-    UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(remove:)];
-    self.view.userInteractionEnabled = YES;
-    [self.view addGestureRecognizer:tap1];
-    
+
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
@@ -47,7 +42,6 @@
     self.navigationItem.leftBarButtonItem = lift;
     
     
-
 
 }
 -(void)pop
@@ -74,7 +68,6 @@
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     self.tableView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.tableView];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -86,14 +79,14 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.myimage = [UIImage imageNamed:@"2.png"];
+    [self.view addSubview:self.tableView];
+
     
     //右item
-    
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
         button.frame =CGRectMake(0, 0, 45, 25);
     [button setTitle:@"完成" forState:(UIControlStateNormal)];
     [button addTarget:self action:@selector(wancheng) forControlEvents:(UIControlEventTouchUpInside)];
-    
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = right;
     
@@ -103,7 +96,6 @@
 //完成的点击事件
 -(void)wancheng
 {
-    
     [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
@@ -120,7 +112,6 @@
     }else{
         return 1;
     }
-    
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -166,6 +157,8 @@
     
     if (indexPath.row == 0 && indexPath.section == 0) {
         
+        NSLog(@"就是这个");
+        
         TouxiangTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
         cell.photoImage.layer.cornerRadius = cell.photoImage.frame.size.height/2;
         cell.photoImage.layer.masksToBounds = YES;
@@ -184,6 +177,7 @@
         UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(push:)];
         self.view.userInteractionEnabled = YES;
         [cell.photoImage addGestureRecognizer:tap1];
+        
         return cell;
         
         
@@ -194,19 +188,18 @@
         //        cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.nameLable.text = str;
         cell.nameLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
-        cell.frame = CGRectMake(20, 0, 60, 50);
-        
-   
+
+
         
         return cell;
     }else {
         DataSexTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"sexCell" forIndexPath:indexPath];
         cell.sexLable.text = str;
         cell.sexLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
-        cell.frame = CGRectMake(20, 0, 60, 50);
         if (indexPath.section == 1 && indexPath.row == 4) {
             cell.back.alpha = 0 ;
         }
+
         return cell;
     }
 }
@@ -266,7 +259,6 @@
         cancelBT.frame = CGRectMake(5, 0, 173.5, 48);
         cancelBT.backgroundColor = [UIColor colorWithRed:95/255.0 green:68/255.0 blue:56/255.0 alpha:1];
         cancelBT.layer.cornerRadius = 10;
-        
         [cancelBT addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
         [_viewNM addSubview:cancelBT];
         
@@ -275,11 +267,9 @@
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(65, 3, 48, 43)];
         [imageView setImage:[UIImage imageNamed:@"cancel.png"]];
         [cancelBT addSubview:imageView];
-        
         UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(65, 3, 48, 43)];
         [imageView2 setImage:[UIImage imageNamed:@"sure.png"]];
         [sureBT addSubview:imageView2];
-        
         [self.myView removeFromSuperview];
         
 
