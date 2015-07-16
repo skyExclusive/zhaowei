@@ -120,6 +120,13 @@
 		95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A5324C1B53B744002D2D0F /* DataSexTableViewCell.xib */; };
 		95B83E191B44D32A007ECAA8 /* XiangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B83E181B44D32A007ECAA8 /* XiangViewController.m */; };
 		95C8DED21B422ECF00FA1FDD /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8DED11B422ECF00FA1FDD /* 3.png */; };
+		95D203501B57448500BCD63F /* ClickTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D2034F1B57448500BCD63F /* ClickTViewController.m */; };
+		95D203521B5789CB00BCD63F /* 白色背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D203511B5789CB00BCD63F /* 白色背景.png */; };
+		95D203541B57931700BCD63F /* 确定按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D203531B57931700BCD63F /* 确定按钮.png */; };
+		95D203571B57933300BCD63F /* SureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D203561B57933300BCD63F /* SureViewController.m */; };
+		95D2035B1B579BB700BCD63F /* addressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D203591B579BB700BCD63F /* addressTableViewCell.m */; };
+		95D2035C1B579BB700BCD63F /* addressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D2035A1B579BB700BCD63F /* addressTableViewCell.xib */; };
+		95D2035E1B57A7C800BCD63F /* 添加按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D2035D1B57A7C800BCD63F /* 添加按钮.png */; };
 		95D4A4491B44DDAB005F5ABF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D4A4461B44DDAB005F5ABF /* SecondViewController.m */; };
 		95D4A44A1B44DDAB005F5ABF /* SxiangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D4A4481B44DDAB005F5ABF /* SxiangViewController.m */; };
 		95D4A44D1B44DDB5005F5ABF /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D4A44C1B44DDB5005F5ABF /* CollectionCell.m */; };
@@ -327,6 +334,16 @@
 		95B83E181B44D32A007ECAA8 /* XiangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiangViewController.m; sourceTree = "<group>"; };
 		95C8DED11B422ECF00FA1FDD /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../3.png; sourceTree = "<group>"; };
 		95C8DED31B42413200FA1FDD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		95D2034E1B57448500BCD63F /* ClickTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickTViewController.h; sourceTree = "<group>"; };
+		95D2034F1B57448500BCD63F /* ClickTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickTViewController.m; sourceTree = "<group>"; };
+		95D203511B5789CB00BCD63F /* 白色背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "白色背景.png"; sourceTree = "<group>"; };
+		95D203531B57931700BCD63F /* 确定按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "确定按钮.png"; sourceTree = "<group>"; };
+		95D203551B57933300BCD63F /* SureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureViewController.h; sourceTree = "<group>"; };
+		95D203561B57933300BCD63F /* SureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureViewController.m; sourceTree = "<group>"; };
+		95D203581B579BB700BCD63F /* addressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addressTableViewCell.h; sourceTree = "<group>"; };
+		95D203591B579BB700BCD63F /* addressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addressTableViewCell.m; sourceTree = "<group>"; };
+		95D2035A1B579BB700BCD63F /* addressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addressTableViewCell.xib; sourceTree = "<group>"; };
+		95D2035D1B57A7C800BCD63F /* 添加按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加按钮.png"; sourceTree = "<group>"; };
 		95D4A4451B44DDAB005F5ABF /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		95D4A4461B44DDAB005F5ABF /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		95D4A4471B44DDAB005F5ABF /* SxiangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SxiangViewController.h; sourceTree = "<group>"; };
@@ -422,6 +439,9 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				95D2035D1B57A7C800BCD63F /* 添加按钮.png */,
+				95D203531B57931700BCD63F /* 确定按钮.png */,
+				95D203511B5789CB00BCD63F /* 白色背景.png */,
 				95DAF6DD1B4F60ED00B891DC /* 形状 1.png */,
 				954F0A4D1B4B5E46002598C5 /* 5.png */,
 				0ADD51C41B47810800FADACD /* 向左白色箭头.png */,
@@ -735,10 +755,14 @@
 			children = (
 				0ACAF2771B411ED30029ACC9 /* ThreeViewController.h */,
 				95D661C01B44D46600E9992E /* ThreeViewController.m */,
-				9581782F1B4BB1BD001AA514 /* ClickViewController.h */,
-				958178301B4BB1BD001AA514 /* ClickViewController.m */,
 				95B83E171B44D32A007ECAA8 /* XiangViewController.h */,
 				95B83E181B44D32A007ECAA8 /* XiangViewController.m */,
+				9581782F1B4BB1BD001AA514 /* ClickViewController.h */,
+				958178301B4BB1BD001AA514 /* ClickViewController.m */,
+				95D2034E1B57448500BCD63F /* ClickTViewController.h */,
+				95D2034F1B57448500BCD63F /* ClickTViewController.m */,
+				95D203551B57933300BCD63F /* SureViewController.h */,
+				95D203561B57933300BCD63F /* SureViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -894,6 +918,9 @@
 				95A5324A1B53B744002D2D0F /* DataSexTableViewCell.h */,
 				95A5324B1B53B744002D2D0F /* DataSexTableViewCell.m */,
 				95A5324C1B53B744002D2D0F /* DataSexTableViewCell.xib */,
+				95D203581B579BB700BCD63F /* addressTableViewCell.h */,
+				95D203591B579BB700BCD63F /* addressTableViewCell.m */,
+				95D2035A1B579BB700BCD63F /* addressTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -980,11 +1007,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
+				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
 				0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */,
 				0AE102381B4B6F7C00BB23BB /* sdk_weibo_logo@3x.png in Resources */,
+				95D203541B57931700BCD63F /* 确定按钮.png in Resources */,
 				9554F8EF1B44D535000131F6 /* 20150418072910824_easyicon_net_1024.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
+				95D2035E1B57A7C800BCD63F /* 添加按钮.png in Resources */,
 				955E92571B4535FD008447B7 /* sdf.jpg in Resources */,
 				0AB91FA71B46171300552824 /* 3.jpg in Resources */,
 				95A532491B53B72C002D2D0F /* DataNameTableViewCell.xib in Resources */,
@@ -999,6 +1029,7 @@
 				9554F8EE1B44D535000131F6 /* 20150418072826995_easyicon_net_1024.png in Resources */,
 				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
+				95D2035C1B579BB700BCD63F /* addressTableViewCell.xib in Resources */,
 				0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */,
 				95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */,
 				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
@@ -1044,8 +1075,10 @@
 				0ACAF2471B411E830029ACC9 /* MJRefreshFooter.m in Sources */,
 				0ACAF2531B411E830029ACC9 /* MJRefreshConst.m in Sources */,
 				0ACAF2631B411E830029ACC9 /* UIImage+WebP.m in Sources */,
+				95D203571B57933300BCD63F /* SureViewController.m in Sources */,
 				0ACAF25B1B411E830029ACC9 /* SDWebImageDecoder.m in Sources */,
 				95A5324D1B53B744002D2D0F /* DataSexTableViewCell.m in Sources */,
+				95D203501B57448500BCD63F /* ClickTViewController.m in Sources */,
 				95D661C11B44D46600E9992E /* ThreeViewController.m in Sources */,
 				95E5AC911B437D4600904602 /* NowViewController.m in Sources */,
 				0ACAF2621B411E830029ACC9 /* UIImage+MultiFormat.m in Sources */,
@@ -1070,6 +1103,7 @@
 				0ACAF2661B411E830029ACC9 /* UIView+WebCacheOperation.m in Sources */,
 				0ACAF2511B411E830029ACC9 /* MJRefreshStateHeader.m in Sources */,
 				0ACAF2571B411E830029ACC9 /* MKAnnotationView+WebCache.m in Sources */,
+				95D2035B1B579BB700BCD63F /* addressTableViewCell.m in Sources */,
 				95B83E191B44D32A007ECAA8 /* XiangViewController.m in Sources */,
 				0ACAF2651B411E830029ACC9 /* UIImageView+WebCache.m in Sources */,
 				0ACAF23D1B411E830029ACC9 /* AFHTTPSessionManager.m in Sources */,

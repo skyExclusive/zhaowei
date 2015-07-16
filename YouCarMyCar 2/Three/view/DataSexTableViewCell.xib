@@ -21,7 +21,7 @@
                             <constraint firstAttribute="height" constant="23" id="eNU-vv-pCW"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="男" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4r-X9-3vW">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4r-X9-3vW">
                         <rect key="frame" x="108" y="14" width="237" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -57,6 +57,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="back" destination="HjN-3q-ioO" id="qQU-j2-kjr"/>
+                <outlet property="myLable" destination="m4r-X9-3vW" id="0P1-M8-6Yr"/>
                 <outlet property="sexLable" destination="5Z2-37-C3j" id="sR9-QF-kp5"/>
                 <outlet property="yourImage" destination="xsF-Lt-B2J" id="YSo-7e-0fK"/>
             </connections>

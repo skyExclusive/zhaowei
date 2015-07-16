@@ -76,7 +76,12 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="backimage" destination="cMi-5R-t5i" id="Y7B-qA-TJj"/>
+                <outlet property="dengLable" destination="KZ0-1C-TOm" id="lCq-52-VIg"/>
+                <outlet property="integralLable" destination="AOg-Nk-k2q" id="uQ7-YL-37i"/>
+                <outlet property="jiLable" destination="T7W-Kb-2DF" id="6dq-VA-dXg"/>
                 <outlet property="photoImage" destination="fEj-A9-p8R" id="yxC-bk-QST"/>
+                <outlet property="rankLable" destination="5NE-7P-VHb" id="O4N-3a-TAT"/>
+                <outlet property="xiaoImage" destination="daZ-Id-IGx" id="TyP-Ew-lev"/>
             </connections>
             <point key="canvasLocation" x="16.5" y="-31.5"/>
         </tableViewCell>

@@ -12,6 +12,18 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.nameField.delegate = self;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+    
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.nameField resignFirstResponder];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
