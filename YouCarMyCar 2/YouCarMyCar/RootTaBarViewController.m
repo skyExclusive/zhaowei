@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 LLY. All rights reserved.
 //
 
+
+
+
 #import "RootTaBarViewController.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
@@ -18,19 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    FirstViewController *first = [[FirstViewController alloc]init];
+         FirstViewController *first = [[FirstViewController alloc]init];
     UINavigationController *firstVC = [[UINavigationController alloc]initWithRootViewController:first];
     
     firstVC.tabBarItem.title = @"免费体验";
     
-    
-    
     SecondViewController *second = [[SecondViewController alloc]init];
     UINavigationController *secondVC = [[UINavigationController alloc]initWithRootViewController:second];
-    
     secondVC.tabBarItem.title = @"往期商品";
-    
     ThreeViewController *three = [[ThreeViewController alloc]init];
     UINavigationController *threeVC = [[UINavigationController alloc]initWithRootViewController:three];
     
@@ -44,7 +42,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 

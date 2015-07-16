@@ -62,7 +62,7 @@
     self.myscrollView.showsVerticalScrollIndicator = NO;
     self.myscrollView.pagingEnabled = YES;
     self.myscrollView.delegate = self;
-    [self.view   addSubview:self.myscrollView];
+    [self.view addSubview:self.myscrollView];
 
     self.nowVC = [[NowViewController alloc]init];
     self.willVC = [[WillViewController alloc]init];
@@ -73,7 +73,6 @@
     [self.myscrollView addSubview:self.nowVC.view];
     [self addChildViewController:self.willVC];
     [self.myscrollView addSubview:self.willVC.view];
-    
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     button.frame = CGRectMake(0, 0, 45, 25);
@@ -88,23 +87,15 @@
 
 -(void)login:(UIButton *)button
 {
-    
     LoginViewController *login = [[LoginViewController alloc]init];
     [self.navigationController pushViewController:login animated:YES];
-    
-    
-    NSLog(@"登录");
-    
-    
     
 }
 -(void)segmentAction:(UISegmentedControl *)segmeng
 {
     if (segmeng.selectedSegmentIndex == 0) {
-        NSLog(@"正在进行的商品");
         self.myscrollView.contentOffset = CGPointMake(0, 0);
     }else if (segmeng.selectedSegmentIndex == 1){
-        NSLog(@"即将开启");
         self.myscrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0);
     }
     

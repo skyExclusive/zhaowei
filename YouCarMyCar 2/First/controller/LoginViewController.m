@@ -41,7 +41,6 @@
     [self.view addSubview:self.qqImageView];
     self.qqImageView.tag = 101;
     self.qqImageView.userInteractionEnabled = YES;
-    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(login:)];
     [self.qqImageView addGestureRecognizer:tap];
     
@@ -77,14 +76,20 @@
 -(void)share:(UIButton *)share
 {
     //1.定制分享的内容
-    NSString* path = [[NSBundle mainBundle]pathForResource:@"ShareSDK" ofType:@"jpg"];
-    id<ISSContent> publishContent = [ShareSDK content:@"Hello,Code4App.com!" defaultContent:nil image:[ShareSDK imageWithPath:path] title:@"This is title" url:@"http://mob.com" description:@"This is description" mediaType:SSPublishContentMediaTypeText];
+    NSString* path = [[NSBundle mainBundle]pathForResource:@"fdssfsf" ofType:@"jpg"];
+    id<ISSContent> publishContent = [ShareSDK content:@"Hello,nichewoche.com" defaultContent:nil image:[ShareSDK imageWithPath:path] title:@"This is title" url:@"http://nichewoche.com" description:@"This is description" mediaType:SSPublishContentMediaTypeNews];
     
     
     
     //2.调用分享菜单分享
     [ShareSDK showShareActionSheet:nil shareList:nil content:publishContent statusBarTips:YES authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
         //如果分享成功
+        
+        
+        
+      
+        
+        
         if (state == SSResponseStateSuccess) {
             NSLog(@"分享成功");
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"分享成功" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -172,6 +177,7 @@
                 NSLog(@"source:%@",[userInfo sourceData]);
                 NSLog(@"uid:%@",[userInfo uid]);
             }else{
+            
                 NSLog(@"分享失败,错误码:%ld,错误描述%@",(long)[error errorCode],[error errorDescription]);
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"授权失败，请看日记错误描述" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];
