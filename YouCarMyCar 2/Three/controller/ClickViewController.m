@@ -10,9 +10,10 @@
 #import "PrefixHeader.pch"
 #import "ClickTViewController.h"
 #import "addressTableViewCell.h"
+#import "ZWTextView.h"
 @interface ClickViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 @property (nonatomic,strong)UITableView *tableView;
-@property (nonatomic,strong)UITextView *textView;
+@property (nonatomic,strong)ZWTextView *textView;
 @property (nonatomic,strong)UIButton *button;
 @property (nonatomic,strong)UITextField *phoneField;
 @property (nonatomic,strong)UIButton *passButton;
@@ -26,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = COLOR(255, 250, 24, 1);
+    self.view.backgroundColor = COLOR(255, 250, 242, 1);
     // Do any additional setup after loading the view.
     if (self.i == 0) {
         //布局我的参与
@@ -56,6 +57,7 @@
     [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
+    
 }
 
 -(void)pop
@@ -251,10 +253,18 @@
 //布局用户反馈
 -(void)layoutBack
 {
-    self.textView = [[UITextView alloc]initWithFrame:CGRectMake(10, 320, kMainWidth - 20, 50)];
+    self.title = @"用户反馈";
+    self.modalPresentationCapturesStatusBarAppearance = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars = NO;
+    
+    self.textView = [[ZWTextView alloc]initWithFrame:CGRectMake(10, 30, kMainWidth - 20, 200)];
     self.textView.textColor = [UIColor blackColor];
-    self.textView.backgroundColor = [UIColor grayColor];
+    self.textView.placeholder = @"你车我车感谢您的支持";
+    self.textView.font =  [UIFont fontWithName:@"Arial" size:16.0];;
+    self.textView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.textView];
+    
     
     self.button = [UIButton buttonWithType:(UIButtonTypeSystem)];
     self.button.frame = CGRectMake(10, kMainWidth/1.5 + 20, kMainWidth - 20, kMainWidth/9);

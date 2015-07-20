@@ -52,6 +52,8 @@
     self.mybuttonImageView.userInteractionEnabled = YES;
     [self addSubview:self.mybuttonImageView];
     
+    
+    
 }
 
 - (void)awakeFromNib {

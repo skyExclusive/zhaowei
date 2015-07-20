@@ -110,6 +110,7 @@
 		0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE701B422A8600C3C98B /* 2.jpg */; };
 		954F0A4E1B4B5E46002598C5 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 954F0A4D1B4B5E46002598C5 /* 5.png */; };
 		955E92591B4535FD008447B7 /* fdssfsf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92561B4535FD008447B7 /* fdssfsf.jpg */; };
+		957B15931B59F9F6002284EF /* ZWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 957B15921B59F9F6002284EF /* ZWTextView.m */; };
 		958178311B4BB1BD001AA514 /* ClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958178301B4BB1BD001AA514 /* ClickViewController.m */; };
 		95A532481B53B72C002D2D0F /* DataNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A532461B53B72C002D2D0F /* DataNameTableViewCell.m */; };
 		95A532491B53B72C002D2D0F /* DataNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A532471B53B72C002D2D0F /* DataNameTableViewCell.xib */; };
@@ -319,6 +320,8 @@
 		0AFBFE701B422A8600C3C98B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../2.jpg; sourceTree = "<group>"; };
 		954F0A4D1B4B5E46002598C5 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		955E92561B4535FD008447B7 /* fdssfsf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fdssfsf.jpg; sourceTree = "<group>"; };
+		957B15911B59F9F6002284EF /* ZWTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZWTextView.h; path = "../../../../../../../../Volumes/CAO/工作中的那些事儿/小功能/带占位符的TextView/ZWTextView.h"; sourceTree = "<group>"; };
+		957B15921B59F9F6002284EF /* ZWTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZWTextView.m; path = "../../../../../../../../Volumes/CAO/工作中的那些事儿/小功能/带占位符的TextView/ZWTextView.m"; sourceTree = "<group>"; };
 		9581782F1B4BB1BD001AA514 /* ClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickViewController.h; sourceTree = "<group>"; };
 		958178301B4BB1BD001AA514 /* ClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickViewController.m; sourceTree = "<group>"; };
 		95A532451B53B72C002D2D0F /* DataNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataNameTableViewCell.h; sourceTree = "<group>"; };
@@ -421,6 +424,8 @@
 		0A9E68481B43B51300A71D88 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				957B15911B59F9F6002284EF /* ZWTextView.h */,
+				957B15921B59F9F6002284EF /* ZWTextView.m */,
 			);
 			name = Model;
 			path = controller/Model;
@@ -1105,6 +1110,7 @@
 				0ADD51C31B477F4300FADACD /* LoginViewController.m in Sources */,
 				0ACAF25C1B411E830029ACC9 /* SDWebImageDownloader.m in Sources */,
 				0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */,
+				957B15931B59F9F6002284EF /* ZWTextView.m in Sources */,
 				0ACAF24E1B411E830029ACC9 /* MJRefreshBackStateFooter.m in Sources */,
 				0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */,
 				95D661BC1B44D44500E9992E /* TongyongTableViewCell.m in Sources */,
