@@ -61,7 +61,11 @@
     
     
 //右item
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:@"设置" style:(UIBarButtonItemStyleDone) target:self action:@selector(bianji)];
+    UIButton *shezhiBT = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [shezhiBT setTitle:@"设置" forState:(UIControlStateNormal)];
+    [shezhiBT addTarget:self action:@selector(bianji) forControlEvents:(UIControlEventTouchUpInside)];
+    [shezhiBT setFrame:CGRectMake(0, 0, 45, 35)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:shezhiBT];
     self.navigationItem.rightBarButtonItem = item;
     
     
@@ -171,7 +175,8 @@
             lable.text = @"退出登陆";
             [cell addSubview:lable];
             lable.textColor = [UIColor whiteColor];
-            cell.backgroundColor = [UIColor redColor];
+            cell.backgroundColor = [UIColor colorWithRed:235/255.0 green:50/255.0 blue:30/255.0 alpha:1];
+
         }
         
         

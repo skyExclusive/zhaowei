@@ -14,8 +14,10 @@
     // Initialization code
 }
 - (IBAction)bianjiButton:(id)sender {
+    NSLog(@"这个是编辑");
 }
 - (IBAction)shanchuButton:(id)sender {
+     NSLog(@"这个是删除");
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

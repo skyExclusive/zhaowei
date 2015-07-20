@@ -31,7 +31,7 @@
     //最上面字体白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     //设置navigationbar 的颜色为蓝色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:48/255.0 green:166/255.0 blue:241/255.0 alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:235/255.0 green:50/255.0 blue:30/255.0 alpha:1]];
     //1.初始化ShareSDK应用
     [ShareSDK registerApp:@"89fd18586698"];
     [self initPlat];//初始化平台
