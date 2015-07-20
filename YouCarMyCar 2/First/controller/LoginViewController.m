@@ -12,7 +12,7 @@
 #import "ForgetViewController.h"
 #import "RegistViewController.h"
 
-@interface LoginViewController ()<UIActionSheetDelegate,UITextFieldDelegate>
+@interface LoginViewController ()<UIActionSheetDelegate,UITextFieldDelegate,MyTextFiedDelegete>
 
 @end
 @implementation LoginViewController
@@ -31,8 +31,34 @@
     
     self.tabBarController.tabBar.hidden = YES;
     
+    //注册键盘通知
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+
+{
+    NSLog(@"界面消失");
+    
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    
+    
     
 }
+
 -(void)coustom
 {
     self.indextX = self.view.frame.size.width / 320;
@@ -73,38 +99,29 @@
     [self.view addSubview:self.photoImabeView];
     
     //username
-    
-    self.userNameLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 180 * self.indextY, 300*self.indextX, 40  )];
-    self.userNameLable.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.userNameLable];
-    
-    self.userNameTextField = [[UITextField alloc]initWithFrame:CGRectMake(40,  180 * self.indextY, (320 - 40) * self.indextX , 40)];
-    self.userNameTextField.placeholder = @"输入手机号";
-    self.userNameTextField.delegate = self;
-    
-    [self.view addSubview:self.userNameTextField];
-    
-    
-    self.userNameImageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 180 * self.indextY +5 , 20, 30)];
-    self.userNameImageView.image = [UIImage imageNamed:@"1.png"];
-    [self.view addSubview:self.userNameImageView];
-    
-    
+    self.userNameMy = [[MyTextFied alloc]initWithFrame:CGRectMake(10, 180 * self.indextY, 300*self.indextX, 40  )];
+    self.userNameMy.mytextField.placeholder = @"请输入您的登录账号";
+    [self.view addSubview:self.userNameMy];
     
     
     
     //password
     
-    self.userPassWordLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 180*self.indextY + 60, 300*self.indextX, 40)];
-    self.userPassWordLable.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.userPassWordLable];
+    self.userPassWordMy = [[MyTextFied alloc]initWithFrame:CGRectMake(10, 180*self.indextY + 60, 300*self.indextX, 40)];
+    self.userPassWordMy.mytextField.placeholder = @"请输入您的登录密码";
 
     
-    self.userPassWordTextField = [[UITextField alloc]initWithFrame:CGRectMake(40,  180 * self.indextY+ 60, (320 - 40) * self.indextX , 40)];
-    self.userPassWordTextField.placeholder = @"输入密码";
-    self.userPassWordTextField.delegate = self;
-    [self.view addSubview:self.userPassWordTextField];
+    [self.view addSubview:self.userPassWordMy];
     
+    self.userNameMy.delegate = self;
+    self.userPassWordMy.delegate = self;
+    
+    
+    
+    
+//    self.userPassWordTextField.keyboardType = UIKeyboardTypeASCIICapable;
+//
+//    
     self.forgetPasswordButton  = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.forgetPasswordButton.frame = CGRectMake(230 * self.indextX, 180 * self.indextY + 60, 80, 40);
     
@@ -115,19 +132,13 @@
     //self.forgetPasswordButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
     [self.forgetPasswordButton setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
     [self.view addSubview:self.forgetPasswordButton];
-
-    
-    self.userPassWordImageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 180 * self.indextY +5 + 60 , 20, 30)];
-    self.userPassWordImageView.image = [UIImage imageNamed:@"1.png"];
-    [self.view addSubview:self.userPassWordImageView];
-    
     //登录按钮
     
     self.loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.loginButton.frame = CGRectMake(10, 290 *self.indextY, 300 *self.indextX, 40);
+    [self.loginButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x(1).png"] forState:(UIControlStateNormal)];
     [self.loginButton setTitle:@"登录" forState:(UIControlStateNormal)];
     [self.loginButton  setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-    self.loginButton.backgroundColor = [UIColor greenColor];
     [self.loginButton addTarget:self action:@selector(loginButton:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.loginButton];
     
@@ -139,11 +150,10 @@
     self.registerButton.frame = CGRectMake(10, 290 *self.indextY + 55, 300 *self.indextX, 40);
     [self.registerButton setTitle:@"注册" forState:(UIControlStateNormal)];
     [self.registerButton  setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-    self.registerButton.backgroundColor = [UIColor greenColor];
+    [self.registerButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x(1).png"] forState:(UIControlStateNormal)];
     [self.registerButton addTarget:self action:@selector(registerButton:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.registerButton];
     
-
     
     
     
@@ -182,38 +192,46 @@
     
     
     
+    
 }
-//点击textfield
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-    NSLog(@"点击textfiele");
+//Code from Brett Schumann
+
+-(void) keyboardWillShow:(NSNotification *)note{
+    
+    NSLog(@"出来");
+    
     
     if (self.indextX == 1) {
         
         [UIView beginAnimations:@"animat" context:nil];
         //设置时间
         [UIView setAnimationDuration:0.5f];
-        self.view.transform = CGAffineTransformMakeTranslation(0, -64);
+        self.view.transform = CGAffineTransformMakeTranslation(0, -84);
         self.view.transform = CGAffineTransformScale(self.view.transform, 1.01, 1.01);
         [UIView commitAnimations];
         
-
         
     }
+}
+
+- (void) keyboardWillHide:(NSNotification *)note{
+    
+    NSLog(@"没了");
+    [UIView setAnimationDuration:0.5f];
+    self.view.transform = CGAffineTransformMakeTranslation(0, 0);
+    self.view.transform = CGAffineTransformScale(self.view.transform, 1.01, 1.01);
+    [UIView commitAnimations];
     
     
-    
-    return YES;
-    
+
     
 }
 //点击return
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-
+-(void)ReturnAction:(UITextField *)textfield
 {
-    [self.userPassWordTextField resignFirstResponder];
-    [self.userNameTextField resignFirstResponder];
+    
+    [textfield resignFirstResponder];
     [UIView beginAnimations:@"animat" context:nil];
     //设置时间
     [UIView setAnimationDuration:0.5f];
@@ -221,20 +239,17 @@
     self.view.transform = CGAffineTransformScale(self.view.transform, 1.01, 1.01);
     [UIView commitAnimations];
     
-    
-    
-    
 
-    return YES;
+    
     
 }
+
 
 //点击空白
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self.userPassWordTextField resignFirstResponder];
-    [self.userNameTextField resignFirstResponder];
-    
+    [self.userPassWordMy.mytextField resignFirstResponder];
+    [self.userNameMy.mytextField resignFirstResponder];
     [UIView beginAnimations:@"animat" context:nil];
     //设置时间
     [UIView setAnimationDuration:0.5f];
@@ -265,8 +280,8 @@
 {
     NSLog(@"忘记密码");
     
-    [self.userPassWordTextField resignFirstResponder];
-    [self.userNameTextField resignFirstResponder];
+    [self.userNameMy.mytextField resignFirstResponder];
+    [self.userPassWordMy.mytextField resignFirstResponder];
 
     //设置时间
     [UIView setAnimationDuration:0.5f];
@@ -278,7 +293,6 @@
     
     ForgetViewController *forget = [[ForgetViewController alloc]init];
     [self.navigationController pushViewController:forget animated:YES];
-    
     
     
     
@@ -321,6 +335,8 @@
     }];
 
 }
+//第三方登录走的方法
+
 -(void)login:(UITapGestureRecognizer *)sent
 {
     UIImageView *image = (UIImageView *)sent.view;

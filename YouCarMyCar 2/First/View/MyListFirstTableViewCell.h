@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-
 @protocol mylistFirstbleDelegate <NSObject>
 
 @end
