@@ -26,6 +26,8 @@
     [self.view addSubview:self.mytable
      ];
     self.mytable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    
 
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -35,6 +37,7 @@
 
     
     return 15;
+
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -42,7 +45,6 @@
     
     return 170;
 }
-
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,6 +61,7 @@
         
         
         
+        
     }
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
@@ -67,13 +70,10 @@
     mycell.mybuttonImageView.tag = 100 + indexPath.row;
     return mycell;
     
-    
-    
 }
 -(void)tapAction:(UITapGestureRecognizer *)sent
 
 {
-    
     UIImageView *iamge = (UIImageView *)sent.view;
     NSLog(@"%ld",(long)iamge.tag - 100);
     

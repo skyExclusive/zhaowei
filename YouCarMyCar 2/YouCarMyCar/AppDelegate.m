@@ -34,6 +34,10 @@
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:48/255.0 green:166/255.0 blue:241/255.0 alpha:1]];
     //1.初始化ShareSDK应用
     [ShareSDK registerApp:@"89fd18586698"];
+    
+    
+    self.window.backgroundColor = [UIColor  purpleColor];
+    
     [self initPlat];//初始化平台
     
     return YES;
