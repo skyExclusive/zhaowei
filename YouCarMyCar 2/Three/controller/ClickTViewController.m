@@ -33,7 +33,7 @@
     self.title = @"修改密码";
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 80, kMainWidth - 20, 50)];
-    imageView.image = [UIImage imageNamed: @"白色背景.png"];
+    imageView.image = [UIImage imageNamed: @"圆角矩形-1.png"];
     imageView.userInteractionEnabled = YES;
     [self.view addSubview:imageView];
     
@@ -44,7 +44,7 @@
     
     
     UIImageView *sureimageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y +70, kMainWidth - 20, 50)];
-    sureimageView.image = [UIImage imageNamed: @"白色背景.png"];
+    sureimageView.image = [UIImage imageNamed: @"圆角矩形-1.png"];
     sureimageView.userInteractionEnabled = YES;
     [self.view addSubview:sureimageView];
     

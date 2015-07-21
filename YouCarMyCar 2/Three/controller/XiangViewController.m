@@ -17,7 +17,6 @@
 @property (nonatomic,strong)NSMutableDictionary *dic;
 @property (nonatomic,strong)UIView *myView;
 @property (nonatomic,strong)UIImage *myimage;
-@property (nonatomic,strong)UIView *viewNM;
 @property (nonatomic,strong)UIPickerView *mypicker;
 @property (nonatomic,strong)NSArray *sexArray;
 @property (nonatomic,strong)UIButton *mybutton;
@@ -351,33 +350,6 @@
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"图片库不可用" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alertView show];
         }
-        self.viewNM = [[UIView alloc]initWithFrame:CGRectMake(0, 620, 375, 48)];
-        
-        
-        [self.view addSubview:_viewNM];
-        UIButton *sureBT = [UIButton buttonWithType:UIButtonTypeSystem];
-        sureBT.frame = CGRectMake(184.5, 0, 188.5, 48);
-        sureBT.backgroundColor = [UIColor colorWithRed:95/255.0 green:68/255.0 blue:56/255.0 alpha:1];
-        [sureBT addTarget:self action:@selector(sure:) forControlEvents:UIControlEventTouchUpInside];
-        sureBT.layer.cornerRadius = 10;
-        [_viewNM addSubview:sureBT];
-        
-        UIButton *cancelBT = [UIButton buttonWithType:UIButtonTypeSystem];
-        cancelBT.frame = CGRectMake(5, 0, 173.5, 48);
-        cancelBT.backgroundColor = [UIColor colorWithRed:95/255.0 green:68/255.0 blue:56/255.0 alpha:1];
-        cancelBT.layer.cornerRadius = 10;
-        [cancelBT addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
-        [_viewNM addSubview:cancelBT];
-        
-        
-        
-        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(65, 3, 48, 43)];
-        [imageView setImage:[UIImage imageNamed:@"cancel.png"]];
-        [cancelBT addSubview:imageView];
-        UIImageView *imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(65, 3, 48, 43)];
-        [imageView2 setImage:[UIImage imageNamed:@"sure.png"]];
-        [sureBT addSubview:imageView2];
-        [self.myView removeFromSuperview];
         
 
     }];
@@ -389,11 +361,7 @@
 
 
 
-//确定选择的照片
--(void)sure:(UIButton *)button
-{
-    [_viewNM removeFromSuperview];
-}
+
 
 //取消选择照片
 -(void)cancel:(UIButton *)button

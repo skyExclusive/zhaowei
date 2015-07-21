@@ -103,13 +103,11 @@
 		0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */; };
 		0AE3C73C1B5C834A007153A3 /* MyTextFied.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3C73B1B5C834A007153A3 /* MyTextFied.m */; };
 		0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */; };
-		0AE3C7421B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */; };
 		0AE3F2601B578F6F00ECA9BC /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */; };
 		0AE3F2631B57A67A00ECA9BC /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F2621B57A67A00ECA9BC /* RegistViewController.m */; };
 		0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE6F1B422A8600C3C98B /* 1.jpg */; };
 		0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE701B422A8600C3C98B /* 2.jpg */; };
 		954F0A4E1B4B5E46002598C5 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 954F0A4D1B4B5E46002598C5 /* 5.png */; };
-		955E92591B4535FD008447B7 /* fdssfsf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 955E92561B4535FD008447B7 /* fdssfsf.jpg */; };
 		958178311B4BB1BD001AA514 /* ClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958178301B4BB1BD001AA514 /* ClickViewController.m */; };
 		959312A11B5C9CA60006142F /* 用户反馈@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 959312A01B5C9CA60006142F /* 用户反馈@2x.png */; };
 		959312A71B5C9DBD0006142F /* ZWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 959312A61B5C9DBD0006142F /* ZWTextView.m */; };
@@ -136,6 +134,7 @@
 		95D661BE1B44D44500E9992E /* TouxiangTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D661B61B44D44500E9992E /* TouxiangTableViewCell.m */; };
 		95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D661B71B44D44500E9992E /* TouxiangTableViewCell.xib */; };
 		95D661C11B44D46600E9992E /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D661C01B44D46600E9992E /* ThreeViewController.m */; };
+		95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */; };
 		95DAF6DE1B4F60ED00B891DC /* 形状 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DAF6DD1B4F60ED00B891DC /* 形状 1.png */; };
 		95E5AC911B437D4600904602 /* NowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E5AC901B437D4600904602 /* NowViewController.m */; };
 		95E5AC941B437D5200904602 /* WillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E5AC931B437D5200904602 /* WillViewController.m */; };
@@ -312,7 +311,6 @@
 		0AE3C73A1B5C834A007153A3 /* MyTextFied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextFied.h; sourceTree = "<group>"; };
 		0AE3C73B1B5C834A007153A3 /* MyTextFied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextFied.m; sourceTree = "<group>"; };
 		0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1@2x.png"; sourceTree = "<group>"; };
-		0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册按钮背景@2x(1).png"; sourceTree = "<group>"; };
 		0AE3F25E1B578F6F00ECA9BC /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		0AE3F2611B57A67A00ECA9BC /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
@@ -320,7 +318,6 @@
 		0AFBFE6F1B422A8600C3C98B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../1.jpg; sourceTree = "<group>"; };
 		0AFBFE701B422A8600C3C98B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../2.jpg; sourceTree = "<group>"; };
 		954F0A4D1B4B5E46002598C5 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
-		955E92561B4535FD008447B7 /* fdssfsf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fdssfsf.jpg; sourceTree = "<group>"; };
 		9581782F1B4BB1BD001AA514 /* ClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickViewController.h; sourceTree = "<group>"; };
 		958178301B4BB1BD001AA514 /* ClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickViewController.m; sourceTree = "<group>"; };
 		959312A01B5C9CA60006142F /* 用户反馈@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "用户反馈@2x.png"; sourceTree = "<group>"; };
@@ -361,6 +358,7 @@
 		95D661B61B44D44500E9992E /* TouxiangTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouxiangTableViewCell.m; sourceTree = "<group>"; };
 		95D661B71B44D44500E9992E /* TouxiangTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouxiangTableViewCell.xib; sourceTree = "<group>"; };
 		95D661C01B44D46600E9992E /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
+		95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册按钮背景@2x.png"; sourceTree = "<group>"; };
 		95DAF6DD1B4F60ED00B891DC /* 形状 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "形状 1.png"; sourceTree = "<group>"; };
 		95E5AC8F1B437D4600904602 /* NowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowViewController.h; sourceTree = "<group>"; };
 		95E5AC901B437D4600904602 /* NowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowViewController.m; sourceTree = "<group>"; };
@@ -433,8 +431,8 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
 				959312A01B5C9CA60006142F /* 用户反馈@2x.png */,
-				0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */,
 				0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */,
 				95D2035D1B57A7C800BCD63F /* 添加按钮.png */,
 				95D203531B57931700BCD63F /* 确定按钮.png */,
@@ -443,7 +441,6 @@
 				954F0A4D1B4B5E46002598C5 /* 5.png */,
 				0ADD51C41B47810800FADACD /* 向左白色箭头.png */,
 				0AB91FA61B46171300552824 /* 3.jpg */,
-				955E92561B4535FD008447B7 /* fdssfsf.jpg */,
 				0AFBFE6F1B422A8600C3C98B /* 1.jpg */,
 				95C8DED11B422ECF00FA1FDD /* 3.png */,
 				0AFBFE701B422A8600C3C98B /* 2.jpg */,
@@ -1010,6 +1007,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
 				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
@@ -1025,7 +1023,6 @@
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
 				0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */,
-				0AE3C7421B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png in Resources */,
 				959312A11B5C9CA60006142F /* 用户反馈@2x.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
 				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
@@ -1042,7 +1039,6 @@
 				0ACAF2521B411E830029ACC9 /* MJRefresh.bundle in Resources */,
 				0ACAF1BC1B411E300029ACC9 /* Images.xcassets in Resources */,
 				0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */,
-				955E92591B4535FD008447B7 /* fdssfsf.jpg in Resources */,
 				0ACAF2AF1B411EE50029ACC9 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

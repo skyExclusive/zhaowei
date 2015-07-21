@@ -21,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    self..backgroundColor = [UIColor redColor];
          FirstViewController *first = [[FirstViewController alloc]init];
     UINavigationController *firstVC = [[UINavigationController alloc]initWithRootViewController:first];
     
