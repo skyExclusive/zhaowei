@@ -44,6 +44,8 @@
     //1.初始化ShareSDK应用
     [ShareSDK registerApp:@"89fd18586698"];
     
+     [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:235/255.0 green:50/255.0 blue:30/255.0 alpha:1]];
+     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
     self.window.backgroundColor = COLOR(251, 246, 240, 1);
     [self initPlat];//初始化平台

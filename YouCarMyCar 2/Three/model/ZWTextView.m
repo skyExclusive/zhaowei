@@ -70,7 +70,7 @@
         UIFont *font = [UIFont fontWithName:@"Arial"size:16.0f];
         UIColor *redColor = [UIColor grayColor];
         NSString *myString =_placeholder;
-        [myString  drawAtPoint:CGPointMake(10,5) withAttributes:@{NSFontAttributeName:font,NSForegroundColorAttributeName:redColor}];
+        [myString  drawAtPoint:CGPointMake(8,8) withAttributes:@{NSFontAttributeName:font,NSForegroundColorAttributeName:redColor}];
     }
 }
 

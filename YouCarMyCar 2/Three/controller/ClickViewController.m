@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = COLOR(255, 250, 242, 1);
+    self.view.backgroundColor = COLOR(251, 246, 240, 1);
     // Do any additional setup after loading the view.
     if (self.i == 0) {
         //布局我的参与
@@ -99,7 +99,7 @@
     
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 80, kMainWidth - 20, 50)];
-    imageView.image = [UIImage imageNamed: @"白色背景.png"];
+    imageView.image = [UIImage imageNamed: @"圆角矩形-1.png"];
     imageView.userInteractionEnabled = YES;
     [self.view addSubview:imageView];
     
@@ -118,7 +118,7 @@
     
     
     UIImageView *codeimageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y +70, kMainWidth - 20, 50)];
-    codeimageView.image = [UIImage imageNamed: @"白色背景.png"];
+    codeimageView.image = [UIImage imageNamed: @"圆角矩形-1.png"];
     codeimageView.userInteractionEnabled = YES;
     [self.view addSubview:codeimageView];
     
@@ -258,21 +258,26 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = NO;
     
-    self.textView = [[ZWTextView alloc]initWithFrame:CGRectMake(10, 30, kMainWidth - 20, 200)];
-    self.textView.textColor = [UIColor blackColor];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 30, kMainWidth - 20, kMainHeight/4)];
+    imageView.image = [UIImage imageNamed:@"用户反馈.png"];
+    imageView.userInteractionEnabled = YES;
+    [self.view addSubview:imageView];
+    
+    self.textView = [[ZWTextView alloc]initWithFrame:CGRectMake(10, 10, imageView.frame.size.width - 20, imageView.frame.size.height - 20)];
     self.textView.placeholder = @"你车我车感谢您的支持";
     self.textView.font =  [UIFont fontWithName:@"Arial" size:16.0];;
-    self.textView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.textView];
+    [imageView addSubview:self.textView];
     
-    
+    UIImageView *buttonImage = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y + kMainHeight/4 +30 , kMainWidth - 20, kMainWidth/9)];
+    buttonImage.image = [UIImage imageNamed:@"登录注册按钮背景.png"];
     self.button = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    self.button.frame = CGRectMake(10, kMainWidth/1.5 + 20, kMainWidth - 20, kMainWidth/9);
+    self.button.frame = CGRectMake(0, 0, kMainWidth - 20, kMainWidth/9);
+    buttonImage.userInteractionEnabled = YES;
+    [self.view addSubview:buttonImage];
     [self.button setTitle:@"提交" forState:(UIControlStateNormal)];
     [self.button addTarget:self action:@selector(tijiao:) forControlEvents:(UIControlEventTouchUpInside)];
-    self.button.backgroundColor = COLOR(55, 219, 223, 1);
     [self.button setTintColor:[UIColor whiteColor]];
-    [self.view addSubview:self.button];
+    [buttonImage addSubview:self.button];
     
 }
 
