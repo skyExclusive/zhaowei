@@ -39,12 +39,12 @@
     [self addSubview:self.myBigimageView];
     
     
-    self.mySmallimageView = [[UIImageView alloc]initWithFrame:CGRectMake(3, 3, self.frame.size.height - 6, self.frame.size.height - 6)];
+    self.mySmallimageView = [[UIImageView alloc]initWithFrame:CGRectMake(8, 8, self.frame.size.height - 16, self.frame.size.height - 16)];
     self.mySmallimageView.image = [UIImage imageNamed:@"1.png"];
     [self addSubview:self.mySmallimageView];
     
     
-    self.mytextField = [[UITextField alloc]initWithFrame:CGRectMake(self.frame.size.height, 0, self.frame.size.width -  self.frame.size.height - 80*[UIScreen mainScreen].bounds.size.width / 320, self.frame.size.height)];
+    self.mytextField = [[UITextField alloc]initWithFrame:CGRectMake(self.frame.size.height + 8, 0, self.frame.size.width -  self.frame.size.height - 80*[UIScreen mainScreen].bounds.size.width / 320 - 8, self.frame.size.height)];
     self.mytextField.delegate = self;
     
     

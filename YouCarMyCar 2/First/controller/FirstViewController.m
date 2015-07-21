@@ -11,8 +11,6 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WXApi.h"
-#import "WeiboApi.h"
-#import "WeiboSDK.h"
 #import "PrefixHeader.pch"
 #import <WeChatConnection/WeChatConnection.h>
 #import "NowViewController.h"
@@ -35,9 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.title = @"免费体验商品";
-    
-
+    self.navigationItem.title = @"免费试用";
     
      //布局
     [self costom];

@@ -9,11 +9,13 @@
 #import "AppDelegate.h"
 #import "RootTaBarViewController.h"
 #import <ShareSDK/ShareSDK.h>
-#import "WeiboApi.h"
 #import "WeiboSDK.h"
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WXApi.h"
+
+#import "PrefixHeader.pch"
+
 @interface AppDelegate ()
 
 @end
@@ -26,8 +28,15 @@
     RootTaBarViewController *root = [[RootTaBarViewController alloc]init];
     self.window.rootViewController = root;
     //title 字体白色
-    NSDictionary * dict=[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
-    [[UINavigationBar appearance] setTitleTextAttributes:dict];
+//    NSDictionary * dict=[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
+//    [[UINavigationBar appearance] setTitleTextAttributes:dict];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[[NSDictionary alloc] initWithObjectsAndKeys:
+                                                          [UIFont  fontWithName:@"DBLCDTempBlack" size:24], NSFontAttributeName,
+                                                          [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                          
+                                                          nil]];
+    
     //最上面字体白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     //设置navigationbar 的颜色为蓝色
@@ -36,8 +45,7 @@
     [ShareSDK registerApp:@"89fd18586698"];
     
     
-    self.window.backgroundColor = [UIColor  purpleColor];
-    
+    self.window.backgroundColor = COLOR(251, 246, 240, 1);
     [self initPlat];//初始化平台
     
     return YES;
@@ -53,13 +61,7 @@
                            wechatCls:[WXApi class]];
 
 
-    //初始化腾讯微博，请在腾讯微博开放平台申请
-    [ShareSDK connectTencentWeiboWithAppKey:@"801307650"
-                                  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
-                                redirectUri:@"http://www.sharesdk.cn"
-                                   wbApiCls:[WeiboApi class]];
-    
-    //连接QQ应用
+        //连接QQ应用
     [ShareSDK connectQQWithQZoneAppKey:@"100371282"
                      qqApiInterfaceCls:[QQApiInterface class]
                        tencentOAuthCls:[TencentOAuth class]];
@@ -73,12 +75,6 @@
     //初始化新浪，在新浪微博开放平台上申请应用z
     [ShareSDK connectSinaWeiboWithAppKey:@"568898243" appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3" redirectUri:@"http://www.sharesdk.cn" weiboSDKCls:[WeiboSDK class]];
 
-    
-    
-    //连接短信
-    [ShareSDK connectSMS];
-    
-    
     
     
     float sysVersion=[[UIDevice currentDevice]systemVersion].floatValue;

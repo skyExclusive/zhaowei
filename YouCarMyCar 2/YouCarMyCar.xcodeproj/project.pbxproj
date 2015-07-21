@@ -79,7 +79,6 @@
 		0ACAF2AD1B411EE50029ACC9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAF28F1B411EE40029ACC9 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		0ACAF2AE1B411EE50029ACC9 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2911B411EE40029ACC9 /* libWeiboSDK.a */; };
 		0ACAF2AF1B411EE50029ACC9 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAF2921B411EE40029ACC9 /* WeiboSDK.bundle */; };
-		0ACAF2B01B411EE50029ACC9 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2951B411EE40029ACC9 /* libTCWeiboSDK.a */; };
 		0ACAF2B11B411EE60029ACC9 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2991B411EE40029ACC9 /* libWeChatSDK.a */; };
 		0ACAF2B21B411EE60029ACC9 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF29C1B411EE40029ACC9 /* ShareSDK.framework */; };
 		0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAF29E1B411EE40029ACC9 /* ShareSDKFlatShareViewUI.bundle */; };
@@ -104,6 +103,16 @@
 		0AE3C73C1B5C834A007153A3 /* MyTextFied.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3C73B1B5C834A007153A3 /* MyTextFied.m */; };
 		0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */; };
 		0AE3C7421B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */; };
+		0AE3C7491B5CACC7007153A3 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */; };
+		0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */; };
+		0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */; };
+		0AE3C7581B5CDDA6007153A3 /* 头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */; };
+		0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */; };
+		0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */; };
+		0AE3C75B1B5CDDA6007153A3 /* 我的密码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */; };
+		0AE3C75C1B5CDDA6007153A3 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7541B5CDDA6007153A3 /* check@2x.png */; };
+		0AE3C75D1B5CDDA6007153A3 /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7551B5CDDA6007153A3 /* qq@2x.png */; };
+		0AE3C75F1B5CEA42007153A3 /* 小人头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C75E1B5CEA42007153A3 /* 小人头像@2x.png */; };
 		0AE3F2601B578F6F00ECA9BC /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */; };
 		0AE3F2631B57A67A00ECA9BC /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F2621B57A67A00ECA9BC /* RegistViewController.m */; };
 		0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE6F1B422A8600C3C98B /* 1.jpg */; };
@@ -282,9 +291,6 @@
 		0ACAF2911B411EE40029ACC9 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		0ACAF2921B411EE40029ACC9 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		0ACAF2931B411EE40029ACC9 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
-		0ACAF2951B411EE40029ACC9 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
-		0ACAF2961B411EE40029ACC9 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
-		0ACAF2971B411EE40029ACC9 /* WeiboApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApiObject.h; sourceTree = "<group>"; };
 		0ACAF2991B411EE40029ACC9 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		0ACAF29A1B411EE40029ACC9 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		0ACAF29B1B411EE40029ACC9 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
@@ -313,6 +319,18 @@
 		0AE3C73B1B5C834A007153A3 /* MyTextFied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextFied.m; sourceTree = "<group>"; };
 		0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1@2x.png"; sourceTree = "<group>"; };
 		0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册按钮背景@2x(1).png"; sourceTree = "<group>"; };
+		0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
+		0AE3C7471B5CACC7007153A3 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
+		0AE3C7481B5CACC7007153A3 /* WeiboApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApiObject.h; sourceTree = "<group>"; };
+		0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "粉色背景@2x.png"; sourceTree = "<group>"; };
+		0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "没点同意协议@2x.png"; sourceTree = "<group>"; };
+		0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头像@2x.png"; sourceTree = "<group>"; };
+		0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微博@2x.png"; sourceTree = "<group>"; };
+		0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信@2x.png"; sourceTree = "<group>"; };
+		0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的密码@2x.png"; sourceTree = "<group>"; };
+		0AE3C7541B5CDDA6007153A3 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		0AE3C7551B5CDDA6007153A3 /* qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@2x.png"; sourceTree = "<group>"; };
+		0AE3C75E1B5CEA42007153A3 /* 小人头像@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小人头像@2x.png"; sourceTree = "<group>"; };
 		0AE3F25E1B578F6F00ECA9BC /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		0AE3F2611B57A67A00ECA9BC /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
@@ -373,6 +391,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE3C7491B5CACC7007153A3 /* libTCWeiboSDK.a in Frameworks */,
 				0ACAF2CD1B4120980029ACC9 /* libsqlite3.dylib in Frameworks */,
 				0ACAF2CB1B41208E0029ACC9 /* libstdc++.dylib in Frameworks */,
 				0ACAF2C91B4120820029ACC9 /* MessageUI.framework in Frameworks */,
@@ -385,7 +404,6 @@
 				0ACAF2BB1B4120330029ACC9 /* CoreTelephony.framework in Frameworks */,
 				0ACAF2B91B41202C0029ACC9 /* QuartzCore.framework in Frameworks */,
 				0ACAF2B71B4120250029ACC9 /* SystemConfiguration.framework in Frameworks */,
-				0ACAF2B01B411EE50029ACC9 /* libTCWeiboSDK.a in Frameworks */,
 				0ACAF2B51B411EE60029ACC9 /* ShareSDKShareActionSheet.framework in Frameworks */,
 				0ACAF2A61B411EE50029ACC9 /* TencentWeiboConnection.framework in Frameworks */,
 				0ACAF2AE1B411EE50029ACC9 /* libWeiboSDK.a in Frameworks */,
@@ -433,6 +451,15 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */,
+				0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */,
+				0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */,
+				0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */,
+				0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */,
+				0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */,
+				0AE3C75E1B5CEA42007153A3 /* 小人头像@2x.png */,
+				0AE3C7541B5CDDA6007153A3 /* check@2x.png */,
+				0AE3C7551B5CDDA6007153A3 /* qq@2x.png */,
 				959312A01B5C9CA60006142F /* 用户反馈@2x.png */,
 				0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */,
 				0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */,
@@ -802,9 +829,9 @@
 		0ACAF28C1B411EE40029ACC9 /* Extend */ = {
 			isa = PBXGroup;
 			children = (
+				0AE3C7451B5CACC7007153A3 /* TencentWeiboSDK */,
 				0ACAF28D1B411EE40029ACC9 /* QQConnectSDK */,
 				0ACAF2901B411EE40029ACC9 /* SinaWeiboSDK */,
-				0ACAF2941B411EE40029ACC9 /* TencentWeiboSDK */,
 				0ACAF2981B411EE40029ACC9 /* WeChatSDK */,
 			);
 			path = Extend;
@@ -829,16 +856,6 @@
 			path = SinaWeiboSDK;
 			sourceTree = "<group>";
 		};
-		0ACAF2941B411EE40029ACC9 /* TencentWeiboSDK */ = {
-			isa = PBXGroup;
-			children = (
-				0ACAF2951B411EE40029ACC9 /* libTCWeiboSDK.a */,
-				0ACAF2961B411EE40029ACC9 /* WeiboApi.h */,
-				0ACAF2971B411EE40029ACC9 /* WeiboApiObject.h */,
-			);
-			path = TencentWeiboSDK;
-			sourceTree = "<group>";
-		};
 		0ACAF2981B411EE40029ACC9 /* WeChatSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -857,6 +874,16 @@
 				0ACAF2A01B411EE40029ACC9 /* ShareSDKShareActionSheet.framework */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		0AE3C7451B5CACC7007153A3 /* TencentWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */,
+				0AE3C7471B5CACC7007153A3 /* WeiboApi.h */,
+				0AE3C7481B5CACC7007153A3 /* WeiboApiObject.h */,
+			);
+			path = TencentWeiboSDK;
 			sourceTree = "<group>";
 		};
 		959312A41B5C9D840006142F /* model */ = {
@@ -1010,6 +1037,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
+				0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */,
 				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
@@ -1023,18 +1052,25 @@
 				95DAF6DE1B4F60ED00B891DC /* 形状 1.png in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
+				0AE3C75C1B5CDDA6007153A3 /* check@2x.png in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
 				0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */,
 				0AE3C7421B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png in Resources */,
 				959312A11B5C9CA60006142F /* 用户反馈@2x.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
+				0AE3C75B1B5CDDA6007153A3 /* 我的密码@2x.png in Resources */,
 				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
+				0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
 				95D2035C1B579BB700BCD63F /* addressTableViewCell.xib in Resources */,
 				0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */,
+				0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */,
+				0AE3C75F1B5CEA42007153A3 /* 小人头像@2x.png in Resources */,
 				95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */,
 				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,
+				0AE3C7581B5CDDA6007153A3 /* 头像@2x.png in Resources */,
+				0AE3C75D1B5CDDA6007153A3 /* qq@2x.png in Resources */,
 				95D661B81B44D44500E9992E /* 1.png in Resources */,
 				0ACAF2AD1B411EE50029ACC9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */,
