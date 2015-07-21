@@ -23,6 +23,8 @@
 @property (nonatomic ,strong)UIButton *loginButton;
 @property (nonatomic ,strong)MyTextFied *userNameMy;
 @property (nonatomic ,strong)MyTextFied *userPassWordMy;
+@property (nonatomic ,strong)UIButton *myZibutton;
+@property (nonatomic )BOOL indext;
 
 
 

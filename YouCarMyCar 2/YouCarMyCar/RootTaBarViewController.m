@@ -28,6 +28,7 @@
     
     firstVC.tabBarItem.title = @"免费体验";
     
+    
     SecondViewController *second = [[SecondViewController alloc]init];
     UINavigationController *secondVC = [[UINavigationController alloc]initWithRootViewController:second];
     secondVC.tabBarItem.title = @"往期商品";

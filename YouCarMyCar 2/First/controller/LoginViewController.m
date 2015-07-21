@@ -11,23 +11,62 @@
 #import <QZoneConnection/ISSQZoneApp.h>
 #import "ForgetViewController.h"
 #import "RegistViewController.h"
-
+#import "PrefixHeader.pch"
 @interface LoginViewController ()<UIActionSheetDelegate,UITextFieldDelegate,MyTextFiedDelegete>
 
 @end
 @implementation LoginViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor purpleColor];
+    self.indextX = self.view.frame.size.width / 320;
+    self.indextY = self.view.frame.size.height / 480;
+    self.indext = NO;
+    
+    
+
+    self.view.window.backgroundColor = COLOR(251, 246, 240, 1);
+    self.view.backgroundColor = COLOR(251, 246, 240, 1);
+    
     self.title = @"登录界面";
 
-    
+    if (self.indextX == 1 && self.indextY == 1) {
+        
+        [self thour];//布局4;
+        
+        
+    }else{
     
     [self coustom];//布局
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    
+    //分享按钮
+    
+    
+    UIButton *share = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [share setTitle:@"一键分享" forState:(UIControlStateNormal)];
+    share.frame = CGRectMake(0, 0, 80, 30);
+    [share addTarget:self action:@selector(share:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:share ];
+    UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:share];
+    self.navigationItem.rightBarButtonItem = right;
+    
+    
+    
+    
+    //返回的箭头
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
+    button.frame =CGRectMake(0, 0, 15, 25);
+    [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
+    UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = lift;
+    
+    
+
     
     self.tabBarController.tabBar.hidden = YES;
     
@@ -58,48 +97,179 @@
     
     
 }
-
--(void)coustom
+-(void)thour
 {
-    self.indextX = self.view.frame.size.width / 320;
-    self.indextY = self.view.frame.size.height / 480;
-    
-    
-    //分享按钮
-    
-    
-    UIButton *share = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [share setTitle:@"一键分享" forState:(UIControlStateNormal)];
-    share.frame = CGRectMake(0, 0, 80, 30);
-    [share addTarget:self action:@selector(share:) forControlEvents:(UIControlEventTouchUpInside)];
-    [self.view addSubview:share ];
-    UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:share];
-    self.navigationItem.rightBarButtonItem = right;
-    
-
-    
-    
-    //返回的箭头
-    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
-    button.frame =CGRectMake(0, 0, 15, 25);
-    [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
-    UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
-    self.navigationItem.leftBarButtonItem = lift;
-    
     
     // 布局登录
     
     //1photo
+    self.photoImabeView  = [[UIImageView alloc]initWithFrame:CGRectMake(120, 84 , 80, 80)];
+    
+    self.photoImabeView.image = [UIImage imageNamed:@"头像@2x.png"];
+    self.photoImabeView.layer.cornerRadius = 40;
+    self.photoImabeView.layer.masksToBounds = YES;
+    [self.view addSubview:self.photoImabeView];
+    
+    //username
+    self.userNameMy = [[MyTextFied alloc]initWithFrame:CGRectMake(10, 170, 300, 40  )];
+    self.userNameMy.mySmallimageView.image = [UIImage imageNamed:@"小人头像@2x.png"];
+    self.userNameMy.mytextField.placeholder = @"请输入您的登录账号";
+    [self.view addSubview:self.userNameMy];
+    
+    
+    
+    //password
+    
+    self.userPassWordMy = [[MyTextFied alloc]initWithFrame:CGRectMake(10, 220, 300, 40)];
+    self.userPassWordMy.mytextField.placeholder = @"请输入您的登录密码";
+    self.userPassWordMy.mySmallimageView.image = [UIImage imageNamed:@"我的密码@2x.png"];
+    
+    
+    
+    [self.view addSubview:self.userPassWordMy];
+    
+    self.userNameMy.delegate = self;
+    self.userPassWordMy.delegate = self;
+    
+    
+    
+    
+    //    self.userPassWordTextField.keyboardType = UIKeyboardTypeASCIICapable;
+    //
+    //
+    self.forgetPasswordButton  = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.forgetPasswordButton.frame = CGRectMake(230, 220, 80, 30);
+    
+    [self.forgetPasswordButton setTitle:@"忘记密码?" forState:(UIControlStateNormal)];
+    [self.forgetPasswordButton addTarget:self action:@selector(forget) forControlEvents:(UIControlEventTouchUpInside)];
+    self.forgetPasswordButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    
+    //self.forgetPasswordButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+    [self.forgetPasswordButton setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
+    [self.view addSubview:self.forgetPasswordButton];
+    
+    
+    UILabel *smallLable = [[UILabel alloc]initWithFrame:CGRectMake(60, 263, 80, 20)];
+    smallLable.text = @"下次自动登录";
+    smallLable.font = [UIFont systemFontOfSize:12];
+    smallLable.textColor = [UIColor grayColor];
+    [self.view addSubview:smallLable];
+    
+    
+   self.myZibutton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    
+    self.myZibutton.frame = CGRectMake(38, 265, 16, 16);
+    [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"没点同意协议@2x.png"] forState:(UIControlStateNormal)];
+    [self.myZibutton addTarget:self action: @selector(dian) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:self.myZibutton];
+    
+    
+    
+    
+    //登录按钮
+    
+    self.loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.loginButton.frame = CGRectMake(10, 290 *self.indextY, 300 *self.indextX, 40);
+    [self.loginButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x(1).png"] forState:(UIControlStateNormal)];
+    [self.loginButton setTitle:@"登录" forState:(UIControlStateNormal)];
+    [self.loginButton  setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    [self.loginButton addTarget:self action:@selector(loginButton:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:self.loginButton];
+    
+    
+    
+    //注册按钮
+    
+    self.registerButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.registerButton.frame = CGRectMake(10, 290 *self.indextY + 55, 300 *self.indextX, 40);
+    [self.registerButton setTitle:@"注册" forState:(UIControlStateNormal)];
+    [self.registerButton  setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    [self.registerButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x(1).png"] forState:(UIControlStateNormal)];
+    [self.registerButton addTarget:self action:@selector(registerButton:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:self.registerButton];
+    
+    
+    
+    
+    // 第三方登录
+    
+    //
+    
+    self.qqImageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, (460 - 55) *self.indextY, 50, 50)];
+    self.qqImageView.image = [UIImage imageNamed:@"qq@2x.png"];
+    [self.view addSubview:self.qqImageView];
+    self.qqImageView.tag = 101;
+    self.qqImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(login:)];
+    [self.qqImageView addGestureRecognizer:tap];
+    
+    //
+    self.weixinImageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 25, (460 - 55) *self.indextY,50, 50)];
+    self.weixinImageView.tag = 102;
+    self.weixinImageView.userInteractionEnabled = YES;
+    self.weixinImageView.image = [UIImage imageNamed:@"微信@2x.png"];
+    UITapGestureRecognizer *tapweixin = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(login:)];
+    [self.weixinImageView addGestureRecognizer:tapweixin];
+    [self.view addSubview:self.weixinImageView];
+    
+    //
+    self.xinlangImageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 80, (460 - 55) *self.indextY, 50,50)];
+    self.xinlangImageView.image = [UIImage imageNamed:@"微博@2x.png"];
+    UITapGestureRecognizer *tapxinlang = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(login:)];
+    [self.xinlangImageView addGestureRecognizer:tapxinlang];
+    self.xinlangImageView.tag = 103;
+    self.xinlangImageView.userInteractionEnabled = YES;
+    [self.view addSubview:self.xinlangImageView];
+    
+    
+    
+    
+
+    
+    
+    
+}
+
+-(void)dian
+{
+    if (self.indext == NO) {
+        self.indext = YES;
+
+        [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"check@2x.png"] forState:(UIControlStateNormal)];
+        
+        
+        
+    }else if(self.indext == YES){
+        
+        
+        [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"没点同意协议@2x.png"] forState:(UIControlStateNormal)];
+
+        
+        self.indext = NO;
+        
+        
+    }
+    
+    
+    
+    
+}
+-(void)coustom
+{
+    
+       // 布局登录
+    
+    //1photo
     self.photoImabeView  = [[UIImageView alloc]initWithFrame:CGRectMake(120 *self.indextX, 84 * self.indextY, 80, 80)];
     
-    self.photoImabeView.image = [UIImage imageNamed:@"3.jpg"];
+    self.photoImabeView.image = [UIImage imageNamed:@"头像@2x.png"];
     self.photoImabeView.layer.cornerRadius = 40;
     self.photoImabeView.layer.masksToBounds = YES;
     [self.view addSubview:self.photoImabeView];
     
     //username
     self.userNameMy = [[MyTextFied alloc]initWithFrame:CGRectMake(10, 180 * self.indextY, 300*self.indextX, 40  )];
+    self.userNameMy.mySmallimageView.image = [UIImage imageNamed:@"小人头像@2x.png"];
     self.userNameMy.mytextField.placeholder = @"请输入您的登录账号";
     [self.view addSubview:self.userNameMy];
     
@@ -109,6 +279,8 @@
     
     self.userPassWordMy = [[MyTextFied alloc]initWithFrame:CGRectMake(10, 180*self.indextY + 60, 300*self.indextX, 40)];
     self.userPassWordMy.mytextField.placeholder = @"请输入您的登录密码";
+    self.userPassWordMy.mySmallimageView.image = [UIImage imageNamed:@"我的密码@2x.png"];
+    
 
     
     [self.view addSubview:self.userPassWordMy];
@@ -128,10 +300,27 @@
     [self.forgetPasswordButton setTitle:@"忘记密码?" forState:(UIControlStateNormal)];
     [self.forgetPasswordButton addTarget:self action:@selector(forget) forControlEvents:(UIControlEventTouchUpInside)];
      self.forgetPasswordButton.titleLabel.font = [UIFont systemFontOfSize:15.0f];
-    
     //self.forgetPasswordButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
     [self.forgetPasswordButton setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
     [self.view addSubview:self.forgetPasswordButton];
+    
+    UILabel *smallLable = [[UILabel alloc]initWithFrame:CGRectMake(60, 265 *self.indextY, 80, 20)];
+    smallLable.text = @"下次自动登录";
+    smallLable.font = [UIFont systemFontOfSize:12];
+    smallLable.textColor = [UIColor grayColor];
+    [self.view addSubview:smallLable];
+    
+    
+    self.myZibutton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    
+    self.myZibutton.frame = CGRectMake(38, 267*self.indextY, 16, 16);
+    [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"没点同意协议@2x.png"] forState:(UIControlStateNormal)];
+    [self.myZibutton addTarget:self action: @selector(dian) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:self.myZibutton];
+    
+
+    
+
     //登录按钮
     
     self.loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -158,13 +347,11 @@
     
     
    // 第三方登录
-    UIView *myView = [[UIView alloc]initWithFrame:CGRectMake(0, (460 - 55) *self.indextY , 320 * self.indextX, 50)];
-    myView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:myView];
+   
     //
     
     self.qqImageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, (460 - 55) *self.indextY, 50, 50)];
-    self.qqImageView.image = [UIImage imageNamed:@"sns_icon_24.png"];
+    self.qqImageView.image = [UIImage imageNamed:@"qq@2x.png"];
     [self.view addSubview:self.qqImageView];
     self.qqImageView.tag = 101;
     self.qqImageView.userInteractionEnabled = YES;
@@ -172,17 +359,17 @@
     [self.qqImageView addGestureRecognizer:tap];
     
     //
-    self.weixinImageView = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - 40 ) / 3 - 20 + 50, (460 - 55) *self.indextY,50, 50)];
+    self.weixinImageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 25, (460 - 55) *self.indextY,50, 50)];
     self.weixinImageView.tag = 102;
     self.weixinImageView.userInteractionEnabled = YES;
-    self.weixinImageView.image = [UIImage imageNamed:@"weixin.png"];
+    self.weixinImageView.image = [UIImage imageNamed:@"微信@2x.png"];
     UITapGestureRecognizer *tapweixin = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(login:)];
     [self.weixinImageView addGestureRecognizer:tapweixin];
     [self.view addSubview:self.weixinImageView];
     
     //
-    self.xinlangImageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 30 - (self.view.frame.size.width - 40 ) / 3 + 20 , (460 - 55) *self.indextY, 50,50)];
-    self.xinlangImageView.image = [UIImage imageNamed:@"sdk_weibo_logo.png"];
+    self.xinlangImageView = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 80, (460 - 55) *self.indextY, 50,50)];
+    self.xinlangImageView.image = [UIImage imageNamed:@"微博@2x.png"];
     UITapGestureRecognizer *tapxinlang = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(login:)];
     [self.xinlangImageView addGestureRecognizer:tapxinlang];
     self.xinlangImageView.tag = 103;
@@ -293,7 +480,6 @@
     
     ForgetViewController *forget = [[ForgetViewController alloc]init];
     [self.navigationController pushViewController:forget animated:YES];
-    
     
     
     

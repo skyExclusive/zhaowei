@@ -12,14 +12,12 @@
 #import "ClickViewController.h"
 #import "DataNameTableViewCell.h"
 #import "DataSexTableViewCell.h"
-@interface XiangViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+@interface XiangViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableDictionary *dic;
 @property (nonatomic,strong)UIView *myView;
 @property (nonatomic,strong)UIImage *myimage;
-@property (nonatomic,strong)UIPickerView *mypicker;
 @property (nonatomic,strong)NSArray *sexArray;
-@property (nonatomic,strong)UIButton *mybutton;
 @property (nonatomic,copy)NSString *str;
 @end
 
@@ -52,10 +50,6 @@
     [self.navigationController  popToRootViewControllerAnimated:YES];
 }
 
--(void)remove:(UITapGestureRecognizer *)tap
-{
-    [self.myView removeFromSuperview];
-}
 
 //布局view
 -(void)layoutView
@@ -93,79 +87,10 @@
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = right;
     
-    //初始化 mypickerView
-    self.mypicker = [[UIPickerView alloc]initWithFrame:CGRectMake(0, 490, kMainWidth, kMainWidth * 0.2)];
-    self.mypicker.delegate = self;
-    self.mypicker.dataSource = self;
-    self.mypicker.userInteractionEnabled = YES;
-    self.sexArray = [NSArray arrayWithObjects:@"男",@"女",@"保密", nil];
-    self.mybutton = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [self.mybutton setTitle:@"确定" forState:(UIControlStateNormal)];
-    [self.mybutton addTarget:self action:@selector(remove1:) forControlEvents:(UIControlEventTouchUpInside)];
-    [self.mybutton setTintColor:[UIColor grayColor]];
-    [self.mybutton  setFrame:CGRectMake(kMainWidth - 60, kMainHeight*0.70, 60, 30)];
-    
     
 }
--(void)remove1:(UIButton *)button
-{
-    [self.mypicker removeFromSuperview];
-    [self.mybutton removeFromSuperview];
-}
-//mypickerView 代理方法实现
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-}
 
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return _sexArray.count;
-}
 
--(CGFloat )pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
-{
-    return 30;
-}
-
--(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)componentpic
-{
-    return kMainWidth;
-}
-
--(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
-{
-    if (!view) {
-        view = [[UIView alloc]init];
-    }
-    UILabel *text = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
-    text.textAlignment = NSTextAlignmentCenter;
-    text.text = [self.sexArray objectAtIndex:row];
-    [view addSubview:text];
-    return view;
-}
-
-//显示的标题
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    NSString *str = [_sexArray objectAtIndex:row];
-    return  str;
-}
-
-//显示标题的字体 颜色合属性
--(NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    NSString *str = [_sexArray objectAtIndex:row];
-    NSMutableAttributedString *AttributeString = [[NSMutableAttributedString alloc]initWithString:str];
-    [AttributeString addAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]} range:NSMakeRange(0, [AttributeString length])];
-    return AttributeString;
-}
-
-//被选择的行
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    self.str = [_sexArray objectAtIndex:row];
-}
 //完成的点击事件
 -(void)wancheng
 {
@@ -175,7 +100,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -196,24 +121,31 @@
     }
 }
 
-
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 2) {
+        return 10;
+    }else{
+        return 0;
+    }
+}
 //cell的点击事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ClickViewController *clichVC = [[ClickViewController alloc]init];
     clichVC.i = 10;
-    if (indexPath.section == 1 && indexPath.row == 2 ) {
-        [self.view addSubview:self.mypicker];
-        [self.view addSubview:self.mybutton];
-        
+    if (indexPath.section == 1 && indexPath.row == 2 ){
+        clichVC.i = 13;
+        [self.navigationController pushViewController:clichVC animated:YES];
     }else if (indexPath.section == 1 && indexPath.row == 3) {
         clichVC.i = 11;
-        NSLog(@"改变性格");
         [self.navigationController pushViewController:clichVC animated:YES];
     }else if (indexPath.section == 1 && indexPath.row == 4) {
         clichVC.i = 12;
-        NSLog(@"改变性格");
         [self.navigationController pushViewController:clichVC animated:YES];
+    }else if (indexPath.section == 2 && indexPath.row == 0) {
+        
+        NSLog(@"退出登录");
     }
 
     
@@ -230,8 +162,6 @@
     
     
     if (indexPath.row == 0 && indexPath.section == 0) {
-        
-        NSLog(@"就是这个");
         
         TouxiangTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
         
@@ -250,14 +180,13 @@
         [cell.dengLable removeFromSuperview];
         [cell.jiLable removeFromSuperview];
         
-       
+        cell.superview.superview.backgroundColor = MainBackGround;
         
         UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
         visualEfView.frame = CGRectMake(cell.backimage.frame.origin.x, cell.backimage.frame.origin.y-2, cell.backimage.frame.size.width, cell.backimage.frame.size.height+2);
         visualEfView.alpha = 1.0;
         [cell.backimage addSubview:visualEfView];
         cell.photoImage.userInteractionEnabled = YES;
-        cell.superview.superview.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
         //轻怕手势
         UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(push:)];
         self.view.userInteractionEnabled = YES;
@@ -286,7 +215,26 @@
    
         
         return cell;
-    }else {
+    }else if (indexPath.section == 2){
+        
+        
+        DataNameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell" forIndexPath:indexPath];
+        
+        [cell.nameLable removeFromSuperview];
+        [cell.nameField removeFromSuperview];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 50)];
+        lable.textAlignment = NSTextAlignmentCenter;
+        lable.text = @"退出登录";
+        lable.backgroundColor = COLOR(233, 42, 48, 1);
+        lable.font = MyButtonFont;
+        lable.textColor = [UIColor whiteColor];
+        [cell addSubview:lable];
+        
+        
+        return cell;
+        
+    }else  {
         DataSexTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"sexCell" forIndexPath:indexPath];
         cell.sexLable.text = str;
         cell.sexLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];

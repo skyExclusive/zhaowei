@@ -79,7 +79,6 @@
 		0ACAF2AD1B411EE50029ACC9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAF28F1B411EE40029ACC9 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		0ACAF2AE1B411EE50029ACC9 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2911B411EE40029ACC9 /* libWeiboSDK.a */; };
 		0ACAF2AF1B411EE50029ACC9 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAF2921B411EE40029ACC9 /* WeiboSDK.bundle */; };
-		0ACAF2B01B411EE50029ACC9 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2951B411EE40029ACC9 /* libTCWeiboSDK.a */; };
 		0ACAF2B11B411EE60029ACC9 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2991B411EE40029ACC9 /* libWeChatSDK.a */; };
 		0ACAF2B21B411EE60029ACC9 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF29C1B411EE40029ACC9 /* ShareSDK.framework */; };
 		0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAF29E1B411EE40029ACC9 /* ShareSDKFlatShareViewUI.bundle */; };
@@ -103,6 +102,16 @@
 		0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */; };
 		0AE3C73C1B5C834A007153A3 /* MyTextFied.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3C73B1B5C834A007153A3 /* MyTextFied.m */; };
 		0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */; };
+		0AE3C7491B5CACC7007153A3 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */; };
+		0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */; };
+		0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */; };
+		0AE3C7581B5CDDA6007153A3 /* 头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */; };
+		0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */; };
+		0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */; };
+		0AE3C75B1B5CDDA6007153A3 /* 我的密码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */; };
+		0AE3C75C1B5CDDA6007153A3 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7541B5CDDA6007153A3 /* check@2x.png */; };
+		0AE3C75D1B5CDDA6007153A3 /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7551B5CDDA6007153A3 /* qq@2x.png */; };
+		0AE3C75F1B5CEA42007153A3 /* 小人头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C75E1B5CEA42007153A3 /* 小人头像@2x.png */; };
 		0AE3F2601B578F6F00ECA9BC /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */; };
 		0AE3F2631B57A67A00ECA9BC /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F2621B57A67A00ECA9BC /* RegistViewController.m */; };
 		0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE6F1B422A8600C3C98B /* 1.jpg */; };
@@ -116,7 +125,23 @@
 		95A5324D1B53B744002D2D0F /* DataSexTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A5324B1B53B744002D2D0F /* DataSexTableViewCell.m */; };
 		95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A5324C1B53B744002D2D0F /* DataSexTableViewCell.xib */; };
 		95B83E191B44D32A007ECAA8 /* XiangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B83E181B44D32A007ECAA8 /* XiangViewController.m */; };
+		95C7BA831B5E2E09009604D7 /* 版本更新@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA7E1B5E2E09009604D7 /* 版本更新@2x.png */; };
+		95C7BA841B5E2E09009604D7 /* 关于我们@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA7F1B5E2E09009604D7 /* 关于我们@2x.png */; };
+		95C7BA851B5E2E09009604D7 /* 活动记录@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA801B5E2E09009604D7 /* 活动记录@2x.png */; };
+		95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA811B5E2E09009604D7 /* 活动介绍@2x.png */; };
+		95C7BA871B5E2E09009604D7 /* 意见反馈@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA821B5E2E09009604D7 /* 意见反馈@2x.png */; };
+		95C7BA891B5E381F009604D7 /* 设置@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA881B5E381F009604D7 /* 设置@2x.png */; };
+		95C7BA8D1B5E4116009604D7 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C7BA8B1B5E4116009604D7 /* ActivityTableViewCell.m */; };
+		95C7BA8E1B5E4116009604D7 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA8C1B5E4116009604D7 /* ActivityTableViewCell.xib */; };
+		95C7BA921B5E4771009604D7 /* 恭喜中奖@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA8F1B5E4771009604D7 /* 恭喜中奖@2x.png */; };
+		95C7BA931B5E4771009604D7 /* 审核中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA901B5E4771009604D7 /* 审核中@2x.png */; };
+		95C7BA941B5E4771009604D7 /* 再接再厉@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA911B5E4771009604D7 /* 再接再厉@2x.png */; };
 		95C8DED21B422ECF00FA1FDD /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8DED11B422ECF00FA1FDD /* 3.png */; };
+		95CB4C8D1B60C6E2002090B9 /* 性别选择@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95CB4C8C1B60C6E2002090B9 /* 性别选择@2x.png */; };
+		95D08E181B5F7D7A00A2CA2F /* 第几几期@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D08E171B5F7D7A00A2CA2F /* 第几几期@2x.png */; };
+		95D08E1C1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D08E1A1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m */; };
+		95D08E1D1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D08E1B1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib */; };
+		95D08E1F1B5F97FB00A2CA2F /* 密码设置成功@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D08E1E1B5F97FB00A2CA2F /* 密码设置成功@2x.png */; };
 		95D203501B57448500BCD63F /* ClickTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D2034F1B57448500BCD63F /* ClickTViewController.m */; };
 		95D203521B5789CB00BCD63F /* 白色背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D203511B5789CB00BCD63F /* 白色背景.png */; };
 		95D203541B57931700BCD63F /* 确定按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D203531B57931700BCD63F /* 确定按钮.png */; };
@@ -281,9 +306,6 @@
 		0ACAF2911B411EE40029ACC9 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		0ACAF2921B411EE40029ACC9 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		0ACAF2931B411EE40029ACC9 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
-		0ACAF2951B411EE40029ACC9 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
-		0ACAF2961B411EE40029ACC9 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
-		0ACAF2971B411EE40029ACC9 /* WeiboApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApiObject.h; sourceTree = "<group>"; };
 		0ACAF2991B411EE40029ACC9 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		0ACAF29A1B411EE40029ACC9 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		0ACAF29B1B411EE40029ACC9 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
@@ -311,6 +333,18 @@
 		0AE3C73A1B5C834A007153A3 /* MyTextFied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextFied.h; sourceTree = "<group>"; };
 		0AE3C73B1B5C834A007153A3 /* MyTextFied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextFied.m; sourceTree = "<group>"; };
 		0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1@2x.png"; sourceTree = "<group>"; };
+		0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
+		0AE3C7471B5CACC7007153A3 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
+		0AE3C7481B5CACC7007153A3 /* WeiboApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApiObject.h; sourceTree = "<group>"; };
+		0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "粉色背景@2x.png"; sourceTree = "<group>"; };
+		0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "没点同意协议@2x.png"; sourceTree = "<group>"; };
+		0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头像@2x.png"; sourceTree = "<group>"; };
+		0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微博@2x.png"; sourceTree = "<group>"; };
+		0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信@2x.png"; sourceTree = "<group>"; };
+		0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的密码@2x.png"; sourceTree = "<group>"; };
+		0AE3C7541B5CDDA6007153A3 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		0AE3C7551B5CDDA6007153A3 /* qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@2x.png"; sourceTree = "<group>"; };
+		0AE3C75E1B5CEA42007153A3 /* 小人头像@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小人头像@2x.png"; sourceTree = "<group>"; };
 		0AE3F25E1B578F6F00ECA9BC /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		0AE3F2611B57A67A00ECA9BC /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
@@ -331,8 +365,26 @@
 		95A5324C1B53B744002D2D0F /* DataSexTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataSexTableViewCell.xib; sourceTree = "<group>"; };
 		95B83E171B44D32A007ECAA8 /* XiangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XiangViewController.h; sourceTree = "<group>"; };
 		95B83E181B44D32A007ECAA8 /* XiangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XiangViewController.m; sourceTree = "<group>"; };
+		95C7BA7E1B5E2E09009604D7 /* 版本更新@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "版本更新@2x.png"; sourceTree = "<group>"; };
+		95C7BA7F1B5E2E09009604D7 /* 关于我们@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关于我们@2x.png"; sourceTree = "<group>"; };
+		95C7BA801B5E2E09009604D7 /* 活动记录@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动记录@2x.png"; sourceTree = "<group>"; };
+		95C7BA811B5E2E09009604D7 /* 活动介绍@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "活动介绍@2x.png"; sourceTree = "<group>"; };
+		95C7BA821B5E2E09009604D7 /* 意见反馈@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "意见反馈@2x.png"; sourceTree = "<group>"; };
+		95C7BA881B5E381F009604D7 /* 设置@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置@2x.png"; sourceTree = "<group>"; };
+		95C7BA8A1B5E4116009604D7 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		95C7BA8B1B5E4116009604D7 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
+		95C7BA8C1B5E4116009604D7 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		95C7BA8F1B5E4771009604D7 /* 恭喜中奖@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "恭喜中奖@2x.png"; sourceTree = "<group>"; };
+		95C7BA901B5E4771009604D7 /* 审核中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "审核中@2x.png"; sourceTree = "<group>"; };
+		95C7BA911B5E4771009604D7 /* 再接再厉@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "再接再厉@2x.png"; sourceTree = "<group>"; };
 		95C8DED11B422ECF00FA1FDD /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../3.png; sourceTree = "<group>"; };
 		95C8DED31B42413200FA1FDD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		95CB4C8C1B60C6E2002090B9 /* 性别选择@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "性别选择@2x.png"; sourceTree = "<group>"; };
+		95D08E171B5F7D7A00A2CA2F /* 第几几期@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "第几几期@2x.png"; sourceTree = "<group>"; };
+		95D08E191B5F7EF700A2CA2F /* DiJiQiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiJiQiTableViewCell.h; sourceTree = "<group>"; };
+		95D08E1A1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiJiQiTableViewCell.m; sourceTree = "<group>"; };
+		95D08E1B1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiJiQiTableViewCell.xib; sourceTree = "<group>"; };
+		95D08E1E1B5F97FB00A2CA2F /* 密码设置成功@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "密码设置成功@2x.png"; sourceTree = "<group>"; };
 		95D2034E1B57448500BCD63F /* ClickTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickTViewController.h; sourceTree = "<group>"; };
 		95D2034F1B57448500BCD63F /* ClickTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickTViewController.m; sourceTree = "<group>"; };
 		95D203511B5789CB00BCD63F /* 白色背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "白色背景.png"; sourceTree = "<group>"; };
@@ -371,6 +423,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE3C7491B5CACC7007153A3 /* libTCWeiboSDK.a in Frameworks */,
 				0ACAF2CD1B4120980029ACC9 /* libsqlite3.dylib in Frameworks */,
 				0ACAF2CB1B41208E0029ACC9 /* libstdc++.dylib in Frameworks */,
 				0ACAF2C91B4120820029ACC9 /* MessageUI.framework in Frameworks */,
@@ -383,7 +436,6 @@
 				0ACAF2BB1B4120330029ACC9 /* CoreTelephony.framework in Frameworks */,
 				0ACAF2B91B41202C0029ACC9 /* QuartzCore.framework in Frameworks */,
 				0ACAF2B71B4120250029ACC9 /* SystemConfiguration.framework in Frameworks */,
-				0ACAF2B01B411EE50029ACC9 /* libTCWeiboSDK.a in Frameworks */,
 				0ACAF2B51B411EE60029ACC9 /* ShareSDKShareActionSheet.framework in Frameworks */,
 				0ACAF2A61B411EE50029ACC9 /* TencentWeiboConnection.framework in Frameworks */,
 				0ACAF2AE1B411EE50029ACC9 /* libWeiboSDK.a in Frameworks */,
@@ -431,10 +483,26 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				95C7BA7E1B5E2E09009604D7 /* 版本更新@2x.png */,
+				95C7BA7F1B5E2E09009604D7 /* 关于我们@2x.png */,
+				95C7BA801B5E2E09009604D7 /* 活动记录@2x.png */,
+				95C7BA811B5E2E09009604D7 /* 活动介绍@2x.png */,
+				95C7BA821B5E2E09009604D7 /* 意见反馈@2x.png */,
 				95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
+				95C7BA881B5E381F009604D7 /* 设置@2x.png */,
+				0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */,
+				0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */,
+				0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */,
+				0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */,
+				0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */,
+				0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */,
+				0AE3C75E1B5CEA42007153A3 /* 小人头像@2x.png */,
+				0AE3C7541B5CDDA6007153A3 /* check@2x.png */,
+				0AE3C7551B5CDDA6007153A3 /* qq@2x.png */,
 				959312A01B5C9CA60006142F /* 用户反馈@2x.png */,
 				0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */,
 				95D2035D1B57A7C800BCD63F /* 添加按钮.png */,
+				95D08E1E1B5F97FB00A2CA2F /* 密码设置成功@2x.png */,
 				95D203531B57931700BCD63F /* 确定按钮.png */,
 				95D203511B5789CB00BCD63F /* 白色背景.png */,
 				95DAF6DD1B4F60ED00B891DC /* 形状 1.png */,
@@ -799,9 +867,9 @@
 		0ACAF28C1B411EE40029ACC9 /* Extend */ = {
 			isa = PBXGroup;
 			children = (
+				0AE3C7451B5CACC7007153A3 /* TencentWeiboSDK */,
 				0ACAF28D1B411EE40029ACC9 /* QQConnectSDK */,
 				0ACAF2901B411EE40029ACC9 /* SinaWeiboSDK */,
-				0ACAF2941B411EE40029ACC9 /* TencentWeiboSDK */,
 				0ACAF2981B411EE40029ACC9 /* WeChatSDK */,
 			);
 			path = Extend;
@@ -826,16 +894,6 @@
 			path = SinaWeiboSDK;
 			sourceTree = "<group>";
 		};
-		0ACAF2941B411EE40029ACC9 /* TencentWeiboSDK */ = {
-			isa = PBXGroup;
-			children = (
-				0ACAF2951B411EE40029ACC9 /* libTCWeiboSDK.a */,
-				0ACAF2961B411EE40029ACC9 /* WeiboApi.h */,
-				0ACAF2971B411EE40029ACC9 /* WeiboApiObject.h */,
-			);
-			path = TencentWeiboSDK;
-			sourceTree = "<group>";
-		};
 		0ACAF2981B411EE40029ACC9 /* WeChatSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -854,6 +912,16 @@
 				0ACAF2A01B411EE40029ACC9 /* ShareSDKShareActionSheet.framework */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		0AE3C7451B5CACC7007153A3 /* TencentWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */,
+				0AE3C7471B5CACC7007153A3 /* WeiboApi.h */,
+				0AE3C7481B5CACC7007153A3 /* WeiboApiObject.h */,
+			);
+			path = TencentWeiboSDK;
 			sourceTree = "<group>";
 		};
 		959312A41B5C9D840006142F /* model */ = {
@@ -905,6 +973,11 @@
 		95D661AC1B44D43E00E9992E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				95CB4C8C1B60C6E2002090B9 /* 性别选择@2x.png */,
+				95D08E171B5F7D7A00A2CA2F /* 第几几期@2x.png */,
+				95C7BA8F1B5E4771009604D7 /* 恭喜中奖@2x.png */,
+				95C7BA901B5E4771009604D7 /* 审核中@2x.png */,
+				95C7BA911B5E4771009604D7 /* 再接再厉@2x.png */,
 				95D661AD1B44D44500E9992E /* 1.png */,
 				95D661AE1B44D44500E9992E /* 2.png */,
 				95D661B21B44D44500E9992E /* TongyongTableViewCell.h */,
@@ -922,6 +995,12 @@
 				95D203581B579BB700BCD63F /* addressTableViewCell.h */,
 				95D203591B579BB700BCD63F /* addressTableViewCell.m */,
 				95D2035A1B579BB700BCD63F /* addressTableViewCell.xib */,
+				95C7BA8A1B5E4116009604D7 /* ActivityTableViewCell.h */,
+				95C7BA8B1B5E4116009604D7 /* ActivityTableViewCell.m */,
+				95C7BA8C1B5E4116009604D7 /* ActivityTableViewCell.xib */,
+				95D08E191B5F7EF700A2CA2F /* DiJiQiTableViewCell.h */,
+				95D08E1A1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m */,
+				95D08E1B1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1007,10 +1086,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C7BA931B5E4771009604D7 /* 审核中@2x.png in Resources */,
+				95C7BA851B5E2E09009604D7 /* 活动记录@2x.png in Resources */,
 				95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
+				0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
+				0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */,
 				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
+				95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */,
 				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
+				95D08E1D1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib in Resources */,
 				0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */,
 				95D203541B57931700BCD63F /* 确定按钮.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
@@ -1021,22 +1106,39 @@
 				95DAF6DE1B4F60ED00B891DC /* 形状 1.png in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
+				0AE3C75C1B5CDDA6007153A3 /* check@2x.png in Resources */,
+				95C7BA941B5E4771009604D7 /* 再接再厉@2x.png in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
 				0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */,
 				959312A11B5C9CA60006142F /* 用户反馈@2x.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
+				0AE3C75B1B5CDDA6007153A3 /* 我的密码@2x.png in Resources */,
+				95C7BA841B5E2E09009604D7 /* 关于我们@2x.png in Resources */,
 				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
+				0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
 				95D2035C1B579BB700BCD63F /* addressTableViewCell.xib in Resources */,
 				0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */,
+				0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */,
+				95C7BA831B5E2E09009604D7 /* 版本更新@2x.png in Resources */,
+				0AE3C75F1B5CEA42007153A3 /* 小人头像@2x.png in Resources */,
 				95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */,
+				95C7BA891B5E381F009604D7 /* 设置@2x.png in Resources */,
 				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,
+				95C7BA8E1B5E4116009604D7 /* ActivityTableViewCell.xib in Resources */,
+				0AE3C7581B5CDDA6007153A3 /* 头像@2x.png in Resources */,
+				0AE3C75D1B5CDDA6007153A3 /* qq@2x.png in Resources */,
 				95D661B81B44D44500E9992E /* 1.png in Resources */,
+				95D08E181B5F7D7A00A2CA2F /* 第几几期@2x.png in Resources */,
+				95D08E1F1B5F97FB00A2CA2F /* 密码设置成功@2x.png in Resources */,
+				95C7BA871B5E2E09009604D7 /* 意见反馈@2x.png in Resources */,
 				0ACAF2AD1B411EE50029ACC9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */,
 				95D661BD1B44D44500E9992E /* TongyongTableViewCell.xib in Resources */,
 				0ACAF2521B411E830029ACC9 /* MJRefresh.bundle in Resources */,
+				95C7BA921B5E4771009604D7 /* 恭喜中奖@2x.png in Resources */,
+				95CB4C8D1B60C6E2002090B9 /* 性别选择@2x.png in Resources */,
 				0ACAF1BC1B411E300029ACC9 /* Images.xcassets in Resources */,
 				0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */,
 				0ACAF2AF1B411EE50029ACC9 /* WeiboSDK.bundle in Resources */,
@@ -1111,6 +1213,7 @@
 				0ACAF25C1B411E830029ACC9 /* SDWebImageDownloader.m in Sources */,
 				0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */,
 				0ACAF24E1B411E830029ACC9 /* MJRefreshBackStateFooter.m in Sources */,
+				95C7BA8D1B5E4116009604D7 /* ActivityTableViewCell.m in Sources */,
 				0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */,
 				95D661BC1B44D44500E9992E /* TongyongTableViewCell.m in Sources */,
 				0ACAF2581B411E830029ACC9 /* NSData+ImageContentType.m in Sources */,
@@ -1122,6 +1225,7 @@
 				0ACAF2431B411E830029ACC9 /* AFURLSessionManager.m in Sources */,
 				95D4A4491B44DDAB005F5ABF /* SecondViewController.m in Sources */,
 				0ACAF2601B411E830029ACC9 /* UIButton+WebCache.m in Sources */,
+				95D08E1C1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m in Sources */,
 				0ACAF1B41B411E300029ACC9 /* AppDelegate.m in Sources */,
 				0AE3F2601B578F6F00ECA9BC /* ForgetViewController.m in Sources */,
 				0AE3C73C1B5C834A007153A3 /* MyTextFied.m in Sources */,
