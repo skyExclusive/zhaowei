@@ -35,6 +35,12 @@
 
 //带有RGBA的颜色设置
 #define COLOR(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+//主要的背景颜色
+#define MainBackGround  [UIColor colorWithRed:251/255.0 green:246/255.0 blue:240/255.0 alpha:1]
+
+//设置button的字体和大小
+
+#define MyButtonFont [UIFont fontWithName:@"DBLCDTempBlack" size:18]
 
 
 //背景色

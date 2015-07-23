@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLable;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLable;
 @property (weak, nonatomic) IBOutlet UILabel *addressLable;
+@property (weak, nonatomic) IBOutlet UIView *backGround;
 @end

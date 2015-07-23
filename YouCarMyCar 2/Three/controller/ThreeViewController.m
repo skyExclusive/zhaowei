@@ -19,6 +19,7 @@
 @interface ThreeViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableDictionary *dic;
+@property (nonatomic,strong)NSMutableDictionary *imagedic;
 @end
 
 @implementation ThreeViewController
@@ -40,11 +41,16 @@
     self.navigationItem.title = @"个人信息";
   
     self.dic = [[NSMutableDictionary alloc]init];
-    NSArray *array1 = [[NSArray alloc]initWithObjects:@"我的参与",@"活动介绍",@"关于我们",@"用户反馈",@"版本更新", nil];
-    NSArray *array2 = [[NSArray alloc]initWithObjects:@"退出登录", nil];
+    NSArray *array1 = [[NSArray alloc]initWithObjects:@"活动记录",@"活动介绍", nil];
+    NSArray *array2 = [[NSArray alloc]initWithObjects:@"关于我们",@"用户反馈",@"版本更新", nil];
     [self.dic  setValue:array1 forKey:@"1"];
     [self.dic  setValue:array2 forKey:@"2"];
     
+    self.imagedic = [[NSMutableDictionary alloc]init];
+    NSArray *imageArr1 = [[NSArray alloc]initWithObjects:@"活动记录.png",@"活动介绍.png", nil];
+    NSArray *imageArr2 = [[NSArray alloc]initWithObjects:@"关于我们.png",@"意见反馈.png",@"版本更新.png", nil];
+    [self.imagedic setValue:imageArr1 forKey:@"1"];
+    [self.imagedic setValue:imageArr2 forKey:@"2"];
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     self.tableView.backgroundColor = [UIColor whiteColor];
@@ -62,9 +68,9 @@
     
 //右item
     UIButton *shezhiBT = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [shezhiBT setTitle:@"设置" forState:(UIControlStateNormal)];
+    [shezhiBT setImage:[UIImage imageNamed:@"设置.png"] forState:(UIControlStateNormal)];
     [shezhiBT addTarget:self action:@selector(bianji) forControlEvents:(UIControlEventTouchUpInside)];
-    [shezhiBT setFrame:CGRectMake(0, 0, 45, 35)];
+    [shezhiBT setFrame:CGRectMake(0, 0, 35, 35)];
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:shezhiBT];
     self.navigationItem.rightBarButtonItem = item;
     
@@ -85,10 +91,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (section == 1) {
-        return 5;
-    }else{
+    if (section == 0) {
         return 1;
+    }else if (section == 1) {
+        return 2;
+    }else {
+        return 3;
     }
     
 }
@@ -107,7 +115,7 @@
     if (section == 1 || section  ==0) {
         return 0;
     }else{
-        return 5;
+        return 10;
     }
 }
 //cell 的点击事件
@@ -115,20 +123,31 @@
 {
     ClickViewController *clichVC = [[ClickViewController alloc]init];
     clichVC.i = 0;
-   
-    if (indexPath.section ==1 && indexPath.row <4) {
-        for (int a = 0; a <5; a ++) {
+
+    if (indexPath.section ==1 && indexPath.row <2) {
+        
+        for (int a = 0; a <2; a ++) {
         if (indexPath.section == 1 && indexPath.row == a) {
             clichVC.i = a;
         }
     }
-    [self.navigationController pushViewController:clichVC animated:YES];
-    }else if (indexPath.section ==1 && indexPath.row == 4) {
+        [self.navigationController pushViewController:clichVC animated:YES];
+        
+    } else if (indexPath.section ==2 && indexPath.row == 0 ) {
+        
+        clichVC.i = 5;
+        [self.navigationController pushViewController:clichVC animated:YES];
+        
+    } else if(indexPath.section ==2 && indexPath.row  == 1 ){
+        
+        clichVC.i = 6;
+        [self.navigationController pushViewController:clichVC animated:YES];
+        
+    } else if (indexPath.section == 2 && indexPath.row == 2 ){
+        
         UIAlertView *alterView = [[UIAlertView alloc] initWithTitle:nil message:@"已经是最新版本" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         alterView.backgroundColor = [UIColor redColor];
         [alterView show];
-    }else if (indexPath.section == 2 && indexPath.row == 0 ){
-        NSLog(@"退出登陆");
     }
     
 }
@@ -136,9 +155,12 @@
     
     NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
     NSString *str = array[indexPath.row];
+    NSArray *imageArr = [self.imagedic  valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
+    NSString *imageStr = imageArr[indexPath.row];
     if (indexPath.row == 0 && indexPath.section == 0) {
         
         TouxiangTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell"forIndexPath:indexPath];
+        
         cell.photoImage.layer.cornerRadius = cell.photoImage.frame.size.height/2;
         cell.photoImage.layer.masksToBounds = YES;
         cell.photoImage.image = [UIImage imageNamed:@"2.png"];
@@ -150,7 +172,7 @@
         visualEfView.alpha = 1.0;
         [cell.backimage addSubview:visualEfView];
         cell.photoImage.userInteractionEnabled = YES;
-        cell.superview.superview.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
+        cell.superview.superview.backgroundColor = COLOR(251, 246, 240, 1);
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
@@ -160,23 +182,18 @@
         
         TongyongTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tongCell" forIndexPath:indexPath];;
         cell.lableText.text = str;
-        cell.lableText.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
+        cell.iconImage.image = [UIImage imageNamed:imageStr];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        if (indexPath.section == 1  && indexPath.row < 4) {
-            cell.myView.alpha = 1;
-        }
-        if (indexPath.section == 2  && indexPath.row == 0) {
-            [cell.boultImage removeFromSuperview];
-            [cell.lableText removeFromSuperview];
-            [cell.iconImage removeFromSuperview];
+        if (indexPath.section == 1  && indexPath.row < 1) {
             
-            UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(kMainWidth/2-36, 0, kMainWidth, 50)];;
-            lable.text = @"退出登陆";
-            [cell addSubview:lable];
-            lable.textColor = [UIColor whiteColor];
-            cell.backgroundColor = [UIColor colorWithRed:235/255.0 green:50/255.0 blue:30/255.0 alpha:1];
-
+            cell.myView.alpha = 1;
+            
+        }
+        if (indexPath.section == 2  && indexPath.row < 2) {
+            
+            cell.myView.alpha = 1;
         }
         
         

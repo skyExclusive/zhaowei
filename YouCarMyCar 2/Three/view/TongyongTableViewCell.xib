@@ -16,44 +16,33 @@
                 <subviews>
                     <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9f-Cl-j8P">
                         <rect key="frame" x="8" y="49" width="359" height="1"/>
-                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-vL-eUs">
-                        <rect key="frame" x="338" y="15" width="20" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="L3o-x0-gST"/>
-                            <constraint firstAttribute="width" constant="20" id="Xwn-Jb-mAn"/>
-                        </constraints>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20150418072910824_easyicon_net_1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="9w9-9u-h8h">
-                        <rect key="frame" x="8" y="10" width="30" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="30" id="4kq-Wj-3qX"/>
-                            <constraint firstAttribute="height" constant="30" id="X2H-62-jL3"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyb-zh-ol2">
-                        <rect key="frame" x="46" y="14" width="72" height="21"/>
+                        <rect key="frame" x="41" y="14" width="72" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="8AJ-7U-czO"/>
-                            <constraint firstAttribute="width" constant="72" id="LqH-tG-Vtk"/>
+                            <constraint firstAttribute="height" constant="21" id="cyp-51-gxs"/>
+                            <constraint firstAttribute="width" constant="72" id="vDS-tZ-cLd"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" red="0.52167515519999996" green="1" blue="0.69370800480000006" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20150418072910824_easyicon_net_1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="9w9-9u-h8h">
+                        <rect key="frame" x="13" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="szm-nV-Xzd"/>
+                            <constraint firstAttribute="height" constant="20" id="yxc-jI-5h8"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="NtC-vL-eUs" secondAttribute="trailing" constant="9" id="C06-QP-cQV"/>
-                    <constraint firstItem="NtC-vL-eUs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="Ok6-yi-MLR"/>
-                    <constraint firstItem="9w9-9u-h8h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="SYQ-Bt-Vzw"/>
-                    <constraint firstItem="Nyb-zh-ol2" firstAttribute="leading" secondItem="9w9-9u-h8h" secondAttribute="trailing" constant="8" id="bdo-3G-GwV"/>
-                    <constraint firstItem="9w9-9u-h8h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hnq-rC-8XV"/>
-                    <constraint firstItem="Nyb-zh-ol2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="sYz-rU-O4T"/>
+                    <constraint firstItem="9w9-9u-h8h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="ByO-BL-wsV"/>
+                    <constraint firstItem="9w9-9u-h8h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="I2u-t9-pAc"/>
+                    <constraint firstItem="Nyb-zh-ol2" firstAttribute="leading" secondItem="9w9-9u-h8h" secondAttribute="trailing" constant="8" id="dCQ-1n-nrk"/>
+                    <constraint firstItem="Nyb-zh-ol2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="eRL-A4-9yJ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="boultImage" destination="NtC-vL-eUs" id="t8W-n4-zVB"/>
                 <outlet property="iconImage" destination="9w9-9u-h8h" id="ui2-hW-FHF"/>
                 <outlet property="lableText" destination="Nyb-zh-ol2" id="caI-u9-ece"/>
                 <outlet property="myView" destination="Q9f-Cl-j8P" id="cEA-0k-SOX"/>
@@ -62,7 +51,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="1.png" width="49" height="43"/>
-        <image name="20150418072910824_easyicon_net_1024.png" width="1024" height="1024"/>
+        <image name="20150418072910824_easyicon_net_1024.png" width="60" height="21"/>
     </resources>
 </document>

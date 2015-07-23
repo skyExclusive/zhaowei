@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = MainBackGround;
     
     //布局View
     [self layoutView];
@@ -52,12 +52,14 @@
 
     self.surepasswordField.placeholder = @"请再次输入新密码";
     self.surepasswordField.delegate = self;
+    
     [sureimageView addSubview:self.surepasswordField];
     
     self.sureButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
     [self.sureButton setTitle:@"确定" forState:(UIControlStateNormal)];
     [self.sureButton addTarget:self action:@selector(sure) forControlEvents:(UIControlEventTouchUpInside)];
     self.sureButton.frame = CGRectMake(10, sureimageView.frame.origin.y + 100, kMainWidth - 20, 50);
+    self.sureButton.titleLabel.font = MyButtonFont;
     self.sureButton.backgroundColor = COLOR(49, 219, 224, 1);
     [self.sureButton setTintColor:[UIColor whiteColor]];
     
@@ -84,6 +86,7 @@
 -(void)sure
 {
     SureViewController *sureVC = [[SureViewController alloc]init];
+    sureVC.j = 10;
     [self.navigationController pushViewController:sureVC animated:YES];
 }
 
