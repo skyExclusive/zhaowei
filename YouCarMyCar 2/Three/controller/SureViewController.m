@@ -16,16 +16,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor =  MainBackGround;
+    
+  
     self.title = @"修改密码";
-    self.view.backgroundColor = [ UIColor whiteColor];
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(kMainWidth/2 - 45, kMainHeight/5 , 90, 90)];
+    imageView.image = [UIImage imageNamed:@"密码设置成功.png"];
+    [self.view addSubview:imageView];
+    
+    UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(kMainWidth/2 -100,kMainHeight/5 +140 , 200, 30)];
+    lable.textAlignment = NSTextAlignmentCenter;
+    lable.text = @"密码设置成功!";
+    [self.view addSubview:lable];
+    
+    
+    
+  
     UIButton *surebutton = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    surebutton.frame = CGRectMake(20, kMainHeight/1.8, kMainWidth - 40, 50);
+    surebutton.frame = CGRectMake(20, kMainHeight/5 +200, kMainWidth - 40, 50);
     [surebutton setTitle:@"确定" forState:(UIControlStateNormal)];
     [surebutton setTintColor:[UIColor whiteColor]];
+    surebutton.titleLabel.font = MyButtonFont;
     surebutton.backgroundColor = COLOR(53, 224, 229, 1);
     [surebutton addTarget:self action:@selector(sure) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:surebutton];
     
+
     
     //返回的箭头
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];

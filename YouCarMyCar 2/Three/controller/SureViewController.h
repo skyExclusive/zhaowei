@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SureViewController : UIViewController
-
+@property (nonatomic)int j;
 @end

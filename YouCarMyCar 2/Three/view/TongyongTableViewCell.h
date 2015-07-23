@@ -12,6 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *lableText;
 @property (weak, nonatomic) IBOutlet UIView *myView;
-@property (weak, nonatomic) IBOutlet UIImageView *boultImage;
+
 
 @end
