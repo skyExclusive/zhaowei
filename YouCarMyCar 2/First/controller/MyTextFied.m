@@ -40,7 +40,6 @@
     
     
     self.mySmallimageView = [[UIImageView alloc]initWithFrame:CGRectMake(8, 8, self.frame.size.height - 16, self.frame.size.height - 16)];
-    self.mySmallimageView.image = [UIImage imageNamed:@"1.png"];
     [self addSubview:self.mySmallimageView];
     
     

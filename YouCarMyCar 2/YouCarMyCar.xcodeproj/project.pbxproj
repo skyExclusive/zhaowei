@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A029CEF1B5F6EE6005E88B8 /* 邮箱注册@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A029CEE1B5F6EE6005E88B8 /* 邮箱注册@2x.png */; };
+		0A4A04261B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A04251B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png */; };
+		0A4A04281B5F6F11005C0E3B /* 手机注册@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A04271B5F6F11005C0E3B /* 手机注册@2x.png */; };
+		0A4A042C1B5F6F1C005C0E3B /* 为选择@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A042B1B5F6F1C005C0E3B /* 为选择@2x(1).png */; };
+		0A4A042E1B5F6F2D005C0E3B /* 选中手机注册@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A042D1B5F6F2D005C0E3B /* 选中手机注册@2x.png */; };
+		0A4A04301B5F6F35005C0E3B /* 获取验证码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A042F1B5F6F35005C0E3B /* 获取验证码@2x.png */; };
+		0A4A04341B5F6FC7005C0E3B /* +86@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A04331B5F6FC7005C0E3B /* +86@2x(1).png */; };
+		0A4A04361B5F9DC3005C0E3B /* 手机选中1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A04351B5F9DC3005C0E3B /* 手机选中1@2x.png */; };
 		0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68511B43BDDC00A71D88 /* 白背景.png */; };
 		0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */; };
 		0AB91FA71B46171300552824 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AB91FA61B46171300552824 /* 3.jpg */; };
@@ -96,27 +104,40 @@
 		0ACAF2C91B4120820029ACC9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2C81B4120820029ACC9 /* MessageUI.framework */; };
 		0ACAF2CB1B41208E0029ACC9 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2CA1B41208E0029ACC9 /* libstdc++.dylib */; };
 		0ACAF2CD1B4120980029ACC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2CC1B4120980029ACC9 /* libsqlite3.dylib */; };
+		0AD9C2801B60C1C900188AE8 /* PhoneForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9C27F1B60C1C900188AE8 /* PhoneForgetViewController.m */; };
+		0AD9C2831B60C1DA00188AE8 /* EmailForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9C2821B60C1DA00188AE8 /* EmailForgetViewController.m */; };
+		0AD9C2851B60C72900188AE8 /* 邮箱找回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2841B60C72900188AE8 /* 邮箱找回@2x.png */; };
+		0AD9C2871B60C73400188AE8 /* 手机找回未选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2861B60C73400188AE8 /* 手机找回未选中@2x.png */; };
+		0AD9C2891B60C73900188AE8 /* 手机找回选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2881B60C73900188AE8 /* 手机找回选中@2x.png */; };
+		0AD9C28B1B60C73F00188AE8 /* 邮箱找回选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C28A1B60C73F00188AE8 /* 邮箱找回选中@2x.png */; };
+		0AD9C28D1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C28C1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png */; };
+		0AD9C28F1B60E01E00188AE8 /* 即将开启选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C28E1B60E01E00188AE8 /* 即将开启选中@2x.png */; };
+		0AD9C2911B60E02500188AE8 /* 正在进行未选@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2901B60E02500188AE8 /* 正在进行未选@2x.png */; };
+		0AD9C2931B60E02B00188AE8 /* 正在进行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2921B60E02B00188AE8 /* 正在进行@2x.png */; };
+		0AD9C2951B60E47D00188AE8 /* 正在进行@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2941B60E47D00188AE8 /* 正在进行@2x(1).png */; };
+		0AD9C2971B60F1B200188AE8 /* a正在进行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2961B60F1B200188AE8 /* a正在进行@2x.png */; };
+		0AD9C2991B60F91C00188AE8 /* b正在进行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2981B60F91C00188AE8 /* b正在进行@2x.png */; };
 		0ADD51C31B477F4300FADACD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD51C21B477F4300FADACD /* LoginViewController.m */; };
 		0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD51C41B47810800FADACD /* 向左白色箭头.png */; };
 		0AE102341B4B6DDD00BB23BB /* sns_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102301B4B6DDD00BB23BB /* sns_icon_24.png */; };
 		0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */; };
 		0AE3C73C1B5C834A007153A3 /* MyTextFied.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3C73B1B5C834A007153A3 /* MyTextFied.m */; };
 		0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */; };
-
-
-0AE3C7421B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */; };
 		0AE3C7491B5CACC7007153A3 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */; };
 		0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */; };
-		0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */; };
 		0AE3C7581B5CDDA6007153A3 /* 头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */; };
 		0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */; };
 		0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */; };
 		0AE3C75B1B5CDDA6007153A3 /* 我的密码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */; };
-		0AE3C75C1B5CDDA6007153A3 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7541B5CDDA6007153A3 /* check@2x.png */; };
 		0AE3C75D1B5CDDA6007153A3 /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7551B5CDDA6007153A3 /* qq@2x.png */; };
 		0AE3C75F1B5CEA42007153A3 /* 小人头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C75E1B5CEA42007153A3 /* 小人头像@2x.png */; };
 		0AE3F2601B578F6F00ECA9BC /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */; };
 		0AE3F2631B57A67A00ECA9BC /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F2621B57A67A00ECA9BC /* RegistViewController.m */; };
+		0AE40E9F1B5E218B00676E49 /* 已选择@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE40E9E1B5E218B00676E49 /* 已选择@2x.png */; };
+		0AE40EA11B5E219100676E49 /* 为选择@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE40EA01B5E219100676E49 /* 为选择@2x.png */; };
+		0AE40EA41B5E2C6800676E49 /* PhoneRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE40EA31B5E2C6800676E49 /* PhoneRegisterViewController.m */; };
+		0AE40EA71B5E2C7E00676E49 /* EmailRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE40EA61B5E2C7E00676E49 /* EmailRegisterViewController.m */; };
+		0AE40EAA1B5F30BB00676E49 /* MyTextFiedNoimage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE40EA91B5F30BB00676E49 /* MyTextFiedNoimage.m */; };
 		0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE6F1B422A8600C3C98B /* 1.jpg */; };
 		0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE701B422A8600C3C98B /* 2.jpg */; };
 		954F0A4E1B4B5E46002598C5 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 954F0A4D1B4B5E46002598C5 /* 5.png */; };
@@ -163,6 +184,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A029CEE1B5F6EE6005E88B8 /* 邮箱注册@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "邮箱注册@2x.png"; sourceTree = "<group>"; };
+		0A4A04251B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "邮箱注册(未选中)@2x.png"; sourceTree = "<group>"; };
+		0A4A04271B5F6F11005C0E3B /* 手机注册@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机注册@2x.png"; sourceTree = "<group>"; };
+		0A4A042B1B5F6F1C005C0E3B /* 为选择@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "为选择@2x(1).png"; sourceTree = "<group>"; };
+		0A4A042D1B5F6F2D005C0E3B /* 选中手机注册@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选中手机注册@2x.png"; sourceTree = "<group>"; };
+		0A4A042F1B5F6F35005C0E3B /* 获取验证码@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "获取验证码@2x.png"; sourceTree = "<group>"; };
+		0A4A04331B5F6FC7005C0E3B /* +86@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "+86@2x(1).png"; sourceTree = "<group>"; };
+		0A4A04351B5F9DC3005C0E3B /* 手机选中1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机选中1@2x.png"; sourceTree = "<group>"; };
 		0A9E68511B43BDDC00A71D88 /* 白背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "白背景.png"; sourceTree = "<group>"; };
 		0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页cell背景.png"; sourceTree = "<group>"; };
 		0AB91FA61B46171300552824 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -312,33 +341,51 @@
 		0ACAF2C81B4120820029ACC9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0ACAF2CA1B41208E0029ACC9 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		0ACAF2CC1B4120980029ACC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		0ADD51C11B477F4300FADACD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		0ADD51C21B477F4300FADACD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0AD9C27E1B60C1C900188AE8 /* PhoneForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneForgetViewController.h; sourceTree = "<group>"; };
+		0AD9C27F1B60C1C900188AE8 /* PhoneForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneForgetViewController.m; sourceTree = "<group>"; };
+		0AD9C2811B60C1DA00188AE8 /* EmailForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailForgetViewController.h; sourceTree = "<group>"; };
+		0AD9C2821B60C1DA00188AE8 /* EmailForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailForgetViewController.m; sourceTree = "<group>"; };
+		0AD9C2841B60C72900188AE8 /* 邮箱找回@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "邮箱找回@2x.png"; sourceTree = "<group>"; };
+		0AD9C2861B60C73400188AE8 /* 手机找回未选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机找回未选中@2x.png"; sourceTree = "<group>"; };
+		0AD9C2881B60C73900188AE8 /* 手机找回选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机找回选中@2x.png"; sourceTree = "<group>"; };
+		0AD9C28A1B60C73F00188AE8 /* 邮箱找回选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "邮箱找回选中@2x.png"; sourceTree = "<group>"; };
+		0AD9C28C1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jijiangkaiqiweixuan@2x.png"; sourceTree = "<group>"; };
+		0AD9C28E1B60E01E00188AE8 /* 即将开启选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "即将开启选中@2x.png"; sourceTree = "<group>"; };
+		0AD9C2901B60E02500188AE8 /* 正在进行未选@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正在进行未选@2x.png"; sourceTree = "<group>"; };
+		0AD9C2921B60E02B00188AE8 /* 正在进行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正在进行@2x.png"; sourceTree = "<group>"; };
+		0AD9C2941B60E47D00188AE8 /* 正在进行@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正在进行@2x(1).png"; sourceTree = "<group>"; };
+		0AD9C2961B60F1B200188AE8 /* a正在进行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a正在进行@2x.png"; sourceTree = "<group>"; };
+		0AD9C2981B60F91C00188AE8 /* b正在进行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b正在进行@2x.png"; sourceTree = "<group>"; };
+		0ADD51C11B477F4300FADACD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../../First/controller/LoginViewController.h; sourceTree = "<group>"; };
+		0ADD51C21B477F4300FADACD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../../First/controller/LoginViewController.m; sourceTree = "<group>"; };
 		0ADD51C41B47810800FADACD /* 向左白色箭头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向左白色箭头.png"; sourceTree = "<group>"; };
 		0AE102301B4B6DDD00BB23BB /* sns_icon_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sns_icon_24.png; path = ShareSDK/Core/Resource.bundle/Icon_7/sns_icon_24.png; sourceTree = SOURCE_ROOT; };
 		0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sns_icon_24@2x.png"; path = "ShareSDK/Core/Resource.bundle/Icon_7/sns_icon_24@2x.png"; sourceTree = SOURCE_ROOT; };
-		0AE3C73A1B5C834A007153A3 /* MyTextFied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextFied.h; sourceTree = "<group>"; };
-		0AE3C73B1B5C834A007153A3 /* MyTextFied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextFied.m; sourceTree = "<group>"; };
+		0AE3C73A1B5C834A007153A3 /* MyTextFied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTextFied.h; path = ../../First/controller/MyTextFied.h; sourceTree = "<group>"; };
+		0AE3C73B1B5C834A007153A3 /* MyTextFied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTextFied.m; path = ../../First/controller/MyTextFied.m; sourceTree = "<group>"; };
 		0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1@2x.png"; sourceTree = "<group>"; };
-
-
-0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册按钮背景@2x(1).png"; sourceTree = "<group>"; };
 		0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
 		0AE3C7471B5CACC7007153A3 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
 		0AE3C7481B5CACC7007153A3 /* WeiboApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApiObject.h; sourceTree = "<group>"; };
 		0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "粉色背景@2x.png"; sourceTree = "<group>"; };
-		0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "没点同意协议@2x.png"; sourceTree = "<group>"; };
 		0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头像@2x.png"; sourceTree = "<group>"; };
 		0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微博@2x.png"; sourceTree = "<group>"; };
 		0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "微信@2x.png"; sourceTree = "<group>"; };
 		0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的密码@2x.png"; sourceTree = "<group>"; };
-		0AE3C7541B5CDDA6007153A3 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
 		0AE3C7551B5CDDA6007153A3 /* qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@2x.png"; sourceTree = "<group>"; };
 		0AE3C75E1B5CEA42007153A3 /* 小人头像@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小人头像@2x.png"; sourceTree = "<group>"; };
-		0AE3F25E1B578F6F00ECA9BC /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
-		0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
-		0AE3F2611B57A67A00ECA9BC /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
-		0AE3F2621B57A67A00ECA9BC /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		0AE3F25E1B578F6F00ECA9BC /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgetViewController.h; path = ../../First/controller/ForgetViewController.h; sourceTree = "<group>"; };
+		0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgetViewController.m; path = ../../First/controller/ForgetViewController.m; sourceTree = "<group>"; };
+		0AE3F2611B57A67A00ECA9BC /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistViewController.h; path = ../../First/controller/RegistViewController.h; sourceTree = "<group>"; };
+		0AE3F2621B57A67A00ECA9BC /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistViewController.m; path = ../../First/controller/RegistViewController.m; sourceTree = "<group>"; };
+		0AE40E9E1B5E218B00676E49 /* 已选择@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "已选择@2x.png"; sourceTree = "<group>"; };
+		0AE40EA01B5E219100676E49 /* 为选择@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "为选择@2x.png"; sourceTree = "<group>"; };
+		0AE40EA21B5E2C6800676E49 /* PhoneRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneRegisterViewController.h; path = ../../First/controller/PhoneRegisterViewController.h; sourceTree = "<group>"; };
+		0AE40EA31B5E2C6800676E49 /* PhoneRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneRegisterViewController.m; path = ../../First/controller/PhoneRegisterViewController.m; sourceTree = "<group>"; };
+		0AE40EA51B5E2C7E00676E49 /* EmailRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailRegisterViewController.h; path = ../../First/controller/EmailRegisterViewController.h; sourceTree = "<group>"; };
+		0AE40EA61B5E2C7E00676E49 /* EmailRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailRegisterViewController.m; path = ../../First/controller/EmailRegisterViewController.m; sourceTree = "<group>"; };
+		0AE40EA81B5F30BB00676E49 /* MyTextFiedNoimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTextFiedNoimage.h; path = ../../First/controller/MyTextFiedNoimage.h; sourceTree = "<group>"; };
+		0AE40EA91B5F30BB00676E49 /* MyTextFiedNoimage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTextFiedNoimage.m; path = ../../First/controller/MyTextFiedNoimage.m; sourceTree = "<group>"; };
 		0AFBFE6F1B422A8600C3C98B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../1.jpg; sourceTree = "<group>"; };
 		0AFBFE701B422A8600C3C98B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../2.jpg; sourceTree = "<group>"; };
 		954F0A4D1B4B5E46002598C5 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
@@ -455,17 +502,34 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
-
-95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
-
-0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */,
-				0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */,
+				0AD9C2981B60F91C00188AE8 /* b正在进行@2x.png */,
+				0AD9C2961B60F1B200188AE8 /* a正在进行@2x.png */,
+				0AD9C2941B60E47D00188AE8 /* 正在进行@2x(1).png */,
+				0AD9C2921B60E02B00188AE8 /* 正在进行@2x.png */,
+				0AD9C2901B60E02500188AE8 /* 正在进行未选@2x.png */,
+				0AD9C28E1B60E01E00188AE8 /* 即将开启选中@2x.png */,
+				0AD9C28C1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png */,
+				0AD9C28A1B60C73F00188AE8 /* 邮箱找回选中@2x.png */,
+				0AD9C2881B60C73900188AE8 /* 手机找回选中@2x.png */,
+				0AD9C2861B60C73400188AE8 /* 手机找回未选中@2x.png */,
+				0AD9C2841B60C72900188AE8 /* 邮箱找回@2x.png */,
+				0A4A04351B5F9DC3005C0E3B /* 手机选中1@2x.png */,
+				0A4A04331B5F6FC7005C0E3B /* +86@2x(1).png */,
+				0A4A042F1B5F6F35005C0E3B /* 获取验证码@2x.png */,
+				0A4A042D1B5F6F2D005C0E3B /* 选中手机注册@2x.png */,
+				0A4A042B1B5F6F1C005C0E3B /* 为选择@2x(1).png */,
+				0A4A04271B5F6F11005C0E3B /* 手机注册@2x.png */,
+				0A4A04251B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png */,
+				0A029CEE1B5F6EE6005E88B8 /* 邮箱注册@2x.png */,
+				0AE40E9E1B5E218B00676E49 /* 已选择@2x.png */,
+				0AE40EA01B5E219100676E49 /* 为选择@2x.png */,
+				95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
+				0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */,
 				0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */,
 				0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */,
 				0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */,
 				0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */,
 				0AE3C75E1B5CEA42007153A3 /* 小人头像@2x.png */,
-				0AE3C7541B5CDDA6007153A3 /* check@2x.png */,
 				0AE3C7551B5CDDA6007153A3 /* qq@2x.png */,
 				959312A01B5C9CA60006142F /* 用户反馈@2x.png */,
 				0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */,
@@ -490,8 +554,9 @@
 		0ACAF1A21B411E300029ACC9 = {
 			isa = PBXGroup;
 			children = (
-				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
 				0A9E68501B43BDDC00A71D88 /* image */,
+				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
+				0AE40EAB1B5F326200676E49 /* LRF */,
 				0ACAF2751B411ED30029ACC9 /* Three */,
 				95D4A4411B44DD93005F5ABF /* Second */,
 				0ACAF2671B411EB90029ACC9 /* First */,
@@ -755,14 +820,6 @@
 				95E5AC931B437D5200904602 /* WillViewController.m */,
 				0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */,
 				0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */,
-				0ADD51C11B477F4300FADACD /* LoginViewController.h */,
-				0ADD51C21B477F4300FADACD /* LoginViewController.m */,
-				0AE3F25E1B578F6F00ECA9BC /* ForgetViewController.h */,
-				0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */,
-				0AE3F2611B57A67A00ECA9BC /* RegistViewController.h */,
-				0AE3F2621B57A67A00ECA9BC /* RegistViewController.m */,
-				0AE3C73A1B5C834A007153A3 /* MyTextFied.h */,
-				0AE3C73B1B5C834A007153A3 /* MyTextFied.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -889,6 +946,55 @@
 				0AE3C7481B5CACC7007153A3 /* WeiboApiObject.h */,
 			);
 			path = TencentWeiboSDK;
+			sourceTree = "<group>";
+		};
+		0AE40EAB1B5F326200676E49 /* LRF */ = {
+			isa = PBXGroup;
+			children = (
+				0AE40EAE1B5F329500676E49 /* conlloer */,
+				0AE40EAD1B5F328700676E49 /* view */,
+				0AE40EAC1B5F327B00676E49 /* model */,
+			);
+			path = LRF;
+			sourceTree = "<group>";
+		};
+		0AE40EAC1B5F327B00676E49 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0AE40EAD1B5F328700676E49 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0AE3C73A1B5C834A007153A3 /* MyTextFied.h */,
+				0AE3C73B1B5C834A007153A3 /* MyTextFied.m */,
+				0AE40EA81B5F30BB00676E49 /* MyTextFiedNoimage.h */,
+				0AE40EA91B5F30BB00676E49 /* MyTextFiedNoimage.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0AE40EAE1B5F329500676E49 /* conlloer */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD51C11B477F4300FADACD /* LoginViewController.h */,
+				0ADD51C21B477F4300FADACD /* LoginViewController.m */,
+				0AE3F25E1B578F6F00ECA9BC /* ForgetViewController.h */,
+				0AE3F25F1B578F6F00ECA9BC /* ForgetViewController.m */,
+				0AD9C27E1B60C1C900188AE8 /* PhoneForgetViewController.h */,
+				0AD9C27F1B60C1C900188AE8 /* PhoneForgetViewController.m */,
+				0AD9C2811B60C1DA00188AE8 /* EmailForgetViewController.h */,
+				0AD9C2821B60C1DA00188AE8 /* EmailForgetViewController.m */,
+				0AE3F2611B57A67A00ECA9BC /* RegistViewController.h */,
+				0AE3F2621B57A67A00ECA9BC /* RegistViewController.m */,
+				0AE40EA21B5E2C6800676E49 /* PhoneRegisterViewController.h */,
+				0AE40EA31B5E2C6800676E49 /* PhoneRegisterViewController.m */,
+				0AE40EA51B5E2C7E00676E49 /* EmailRegisterViewController.h */,
+				0AE40EA61B5E2C7E00676E49 /* EmailRegisterViewController.m */,
+			);
+			path = conlloer;
 			sourceTree = "<group>";
 		};
 		959312A41B5C9D840006142F /* model */ = {
@@ -1042,49 +1148,65 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
-
-0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
-				0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */,
-
-95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
+				95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
+				0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
+				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
 				0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */,
+				0AE40E9F1B5E218B00676E49 /* 已选择@2x.png in Resources */,
+				0AD9C28D1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png in Resources */,
 				95D203541B57931700BCD63F /* 确定按钮.png in Resources */,
+				0A4A04301B5F6F35005C0E3B /* 获取验证码@2x.png in Resources */,
+				0AD9C2991B60F91C00188AE8 /* b正在进行@2x.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
+				0A4A04281B5F6F11005C0E3B /* 手机注册@2x.png in Resources */,
 				95D2035E1B57A7C800BCD63F /* 添加按钮.png in Resources */,
 				0AB91FA71B46171300552824 /* 3.jpg in Resources */,
 				95A532491B53B72C002D2D0F /* DataNameTableViewCell.xib in Resources */,
 				0AE102341B4B6DDD00BB23BB /* sns_icon_24.png in Resources */,
 				95DAF6DE1B4F60ED00B891DC /* 形状 1.png in Resources */,
+				0AE40EA11B5E219100676E49 /* 为选择@2x.png in Resources */,
+				0AD9C28B1B60C73F00188AE8 /* 邮箱找回选中@2x.png in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
-				0AE3C75C1B5CDDA6007153A3 /* check@2x.png in Resources */,
+				0A4A04261B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png in Resources */,
+				0AD9C2891B60C73900188AE8 /* 手机找回选中@2x.png in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
 				0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */,
 				959312A11B5C9CA60006142F /* 用户反馈@2x.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
 				0AE3C75B1B5CDDA6007153A3 /* 我的密码@2x.png in Resources */,
+				0AD9C2851B60C72900188AE8 /* 邮箱找回@2x.png in Resources */,
+				0A4A042E1B5F6F2D005C0E3B /* 选中手机注册@2x.png in Resources */,
 				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
 				0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
+				0AD9C2911B60E02500188AE8 /* 正在进行未选@2x.png in Resources */,
 				95D2035C1B579BB700BCD63F /* addressTableViewCell.xib in Resources */,
 				0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */,
+				0AD9C2931B60E02B00188AE8 /* 正在进行@2x.png in Resources */,
 				0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */,
 				0AE3C75F1B5CEA42007153A3 /* 小人头像@2x.png in Resources */,
+				0AD9C2951B60E47D00188AE8 /* 正在进行@2x(1).png in Resources */,
 				95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */,
+				0A029CEF1B5F6EE6005E88B8 /* 邮箱注册@2x.png in Resources */,
 				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
+				0A4A04341B5F6FC7005C0E3B /* +86@2x(1).png in Resources */,
+				0AD9C2971B60F1B200188AE8 /* a正在进行@2x.png in Resources */,
+				0A4A042C1B5F6F1C005C0E3B /* 为选择@2x(1).png in Resources */,
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,
+				0AD9C2871B60C73400188AE8 /* 手机找回未选中@2x.png in Resources */,
 				0AE3C7581B5CDDA6007153A3 /* 头像@2x.png in Resources */,
 				0AE3C75D1B5CDDA6007153A3 /* qq@2x.png in Resources */,
 				95D661B81B44D44500E9992E /* 1.png in Resources */,
 				0ACAF2AD1B411EE50029ACC9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				0AD9C28F1B60E01E00188AE8 /* 即将开启选中@2x.png in Resources */,
 				0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */,
 				95D661BD1B44D44500E9992E /* TongyongTableViewCell.xib in Resources */,
 				0ACAF2521B411E830029ACC9 /* MJRefresh.bundle in Resources */,
 				0ACAF1BC1B411E300029ACC9 /* Images.xcassets in Resources */,
+				0A4A04361B5F9DC3005C0E3B /* 手机选中1@2x.png in Resources */,
 				0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */,
 				0ACAF2AF1B411EE50029ACC9 /* WeiboSDK.bundle in Resources */,
 			);
@@ -1114,12 +1236,14 @@
 				0ACAF25D1B411E830029ACC9 /* SDWebImageDownloaderOperation.m in Sources */,
 				0ACAF2641B411E830029ACC9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				0ACAF24D1B411E830029ACC9 /* MJRefreshBackNormalFooter.m in Sources */,
+				0AE40EA71B5E2C7E00676E49 /* EmailRegisterViewController.m in Sources */,
 				0ACAF2471B411E830029ACC9 /* MJRefreshFooter.m in Sources */,
 				0ACAF2531B411E830029ACC9 /* MJRefreshConst.m in Sources */,
 				0ACAF2631B411E830029ACC9 /* UIImage+WebP.m in Sources */,
 				95D203571B57933300BCD63F /* SureViewController.m in Sources */,
 				0ACAF25B1B411E830029ACC9 /* SDWebImageDecoder.m in Sources */,
 				95A5324D1B53B744002D2D0F /* DataSexTableViewCell.m in Sources */,
+				0AE40EAA1B5F30BB00676E49 /* MyTextFiedNoimage.m in Sources */,
 				95D203501B57448500BCD63F /* ClickTViewController.m in Sources */,
 				95D661C11B44D46600E9992E /* ThreeViewController.m in Sources */,
 				95E5AC911B437D4600904602 /* NowViewController.m in Sources */,
@@ -1146,8 +1270,10 @@
 				0ACAF24B1B411E830029ACC9 /* MJRefreshAutoStateFooter.m in Sources */,
 				0ACAF2661B411E830029ACC9 /* UIView+WebCacheOperation.m in Sources */,
 				0ACAF2511B411E830029ACC9 /* MJRefreshStateHeader.m in Sources */,
+				0AD9C2831B60C1DA00188AE8 /* EmailForgetViewController.m in Sources */,
 				0ACAF2571B411E830029ACC9 /* MKAnnotationView+WebCache.m in Sources */,
 				95D2035B1B579BB700BCD63F /* addressTableViewCell.m in Sources */,
+				0AE40EA41B5E2C6800676E49 /* PhoneRegisterViewController.m in Sources */,
 				95B83E191B44D32A007ECAA8 /* XiangViewController.m in Sources */,
 				0ACAF2651B411E830029ACC9 /* UIImageView+WebCache.m in Sources */,
 				0ACAF23D1B411E830029ACC9 /* AFHTTPSessionManager.m in Sources */,
@@ -1156,6 +1282,7 @@
 				0ACAF2481B411E830029ACC9 /* MJRefreshHeader.m in Sources */,
 				0ADD51C31B477F4300FADACD /* LoginViewController.m in Sources */,
 				0ACAF25C1B411E830029ACC9 /* SDWebImageDownloader.m in Sources */,
+				0AD9C2801B60C1C900188AE8 /* PhoneForgetViewController.m in Sources */,
 				0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */,
 				0ACAF24E1B411E830029ACC9 /* MJRefreshBackStateFooter.m in Sources */,
 				0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */,

@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ForgetViewController : UIViewController
+@property (nonatomic ,strong)UIScrollView *myscrollView;
+@property (nonatomic,strong)UIButton *liftButton;
+@property (nonatomic ,strong)UIButton *rightButton;
+
+
 
 @end

@@ -50,13 +50,23 @@
 
 -(void)costom
 {
-    //布局segment
-    self.mySegment = [[UISegmentedControl alloc]initWithItems:@[@"正在进行",@"即将开启"]];
-    self.mySegment.backgroundColor = [UIColor whiteColor];
-    self.mySegment.frame = CGRectMake(0, 64, kMainWidth,kseGmentHeight);
-    [self.mySegment addTarget:self action:@selector(segmentAction:) forControlEvents:(UIControlEventValueChanged)];
-    self.mySegment.selectedSegmentIndex = 0;
-    [self.view addSubview:self.mySegment];
+
+    self.liftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.liftButton.frame =CGRectMake(0, 64, self.view.frame.size.width / 2 ,40);
+    [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行@2x.png"] forState:(UIControlStateNormal)];
+    [self.liftButton addTarget:self action:@selector(liftButton:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:self.liftButton];
+    
+    self.rightButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.rightButton.frame =CGRectMake(self.view.frame.size.width / 2, 64, self.view.frame.size.width / 2 ,40);
+    [self.rightButton setBackgroundImage:[UIImage imageNamed:@"jijiangkaiqiweixuan@2x.png"] forState:(UIControlStateNormal)];
+    [self.rightButton addTarget:self action:@selector(rightButton:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:self.rightButton];
+
+    
+    
+    
+    
     //布局 UIScrollView
     self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, kscrollViewH, kMainWidth, kMainHeight - kscrollViewH - 44)];
     self.myscrollView.contentSize = CGSizeMake(kMainWidth * 2, kMainHeight - kscrollViewH - 44);
@@ -87,6 +97,25 @@
     
     
 }
+-(void)rightButton:(UIButton *)button
+{
+    [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行未选@2x.png"] forState:(UIControlStateNormal)];
+    
+    [self.rightButton setBackgroundImage:[UIImage imageNamed:@"即将开启选中@2x.png"] forState:(UIControlStateNormal)];
+    self.myscrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0);
+    
+    
+}
+-(void)liftButton:(UIButton *)button
+{    [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行@2x.png"] forState:(UIControlStateNormal)];
+    
+    [self.rightButton setBackgroundImage:[UIImage imageNamed:@"jijiangkaiqiweixuan@2x.png"] forState:(UIControlStateNormal)];
+    
+    self.myscrollView.contentOffset = CGPointMake(0, 0);
+    
+    
+    
+}
 
 -(void)login:(UIButton *)button
 {
@@ -94,19 +123,26 @@
     [self.navigationController pushViewController:login animated:YES];
     
 }
--(void)segmentAction:(UISegmentedControl *)segmeng
-{
-    if (segmeng.selectedSegmentIndex == 0) {
-        self.myscrollView.contentOffset = CGPointMake(0, 0);
-    }else if (segmeng.selectedSegmentIndex == 1){
-        self.myscrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0);
-    }
-    
-}
+
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    self.mySegment.selectedSegmentIndex = self.myscrollView.contentOffset.x/kMainWidth;
+    if (self.myscrollView.contentOffset.x/kMainWidth == 0) {
+        [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行@2x.png"] forState:(UIControlStateNormal)];
+        
+        [self.rightButton setBackgroundImage:[UIImage imageNamed:@"jijiangkaiqiweixuan@2x.png"] forState:(UIControlStateNormal)];
+        
+        
+        
+    }else if (self.myscrollView.contentOffset.x/kMainWidth == 1){
+        [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行未选@2x.png"] forState:(UIControlStateNormal)];
+        
+        [self.rightButton setBackgroundImage:[UIImage imageNamed:@"即将开启选中@2x.png"] forState:(UIControlStateNormal)];
+        
+        
+    }
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

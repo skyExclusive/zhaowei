@@ -22,21 +22,18 @@
     self.indextY = self.view.frame.size.height / 480;
     self.indext = NO;
     
-    
-
-    self.view.window.backgroundColor = COLOR(251, 246, 240, 1);
     self.view.backgroundColor = COLOR(251, 246, 240, 1);
     
     self.title = @"登录界面";
-
+    
     if (self.indextX == 1 && self.indextY == 1) {
         
         [self thour];//布局4;
         
         
     }else{
-    
-    [self coustom];//布局
+        
+        [self coustom];//布局
     }
 }
 
@@ -66,7 +63,7 @@
     self.navigationItem.leftBarButtonItem = lift;
     
     
-
+    
     
     self.tabBarController.tabBar.hidden = YES;
     
@@ -97,6 +94,7 @@
     
     
 }
+//布局4
 -(void)thour
 {
     
@@ -104,7 +102,6 @@
     
     //1photo
     self.photoImabeView  = [[UIImageView alloc]initWithFrame:CGRectMake(120, 84 , 80, 80)];
-    
     self.photoImabeView.image = [UIImage imageNamed:@"头像@2x.png"];
     self.photoImabeView.layer.cornerRadius = 40;
     self.photoImabeView.layer.masksToBounds = YES;
@@ -117,34 +114,23 @@
     [self.view addSubview:self.userNameMy];
     
     
-    
     //password
     
     self.userPassWordMy = [[MyTextFied alloc]initWithFrame:CGRectMake(10, 220, 300, 40)];
     self.userPassWordMy.mytextField.placeholder = @"请输入您的登录密码";
     self.userPassWordMy.mySmallimageView.image = [UIImage imageNamed:@"我的密码@2x.png"];
-    
-    
-    
+    self.userPassWordMy.mytextField.secureTextEntry = YES;
     [self.view addSubview:self.userPassWordMy];
-    
     self.userNameMy.delegate = self;
     self.userPassWordMy.delegate = self;
     
     
-    
-    
-    //    self.userPassWordTextField.keyboardType = UIKeyboardTypeASCIICapable;
-    //
-    //
     self.forgetPasswordButton  = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    self.forgetPasswordButton.frame = CGRectMake(230, 220, 80, 30);
+    self.forgetPasswordButton.frame = CGRectMake(230, 225, 80, 30);
     
     [self.forgetPasswordButton setTitle:@"忘记密码?" forState:(UIControlStateNormal)];
     [self.forgetPasswordButton addTarget:self action:@selector(forget) forControlEvents:(UIControlEventTouchUpInside)];
     self.forgetPasswordButton.titleLabel.font = [UIFont systemFontOfSize:12];
-    
-    //self.forgetPasswordButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
     [self.forgetPasswordButton setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
     [self.view addSubview:self.forgetPasswordButton];
     
@@ -155,11 +141,11 @@
     smallLable.textColor = [UIColor grayColor];
     [self.view addSubview:smallLable];
     
+    //记住密码的button
     
-   self.myZibutton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    
+    self.myZibutton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.myZibutton.frame = CGRectMake(38, 265, 16, 16);
-    [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"没点同意协议@2x.png"] forState:(UIControlStateNormal)];
+    [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"为选择@2x.png"] forState:(UIControlStateNormal)];
     [self.myZibutton addTarget:self action: @selector(dian) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.myZibutton];
     
@@ -170,21 +156,23 @@
     
     self.loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.loginButton.frame = CGRectMake(10, 290 *self.indextY, 300 *self.indextX, 40);
-    [self.loginButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x(1).png"] forState:(UIControlStateNormal)];
+    [self.loginButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x.png"] forState:(UIControlStateNormal)];
+//    self.loginButton.backgroundColor = [UIColor colorWithRed:95 / 255 green:220 / 255 blue:225 / 255 alpha:1];
+//    
     [self.loginButton setTitle:@"登录" forState:(UIControlStateNormal)];
     [self.loginButton  setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
     [self.loginButton addTarget:self action:@selector(loginButton:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.loginButton];
     
-    
-    
-    //注册按钮
-    
+//
+//    
+//    //注册按钮
+//    
     self.registerButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.registerButton.frame = CGRectMake(10, 290 *self.indextY + 55, 300 *self.indextX, 40);
     [self.registerButton setTitle:@"注册" forState:(UIControlStateNormal)];
     [self.registerButton  setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-    [self.registerButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x(1).png"] forState:(UIControlStateNormal)];
+    [self.registerButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x.png"] forState:(UIControlStateNormal)];
     [self.registerButton addTarget:self action:@selector(registerButton:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.registerButton];
     
@@ -193,7 +181,6 @@
     
     // 第三方登录
     
-    //
     
     self.qqImageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, (460 - 55) *self.indextY, 50, 50)];
     self.qqImageView.image = [UIImage imageNamed:@"qq@2x.png"];
@@ -223,41 +210,12 @@
     
     
     
-    
-
-    
-    
-    
 }
-
--(void)dian
-{
-    if (self.indext == NO) {
-        self.indext = YES;
-
-        [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"check@2x.png"] forState:(UIControlStateNormal)];
-        
-        
-        
-    }else if(self.indext == YES){
-        
-        
-        [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"没点同意协议@2x.png"] forState:(UIControlStateNormal)];
-
-        
-        self.indext = NO;
-        
-        
-    }
-    
-    
-    
-    
-}
+//布局 除了4
 -(void)coustom
 {
     
-       // 布局登录
+    // 布局登录
     
     //1photo
     self.photoImabeView  = [[UIImageView alloc]initWithFrame:CGRectMake(120 *self.indextX, 84 * self.indextY, 80, 80)];
@@ -276,56 +234,49 @@
     
     
     //password
-    
     self.userPassWordMy = [[MyTextFied alloc]initWithFrame:CGRectMake(10, 180*self.indextY + 60, 300*self.indextX, 40)];
     self.userPassWordMy.mytextField.placeholder = @"请输入您的登录密码";
     self.userPassWordMy.mySmallimageView.image = [UIImage imageNamed:@"我的密码@2x.png"];
-    
-
-    
     [self.view addSubview:self.userPassWordMy];
-    
     self.userNameMy.delegate = self;
     self.userPassWordMy.delegate = self;
+    self.userPassWordMy.mytextField.secureTextEntry = YES;
     
     
     
     
-//    self.userPassWordTextField.keyboardType = UIKeyboardTypeASCIICapable;
-//
-//    
+    
+    //    self.userPassWordTextField.keyboardType = UIKeyboardTypeASCIICapable;
+    //
+    //
     self.forgetPasswordButton  = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.forgetPasswordButton.frame = CGRectMake(230 * self.indextX, 180 * self.indextY + 60, 80, 40);
     
     [self.forgetPasswordButton setTitle:@"忘记密码?" forState:(UIControlStateNormal)];
     [self.forgetPasswordButton addTarget:self action:@selector(forget) forControlEvents:(UIControlEventTouchUpInside)];
-     self.forgetPasswordButton.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+    self.forgetPasswordButton.titleLabel.font = [UIFont systemFontOfSize:15.0f];
     //self.forgetPasswordButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
     [self.forgetPasswordButton setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
     [self.view addSubview:self.forgetPasswordButton];
+    
+    //点击记住密码
     
     UILabel *smallLable = [[UILabel alloc]initWithFrame:CGRectMake(60, 265 *self.indextY, 80, 20)];
     smallLable.text = @"下次自动登录";
     smallLable.font = [UIFont systemFontOfSize:12];
     smallLable.textColor = [UIColor grayColor];
     [self.view addSubview:smallLable];
-    
-    
     self.myZibutton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    
     self.myZibutton.frame = CGRectMake(38, 267*self.indextY, 16, 16);
-    [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"没点同意协议@2x.png"] forState:(UIControlStateNormal)];
+    [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"为选择@2x.png"] forState:(UIControlStateNormal)];
     [self.myZibutton addTarget:self action: @selector(dian) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.myZibutton];
-    
-
-    
-
     //登录按钮
     
     self.loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.loginButton.frame = CGRectMake(10, 290 *self.indextY, 300 *self.indextX, 40);
     [self.loginButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x(1).png"] forState:(UIControlStateNormal)];
+    self.loginButton.backgroundColor = [UIColor purpleColor];
     [self.loginButton setTitle:@"登录" forState:(UIControlStateNormal)];
     [self.loginButton  setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
     [self.loginButton addTarget:self action:@selector(loginButton:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -339,15 +290,11 @@
     self.registerButton.frame = CGRectMake(10, 290 *self.indextY + 55, 300 *self.indextX, 40);
     [self.registerButton setTitle:@"注册" forState:(UIControlStateNormal)];
     [self.registerButton  setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-    [self.registerButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x(1).png"] forState:(UIControlStateNormal)];
+    [self.registerButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x.png"] forState:(UIControlStateNormal)];
     [self.registerButton addTarget:self action:@selector(registerButton:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.registerButton];
+//    // 第三方登录
     
-    
-    
-    
-   // 第三方登录
-   
     //
     
     self.qqImageView = [[UIImageView alloc]initWithFrame:CGRectMake(30, (460 - 55) *self.indextY, 50, 50)];
@@ -381,11 +328,34 @@
     
     
 }
-//Code from Brett Schumann
-
--(void) keyboardWillShow:(NSNotification *)note{
+//点击记住密码
+-(void)dian
+{
+    if (self.indext == NO) {
+        self.indext = YES;
+        [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"已选择@2x.png"] forState:(UIControlStateNormal)];
+        
+        
+        
+    }else if(self.indext == YES){
+        
+        
+        [self.myZibutton setBackgroundImage:[UIImage imageNamed:@"为选择@2x.png"] forState:(UIControlStateNormal)];
+        
+        
+        self.indext = NO;
+        
+        
+    }
     
-    NSLog(@"出来");
+    
+    
+    
+}
+//Code from Brett Schumann
+//键盘出来走的方法
+-(void) keyboardWillShow:(NSNotification *)note
+{
     
     
     if (self.indextX == 1) {
@@ -400,8 +370,9 @@
         
     }
 }
-
-- (void) keyboardWillHide:(NSNotification *)note{
+//键盘回收走的方法
+- (void) keyboardWillHide:(NSNotification *)note
+{
     
     NSLog(@"没了");
     [UIView setAnimationDuration:0.5f];
@@ -410,7 +381,7 @@
     [UIView commitAnimations];
     
     
-
+    
     
 }
 //点击return
@@ -426,11 +397,10 @@
     self.view.transform = CGAffineTransformScale(self.view.transform, 1.01, 1.01);
     [UIView commitAnimations];
     
-
+    
     
     
 }
-
 
 //点击空白
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -447,11 +417,14 @@
     
     
 }
+//点击登录按钮走的方法
 -(void)loginButton:(UIButton *)button
 {
     NSLog(@"登录");
     
 }
+//点击注册走的方法
+
 -(void)registerButton:(UIButton *)button
 {
     NSLog(@"注册");
@@ -462,21 +435,20 @@
     
 }
 //忘记密码的点击事件
-
 -(void)forget
 {
     NSLog(@"忘记密码");
     
     [self.userNameMy.mytextField resignFirstResponder];
     [self.userPassWordMy.mytextField resignFirstResponder];
-
+    
     //设置时间
     [UIView setAnimationDuration:0.5f];
     self.view.transform = CGAffineTransformMakeTranslation(0, 0);
     self.view.transform = CGAffineTransformScale(self.view.transform, 1.01, 1.01);
     [UIView commitAnimations];
     
-
+    
     
     ForgetViewController *forget = [[ForgetViewController alloc]init];
     [self.navigationController pushViewController:forget animated:YES];
@@ -484,6 +456,8 @@
     
     
 }
+//点击分享走的方法
+
 -(void)share:(UIButton *)share
 {
     //1.定制分享的内容
@@ -497,10 +471,6 @@
     //2.调用分享菜单分享
     [ShareSDK showShareActionSheet:nil shareList:shareList content:publishContent statusBarTips:YES authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
         //如果分享成功
-        
-    
-      
-        
         
         if (state == SSResponseStateSuccess) {
             NSLog(@"分享成功");
@@ -519,19 +489,19 @@
             [alert show];
         }
     }];
-
+    
 }
 //第三方登录走的方法
 
 -(void)login:(UITapGestureRecognizer *)sent
 {
     UIImageView *image = (UIImageView *)sent.view;
-        if (image.tag == 101) {
+    if (image.tag == 101) {
         NSLog(@"QQ登录");
-            id<ISSQZoneApp> app =(id<ISSQZoneApp>)[ShareSDK getClientWithType:ShareTypeQQSpace];
-           
-                [app setIsAllowWebAuthorize:YES];
-                   [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
+        id<ISSQZoneApp> app =(id<ISSQZoneApp>)[ShareSDK getClientWithType:ShareTypeQQSpace];
+        
+        [app setIsAllowWebAuthorize:YES];
+        [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
             if (result) {
                 NSLog(@"授权登陆成功，已获取用户信息");
                 NSString *uid = [userInfo uid];
@@ -549,7 +519,7 @@
                 [alert show];
             }
         }];
-
+        
         
     }else if (image.tag == 102){
         
@@ -572,7 +542,7 @@
                 [alert show];
             }
         }];
-
+        
         
     }else if (image.tag == 103){
         
@@ -591,19 +561,19 @@
                 NSLog(@"source:%@",[userInfo sourceData]);
                 NSLog(@"uid:%@",[userInfo uid]);
             }else{
-            
+                
                 NSLog(@"分享失败,错误码:%ld,错误描述%@",(long)[error errorCode],[error errorDescription]);
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Code4App" message:@"授权失败，请看日记错误描述" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];
             }
         }];
-
+        
         
     }
     
     
 }
-
+//返回走的方法
 -(void)pop
 {
     
@@ -616,12 +586,12 @@
 }
 
 /*
-#pragma mark - Navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

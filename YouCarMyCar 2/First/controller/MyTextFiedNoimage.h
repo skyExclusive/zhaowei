@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyTextFiedNoimage : UITextField
+@protocol MyTextFiedNoimageDelegete <NSObject>
+
+-(void)ReturnAction:(UITextField *)textfield;
+
+
+@end
+
+@interface MyTextFiedNoimage : UIView
+
+
+@property (nonatomic ,strong)UIImageView *myBigimageView;
+@property (nonatomic ,strong)UIImageView *mySmallimageView;
+@property (nonatomic ,strong)UITextField *mytextField;
+@property (nonatomic ,assign)id<MyTextFiedNoimageDelegete>delegate;
+
 
 @end
