@@ -102,6 +102,9 @@
 		0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */; };
 		0AE3C73C1B5C834A007153A3 /* MyTextFied.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3C73B1B5C834A007153A3 /* MyTextFied.m */; };
 		0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */; };
+
+
+0AE3C7421B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */; };
 		0AE3C7491B5CACC7007153A3 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */; };
 		0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */; };
 		0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */; };
@@ -333,6 +336,9 @@
 		0AE3C73A1B5C834A007153A3 /* MyTextFied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextFied.h; sourceTree = "<group>"; };
 		0AE3C73B1B5C834A007153A3 /* MyTextFied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextFied.m; sourceTree = "<group>"; };
 		0AE3C73D1B5C941D007153A3 /* 圆角矩形-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-1@2x.png"; sourceTree = "<group>"; };
+
+
+0AE3C7411B5C97ED007153A3 /* 登录注册按钮背景@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录注册按钮背景@2x(1).png"; sourceTree = "<group>"; };
 		0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
 		0AE3C7471B5CACC7007153A3 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
 		0AE3C7481B5CACC7007153A3 /* WeiboApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApiObject.h; sourceTree = "<group>"; };
@@ -491,6 +497,10 @@
 				95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
 				95C7BA881B5E381F009604D7 /* 设置@2x.png */,
 				0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */,
+
+95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
+
+0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */,
 				0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */,
 				0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */,
 				0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */,
@@ -1093,6 +1103,13 @@
 				0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */,
 				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */,
+
+95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
+
+0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
+				0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */,
+
+95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
 				95D08E1D1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib in Resources */,
