@@ -7,6 +7,8 @@
 //
 
 #import "NowDetaNeiViewController.h"
+#import "HEInfiniteScrollView.h"
+
 
 @interface NowDetaNeiViewController ()
 
@@ -16,6 +18,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    NSArray *images = @[ [UIImage imageNamed:@"45.jpg"],
+                         [UIImage imageNamed:@"Untitled2.jpg"],
+                         [UIImage imageNamed:@"33.jpg"]];
+    
+    
+    
+    HEInfiniteScrollView *infiniteScrollView = [[HEInfiniteScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 200)];
+    [self.view addSubview:infiniteScrollView];
+    [infiniteScrollView setContentObjs:images Placeholder:nil];
+    infiniteScrollView.pageControlContentMode = kHEPageControlContentModeBottomCenter;
+    infiniteScrollView.switchType = kHESwitchTypeFadeOut;
+    //        infiniteScrollView.delegate = self;
+    
+
+    
+    
     // Do any additional setup after loading the view.
 }
 

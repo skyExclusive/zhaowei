@@ -12,6 +12,7 @@
 #import "ForgetViewController.h"
 #import "RegistViewController.h"
 #import "PrefixHeader.pch"
+
 @interface LoginViewController ()<UIActionSheetDelegate,UITextFieldDelegate,MyTextFiedDelegete>
 
 @end

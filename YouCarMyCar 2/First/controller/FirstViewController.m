@@ -59,7 +59,7 @@
     
     self.rightButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.rightButton.frame =CGRectMake(self.view.frame.size.width / 2, 64, self.view.frame.size.width / 2 ,40);
-    [self.rightButton setBackgroundImage:[UIImage imageNamed:@"jijiangkaiqiweixuan@2x.png"] forState:(UIControlStateNormal)];
+    [self.rightButton setBackgroundImage:[UIImage imageNamed:@"即将开启未选中@2x.png"] forState:(UIControlStateNormal)];
     [self.rightButton addTarget:self action:@selector(rightButton:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.rightButton];
 
@@ -99,20 +99,17 @@
 }
 -(void)rightButton:(UIButton *)button
 {
-    [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行未选@2x.png"] forState:(UIControlStateNormal)];
-    
+    [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行未选中@2x.png"] forState:(UIControlStateNormal)];
     [self.rightButton setBackgroundImage:[UIImage imageNamed:@"即将开启选中@2x.png"] forState:(UIControlStateNormal)];
     self.myscrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0);
     
     
 }
 -(void)liftButton:(UIButton *)button
-{    [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行@2x.png"] forState:(UIControlStateNormal)];
-    
-    [self.rightButton setBackgroundImage:[UIImage imageNamed:@"jijiangkaiqiweixuan@2x.png"] forState:(UIControlStateNormal)];
-    
+{
+    [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行@2x.png"] forState:(UIControlStateNormal)];
+    [self.rightButton setBackgroundImage:[UIImage imageNamed:@"即将开启未选中@2x.png"] forState:(UIControlStateNormal)];
     self.myscrollView.contentOffset = CGPointMake(0, 0);
-    
     
     
 }
@@ -129,14 +126,13 @@
 {
     if (self.myscrollView.contentOffset.x/kMainWidth == 0) {
         [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行@2x.png"] forState:(UIControlStateNormal)];
-        
-        [self.rightButton setBackgroundImage:[UIImage imageNamed:@"jijiangkaiqiweixuan@2x.png"] forState:(UIControlStateNormal)];
+        [self.rightButton setBackgroundImage:[UIImage imageNamed:@"即将开启未选中@2x.png"] forState:(UIControlStateNormal)];
         
         
         
     }else if (self.myscrollView.contentOffset.x/kMainWidth == 1){
-        [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行未选@2x.png"] forState:(UIControlStateNormal)];
         
+        [self.liftButton setBackgroundImage:[UIImage imageNamed:@"正在进行未选中@2x.png"] forState:(UIControlStateNormal)];
         [self.rightButton setBackgroundImage:[UIImage imageNamed:@"即将开启选中@2x.png"] forState:(UIControlStateNormal)];
         
         

@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0A029CEF1B5F6EE6005E88B8 /* 邮箱注册@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A029CEE1B5F6EE6005E88B8 /* 邮箱注册@2x.png */; };
+		0A0E45951B61D21700A52286 /* 正在进行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E45941B61D21700A52286 /* 正在进行@2x.png */; };
+		0A0E45971B61D21F00A52286 /* 正在进行未选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E45961B61D21F00A52286 /* 正在进行未选中@2x.png */; };
+		0A0E45991B61D22500A52286 /* 即将开启未选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E45981B61D22500A52286 /* 即将开启未选中@2x.png */; };
+		0A0E459B1B61D22E00A52286 /* 即将开启选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E459A1B61D22E00A52286 /* 即将开启选中@2x.png */; };
+		0A0E46121B6226A000A52286 /* HEImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E460F1B6226A000A52286 /* HEImageView.m */; };
+		0A0E46131B6226A000A52286 /* HEInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E46111B6226A000A52286 /* HEInfiniteScrollView.m */; };
+		0A0E46161B62276700A52286 /* 33.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E46141B62276700A52286 /* 33.jpg */; };
+		0A0E46171B62276700A52286 /* 45.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E46151B62276700A52286 /* 45.jpg */; };
+		0A0E46191B62277400A52286 /* Untitled2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E46181B62277400A52286 /* Untitled2.jpg */; };
+		0A0E461F1B62377000A52286 /* NowDetaNeiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E461E1B62377000A52286 /* NowDetaNeiViewController.m */; };
 		0A4A04261B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A04251B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png */; };
 		0A4A04281B5F6F11005C0E3B /* 手机注册@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A04271B5F6F11005C0E3B /* 手机注册@2x.png */; };
 		0A4A042C1B5F6F1C005C0E3B /* 为选择@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A042B1B5F6F1C005C0E3B /* 为选择@2x(1).png */; };
@@ -110,13 +120,9 @@
 		0AD9C2871B60C73400188AE8 /* 手机找回未选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2861B60C73400188AE8 /* 手机找回未选中@2x.png */; };
 		0AD9C2891B60C73900188AE8 /* 手机找回选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2881B60C73900188AE8 /* 手机找回选中@2x.png */; };
 		0AD9C28B1B60C73F00188AE8 /* 邮箱找回选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C28A1B60C73F00188AE8 /* 邮箱找回选中@2x.png */; };
-		0AD9C28D1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C28C1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png */; };
-		0AD9C28F1B60E01E00188AE8 /* 即将开启选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C28E1B60E01E00188AE8 /* 即将开启选中@2x.png */; };
-		0AD9C2911B60E02500188AE8 /* 正在进行未选@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2901B60E02500188AE8 /* 正在进行未选@2x.png */; };
-		0AD9C2931B60E02B00188AE8 /* 正在进行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2921B60E02B00188AE8 /* 正在进行@2x.png */; };
-		0AD9C2951B60E47D00188AE8 /* 正在进行@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2941B60E47D00188AE8 /* 正在进行@2x(1).png */; };
-		0AD9C2971B60F1B200188AE8 /* a正在进行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2961B60F1B200188AE8 /* a正在进行@2x.png */; };
-		0AD9C2991B60F91C00188AE8 /* b正在进行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9C2981B60F91C00188AE8 /* b正在进行@2x.png */; };
+		0AD9C29A1B60FDB000188AE8 /* 微博@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */; };
+		0AD9C29B1B60FDB000188AE8 /* 登录注册按钮背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */; };
+		0AD9C29C1B60FDB000188AE8 /* TouxiangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D661B71B44D44500E9992E /* TouxiangTableViewCell.xib */; };
 		0ADD51C31B477F4300FADACD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD51C21B477F4300FADACD /* LoginViewController.m */; };
 		0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD51C41B47810800FADACD /* 向左白色箭头.png */; };
 		0AE102341B4B6DDD00BB23BB /* sns_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102301B4B6DDD00BB23BB /* sns_icon_24.png */; };
@@ -126,7 +132,6 @@
 		0AE3C7491B5CACC7007153A3 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE3C7461B5CACC7007153A3 /* libTCWeiboSDK.a */; };
 		0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */; };
 		0AE3C7581B5CDDA6007153A3 /* 头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */; };
-		0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */; };
 		0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */; };
 		0AE3C75B1B5CDDA6007153A3 /* 我的密码@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7531B5CDDA6007153A3 /* 我的密码@2x.png */; };
 		0AE3C75D1B5CDDA6007153A3 /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3C7551B5CDDA6007153A3 /* qq@2x.png */; };
@@ -181,9 +186,7 @@
 		95D661BC1B44D44500E9992E /* TongyongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D661B31B44D44500E9992E /* TongyongTableViewCell.m */; };
 		95D661BD1B44D44500E9992E /* TongyongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D661B41B44D44500E9992E /* TongyongTableViewCell.xib */; };
 		95D661BE1B44D44500E9992E /* TouxiangTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D661B61B44D44500E9992E /* TouxiangTableViewCell.m */; };
-		95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D661B71B44D44500E9992E /* TouxiangTableViewCell.xib */; };
 		95D661C11B44D46600E9992E /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D661C01B44D46600E9992E /* ThreeViewController.m */; };
-		95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */; };
 		95DAF6DE1B4F60ED00B891DC /* 形状 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DAF6DD1B4F60ED00B891DC /* 形状 1.png */; };
 		95E5AC911B437D4600904602 /* NowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E5AC901B437D4600904602 /* NowViewController.m */; };
 		95E5AC941B437D5200904602 /* WillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E5AC931B437D5200904602 /* WillViewController.m */; };
@@ -201,6 +204,19 @@
 
 /* Begin PBXFileReference section */
 		0A029CEE1B5F6EE6005E88B8 /* 邮箱注册@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "邮箱注册@2x.png"; sourceTree = "<group>"; };
+		0A0E45941B61D21700A52286 /* 正在进行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正在进行@2x.png"; sourceTree = "<group>"; };
+		0A0E45961B61D21F00A52286 /* 正在进行未选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正在进行未选中@2x.png"; sourceTree = "<group>"; };
+		0A0E45981B61D22500A52286 /* 即将开启未选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "即将开启未选中@2x.png"; sourceTree = "<group>"; };
+		0A0E459A1B61D22E00A52286 /* 即将开启选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "即将开启选中@2x.png"; sourceTree = "<group>"; };
+		0A0E460E1B6226A000A52286 /* HEImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEImageView.h; sourceTree = "<group>"; };
+		0A0E460F1B6226A000A52286 /* HEImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEImageView.m; sourceTree = "<group>"; };
+		0A0E46101B6226A000A52286 /* HEInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEInfiniteScrollView.h; sourceTree = "<group>"; };
+		0A0E46111B6226A000A52286 /* HEInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEInfiniteScrollView.m; sourceTree = "<group>"; };
+		0A0E46141B62276700A52286 /* 33.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 33.jpg; sourceTree = "<group>"; };
+		0A0E46151B62276700A52286 /* 45.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 45.jpg; sourceTree = "<group>"; };
+		0A0E46181B62277400A52286 /* Untitled2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Untitled2.jpg; sourceTree = "<group>"; };
+		0A0E461D1B62377000A52286 /* NowDetaNeiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowDetaNeiViewController.h; sourceTree = "<group>"; };
+		0A0E461E1B62377000A52286 /* NowDetaNeiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowDetaNeiViewController.m; sourceTree = "<group>"; };
 		0A4A04251B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "邮箱注册(未选中)@2x.png"; sourceTree = "<group>"; };
 		0A4A04271B5F6F11005C0E3B /* 手机注册@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机注册@2x.png"; sourceTree = "<group>"; };
 		0A4A042B1B5F6F1C005C0E3B /* 为选择@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "为选择@2x(1).png"; sourceTree = "<group>"; };
@@ -365,13 +381,6 @@
 		0AD9C2861B60C73400188AE8 /* 手机找回未选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机找回未选中@2x.png"; sourceTree = "<group>"; };
 		0AD9C2881B60C73900188AE8 /* 手机找回选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机找回选中@2x.png"; sourceTree = "<group>"; };
 		0AD9C28A1B60C73F00188AE8 /* 邮箱找回选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "邮箱找回选中@2x.png"; sourceTree = "<group>"; };
-		0AD9C28C1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jijiangkaiqiweixuan@2x.png"; sourceTree = "<group>"; };
-		0AD9C28E1B60E01E00188AE8 /* 即将开启选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "即将开启选中@2x.png"; sourceTree = "<group>"; };
-		0AD9C2901B60E02500188AE8 /* 正在进行未选@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正在进行未选@2x.png"; sourceTree = "<group>"; };
-		0AD9C2921B60E02B00188AE8 /* 正在进行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正在进行@2x.png"; sourceTree = "<group>"; };
-		0AD9C2941B60E47D00188AE8 /* 正在进行@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正在进行@2x(1).png"; sourceTree = "<group>"; };
-		0AD9C2961B60F1B200188AE8 /* a正在进行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a正在进行@2x.png"; sourceTree = "<group>"; };
-		0AD9C2981B60F91C00188AE8 /* b正在进行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b正在进行@2x.png"; sourceTree = "<group>"; };
 		0ADD51C11B477F4300FADACD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../../First/controller/LoginViewController.h; sourceTree = "<group>"; };
 		0ADD51C21B477F4300FADACD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../../First/controller/LoginViewController.m; sourceTree = "<group>"; };
 		0ADD51C41B47810800FADACD /* 向左白色箭头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向左白色箭头.png"; sourceTree = "<group>"; };
@@ -517,6 +526,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A0E460D1B6226A000A52286 /* HEInfiniteScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				0A0E460E1B6226A000A52286 /* HEImageView.h */,
+				0A0E460F1B6226A000A52286 /* HEImageView.m */,
+				0A0E46101B6226A000A52286 /* HEInfiniteScrollView.h */,
+				0A0E46111B6226A000A52286 /* HEInfiniteScrollView.m */,
+			);
+			path = HEInfiniteScrollView;
+			sourceTree = "<group>";
+		};
 		0A9E68471B43B4ED00A71D88 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,13 +556,13 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
-				0AD9C2981B60F91C00188AE8 /* b正在进行@2x.png */,
-				0AD9C2961B60F1B200188AE8 /* a正在进行@2x.png */,
-				0AD9C2941B60E47D00188AE8 /* 正在进行@2x(1).png */,
-				0AD9C2921B60E02B00188AE8 /* 正在进行@2x.png */,
-				0AD9C2901B60E02500188AE8 /* 正在进行未选@2x.png */,
-				0AD9C28E1B60E01E00188AE8 /* 即将开启选中@2x.png */,
-				0AD9C28C1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png */,
+				0A0E46181B62277400A52286 /* Untitled2.jpg */,
+				0A0E46141B62276700A52286 /* 33.jpg */,
+				0A0E46151B62276700A52286 /* 45.jpg */,
+				0A0E459A1B61D22E00A52286 /* 即将开启选中@2x.png */,
+				0A0E45981B61D22500A52286 /* 即将开启未选中@2x.png */,
+				0A0E45961B61D21F00A52286 /* 正在进行未选中@2x.png */,
+				0A0E45941B61D21700A52286 /* 正在进行@2x.png */,
 				0AD9C28A1B60C73F00188AE8 /* 邮箱找回选中@2x.png */,
 				0AD9C2881B60C73900188AE8 /* 手机找回选中@2x.png */,
 				0AD9C2861B60C73400188AE8 /* 手机找回未选中@2x.png */,
@@ -557,21 +577,14 @@
 				0A029CEE1B5F6EE6005E88B8 /* 邮箱注册@2x.png */,
 				0AE40E9E1B5E218B00676E49 /* 已选择@2x.png */,
 				0AE40EA01B5E219100676E49 /* 为选择@2x.png */,
-				95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
-				0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */,
 				95C7BA7E1B5E2E09009604D7 /* 版本更新@2x.png */,
 				95C7BA7F1B5E2E09009604D7 /* 关于我们@2x.png */,
 				95C7BA801B5E2E09009604D7 /* 活动记录@2x.png */,
 				95C7BA811B5E2E09009604D7 /* 活动介绍@2x.png */,
 				95C7BA821B5E2E09009604D7 /* 意见反馈@2x.png */,
-				95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
 				95C7BA881B5E381F009604D7 /* 设置@2x.png */,
+				95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
 				0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */,
-
-95D8BE261B5DDD1E001C57EF /* 登录注册按钮背景@2x.png */,
-
-0AE3C74E1B5CDDA6007153A3 /* 粉色背景@2x.png */,
-				0AE3C74F1B5CDDA6007153A3 /* 没点同意协议@2x.png */,
 				0AE3C7501B5CDDA6007153A3 /* 头像@2x.png */,
 				0AE3C7511B5CDDA6007153A3 /* 微博@2x.png */,
 				0AE3C7521B5CDDA6007153A3 /* 微信@2x.png */,
@@ -602,13 +615,13 @@
 		0ACAF1A21B411E300029ACC9 = {
 			isa = PBXGroup;
 			children = (
-				0A9E68501B43BDDC00A71D88 /* image */,
-				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
-				0AE40EAB1B5F326200676E49 /* LRF */,
-				0ACAF2751B411ED30029ACC9 /* Three */,
-				95D4A4411B44DD93005F5ABF /* Second */,
-				0ACAF2671B411EB90029ACC9 /* First */,
 				0ACAF1D71B411E820029ACC9 /* 工具类 */,
+				0ACAF2671B411EB90029ACC9 /* First */,
+				95D4A4411B44DD93005F5ABF /* Second */,
+				0ACAF2751B411ED30029ACC9 /* Three */,
+				0AE40EAB1B5F326200676E49 /* LRF */,
+				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
+				0A9E68501B43BDDC00A71D88 /* image */,
 				0ACAF1AD1B411E300029ACC9 /* YouCarMyCar */,
 				0ACAF1C71B411E300029ACC9 /* YouCarMyCarTests */,
 				0ACAF1AC1B411E300029ACC9 /* Products */,
@@ -681,6 +694,7 @@
 		0ACAF1D71B411E820029ACC9 /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				0A0E460D1B6226A000A52286 /* HEInfiniteScrollView */,
 				0ACAF1D81B411E820029ACC9 /* AFNetworking */,
 				0ACAF1EC1B411E830029ACC9 /* MJRefresh */,
 				0ACAF2191B411E830029ACC9 /* SDWebImage */,
@@ -868,6 +882,8 @@
 				95E5AC931B437D5200904602 /* WillViewController.m */,
 				0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */,
 				0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */,
+				0A0E461D1B62377000A52286 /* NowDetaNeiViewController.h */,
+				0A0E461E1B62377000A52286 /* NowDetaNeiViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1170,7 +1186,7 @@
 		0ACAF1A31B411E300029ACC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = LLY;
 				TargetAttributes = {
 					0ACAF1AA1B411E300029ACC9 = {
@@ -1207,32 +1223,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
-				0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
-				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
+				0AD9C29B1B60FDB000188AE8 /* 登录注册按钮背景@2x.png in Resources */,
+				0AD9C29A1B60FDB000188AE8 /* 微博@2x.png in Resources */,
+				0AD9C29C1B60FDB000188AE8 /* TouxiangTableViewCell.xib in Resources */,
 				95C7BA931B5E4771009604D7 /* 审核中@2x.png in Resources */,
 				95C7BA851B5E2E09009604D7 /* 活动记录@2x.png in Resources */,
-				95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
-				0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
-				0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */,
-				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */,
-
-95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
-
-0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
-				0AE3C7571B5CDDA6007153A3 /* 没点同意协议@2x.png in Resources */,
-
-95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
 				95D08E1D1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib in Resources */,
 				0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */,
 				0AE40E9F1B5E218B00676E49 /* 已选择@2x.png in Resources */,
-				0AD9C28D1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png in Resources */,
 				95D203541B57931700BCD63F /* 确定按钮.png in Resources */,
 				0A4A04301B5F6F35005C0E3B /* 获取验证码@2x.png in Resources */,
-				0AD9C2991B60F91C00188AE8 /* b正在进行@2x.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
 				0A4A04281B5F6F11005C0E3B /* 手机注册@2x.png in Resources */,
 				95D2035E1B57A7C800BCD63F /* 添加按钮.png in Resources */,
@@ -1246,9 +1249,9 @@
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				0A4A04261B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png in Resources */,
 				0AD9C2891B60C73900188AE8 /* 手机找回选中@2x.png in Resources */,
-				0AE3C75C1B5CDDA6007153A3 /* check@2x.png in Resources */,
 				95C7BA941B5E4771009604D7 /* 再接再厉@2x.png in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
+				0A0E46171B62276700A52286 /* 45.jpg in Resources */,
 				0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */,
 				959312A11B5C9CA60006142F /* 用户反馈@2x.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
@@ -1259,32 +1262,33 @@
 				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
 				0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
-				0AD9C2911B60E02500188AE8 /* 正在进行未选@2x.png in Resources */,
 				95D2035C1B579BB700BCD63F /* addressTableViewCell.xib in Resources */,
 				0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */,
-				0AD9C2931B60E02B00188AE8 /* 正在进行@2x.png in Resources */,
 				0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */,
 				95C7BA831B5E2E09009604D7 /* 版本更新@2x.png in Resources */,
 				0AE3C75F1B5CEA42007153A3 /* 小人头像@2x.png in Resources */,
-				0AD9C2951B60E47D00188AE8 /* 正在进行@2x(1).png in Resources */,
 				95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */,
 				0A029CEF1B5F6EE6005E88B8 /* 邮箱注册@2x.png in Resources */,
+				0A0E45951B61D21700A52286 /* 正在进行@2x.png in Resources */,
 				95C7BA891B5E381F009604D7 /* 设置@2x.png in Resources */,
 				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
 				0A4A04341B5F6FC7005C0E3B /* +86@2x(1).png in Resources */,
-				0AD9C2971B60F1B200188AE8 /* a正在进行@2x.png in Resources */,
 				0A4A042C1B5F6F1C005C0E3B /* 为选择@2x(1).png in Resources */,
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				0AD9C2871B60C73400188AE8 /* 手机找回未选中@2x.png in Resources */,
 				95C7BA8E1B5E4116009604D7 /* ActivityTableViewCell.xib in Resources */,
 				0AE3C7581B5CDDA6007153A3 /* 头像@2x.png in Resources */,
+				0A0E46191B62277400A52286 /* Untitled2.jpg in Resources */,
+				0A0E45971B61D21F00A52286 /* 正在进行未选中@2x.png in Resources */,
 				0AE3C75D1B5CDDA6007153A3 /* qq@2x.png in Resources */,
+				0A0E46161B62276700A52286 /* 33.jpg in Resources */,
 				95D661B81B44D44500E9992E /* 1.png in Resources */,
+				0A0E45991B61D22500A52286 /* 即将开启未选中@2x.png in Resources */,
 				95D08E181B5F7D7A00A2CA2F /* 第几几期@2x.png in Resources */,
 				95D08E1F1B5F97FB00A2CA2F /* 密码设置成功@2x.png in Resources */,
 				95C7BA871B5E2E09009604D7 /* 意见反馈@2x.png in Resources */,
+				0A0E459B1B61D22E00A52286 /* 即将开启选中@2x.png in Resources */,
 				0ACAF2AD1B411EE50029ACC9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
-				0AD9C28F1B60E01E00188AE8 /* 即将开启选中@2x.png in Resources */,
 				0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */,
 				95D661BD1B44D44500E9992E /* TongyongTableViewCell.xib in Resources */,
 				0ACAF2521B411E830029ACC9 /* MJRefresh.bundle in Resources */,
@@ -1325,6 +1329,7 @@
 				0ACAF2471B411E830029ACC9 /* MJRefreshFooter.m in Sources */,
 				0ACAF2531B411E830029ACC9 /* MJRefreshConst.m in Sources */,
 				0ACAF2631B411E830029ACC9 /* UIImage+WebP.m in Sources */,
+				0A0E46121B6226A000A52286 /* HEImageView.m in Sources */,
 				95D203571B57933300BCD63F /* SureViewController.m in Sources */,
 				0ACAF25B1B411E830029ACC9 /* SDWebImageDecoder.m in Sources */,
 				95A5324D1B53B744002D2D0F /* DataSexTableViewCell.m in Sources */,
@@ -1361,6 +1366,7 @@
 				0AE40EA41B5E2C6800676E49 /* PhoneRegisterViewController.m in Sources */,
 				95B83E191B44D32A007ECAA8 /* XiangViewController.m in Sources */,
 				0ACAF2651B411E830029ACC9 /* UIImageView+WebCache.m in Sources */,
+				0A0E461F1B62377000A52286 /* NowDetaNeiViewController.m in Sources */,
 				0ACAF23D1B411E830029ACC9 /* AFHTTPSessionManager.m in Sources */,
 				0ACAF2551B411E830029ACC9 /* UIScrollView+MJRefresh.m in Sources */,
 				95D661BE1B44D44500E9992E /* TouxiangTableViewCell.m in Sources */,
@@ -1386,6 +1392,7 @@
 				0ACAF1B41B411E300029ACC9 /* AppDelegate.m in Sources */,
 				0AE3F2601B578F6F00ECA9BC /* ForgetViewController.m in Sources */,
 				0AE3C73C1B5C834A007153A3 /* MyTextFied.m in Sources */,
+				0A0E46131B6226A000A52286 /* HEInfiniteScrollView.m in Sources */,
 				0ACAF1B11B411E300029ACC9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
