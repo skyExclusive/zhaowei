@@ -18,8 +18,7 @@
 #define kMainY ([UIScreen mainScreen].bounds.origin.y)
 #define kMainWidth ([UIScreen mainScreen].bounds.size.width)
 #define kMainHeight ([UIScreen mainScreen].bounds.size.height)
-
-
+#define http @"http://m.nichewoche.com/mobile/index.php?act=index"
 
 
 #define KcellIndetifier @"cellIndentifier"

@@ -10,5 +10,6 @@
 
 
 @interface NowViewController : UIViewController
+@property (nonatomic ,strong)NSMutableArray *myArray;
 
 @end
