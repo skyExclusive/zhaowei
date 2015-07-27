@@ -9,5 +9,8 @@
 #import "NowViewModel.h"
 
 @implementation NowViewModel
-
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
 @end

@@ -33,6 +33,8 @@
 #define kDefaultFireIntervalNormal  0.1
 #define kDefaultFireIntervalHighUse  0.02
 
+
+
 @interface MZTimerLabel()
 
     @property (strong) NSTimer *timer;
@@ -193,7 +195,17 @@
 -(void)setup{
     
     if ([_timeFormat length] == 0) {
-        _timeFormat = kDefaultTimeFormat;
+        
+        
+        NSString *str1 = @"HH";
+        NSString *str2 = @"mm";
+        NSString *str3 = @"ss";
+        
+        
+        
+        _timeFormat = [NSString stringWithFormat:@"%@  %@  %@",str1 ,str2,str3];
+        
+        
     }
     
     if(_timeLabel == nil){

@@ -9,7 +9,7 @@
 #import "WillViewController.h"
 #import "PrefixHeader.pch"
 #import "MyListFirstTableViewCell.h"
-@interface WillViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface WillViewController ()<UITableViewDataSource,UITableViewDelegate,MylistFirstbleDelegate>
 @property (nonatomic,strong)UITableView *willtable;
 @end
 @implementation WillViewController
@@ -47,7 +47,19 @@
     cell.mydescritionLable.text = @"即将开启的商品的 描述";
     cell.myGoodImageVeiw.image = [UIImage   imageNamed:@"3.jpg"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.mybutton.tag = 100 + indexPath.row;
+    cell.delegagate = self;
+    cell.mytimeInteger = 1000 + indexPath.row;
+    
+    
+    
     return cell;
+}
+
+-(void)actionButton:(UIButton *)button
+{
+    
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

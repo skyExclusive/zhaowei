@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GoodSdeatlViewController : UIViewController
+@property (nonatomic ,strong)UITableView *mytableview;
 
 @end

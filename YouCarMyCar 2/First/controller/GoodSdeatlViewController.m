@@ -1,3 +1,4 @@
+
 //
 //  GoodSdeatlViewController.m
 //  YouCarMyCar
@@ -7,8 +8,8 @@
 //
 
 #import "GoodSdeatlViewController.h"
-
-@interface GoodSdeatlViewController ()
+#import "PrefixHeader.pch"
+@interface GoodSdeatlViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -16,8 +17,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.mytableview = [[UITableView alloc]initWithFrame:CGRectMake(kMainX, kMainY, kMainWidth, kMainHeight-150)];
+    self.mytableview.delegate = self;
+    self.mytableview.dataSource = self;
+    [self.view addSubview:self.mytableview];
+    self.mytableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     // Do any additional setup after loading the view.
 }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 0;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    
+    return 0;
+    
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 0;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

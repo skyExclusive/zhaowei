@@ -11,7 +11,7 @@
 #import "MyListFirstTableViewCell.h"
 #import "NowDetalViewController.h"
 
-@interface NowViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface NowViewController ()<UITableViewDataSource,UITableViewDelegate,MylistFirstbleDelegate>
 @property (nonatomic,strong)UITableView *mytable;
 @end
 
@@ -28,7 +28,17 @@
     self.mytable.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     
+    [self cuostom];//获取数据
+    
+    
 
+}
+-(void)cuostom
+{
+    
+    
+    
+    
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -64,20 +74,26 @@
         
     }
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+
+    mycell.mybutton.tag = 100 + indexPath.row;
     
-    [mycell.mybuttonImageView addGestureRecognizer:tap];
-    mycell.mybuttonImageView.tag = 100 + indexPath.row;
+    mycell.delegagate = self;
+    
+    mycell.mytimeInteger = 1000 + indexPath.row;
+    
+    
     return mycell;
     
 }
--(void)tapAction:(UITapGestureRecognizer *)sent
 
+-(void)actionButton:(UIButton *)button
 {
-    UIImageView *iamge = (UIImageView *)sent.view;
-    NSLog(@"%ld",(long)iamge.tag - 100);
+    NSInteger aa = button.tag - 100;
+    NSLog(@"%ld",(long)aa);
+    
     
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NowDetalViewController *detal = [[NowDetalViewController alloc]init];
