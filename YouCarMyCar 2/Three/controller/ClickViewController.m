@@ -401,17 +401,16 @@
     [imageView addSubview:self.textView];
     [imageView addSubview:view];
     
-    UIImageView *buttonImage = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y + kMainHeight/4 +30 , kMainWidth - 20, kMainWidth/9)];
-    buttonImage.image = [UIImage imageNamed:@"登录注册按钮背景.png"];
-    self.button = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    self.button.frame = CGRectMake(0, 0, kMainWidth - 20, kMainWidth/9);
-    buttonImage.userInteractionEnabled = YES;
-    [self.view addSubview:buttonImage];
+
+    self.button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.button.frame = CGRectMake(10, imageView.frame.origin.y + kMainHeight/4 +30 , kMainWidth - 20, kMainWidth/9);
+    [self.button setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景.png"] forState:(UIControlStateNormal)];
+ 
     [self.button setTitle:@"提交" forState:(UIControlStateNormal)];
     [self.button addTarget:self action:@selector(tijiao:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.button setTintColor:[UIColor whiteColor]];
     
-    [buttonImage addSubview:self.button];
+    [self.view addSubview:self.button];
     
 }
 

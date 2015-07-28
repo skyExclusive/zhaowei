@@ -437,6 +437,7 @@
 		0AFF81001B6390E50009C5C3 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
 		0AFF81011B6390E50009C5C3 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
 		954F0A4D1B4B5E46002598C5 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		95651C221B671DC100EAB2FC /* DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissKeyboard.h; sourceTree = "<group>"; };
 		9581782F1B4BB1BD001AA514 /* ClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickViewController.h; sourceTree = "<group>"; };
 		958178301B4BB1BD001AA514 /* ClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickViewController.m; sourceTree = "<group>"; };
 		959312A01B5C9CA60006142F /* 用户反馈@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "用户反馈@2x.png"; sourceTree = "<group>"; };
@@ -587,13 +588,6 @@
 				95C7BA911B5E4771009604D7 /* 再接再厉@2x.png */,
 				95D661AD1B44D44500E9992E /* 1.png */,
 				95D661AE1B44D44500E9992E /* 2.png */,
-				0AD9C2981B60F91C00188AE8 /* b正在进行@2x.png */,
-				0AD9C2961B60F1B200188AE8 /* a正在进行@2x.png */,
-				0AD9C2941B60E47D00188AE8 /* 正在进行@2x(1).png */,
-				0AD9C2921B60E02B00188AE8 /* 正在进行@2x.png */,
-				0AD9C2901B60E02500188AE8 /* 正在进行未选@2x.png */,
-				0AD9C28E1B60E01E00188AE8 /* 即将开启选中@2x.png */,
-				0AD9C28C1B60E01800188AE8 /* jijiangkaiqiweixuan@2x.png */,
 				0ADEC49C1B660673001C26F1 /* 闹铃@2x.png */,
 				0AFF80FE1B63862E0009C5C3 /* 免费试用dianji@2x.png */,
 				0AFF80FC1B6383360009C5C3 /* 免费试用@2x.png */,
@@ -687,6 +681,7 @@
 				0ACAF1B31B411E300029ACC9 /* AppDelegate.m */,
 				0ACAF1D41B411E710029ACC9 /* RootTaBarViewController.h */,
 				0ACAF1D51B411E710029ACC9 /* RootTaBarViewController.m */,
+				95651C221B671DC100EAB2FC /* DismissKeyboard.h */,
 				95C8DED31B42413200FA1FDD /* PrefixHeader.pch */,
 				0ACAF1B81B411E300029ACC9 /* Main.storyboard */,
 				0ACAF1BB1B411E300029ACC9 /* Images.xcassets */,
@@ -1274,19 +1269,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
-				0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
-				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				95DF437A1B65DA2400A25CFD /* 删除@2x.png in Resources */,
 				95C7BA931B5E4771009604D7 /* 审核中@2x.png in Resources */,
 				95C7BA851B5E2E09009604D7 /* 活动记录@2x.png in Resources */,
-				95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
-				0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
-				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */,
-				95D8BE271B5DDD1E001C57EF /* 登录注册按钮背景@2x.png in Resources */,
-				0AE3C7591B5CDDA6007153A3 /* 微博@2x.png in Resources */,
-				95D661BF1B44D44500E9992E /* TouxiangTableViewCell.xib in Resources */,
 				0AD9C29B1B60FDB000188AE8 /* 登录注册按钮背景@2x.png in Resources */,
 				0AD9C29A1B60FDB000188AE8 /* 微博@2x.png in Resources */,
 				0AD9C29C1B60FDB000188AE8 /* TouxiangTableViewCell.xib in Resources */,

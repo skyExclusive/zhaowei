@@ -42,9 +42,23 @@
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 
 }
+
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGRect keyboardBounds = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    self.tableView.contentInset = UIEdgeInsetsMake(self.tableView.contentInset.top, 0, keyboardBounds.size.height, 0);
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    self.tableView.contentInset = UIEdgeInsetsMake(self.tableView.contentInset.top, 0, 0, 0);
+}
+
 -(void)pop
 {
     [self.navigationController  popToRootViewControllerAnimated:YES];

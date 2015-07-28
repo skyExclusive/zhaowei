@@ -13,7 +13,7 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WXApi.h"
-
+#import "DismissKeyboard.h"
 #import "PrefixHeader.pch"
 
 @interface AppDelegate ()
@@ -30,6 +30,8 @@
     //title 字体白色
 //    NSDictionary * dict=[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
 //    [[UINavigationBar appearance] setTitleTextAttributes:dict];
+    
+    [self openTouchOutsideDismissKeyboard];
     
     [[UINavigationBar appearance] setTitleTextAttributes:[[NSDictionary alloc] initWithObjectsAndKeys:
                                                           [UIFont  fontWithName:@"DBLCDTempBlack" size:24], NSFontAttributeName,
