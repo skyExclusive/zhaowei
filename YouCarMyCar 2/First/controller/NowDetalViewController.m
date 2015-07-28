@@ -14,7 +14,7 @@
 #import "SpeckTableViewController.h"
 #import "PrefixHeader.pch"
 #define kseGmentHeight 40
-#define kscrollViewH 234
+#define kscrollViewH 274
 
 @interface NowDetalViewController ()<UITableViewDataSource,UITableViewDelegate,MylistFirstbleDelegate,UIScrollViewDelegate>
 
@@ -47,9 +47,8 @@
 {
     
     //布局 UIScrollView
-    self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, kscrollViewH, kMainWidth, kMainHeight - kscrollViewH - 44)];
-    self.myscrollView.contentSize = CGSizeMake(kMainWidth * 2, 0);
-//    self.myscrollView.backgroundColor = [UIColor whiteColor];
+    self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -500, kMainWidth, kMainHeight - kscrollViewH - 44)];
+    self.myscrollView.contentSize = CGSizeMake(kMainWidth * 2, 200);
     self.myscrollView.showsVerticalScrollIndicator = NO;
     self.myscrollView.showsVerticalScrollIndicator = NO;
     self.myscrollView.pagingEnabled = YES;
@@ -58,19 +57,25 @@
     self.myscrollView.backgroundColor =[UIColor redColor];
 
     
-    self.nowVC = [[GoodDetalTableViewController alloc]init];
+    UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 30, 40)];
+    [self.myscrollView addSubview:lable];
+    lable.backgroundColor = [UIColor purpleColor];
     
+    
+    self.nowVC = [[GoodDetalTableViewController alloc]init];
     self.willVC = [[SpeckTableViewController alloc]init];
     self.nowVC.view.frame = CGRectMake(0, 0, kMainWidth, 500);
-    self.willVC.view.frame = CGRectMake(kMainWidth, 0, kMainWidth, 500);
+    self.willVC.view.frame = CGRectMake(kMainWidth, 0, kMainWidth, 200);
     
     [self addChildViewController:self.nowVC];
     [self.myscrollView addSubview:self.nowVC.view];
+    
+    
     [self addChildViewController:self.willVC];
     [self.myscrollView addSubview:self.willVC.view];
     
     MyListFirstTableViewCell *cell = [[MyListFirstTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"aa"];
-//    [self.view addSubview:cell];
+    [self.view addSubview:cell];
     cell.frame = CGRectMake(0, 64, 320, 170);
 
     cell.delegagate = self;
