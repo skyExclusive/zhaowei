@@ -86,6 +86,7 @@
 -(void)sure
 {
     SureViewController *sureVC = [[SureViewController alloc]init];
+    sureVC.j = 10;
     [self.navigationController pushViewController:sureVC animated:YES];
 }
 

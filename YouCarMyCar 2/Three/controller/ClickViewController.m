@@ -13,7 +13,8 @@
 #import "ZWTextView.h"
 #import "ActivityTableViewCell.h"
 #import "DiJiQiTableViewCell.h"
-@interface ClickViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+#import "SureViewController.h"
+@interface ClickViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)ZWTextView *textView;
 @property (nonatomic,strong)UIButton *button;
@@ -186,7 +187,8 @@
         
         addressTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"addressCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.superview.superview.backgroundColor = MainBackGround;
+//        cell.superview.superview.backgroundColor = MainBackGround;
+        cell.backgroundColor = MainBackGround;
         
         return cell;
         
@@ -261,6 +263,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"addressTableViewCell" bundle:nil] forCellReuseIdentifier:@"addressCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    self.tableView.backgroundColor = MainBackGround;
     
     //返回的箭头
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -270,10 +273,16 @@
     [button addTarget:self action:@selector(add) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = right;
+    
+    
+    
 }
 
 -(void)add
 {
+    SureViewController *sure = [[SureViewController alloc]init];
+    sure.j = 11;
+    [self.navigationController pushViewController:sure animated:YES];
     NSLog(@"添加 cell ");
 }
 //***********************************修改密码********************************
@@ -382,21 +391,42 @@
     
     self.textView = [[ZWTextView alloc]initWithFrame:CGRectMake(10, 10, imageView.frame.size.width - 20, imageView.frame.size.height - 20)];
     self.textView.placeholder = @"你车我车感谢您的支持";
-    self.textView.font =  [UIFont fontWithName:@"Arial" size:16.0];;
-    [imageView addSubview:self.textView];
+    self.textView.font =  [UIFont fontWithName:@"Arial" size:16.0];
+    self.textView.delegate = self;
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake( 10, 9, imageView.frame.size.width - 20, 3)];
+    view.backgroundColor = [UIColor whiteColor];
     
-    UIImageView *buttonImage = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y + kMainHeight/4 +30 , kMainWidth - 20, kMainWidth/9)];
-    buttonImage.image = [UIImage imageNamed:@"登录注册按钮背景.png"];
-    self.button = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    self.button.frame = CGRectMake(0, 0, kMainWidth - 20, kMainWidth/9);
-    buttonImage.userInteractionEnabled = YES;
-    [self.view addSubview:buttonImage];
+    
+    
+    [imageView addSubview:self.textView];
+    [imageView addSubview:view];
+    
+
+    self.button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    self.button.frame = CGRectMake(10, imageView.frame.origin.y + kMainHeight/4 +30 , kMainWidth - 20, kMainWidth/9);
+    [self.button setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景.png"] forState:(UIControlStateNormal)];
+ 
     [self.button setTitle:@"提交" forState:(UIControlStateNormal)];
     [self.button addTarget:self action:@selector(tijiao:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.button setTintColor:[UIColor whiteColor]];
     
-    [buttonImage addSubview:self.button];
+    [self.view addSubview:self.button];
     
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    //隐藏键盘
+    [self.textView  resignFirstResponder];
 }
 
 //键盘回收

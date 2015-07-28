@@ -187,9 +187,12 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         if (indexPath.section == 1  && indexPath.row < 1) {
+            
             cell.myView.alpha = 1;
+            
         }
         if (indexPath.section == 2  && indexPath.row < 2) {
+            
             cell.myView.alpha = 1;
         }
         
