@@ -16,6 +16,13 @@
 
 @implementation SecondViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    self.tabBarController.tabBar.hidden = NO;
+    
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];

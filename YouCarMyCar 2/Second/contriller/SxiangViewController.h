@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SxiangViewController : UIViewController
-
+@property (nonatomic,strong)UITableView *myTableView;
 @end

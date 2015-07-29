@@ -9,10 +9,11 @@
 #import "GoodDetalTableViewController.h"
 
 #import "PrefixHeader.pch"
+#import "GoodTableTableViewCell.h"
 
 
 
-@interface GoodDetalTableViewController ()
+@interface GoodDetalTableViewController ()<MylistFirstbleDelegate>
 
 @end
 
@@ -25,7 +26,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = NO;
    
-    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 -(CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -33,7 +34,7 @@
     
     
     if (section == 1) {
-        return 100;
+        return 30;
         
     }else {
         
@@ -48,54 +49,41 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (section == 1) {
-        self.myView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 200)];
+        self.myView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 30)];
         self.myView.backgroundColor = COLOR(253, 246, 240, 1);
 
         self.myliftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
         self.myliftButton.frame = CGRectMake(0, 0, 80, 30);
         
-        [self.myliftButton setBackgroundImage:[UIImage imageNamed:@"产品详情@2x.png"] forState:(UIControlStateNormal)];
+        [self.myliftButton setBackgroundImage:[UIImage imageNamed:@"产品详情@2x(1).png"] forState:(UIControlStateNormal)];
         
         [self.myView addSubview:self.myliftButton];
         
         self.myRignth = [UIButton buttonWithType:(UIButtonTypeCustom)];
         self.myRignth.frame = CGRectMake(80, 0, 80, 30);
+        [self.myRignth addTarget:self action:@selector(myRignth:) forControlEvents:(UIControlEventTouchUpInside)];
         
-        [self.myRignth setBackgroundImage:[UIImage imageNamed:@"参与评论未选中@2x.png"] forState:(UIControlStateNormal)];
+        [self.myRignth setBackgroundImage:[UIImage imageNamed:@"参与评论未选中@2x(1).png"] forState:(UIControlStateNormal)];
         [self.myView addSubview:self.myRignth];
         
         
         
         
-        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(15, 35, kMainWidth - 30, 15)];
-        lable.text = @"小提示:积极参与用户活动与反馈用户使用报告,及可提高免费试用的成功率!";
-        
-        lable.textColor = [UIColor redColor];
-        lable.font = [UIFont systemFontOfSize:8];
-        [self.myView addSubview:lable];
-        
-        
-        
-        self.myTextView = [[ZWTextView alloc]initWithFrame:CGRectMake(10, 50, kMainWidth - 80, 50)];
-        
-        
-        [self.myView addSubview:self.myTextView];
-        self.myTextView.backgroundColor = [UIColor grayColor];
-        self.myTextView.placeholder = @"请在这里输入您想说的话";
-        
-        
-        
-        return self.myView;
+               return self.myView;
 
 
     }
     
     return nil;
     
-    self.view.backgroundColor = [UIColor orangeColor];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+}
+-(void)myRignth:(UIButton *)button
+{
     
+    if ([self.delegate respondsToSelector:@selector(ringhtButtonAction:)]) {
+        [self.delegate ringhtButtonAction:button];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -124,28 +112,73 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-   static NSString *cell = @"index";
-     MyListFirstTableViewCell *mycell = [self.tableView dequeueReusableCellWithIdentifier:cell];
- 
- 
-     if (!mycell) {
- 
-    mycell = [[MyListFirstTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cell];
-    mycell.selectionStyle = UITableViewCellSelectionStyleNone;
- 
- 
-  
- }
-    
-    return mycell;
     
 
+    
+    if (indexPath.section == 0) {
+        static NSString *cell = @"index";
+        MyListFirstTableViewCell *mycell = [self.tableView dequeueReusableCellWithIdentifier:cell];
+        
+        
+        if (!mycell) {
+            
+            mycell = [[MyListFirstTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cell];
+            mycell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+
+
+        }
+        mycell.mybutton.tag = 100 + indexPath.row;
+        
+        mycell.delegagate = self;
+        
+        mycell.mytimeInteger = 1000 + indexPath.row;
+        
+        mycell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+        
+        return mycell;
+
+    
+    }else {
+        
+        static NSString *goodindext = @"goods";
+        GoodTableTableViewCell *goodcell = [self.tableView dequeueReusableCellWithIdentifier:goodindext];
+        if (!goodcell) {
+            goodcell = [[GoodTableTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:goodindext];
+            goodcell.myImageView.image = [UIImage imageNamed:@"33.jpg"];
+            
+            
+            
+            
+            
+        }
+        
+        goodcell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+        return goodcell;
+
+
+        
+ 
+    }
+    
+    
 }
 
 -(CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     return 170;
+    
+}
+//点击的方法
+
+//点击参与走的方法
+
+-(void)actionButton:(UIButton *)button
+{
+    
     
 }
 /*

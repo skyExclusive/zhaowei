@@ -7,7 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyListFirstTableViewCell.h"
+#import "ZWTextView.h"
+
+@protocol SpeckTableviewDelegate <NSObject>
+
+-(void)lightButtonAction:(UIButton *)button;
+-(void)speckButtonAction:(UIButton *)button;
+
+
+@end
+
 
 @interface SpeckTableViewController : UITableViewController
+@property (nonatomic,strong)ZWTextView *myTextView;
+@property (nonatomic,strong)UIButton *myliftButton;
+@property (nonatomic ,strong)UIButton *myRignth;
+@property (nonatomic ,strong)UIView *myView;
+@property (nonatomic ,assign)id<SpeckTableviewDelegate>delegate;
+@property (nonatomic ,strong)UIButton *myspeckButton;
+
 
 @end

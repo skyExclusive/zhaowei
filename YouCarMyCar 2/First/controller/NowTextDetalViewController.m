@@ -13,7 +13,7 @@
 #import "SpeckTableViewController.h"
 
 
-@interface NowTextDetalViewController ()<UIScrollViewDelegate,MylistFirstbleDelegate>
+@interface NowTextDetalViewController ()<UIScrollViewDelegate,MylistFirstbleDelegate,GoodDetalTableviewDelegate,SpeckTableviewDelegate>
 @property (nonatomic ,strong)GoodDetalTableViewController *nowVC;
 @property (nonatomic ,strong)SpeckTableViewController *willVC;
 
@@ -39,7 +39,7 @@
 }
 -(void)coustom
 {
-    self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, kMainHeight - 44)];
+    self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, kMainWidth * 2, kMainHeight - 44)];
     self.myscrollView.contentSize = CGSizeMake(kMainWidth * 2, 0);
     self.myscrollView.showsVerticalScrollIndicator = NO;
     self.myscrollView.showsVerticalScrollIndicator = NO;
@@ -55,8 +55,11 @@
 //    
     self.nowVC = [[GoodDetalTableViewController alloc]init];
     self.willVC = [[SpeckTableViewController alloc]init];
-    self.nowVC.tableView.frame = CGRectMake(0, 0, kMainWidth, 500);
-    self.willVC.tableView.frame = CGRectMake(kMainWidth, 0, kMainWidth, 200);
+    self.nowVC.tableView.frame = CGRectMake(0, -64, kMainWidth, kMainHeight - 64 -44);
+    self.willVC.tableView.frame = CGRectMake(kMainWidth, -64, kMainWidth, kMainHeight - 64 - 44);
+    self.nowVC.delegate = self;
+    self.willVC.delegate = self;
+    
     
     [self addChildViewController:self.nowVC];
     [self.myscrollView addSubview:self.nowVC.tableView];
@@ -65,12 +68,50 @@
     [self addChildViewController:self.willVC];
     [self.myscrollView addSubview:self.willVC.tableView];
     
+}
+-(void)lightButtonAction:(UIButton *)button
+{
+    [UIView beginAnimations:@"animat" context:nil];
+    //设置时间
+    [UIView setAnimationDuration:0.5f];
+    self.myscrollView.transform = CGAffineTransformMakeTranslation(0, 0);
+    self.myscrollView.transform = CGAffineTransformScale(self.myscrollView.transform, 1.01, 1.01);
+    [UIView commitAnimations];
     
+
+    
+    
+}
+-(void)ringhtButtonAction:(UIButton *)button
+{
+    [UIView beginAnimations:@"animat" context:nil];
+    //设置时间
+    [UIView setAnimationDuration:0.5f];
+    self.myscrollView.transform = CGAffineTransformMakeTranslation(-kMainWidth, 0);
+    self.myscrollView.transform = CGAffineTransformScale(self.myscrollView.transform, 1.01, 1.01);
+    [UIView commitAnimations];
+    
+    
+    
+}
+-(void)speckButtonAction:(UIButton *)button
+{
+    NSLog(@"评论");
     
     
 }
 -(void)pop
 {
+    [UIView beginAnimations:@"animat" context:nil];
+    //设置时间
+    [UIView setAnimationDuration:0];
+    self.myscrollView.transform = CGAffineTransformMakeTranslation(0, 0);
+    self.myscrollView.transform = CGAffineTransformScale(self.myscrollView.transform, 1.01, 1.01);
+    [UIView commitAnimations];
+    
+
+    
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {
