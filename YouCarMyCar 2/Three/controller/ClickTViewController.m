@@ -33,24 +33,24 @@
     self.title = @"修改密码";
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 80, kMainWidth - 20, 50)];
-    imageView.image = [UIImage imageNamed: @"圆角矩形-1.png"];
+    imageView.image = [UIImage imageNamed: @"背景框.png"];
     imageView.userInteractionEnabled = YES;
     [self.view addSubview:imageView];
     
     self.newpasswordField = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, kMainWidth - 20, 50)];
     self.newpasswordField.delegate = self;
-    self.newpasswordField.placeholder = @"请输入新密码";
+    self.newpasswordField.attributedPlaceholder = KMainPlaceholder(@"请输入新密码");
     [imageView addSubview:self.newpasswordField];
     
     
     UIImageView *sureimageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y +70, kMainWidth - 20, 50)];
-    sureimageView.image = [UIImage imageNamed: @"圆角矩形-1.png"];
+    sureimageView.image = [UIImage imageNamed: @"背景框.png"];
     sureimageView.userInteractionEnabled = YES;
     [self.view addSubview:sureimageView];
     
     self.surepasswordField = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, kMainWidth - 20, 50)];
 
-    self.surepasswordField.placeholder = @"请再次输入新密码";
+    self.surepasswordField.attributedPlaceholder = KMainPlaceholder(@"请再次输入新密码");
     self.surepasswordField.delegate = self;
     
     [sureimageView addSubview:self.surepasswordField];

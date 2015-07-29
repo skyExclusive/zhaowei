@@ -72,7 +72,7 @@
     self.navigationItem.title = @"个人信息";
     
     self.dic = [[NSMutableDictionary alloc]init];
-    NSArray *array1 = [[NSArray alloc]initWithObjects:@"用户名",@"手机号",@"性别",@"地址管理",@"密码服务", nil];
+    NSArray *array1 = [[NSArray alloc]initWithObjects:@"用户名",@"手机号",@"邮箱",@"性别",@"地址管理",@"密码服务", nil];
     
     [self.dic  setValue:array1 forKey:@"1"];
     
@@ -120,7 +120,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     if (section == 1) {
-        return 5;
+        return 6;
     }else{
         return 1;
     }
@@ -148,14 +148,20 @@
 {
     ClickViewController *clichVC = [[ClickViewController alloc]init];
     clichVC.i = 10;
-    if (indexPath.section == 1 && indexPath.row == 2 ){
+    if (indexPath.section == 1 && indexPath.row == 3 ){
         clichVC.i = 13;
         [self.navigationController pushViewController:clichVC animated:YES];
-    }else if (indexPath.section == 1 && indexPath.row == 3) {
+    }else if (indexPath.section == 1 && indexPath.row == 4) {
         clichVC.i = 11;
         [self.navigationController pushViewController:clichVC animated:YES];
-    }else if (indexPath.section == 1 && indexPath.row == 4) {
+    }else if (indexPath.section == 1 && indexPath.row == 5) {
         clichVC.i = 12;
+        [self.navigationController pushViewController:clichVC animated:YES];
+    }else if (indexPath.section == 1 && indexPath.row == 1){
+        clichVC.i = 14;
+        [self.navigationController pushViewController:clichVC animated:YES];
+    }else if (indexPath.section ==1 && indexPath.row == 2) {
+        clichVC.i = 15;
         [self.navigationController pushViewController:clichVC animated:YES];
     }else if (indexPath.section == 2 && indexPath.row == 0) {
         
@@ -209,28 +215,37 @@
         return cell;
         
         
-    }else if (indexPath.section == 1 && indexPath.row < 2){
+    }else if (indexPath.section == 1 && indexPath.row == 0){
         
         
         DataNameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell" forIndexPath:indexPath];
-        //        cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.nameLable.text = str;
-        cell.nameLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
-
-
-        cell.frame = CGRectMake(20, 0, 60, 50);
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        if (indexPath.row == 0) {
-            cell.nameField.text = @"你车我车";
-        }else if (indexPath.row == 1) {
-            cell.nameField.text = @"18031935432";
-        }
-        
-   
-        
+        cell.nameField.text = @"你车我车";
         return cell;
-    }else if (indexPath.section == 2){
+    }else if (indexPath.section == 1 && indexPath.row > 0 && indexPath.row < 6){
         
+        
+        
+        DataSexTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"sexCell" forIndexPath:indexPath];
+        cell.sexLable.text = str;
+        cell.sexLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        if ( indexPath.row == 1) {
+            cell.myLable.text = @"13811111111";
+        }else if ( indexPath.row == 2 ) {
+            cell.myLable.text = @"zw_mting@126.com";
+        }else if ( indexPath.row == 3 ){
+            cell.myLable.text = @"男";
+        }else if ( indexPath.row == 4 ) {
+            cell.myLable.text = @"北京市 房山区 拱辰街";
+        }else if ( indexPath.row == 5 ) {
+            cell.myLable.text = @"修改密码";
+        }
+        return cell;
+        
+    }else  {
         
         DataNameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell" forIndexPath:indexPath];
         
@@ -247,28 +262,7 @@
         
         
         return cell;
-        
-    }else  {
-        DataSexTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"sexCell" forIndexPath:indexPath];
-        cell.sexLable.text = str;
-        cell.sexLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
-        if (indexPath.section == 1 && indexPath.row == 4) {
-            cell.back.alpha = 0 ;
-        }
 
-        cell.frame = CGRectMake(20, 0, 60, 50);
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        if (indexPath.row == 4) {
-            cell.back.alpha = 0 ;
-        }
-        if ( indexPath.row == 2) {
-            cell.myLable.text = @"男";
-        }else if (indexPath.row == 3){
-            cell.myLable.text = @"北京市 房山区 拱辰街 ";
-        }else if ( indexPath.row == 4) {
-            cell.myLable.text = @"修改密码";
-        }
-        return cell;
     }
 }
 
