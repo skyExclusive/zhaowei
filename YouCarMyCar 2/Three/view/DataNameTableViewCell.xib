@@ -21,16 +21,9 @@
                             <constraint firstAttribute="height" constant="25" id="f7M-dw-toH"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwN-l8-nMx">
-                        <rect key="frame" x="8" y="49" width="359" height="1"/>
-                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="ujF-bl-Oer"/>
-                        </constraints>
-                    </view>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="你车我车网" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-eP-KXc">
                         <rect key="frame" x="152" y="10" width="215" height="30"/>
                         <constraints>
@@ -40,14 +33,15 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RwN-l8-nMx">
+                        <rect key="frame" x="-63" y="49" width="500" height="1"/>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="1Rb-eP-KXc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="6AV-4E-u2f"/>
                     <constraint firstItem="JOo-3F-FsT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="95q-st-mGq"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="RwN-l8-nMx" secondAttribute="bottom" constant="-9" id="OdB-jz-eyy"/>
                     <constraint firstItem="1Rb-eP-KXc" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="YIZ-mr-T75"/>
-                    <constraint firstItem="RwN-l8-nMx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cUa-Om-2hC"/>
-                    <constraint firstItem="RwN-l8-nMx" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="eTz-Fr-x47"/>
                     <constraint firstItem="JOo-3F-FsT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="zW6-kA-W4n"/>
                 </constraints>
             </tableViewCellContentView>

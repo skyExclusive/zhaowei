@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ClickTViewController : UIViewController
-
+@property (nonatomic)int k;
 @end

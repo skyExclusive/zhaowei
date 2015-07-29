@@ -23,7 +23,6 @@
 @property (nonatomic,strong)UITextField *codeField;
 @property (nonatomic,strong)UIButton *nextButton;
 @property (nonatomic,strong)UIImageView *choiceImage;
-
 @end
 
 @implementation ClickViewController
@@ -33,26 +32,43 @@
     
     self.view.backgroundColor = COLOR(251, 246, 240, 1);
     // Do any additional setup after loading the view.
-    if (self.i == 0) {
-        //布局我的参与
+    
+    
+          if (self.i == 0) {     //布局我的参与
+        
         [self layoutJoinView];
-    }else if (self.i == 1) {
-        //布局活动介绍
+        
+    }else if (self.i == 1) {     //布局活动介绍
+        
         [self layoutIntroduce];
-    }else if (self.i == 5) {
-        //布局关于我们
+        
+    }else if (self.i == 5) {     //布局关于我们
+        
         [self layoutOurs];
-    }else if (self.i == 6) {
-        //布局用户反馈
+        
+    }else if (self.i == 6) {     //布局用户反馈
+        
         [self layoutBack];
-    }else if (self.i == 11) {
-        //布局地址编辑
+        
+    }else if (self.i == 11) {    //布局地址编辑
+        
         [self layoutAddress];
-    }else if (self.i == 12) {
-        //布局修改密码
+        
+    }else if (self.i == 12) {    //布局修改密码
+        
         [self layoutPassword];
-    }else if (self.i == 13) {
+        
+    }else if (self.i == 13) {    //布局改变性别
+        
         [self layoutSexVC];
+        
+    }else if (self.i == 14) {    //布局更改手机号
+        
+        [self layoutPhotoNamber];
+        
+    }else if (self.i == 15) {    //布局更改邮箱
+        
+        [self layoutEmail];
     }
     
     
@@ -63,6 +79,8 @@
     [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
+    
+    
     
 }
 
@@ -100,9 +118,11 @@
     self.tableView.backgroundColor = MainBackGround;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    self.choiceImage = [[UIImageView alloc]initWithFrame:CGRectMake(kMainWidth - 40, 15, 20, 20)];
+
+    self.choiceImage = [[UIImageView alloc]initWithFrame:CGRectMake(kMainWidth - 40, 25, 20, 20)];
     self.choiceImage.image = [UIImage imageNamed:@"性别选择.png"];
-//    self.choiceImage.hidden = YES;
+    
+    [self.tableView addSubview:self.choiceImage];
     
 }
 
@@ -164,15 +184,18 @@
         NSLog(@"这个是活动记录的点击事件");
     }else if (self.i == 13){
         
-        
-        
-        self.choiceImage.hidden = NO;
-        
-        NSLog(@"确实已经点了");
-        
-        
-        
-        
+        if (indexPath.row == 1) {
+            self.choiceImage.frame = CGRectMake(kMainWidth - 40, 25, 20, 20);
+            [self.tableView addSubview:self.choiceImage];
+        }else if (indexPath.row == 2) {
+            self.choiceImage.frame = CGRectMake(kMainWidth - 40, 75, 20, 20);
+            [self.tableView addSubview:self.choiceImage];
+
+        }else if (indexPath.row == 3) {
+            self.choiceImage.frame = CGRectMake(kMainWidth - 40, 125, 20, 20);
+            [self.tableView addSubview:self.choiceImage];
+        }
+
         
     }
     
@@ -202,8 +225,6 @@
 
         if (cell==nil ) {
             cell=[[ UITableViewCell alloc]init];
-            
-            [cell addSubview:self.choiceImage];
             if (indexPath.row == 1 || indexPath.row == 2) {
                 UIView *view = [[UIView alloc]initWithFrame:CGRectMake(10, 49, kMainWidth - 20 , 1)];
                 view.backgroundColor = COLOR(201, 201, 201, 1);
@@ -283,7 +304,6 @@
     SureViewController *sure = [[SureViewController alloc]init];
     sure.j = 11;
     [self.navigationController pushViewController:sure animated:YES];
-    NSLog(@"添加 cell ");
 }
 //***********************************修改密码********************************
 -(void)layoutPassword
@@ -291,21 +311,16 @@
     
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 80, kMainWidth - 20, 50)];
-    imageView.image = [UIImage imageNamed: @"圆角矩形-1.png"];
+    imageView.image = [UIImage imageNamed: @"+86框.png"];
     imageView.userInteractionEnabled = YES;
     [self.view addSubview:imageView];
     
-    self.phoneField = [[UITextField alloc]initWithFrame:CGRectMake(10+kMainWidth/9, 0, kMainWidth - 20 - kMainWidth/8, 50)];
-    self.phoneField.placeholder = @"请输入您的手机号";
+    self.phoneField = [[UITextField alloc]initWithFrame:CGRectMake(imageView.frame.size.width/7 , 0, imageView.frame.size.width - imageView.frame.size.width/7 , 50)];
+    self.phoneField.attributedPlaceholder = KMainPlaceholder(@"请输入您的手机号");
     self.phoneField.keyboardType = UIKeyboardTypeNumberPad;
     self.phoneField.delegate = self;
-    
-    UILabel *phoneLable = [[UILabel alloc]initWithFrame:CGRectMake(1, 0, 50, 50)];
-    phoneLable.text = @"+86";
-    phoneLable.backgroundColor = [UIColor grayColor];
-    phoneLable.textAlignment = NSTextAlignmentCenter;
-    [imageView addSubview:phoneLable];
     [imageView addSubview:self.phoneField];
+    
     
     UIButton *verifyButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
     [verifyButton setTitle:@"获取验证码" forState:(UIControlStateNormal)];
@@ -316,19 +331,19 @@
     
     
     UIImageView *codeimageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y +70, kMainWidth - 20, 50)];
-    codeimageView.image = [UIImage imageNamed: @"圆角矩形-1.png"];
+    codeimageView.image = [UIImage imageNamed: @"背景框.png"];
     codeimageView.userInteractionEnabled = YES;
     [self.view addSubview:codeimageView];
     
     self.codeField = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, kMainWidth - 40, 50)];
     
-    self.codeField.placeholder = @"请输入验证码";
+    self.codeField.attributedPlaceholder = KMainPlaceholder(@"请输入验证码");
     self.codeField.delegate = self;
     self.codeField.keyboardType = UIKeyboardTypeNumberPad;
     [codeimageView addSubview:self.codeField];
     
     self.nextButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
-    [self.nextButton setTitle:@"下一步" forState:(UIControlStateNormal)];
+    [self.nextButton setTitle:@"确定" forState:(UIControlStateNormal)];
     [self.nextButton addTarget:self action:@selector(sure) forControlEvents:(UIControlEventTouchUpInside)];
     self.nextButton.titleLabel.font = MyButtonFont;
     self.nextButton.frame = CGRectMake(10, codeimageView.frame.origin.y + 100, kMainWidth - 20, 50);
@@ -352,7 +367,19 @@
 -(void)sure
 {
     ClickTViewController *clicktView = [[ClickTViewController alloc]init];
-    [self.navigationController pushViewController:clicktView animated:YES];
+    
+    if (self.i == 12) {
+        
+        clicktView.k = 100;
+        [self.navigationController pushViewController:clicktView animated:YES];
+        
+    }else if (self.i == 14 ) {
+
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    
+    
+    
 }
 
 
@@ -433,6 +460,121 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.phoneField resignFirstResponder];
     [self.codeField resignFirstResponder];
+}
+
+//********************************布局更改手机号*********************************
+-(void)layoutPhotoNamber
+{
+    self.title = @"修改手机号";
+    
+    
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 80, kMainWidth - 20, 50)];
+    imageView.image = [UIImage imageNamed: @"+86框.png"];
+    imageView.userInteractionEnabled = YES;
+    [self.view addSubview:imageView];
+    
+    self.phoneField = [[UITextField alloc]initWithFrame:CGRectMake(kMainWidth / 8 + 20, 0, kMainWidth *3/4, 50)];
+    self.phoneField.placeholder = @"请输入您的手机号";
+    self.phoneField.keyboardType = UIKeyboardTypeNumberPad;
+    self.phoneField.delegate = self;
+    
+    [imageView addSubview:self.phoneField];
+
+    
+    
+    UIImageView *codeimageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y +70, kMainWidth - 20, 50)];
+    codeimageView.image = [UIImage imageNamed: @"获取验证码框.png"];
+    codeimageView.userInteractionEnabled = YES;
+    [self.view addSubview:codeimageView];
+    
+    
+    
+    UIButton *verifyButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    verifyButton.titleLabel.font = [UIFont systemFontOfSize:13];
+    [verifyButton addTarget:self action:@selector(verify:) forControlEvents:(UIControlEventTouchUpInside)];
+    verifyButton.frame = CGRectMake(0, 0, kMainWidth/5, 50);
+    [codeimageView addSubview:verifyButton];
+    
+    self.codeField = [[UITextField alloc]initWithFrame:CGRectMake(imageView.frame.size.width/5 + 20, 0, imageView.frame.size.width - imageView.frame.size.width/5 - 20 , 50)];
+    
+    self.codeField.placeholder = @"请输入验证码";
+    self.codeField.delegate = self;
+    self.codeField.keyboardType = UIKeyboardTypeNumberPad;
+    [codeimageView addSubview:self.codeField];
+    
+    self.nextButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    [self.nextButton setTitle:@"确定" forState:(UIControlStateNormal)];
+    [self.nextButton addTarget:self action:@selector(surePhone) forControlEvents:(UIControlEventTouchUpInside)];
+    self.nextButton.titleLabel.font = MyButtonFont;
+    self.nextButton.frame = CGRectMake(10, codeimageView.frame.origin.y + 100, kMainWidth - 20, 50);
+    self.nextButton.backgroundColor = COLOR(49, 219, 224, 1);
+    [self.nextButton setTintColor:[UIColor whiteColor]];
+    
+    [self.view addSubview:self.nextButton];
+
+
+    
+}
+
+-(void)surePhone
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+//********************************布局更改邮箱*********************************
+-(void)layoutEmail
+{
+    self.title = @"更改邮箱";
+    
+    
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 80, kMainWidth - 20, 50)];
+    imageView.image = [UIImage imageNamed: @"背景框.png"];
+    imageView.userInteractionEnabled = YES;
+    [self.view addSubview:imageView];
+    
+    self.phoneField = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, imageView.frame.size.width -20, 50)];
+    self.phoneField.attributedPlaceholder = KMainPlaceholder(@"请输入您的邮箱");
+    self.phoneField.delegate = self;
+    [imageView addSubview:self.phoneField];
+    
+    
+    
+    UIImageView *codeimageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y +70, kMainWidth - 20, 50)];
+    codeimageView.image = [UIImage imageNamed: @"获取验证码框.png"];
+    codeimageView.userInteractionEnabled = YES;
+    [self.view addSubview:codeimageView];
+    
+    
+    
+    UIButton *verifyButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    verifyButton.titleLabel.font = [UIFont systemFontOfSize:13];
+    [verifyButton addTarget:self action:@selector(verify:) forControlEvents:(UIControlEventTouchUpInside)];
+    verifyButton.frame = CGRectMake(0, 0, kMainWidth/5, 50);
+    [codeimageView addSubview:verifyButton];
+    
+    self.codeField = [[UITextField alloc]initWithFrame:CGRectMake(imageView.frame.size.width/5 + 20, 0, imageView.frame.size.width - imageView.frame.size.width/5 - 20 , 50)];
+    
+    self.codeField.attributedPlaceholder = KMainPlaceholder(@"请输入您的邮箱验证码");
+    self.codeField.delegate = self;
+    self.codeField.keyboardType = UIKeyboardTypeNumberPad;
+    [codeimageView addSubview:self.codeField];
+    
+    self.nextButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    [self.nextButton setTitle:@"确定" forState:(UIControlStateNormal)];
+    [self.nextButton addTarget:self action:@selector(changeEmail) forControlEvents:(UIControlEventTouchUpInside)];
+    self.nextButton.titleLabel.font = MyButtonFont;
+    self.nextButton.frame = CGRectMake(10, codeimageView.frame.origin.y + 100, kMainWidth - 20, 50);
+    self.nextButton.backgroundColor = COLOR(49, 219, 224, 1);
+    [self.nextButton setTintColor:[UIColor whiteColor]];
+    
+    [self.view addSubview:self.nextButton];
+    
+
+}
+-(void)changeEmail
+{
+    NSLog(@"改变邮箱");
 }
 
 -(void)tijiao:(UIButton *)button

@@ -51,6 +51,9 @@
 //所有字体的颜色 黑色
 #define WordColor [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1]
 
+//textField的占位符字体 大小 颜色
+
+#define KMainPlaceholder(arr) [[NSAttributedString alloc] initWithString:arr attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:COLOR(150, 150, 150, 1)}]
 
 //（1）当前系统版本号
 

@@ -8,9 +8,11 @@
 
 #import "SureViewController.h"
 #import "PrefixHeader.pch"
-@interface SureViewController ()<UITextFieldDelegate>
+@interface SureViewController ()<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITextField *addressField;
 @property (nonatomic,strong)UITableView *addressTableView;
+@property (nonatomic,strong)UITableView *myTableView;
+
 @end
 
 @implementation SureViewController
@@ -39,6 +41,11 @@
     [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
+    
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
 }
 
@@ -88,68 +95,136 @@
 {
     self.title = @"新增地址";
     
-    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(kMainX,-64 , kMainWidth, kMainHeight * 2)];
-    scrollView.backgroundColor = MainBackGround;
+       self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height )];
+    self.myTableView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.myTableView];
+    self.myTableView.backgroundColor = MainBackGround;
+    self.myTableView.delegate = self;
+    self.myTableView.dataSource = self;
+    self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+   self.myTableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+
     
-    UILabel *myLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 84, kMainWidth, 40)];
-    myLable.text = @"请您认真填写,以便我们准确发货";
-    myLable.textAlignment = NSTextAlignmentCenter;
-    myLable.backgroundColor = COLOR(36, 141, 216, 1);
-    myLable.textColor = [UIColor whiteColor];
-    [scrollView addSubview:myLable];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
-    NSArray *arr = [[NSArray alloc]initWithObjects:@"请输入收货人姓名",@"请输入您的详细地址",@"请输入您的联系电话",@"请输入您的邮箱", nil];
+}
+
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGRect keyboardBounds = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    self.myTableView.contentInset = UIEdgeInsetsMake(self.myTableView.contentInset.top, 0, keyboardBounds.size.height, 0);
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    self.myTableView.contentInset = UIEdgeInsetsMake(self.myTableView.contentInset.top, 0, 0, 0);
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    for (int i = 0; i < 4 ; i++) {
-        UIView  *lable = [[UIView alloc]initWithFrame:CGRectMake(30, 144 + i*45, kMainWidth - 60, 40)];
+    return 8;
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+       return 65;
+    }else if (indexPath.row > 0 && indexPath.row <5) {
+        return 45;
+    }else if (indexPath.row == 5 ){
+        return 170;
+    }else{
+        return 50;
+    }
+}
+
+//cell 的点击事件
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    NSString *tag=@"tag";
+    NSArray *arr = [[NSArray alloc]initWithObjects:@"",@"请输入收货人姓名",@"请输入您的详细地址",@"请输入您的联系电话",@"请输入您的邮编",@"",@"",@"", nil];
+    NSString *cellString  =arr[indexPath.row];
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:tag];
+    
+    
+    if (cell==nil ) {
+        cell=[[ UITableViewCell alloc]init];
+        if (indexPath.row >0 && indexPath.row < 5) {
+        UIView  *lable = [[UIView alloc]initWithFrame:CGRectMake(30, 0, kMainWidth - 60, 40)];
         lable.backgroundColor = [UIColor whiteColor];
         lable.layer.cornerRadius = 4;
         
         
         self.addressField = [[UITextField alloc]initWithFrame:CGRectMake(25, 0, lable.frame.size.width - 30, 40)];
         _addressField.delegate = self;
-        _addressField.tag = 100 + i;
-        UIFont *font = [UIFont systemFontOfSize:17];
-        UIColor *color =COLOR(100, 100, 100, 1);
-        // 没错，就是看接下来这一步了。
-        _addressField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:arr[i] attributes:@{NSFontAttributeName:font, NSForegroundColorAttributeName:color}];
-        
-    
-        [scrollView addSubview:lable];
-        
+        _addressField.attributedPlaceholder = KMainPlaceholder(cellString);
         [lable addSubview:_addressField];
+        [cell addSubview:lable];
+            
 
+        }
+    }
+    cell.backgroundColor = MainBackGround;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (indexPath.row == 0) {
+        UILabel *myLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 10, kMainWidth, 40)];
+        myLable.text = @"请您认真填写,以便我们准确发货";
+        myLable.textAlignment = NSTextAlignmentCenter;
+        myLable.backgroundColor = COLOR(36, 141, 216, 1);
+        myLable.textColor = [UIColor whiteColor];
+        [cell addSubview:myLable];
+
+    }else if(indexPath.row == 5) {
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 30, kMainWidth - 40, 130)];
+        imageView.image = [UIImage imageNamed:@"小提示1.png"];
+        [cell addSubview:imageView];
+
+    
+    }else if (indexPath.row == 6) {
+        
+        UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        [button setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景.png"] forState:(UIControlStateNormal)];
+        [button setFrame:CGRectMake(10, 10, kMainWidth - 20 , 40)];
+        [button setTitle:@"确定" forState:(UIControlStateNormal)];
+        [button setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+        [button addTarget:self action:@selector(sureAddress) forControlEvents:(UIControlEventTouchUpInside)];
+        
+        
+        [cell addSubview:button];
+        
     }
     
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 340, kMainWidth - 40, 130)];
-    imageView.image = [UIImage imageNamed:@"小提示1.png"];
-    [scrollView addSubview:imageView];
-    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [button setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景.png"] forState:(UIControlStateNormal)];
-    [button setFrame:CGRectMake(10, imageView.frame.origin.y + 160, kMainWidth - 20 , 40)];
-        [button setTitle:@"确定" forState:(UIControlStateNormal)];
-    [button setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-    [button addTarget:self action:@selector(sureAddress) forControlEvents:(UIControlEventTouchUpInside)];
+    return cell;
 
-
-    [scrollView addSubview:button];
     
-    [self.view addSubview:scrollView];
+    
     
 }
 
+-(void)sureAddress
+{
+    NSLog(@"确定添加新地址");
+}
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
-}
-
-
--(void)sureAddress
-{
-    NSLog(@"确定添加新地址");
 }
 
 - (void)didReceiveMemoryWarning {

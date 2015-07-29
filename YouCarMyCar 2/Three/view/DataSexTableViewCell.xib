@@ -27,16 +27,9 @@
                             <constraint firstAttribute="height" constant="21" id="P0A-P3-JTx"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjN-3q-ioO">
-                        <rect key="frame" x="8" y="49" width="359" height="1"/>
-                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="9mD-bp-Ly6"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Z2-37-C3j">
                         <rect key="frame" x="23" y="15" width="60" height="20"/>
                         <constraints>
@@ -44,17 +37,18 @@
                             <constraint firstAttribute="width" constant="60" id="avX-bx-eri"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HjN-3q-ioO">
+                        <rect key="frame" x="-63" y="49" width="500" height="1"/>
+                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="m4r-X9-3vW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="2TM-Q7-8hR"/>
                     <constraint firstItem="5Z2-37-C3j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="7cj-tv-FPa"/>
-                    <constraint firstItem="HjN-3q-ioO" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Dbb-dm-uig"/>
-                    <constraint firstItem="HjN-3q-ioO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="41" id="Rt2-Rv-Uyb"/>
                     <constraint firstItem="m4r-X9-3vW" firstAttribute="leading" secondItem="5Z2-37-C3j" secondAttribute="trailing" constant="54" id="VRu-L3-nam"/>
-                    <constraint firstItem="HjN-3q-ioO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="gkF-mZ-8PD"/>
                     <constraint firstItem="xsF-Lt-B2J" firstAttribute="leading" secondItem="m4r-X9-3vW" secondAttribute="trailing" constant="-1" id="krM-WB-rgl"/>
                     <constraint firstItem="5Z2-37-C3j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="pVF-VV-lDg"/>
                     <constraint firstItem="xsF-Lt-B2J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="q30-ZN-tbj"/>
@@ -71,6 +65,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="1.png" width="49" height="43"/>
+        <image name="1.png" width="60" height="21"/>
     </resources>
 </document>
