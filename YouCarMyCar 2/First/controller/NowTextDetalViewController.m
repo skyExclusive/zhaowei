@@ -1,34 +1,27 @@
 //
-//  NowDetalViewController.m
+//  NowTextDetalViewController.m
 //  YouCarMyCar
 //
-//  Created by LLY on 15/7/2.
+//  Created by LLY on 15/7/27.
 //  Copyright (c) 2015年 LLY. All rights reserved.
 //
 
-#import "NowDetalViewController.h"
+#import "NowTextDetalViewController.h"
+
 #import "PrefixHeader.pch"
-#import "HEInfiniteScrollView.h"
-#import "MyListFirstTableViewCell.h"
 #import "GoodDetalTableViewController.h"
 #import "SpeckTableViewController.h"
-#import "PrefixHeader.pch"
-#define kseGmentHeight 40
-#define kscrollViewH 274
 
-@interface NowDetalViewController ()<UITableViewDataSource,UITableViewDelegate,MylistFirstbleDelegate,UIScrollViewDelegate>
 
-@property (nonatomic ,strong)UITableView *mytable;
+@interface NowTextDetalViewController ()<UIScrollViewDelegate,MylistFirstbleDelegate>
 @property (nonatomic ,strong)GoodDetalTableViewController *nowVC;
 @property (nonatomic ,strong)SpeckTableViewController *willVC;
 
-
 @end
 
-@implementation NowDetalViewController
+@implementation NowTextDetalViewController
 
 - (void)viewDidLoad {
-
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"商品详情";
@@ -38,70 +31,61 @@
     [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
-    [self scrollerView];
     self.view.backgroundColor = COLOR(253, 246, 240, 1);
-
-
+//
+//
+    [self coustom];
+    // Do any additional setup after loading the view.
 }
--(void)scrollerView
+-(void)coustom
 {
-    
-    //布局 UIScrollView
-    self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, -500, kMainWidth, kMainHeight - kscrollViewH - 44)];
-    self.myscrollView.contentSize = CGSizeMake(kMainWidth * 2, 200);
+    self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, kMainHeight - 44)];
+    self.myscrollView.contentSize = CGSizeMake(kMainWidth * 2, 0);
     self.myscrollView.showsVerticalScrollIndicator = NO;
     self.myscrollView.showsVerticalScrollIndicator = NO;
     self.myscrollView.pagingEnabled = YES;
     self.myscrollView.delegate = self;
     [self.view addSubview:self.myscrollView];
+    self.myscrollView.showsVerticalScrollIndicator = FALSE;
+    self.myscrollView.showsHorizontalScrollIndicator = FALSE;
     self.myscrollView.backgroundColor =[UIColor redColor];
-
-    
-    UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 30, 40)];
-    [self.myscrollView addSubview:lable];
-    lable.backgroundColor = [UIColor purpleColor];
+    self.myscrollView.bounces = NO;
     
     
+//    
     self.nowVC = [[GoodDetalTableViewController alloc]init];
     self.willVC = [[SpeckTableViewController alloc]init];
-    self.nowVC.view.frame = CGRectMake(0, 0, kMainWidth, 500);
-    self.willVC.view.frame = CGRectMake(kMainWidth, 0, kMainWidth, 200);
+    self.nowVC.tableView.frame = CGRectMake(0, 0, kMainWidth, 500);
+    self.willVC.tableView.frame = CGRectMake(kMainWidth, 0, kMainWidth, 200);
     
     [self addChildViewController:self.nowVC];
-    [self.myscrollView addSubview:self.nowVC.view];
+    [self.myscrollView addSubview:self.nowVC.tableView];
     
     
     [self addChildViewController:self.willVC];
-    [self.myscrollView addSubview:self.willVC.view];
+    [self.myscrollView addSubview:self.willVC.tableView];
     
-    MyListFirstTableViewCell *cell = [[MyListFirstTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"aa"];
-    [self.view addSubview:cell];
-    cell.frame = CGRectMake(0, 64, 320, 170);
-
-    cell.delegagate = self;
     
-    cell.mytimeInteger = 1000;
-    
-
     
     
 }
-//点击参与
--(void)actionButton:(UIButton *)button
-{
-    
-    
-}
-
 -(void)pop
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

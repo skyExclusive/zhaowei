@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MyListFirstTableViewCell.h"
+
+#import "ZWTextView.h"
+
+
 @interface GoodDetalTableViewController : UITableViewController
+@property (nonatomic,strong)ZWTextView *myTextView;
+@property (nonatomic,strong)UIButton *myliftButton;
+@property (nonatomic ,strong)UIButton *myRignth;
+@property (nonatomic ,strong)UIView *myView;
 
 @end

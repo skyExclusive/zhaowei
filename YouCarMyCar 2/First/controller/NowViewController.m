@@ -10,6 +10,7 @@
 #import "PrefixHeader.pch"
 #import "MyListFirstTableViewCell.h"
 #import "NowDetalViewController.h"
+#import "NowTextDetalViewController.h"
 
 @interface NowViewController ()<UITableViewDataSource,UITableViewDelegate,MylistFirstbleDelegate>
 @property (nonatomic,strong)UITableView *mytable;
@@ -96,8 +97,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NowDetalViewController *detal = [[NowDetalViewController alloc]init];
-    [self.navigationController pushViewController:detal animated:YES];
+    NowTextDetalViewController *detal = [[NowTextDetalViewController alloc]init];
+    [[super navigationController] pushViewController:detal animated:YES];
     
 }
 - (void)didReceiveMemoryWarning {
