@@ -12,11 +12,19 @@
 
 #import "ZWTextView.h"
 
+@protocol GoodDetalTableviewDelegate <NSObject>
+
+-(void)ringhtButtonAction:(UIButton *)button;
+
+
+@end
+
 
 @interface GoodDetalTableViewController : UITableViewController
 @property (nonatomic,strong)ZWTextView *myTextView;
 @property (nonatomic,strong)UIButton *myliftButton;
 @property (nonatomic ,strong)UIButton *myRignth;
 @property (nonatomic ,strong)UIView *myView;
+@property (nonatomic ,assign)id<GoodDetalTableviewDelegate>delegate;
 
 @end

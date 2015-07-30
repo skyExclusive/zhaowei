@@ -9,7 +9,6 @@
 #import "NowViewController.h"
 #import "PrefixHeader.pch"
 #import "MyListFirstTableViewCell.h"
-#import "NowDetalViewController.h"
 #import "NowTextDetalViewController.h"
 
 @interface NowViewController ()<UITableViewDataSource,UITableViewDelegate,MylistFirstbleDelegate>

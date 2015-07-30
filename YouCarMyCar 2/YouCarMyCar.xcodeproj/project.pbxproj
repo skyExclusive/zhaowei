@@ -17,10 +17,11 @@
 		0A0E46161B62276700A52286 /* 33.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E46141B62276700A52286 /* 33.jpg */; };
 		0A0E46171B62276700A52286 /* 45.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E46151B62276700A52286 /* 45.jpg */; };
 		0A0E46191B62277400A52286 /* Untitled2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0A0E46181B62277400A52286 /* Untitled2.jpg */; };
-		0A2603DE1B675EE80013262A /* 参与评论未选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2603DD1B675EE80013262A /* 参与评论未选中@2x.png */; };
-		0A2603E01B675EEE0013262A /* 参与评论@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2603DF1B675EEE0013262A /* 参与评论@2x.png */; };
-		0A2603E21B675EF40013262A /* 产品详情未选@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2603E11B675EF40013262A /* 产品详情未选@2x.png */; };
-		0A2603E41B675EFA0013262A /* 产品详情@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2603E31B675EFA0013262A /* 产品详情@2x.png */; };
+		0A2603E61B6770780013262A /* 参与评论未选中@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2603E51B6770780013262A /* 参与评论未选中@2x(1).png */; };
+		0A2603E81B67707F0013262A /* 参与评论@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2603E71B67707F0013262A /* 参与评论@2x(1).png */; };
+		0A2603EA1B6770860013262A /* 产品详情@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2603E91B6770860013262A /* 产品详情@2x(1).png */; };
+		0A2603EC1B67708B0013262A /* 产品详情未选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2603EB1B67708B0013262A /* 产品详情未选中@2x.png */; };
+		0A2603EE1B6771610013262A /* 发表@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2603ED1B6771610013262A /* 发表@2x.png */; };
 		0A4A04261B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A04251B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png */; };
 		0A4A04281B5F6F11005C0E3B /* 手机注册@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A04271B5F6F11005C0E3B /* 手机注册@2x.png */; };
 		0A4A042C1B5F6F1C005C0E3B /* 为选择@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0A4A042B1B5F6F1C005C0E3B /* 为选择@2x(1).png */; };
@@ -32,7 +33,6 @@
 		0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */; };
 		0AB91FA71B46171300552824 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AB91FA61B46171300552824 /* 3.jpg */; };
 		0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */; };
-		0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */; };
 		0ACAF1B11B411E300029ACC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B01B411E300029ACC9 /* main.m */; };
 		0ACAF1B41B411E300029ACC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B31B411E300029ACC9 /* AppDelegate.m */; };
 		0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B81B411E300029ACC9 /* Main.storyboard */; };
@@ -133,6 +133,19 @@
 		0ADEC4A01B661B4E001C26F1 /* GoodDetalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADEC49F1B661B4E001C26F1 /* GoodDetalTableViewController.m */; };
 		0ADEC4A31B661B67001C26F1 /* SpeckTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADEC4A21B661B67001C26F1 /* SpeckTableViewController.m */; };
 		0ADEC4A91B6639C5001C26F1 /* NowTextDetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADEC4A81B6639C5001C26F1 /* NowTextDetalViewController.m */; };
+		0AE06C281B6876EE00EE6B22 /* GoodTableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE06C271B6876EE00EE6B22 /* GoodTableTableViewCell.m */; };
+		0AE06C2B1B6876FD00EE6B22 /* SpeckTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE06C2A1B6876FD00EE6B22 /* SpeckTableViewCell.m */; };
+		0AE06C2E1B68AD4F00EE6B22 /* WqDetalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE06C2D1B68AD4F00EE6B22 /* WqDetalTableViewCell.m */; };
+		0AE06C301B68C1DC00EE6B22 /* 矩形-16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE06C2F1B68C1DC00EE6B22 /* 矩形-16@2x.png */; };
+		0AE06C321B68C1E100EE6B22 /* 评分@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE06C311B68C1E100EE6B22 /* 评分@2x.png */; };
+		0AE06C341B68C1E600EE6B22 /* truck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE06C331B68C1E600EE6B22 /* truck@2x.png */; };
+		0AE06C361B68C1ED00EE6B22 /* 形状-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE06C351B68C1ED00EE6B22 /* 形状-3@2x.png */; };
+		0AE06C381B68C1F300EE6B22 /* 未选评分@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE06C371B68C1F300EE6B22 /* 未选评分@2x.png */; };
+		0AE06C3A1B68CD6F00EE6B22 /* 提交试用报告@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE06C391B68CD6F00EE6B22 /* 提交试用报告@2x.png */; };
+		0AE06C3C1B68CD7600EE6B22 /* 查看中奖名单@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE06C3B1B68CD7600EE6B22 /* 查看中奖名单@2x.png */; };
+		0AE06C3F1B68D28C00EE6B22 /* SureAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE06C3E1B68D28C00EE6B22 /* SureAddressViewController.m */; };
+		0AE06C421B68D2AD00EE6B22 /* LiftButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE06C411B68D2AD00EE6B22 /* LiftButtonViewController.m */; };
+		0AE06C451B68D2B800EE6B22 /* RightButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE06C441B68D2B800EE6B22 /* RightButtonViewController.m */; };
 		0AE102341B4B6DDD00BB23BB /* sns_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102301B4B6DDD00BB23BB /* sns_icon_24.png */; };
 		0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */; };
 		0AE3C73C1B5C834A007153A3 /* MyTextFied.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3C73B1B5C834A007153A3 /* MyTextFied.m */; };
@@ -230,10 +243,11 @@
 		0A0E46141B62276700A52286 /* 33.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 33.jpg; sourceTree = "<group>"; };
 		0A0E46151B62276700A52286 /* 45.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 45.jpg; sourceTree = "<group>"; };
 		0A0E46181B62277400A52286 /* Untitled2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Untitled2.jpg; sourceTree = "<group>"; };
-		0A2603DD1B675EE80013262A /* 参与评论未选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "参与评论未选中@2x.png"; sourceTree = "<group>"; };
-		0A2603DF1B675EEE0013262A /* 参与评论@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "参与评论@2x.png"; sourceTree = "<group>"; };
-		0A2603E11B675EF40013262A /* 产品详情未选@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "产品详情未选@2x.png"; sourceTree = "<group>"; };
-		0A2603E31B675EFA0013262A /* 产品详情@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "产品详情@2x.png"; sourceTree = "<group>"; };
+		0A2603E51B6770780013262A /* 参与评论未选中@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "参与评论未选中@2x(1).png"; sourceTree = "<group>"; };
+		0A2603E71B67707F0013262A /* 参与评论@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "参与评论@2x(1).png"; sourceTree = "<group>"; };
+		0A2603E91B6770860013262A /* 产品详情@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "产品详情@2x(1).png"; sourceTree = "<group>"; };
+		0A2603EB1B67708B0013262A /* 产品详情未选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "产品详情未选中@2x.png"; sourceTree = "<group>"; };
+		0A2603ED1B6771610013262A /* 发表@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发表@2x.png"; sourceTree = "<group>"; };
 		0A4A04251B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "邮箱注册(未选中)@2x.png"; sourceTree = "<group>"; };
 		0A4A04271B5F6F11005C0E3B /* 手机注册@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机注册@2x.png"; sourceTree = "<group>"; };
 		0A4A042B1B5F6F1C005C0E3B /* 为选择@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "为选择@2x(1).png"; sourceTree = "<group>"; };
@@ -246,8 +260,6 @@
 		0AB91FA61B46171300552824 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		0AC346481B450D25005D6A39 /* MyListFirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyListFirstTableViewCell.h; sourceTree = "<group>"; };
 		0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyListFirstTableViewCell.m; sourceTree = "<group>"; };
-		0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowDetalViewController.h; sourceTree = "<group>"; };
-		0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowDetalViewController.m; sourceTree = "<group>"; };
 		0ACAF1AB1B411E300029ACC9 /* YouCarMyCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouCarMyCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACAF1AF1B411E300029ACC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACAF1B01B411E300029ACC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -410,6 +422,25 @@
 		0ADEC4A21B661B67001C26F1 /* SpeckTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeckTableViewController.m; sourceTree = "<group>"; };
 		0ADEC4A71B6639C5001C26F1 /* NowTextDetalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowTextDetalViewController.h; sourceTree = "<group>"; };
 		0ADEC4A81B6639C5001C26F1 /* NowTextDetalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowTextDetalViewController.m; sourceTree = "<group>"; };
+		0AE06C261B6876EE00EE6B22 /* GoodTableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodTableTableViewCell.h; sourceTree = "<group>"; };
+		0AE06C271B6876EE00EE6B22 /* GoodTableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodTableTableViewCell.m; sourceTree = "<group>"; };
+		0AE06C291B6876FD00EE6B22 /* SpeckTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeckTableViewCell.h; sourceTree = "<group>"; };
+		0AE06C2A1B6876FD00EE6B22 /* SpeckTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeckTableViewCell.m; sourceTree = "<group>"; };
+		0AE06C2C1B68AD4F00EE6B22 /* WqDetalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WqDetalTableViewCell.h; sourceTree = "<group>"; };
+		0AE06C2D1B68AD4F00EE6B22 /* WqDetalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WqDetalTableViewCell.m; sourceTree = "<group>"; };
+		0AE06C2F1B68C1DC00EE6B22 /* 矩形-16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "矩形-16@2x.png"; sourceTree = "<group>"; };
+		0AE06C311B68C1E100EE6B22 /* 评分@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "评分@2x.png"; sourceTree = "<group>"; };
+		0AE06C331B68C1E600EE6B22 /* truck@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "truck@2x.png"; sourceTree = "<group>"; };
+		0AE06C351B68C1ED00EE6B22 /* 形状-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "形状-3@2x.png"; sourceTree = "<group>"; };
+		0AE06C371B68C1F300EE6B22 /* 未选评分@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未选评分@2x.png"; sourceTree = "<group>"; };
+		0AE06C391B68CD6F00EE6B22 /* 提交试用报告@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提交试用报告@2x.png"; sourceTree = "<group>"; };
+		0AE06C3B1B68CD7600EE6B22 /* 查看中奖名单@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "查看中奖名单@2x.png"; sourceTree = "<group>"; };
+		0AE06C3D1B68D28C00EE6B22 /* SureAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SureAddressViewController.h; sourceTree = "<group>"; };
+		0AE06C3E1B68D28C00EE6B22 /* SureAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SureAddressViewController.m; sourceTree = "<group>"; };
+		0AE06C401B68D2AD00EE6B22 /* LiftButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiftButtonViewController.h; sourceTree = "<group>"; };
+		0AE06C411B68D2AD00EE6B22 /* LiftButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiftButtonViewController.m; sourceTree = "<group>"; };
+		0AE06C431B68D2B800EE6B22 /* RightButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightButtonViewController.h; sourceTree = "<group>"; };
+		0AE06C441B68D2B800EE6B22 /* RightButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightButtonViewController.m; sourceTree = "<group>"; };
 		0AE102301B4B6DDD00BB23BB /* sns_icon_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sns_icon_24.png; path = ShareSDK/Core/Resource.bundle/Icon_7/sns_icon_24.png; sourceTree = SOURCE_ROOT; };
 		0AE102321B4B6DDD00BB23BB /* sns_icon_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sns_icon_24@2x.png"; path = "ShareSDK/Core/Resource.bundle/Icon_7/sns_icon_24@2x.png"; sourceTree = SOURCE_ROOT; };
 		0AE3C73A1B5C834A007153A3 /* MyTextFied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTextFied.h; path = ../../First/controller/MyTextFied.h; sourceTree = "<group>"; };
@@ -577,6 +608,10 @@
 			children = (
 				0AC346481B450D25005D6A39 /* MyListFirstTableViewCell.h */,
 				0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */,
+				0AE06C261B6876EE00EE6B22 /* GoodTableTableViewCell.h */,
+				0AE06C271B6876EE00EE6B22 /* GoodTableTableViewCell.m */,
+				0AE06C291B6876FD00EE6B22 /* SpeckTableViewCell.h */,
+				0AE06C2A1B6876FD00EE6B22 /* SpeckTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -584,6 +619,18 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				0AE06C3B1B68CD7600EE6B22 /* 查看中奖名单@2x.png */,
+				0AE06C391B68CD6F00EE6B22 /* 提交试用报告@2x.png */,
+				0AE06C371B68C1F300EE6B22 /* 未选评分@2x.png */,
+				0AE06C351B68C1ED00EE6B22 /* 形状-3@2x.png */,
+				0AE06C311B68C1E100EE6B22 /* 评分@2x.png */,
+				0AE06C331B68C1E600EE6B22 /* truck@2x.png */,
+				0AE06C2F1B68C1DC00EE6B22 /* 矩形-16@2x.png */,
+				0A2603ED1B6771610013262A /* 发表@2x.png */,
+				0A2603EB1B67708B0013262A /* 产品详情未选中@2x.png */,
+				0A2603E91B6770860013262A /* 产品详情@2x(1).png */,
+				0A2603E71B67707F0013262A /* 参与评论@2x(1).png */,
+				0A2603E51B6770780013262A /* 参与评论未选中@2x(1).png */,
 				956CE1791B6864A200545644 /* 背景框@2x.png */,
 				956CE17A1B6864A200545644 /* +86框@2x.png */,
 				956CE17B1B6864A200545644 /* 获取验证码框@2x.png */,
@@ -929,8 +976,6 @@
 				95E5AC901B437D4600904602 /* NowViewController.m */,
 				95E5AC921B437D5200904602 /* WillViewController.h */,
 				95E5AC931B437D5200904602 /* WillViewController.m */,
-				0AC3464B1B4527CC005D6A39 /* NowDetalViewController.h */,
-				0AC3464C1B4527CC005D6A39 /* NowDetalViewController.m */,
 				0ADEC4A71B6639C5001C26F1 /* NowTextDetalViewController.h */,
 				0ADEC4A81B6639C5001C26F1 /* NowTextDetalViewController.m */,
 				0ADEC49E1B661B4E001C26F1 /* GoodDetalTableViewController.h */,
@@ -1149,6 +1194,12 @@
 				95D4A4461B44DDAB005F5ABF /* SecondViewController.m */,
 				95D4A4471B44DDAB005F5ABF /* SxiangViewController.h */,
 				95D4A4481B44DDAB005F5ABF /* SxiangViewController.m */,
+				0AE06C3D1B68D28C00EE6B22 /* SureAddressViewController.h */,
+				0AE06C3E1B68D28C00EE6B22 /* SureAddressViewController.m */,
+				0AE06C401B68D2AD00EE6B22 /* LiftButtonViewController.h */,
+				0AE06C411B68D2AD00EE6B22 /* LiftButtonViewController.m */,
+				0AE06C431B68D2B800EE6B22 /* RightButtonViewController.h */,
+				0AE06C441B68D2B800EE6B22 /* RightButtonViewController.m */,
 			);
 			path = contriller;
 			sourceTree = "<group>";
@@ -1158,6 +1209,8 @@
 			children = (
 				95D4A44B1B44DDB5005F5ABF /* CollectionCell.h */,
 				95D4A44C1B44DDB5005F5ABF /* CollectionCell.m */,
+				0AE06C2C1B68AD4F00EE6B22 /* WqDetalTableViewCell.h */,
+				0AE06C2D1B68AD4F00EE6B22 /* WqDetalTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1280,16 +1333,18 @@
 			files = (
 				95DF437A1B65DA2400A25CFD /* 删除@2x.png in Resources */,
 				95C7BA931B5E4771009604D7 /* 审核中@2x.png in Resources */,
+				0AE06C341B68C1E600EE6B22 /* truck@2x.png in Resources */,
 				95C7BA851B5E2E09009604D7 /* 活动记录@2x.png in Resources */,
 				95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */,
+				0AE06C361B68C1ED00EE6B22 /* 形状-3@2x.png in Resources */,
 				0AD9C29B1B60FDB000188AE8 /* 登录注册按钮背景@2x.png in Resources */,
 				956CE17E1B6864A200545644 /* 获取验证码框@2x.png in Resources */,
 				0AD9C29A1B60FDB000188AE8 /* 微博@2x.png in Resources */,
 				0AD9C29C1B60FDB000188AE8 /* TouxiangTableViewCell.xib in Resources */,
 				95C7BA931B5E4771009604D7 /* 审核中@2x.png in Resources */,
+				0AE06C3A1B68CD6F00EE6B22 /* 提交试用报告@2x.png in Resources */,
 				95C7BA851B5E2E09009604D7 /* 活动记录@2x.png in Resources */,
 				95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */,
-				0A2603E01B675EEE0013262A /* 参与评论@2x.png in Resources */,
 				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
 				95D08E1D1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib in Resources */,
@@ -1298,6 +1353,7 @@
 				95D203541B57931700BCD63F /* 确定按钮.png in Resources */,
 				0A4A04301B5F6F35005C0E3B /* 获取验证码@2x.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
+				0AE06C3C1B68CD7600EE6B22 /* 查看中奖名单@2x.png in Resources */,
 				0A4A04281B5F6F11005C0E3B /* 手机注册@2x.png in Resources */,
 				95D2035E1B57A7C800BCD63F /* 添加按钮.png in Resources */,
 				0AB91FA71B46171300552824 /* 3.jpg in Resources */,
@@ -1307,14 +1363,17 @@
 				95DAF6DE1B4F60ED00B891DC /* 形状 1.png in Resources */,
 				0AE40EA11B5E219100676E49 /* 为选择@2x.png in Resources */,
 				0AD9C28B1B60C73F00188AE8 /* 邮箱找回选中@2x.png in Resources */,
+				0A2603E81B67707F0013262A /* 参与评论@2x(1).png in Resources */,
+				0AE06C321B68C1E100EE6B22 /* 评分@2x.png in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
-				0A2603E41B675EFA0013262A /* 产品详情@2x.png in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				0A4A04261B5F6F09005C0E3B /* 邮箱注册(未选中)@2x.png in Resources */,
 				95DF43761B65D5A100A25CFD /* 编辑@2x.png in Resources */,
 				95DF43741B65CF8D00A25CFD /* 地址详情@2x.png in Resources */,
 				0AD9C2891B60C73900188AE8 /* 手机找回选中@2x.png in Resources */,
 				95C7BA941B5E4771009604D7 /* 再接再厉@2x.png in Resources */,
+				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
+				0AE06C301B68C1DC00EE6B22 /* 矩形-16@2x.png in Resources */,
 				0A0E46171B62276700A52286 /* 45.jpg in Resources */,
 				0AE3C73E1B5C941D007153A3 /* 圆角矩形-1@2x.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
@@ -1323,13 +1382,16 @@
 				0A4A042E1B5F6F2D005C0E3B /* 选中手机注册@2x.png in Resources */,
 				95C7BA841B5E2E09009604D7 /* 关于我们@2x.png in Resources */,
 				0A2603DE1B675EE80013262A /* 参与评论未选中@2x.png in Resources */,
+				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
 				0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
 				95D2035C1B579BB700BCD63F /* addressTableViewCell.xib in Resources */,
 				0AE102361B4B6DDD00BB23BB /* sns_icon_24@2x.png in Resources */,
 				0AE3C7561B5CDDA6007153A3 /* 粉色背景@2x.png in Resources */,
+				0A2603E61B6770780013262A /* 参与评论未选中@2x(1).png in Resources */,
 				95C7BA831B5E2E09009604D7 /* 版本更新@2x.png in Resources */,
 				0AE3C75F1B5CEA42007153A3 /* 小人头像@2x.png in Resources */,
+				0A2603EA1B6770860013262A /* 产品详情@2x(1).png in Resources */,
 				95A5324E1B53B744002D2D0F /* DataSexTableViewCell.xib in Resources */,
 				0A029CEF1B5F6EE6005E88B8 /* 邮箱注册@2x.png in Resources */,
 				0A0E45951B61D21700A52286 /* 正在进行@2x.png in Resources */,
@@ -1341,6 +1403,7 @@
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				0AD9C2871B60C73400188AE8 /* 手机找回未选中@2x.png in Resources */,
 				95C7BA8E1B5E4116009604D7 /* ActivityTableViewCell.xib in Resources */,
+				0AE06C381B68C1F300EE6B22 /* 未选评分@2x.png in Resources */,
 				0AE3C7581B5CDDA6007153A3 /* 头像@2x.png in Resources */,
 				0A0E46191B62277400A52286 /* Untitled2.jpg in Resources */,
 				0A0E45971B61D21F00A52286 /* 正在进行未选中@2x.png in Resources */,
@@ -1351,6 +1414,7 @@
 				95D08E181B5F7D7A00A2CA2F /* 第几几期@2x.png in Resources */,
 				95D08E1F1B5F97FB00A2CA2F /* 密码设置成功@2x.png in Resources */,
 				95C7BA871B5E2E09009604D7 /* 意见反馈@2x.png in Resources */,
+				0A2603EC1B67708B0013262A /* 产品详情未选中@2x.png in Resources */,
 				0A0E459B1B61D22E00A52286 /* 即将开启选中@2x.png in Resources */,
 				959281AC1B6A035200F122B8 /* 用户反馈@2x.png in Resources */,
 				0ACAF2AD1B411EE50029ACC9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -1358,13 +1422,13 @@
 				95D661BD1B44D44500E9992E /* TongyongTableViewCell.xib in Resources */,
 				0ACAF2521B411E830029ACC9 /* MJRefresh.bundle in Resources */,
 				95C7BA921B5E4771009604D7 /* 恭喜中奖@2x.png in Resources */,
-				0A2603E21B675EF40013262A /* 产品详情未选@2x.png in Resources */,
 				95CB4C8D1B60C6E2002090B9 /* 性别选择@2x.png in Resources */,
 				0AFF80FD1B6383360009C5C3 /* 免费试用@2x.png in Resources */,
 				0ACAF1BC1B411E300029ACC9 /* Images.xcassets in Resources */,
 				0A4A04361B5F9DC3005C0E3B /* 手机选中1@2x.png in Resources */,
 				0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */,
 				95DF437E1B6617B800A25CFD /* 小提示1@2x.png in Resources */,
+				0A2603EE1B6771610013262A /* 发表@2x.png in Resources */,
 				956CE17C1B6864A200545644 /* 背景框@2x.png in Resources */,
 				0ACAF2AF1B411EE50029ACC9 /* WeiboSDK.bundle in Resources */,
 			);
@@ -1384,6 +1448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE06C2B1B6876FD00EE6B22 /* SpeckTableViewCell.m in Sources */,
 				0ACAF24A1B411E830029ACC9 /* MJRefreshAutoNormalFooter.m in Sources */,
 				0ACAF2561B411E830029ACC9 /* UIView+MJExtension.m in Sources */,
 				0ACAF2451B411E830029ACC9 /* MJRefreshBackFooter.m in Sources */,
@@ -1401,6 +1466,7 @@
 				0ACAF2631B411E830029ACC9 /* UIImage+WebP.m in Sources */,
 				0A0E46121B6226A000A52286 /* HEImageView.m in Sources */,
 				95D203571B57933300BCD63F /* SureViewController.m in Sources */,
+				0AE06C421B68D2AD00EE6B22 /* LiftButtonViewController.m in Sources */,
 				0ACAF25B1B411E830029ACC9 /* SDWebImageDecoder.m in Sources */,
 				95A5324D1B53B744002D2D0F /* DataSexTableViewCell.m in Sources */,
 				0AE40EAA1B5F30BB00676E49 /* MyTextFiedNoimage.m in Sources */,
@@ -1410,7 +1476,10 @@
 				0ACAF2621B411E830029ACC9 /* UIImage+MultiFormat.m in Sources */,
 				0ACAF2591B411E830029ACC9 /* SDImageCache.m in Sources */,
 				0ACAF23B1B411E830029ACC9 /* AFHTTPRequestOperation.m in Sources */,
+				0AE06C281B6876EE00EE6B22 /* GoodTableTableViewCell.m in Sources */,
 				0ACAF2501B411E830029ACC9 /* MJRefreshNormalHeader.m in Sources */,
+				0AE06C2E1B68AD4F00EE6B22 /* WqDetalTableViewCell.m in Sources */,
+				0AE06C451B68D2B800EE6B22 /* RightButtonViewController.m in Sources */,
 				0ACAF2461B411E830029ACC9 /* MJRefreshComponent.m in Sources */,
 				0ACAF25A1B411E830029ACC9 /* SDWebImageCompat.m in Sources */,
 				0ACAF1D61B411E710029ACC9 /* RootTaBarViewController.m in Sources */,
@@ -1437,6 +1506,7 @@
 				0ACAF2571B411E830029ACC9 /* MKAnnotationView+WebCache.m in Sources */,
 				95D2035B1B579BB700BCD63F /* addressTableViewCell.m in Sources */,
 				0AE40EA41B5E2C6800676E49 /* PhoneRegisterViewController.m in Sources */,
+				0AE06C3F1B68D28C00EE6B22 /* SureAddressViewController.m in Sources */,
 				95B83E191B44D32A007ECAA8 /* XiangViewController.m in Sources */,
 				0ACAF2651B411E830029ACC9 /* UIImageView+WebCache.m in Sources */,
 				0ACAF23D1B411E830029ACC9 /* AFHTTPSessionManager.m in Sources */,
@@ -1449,7 +1519,6 @@
 				0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */,
 				0ACAF24E1B411E830029ACC9 /* MJRefreshBackStateFooter.m in Sources */,
 				95C7BA8D1B5E4116009604D7 /* ActivityTableViewCell.m in Sources */,
-				0AC3464D1B4527CC005D6A39 /* NowDetalViewController.m in Sources */,
 				95D661BC1B44D44500E9992E /* TongyongTableViewCell.m in Sources */,
 				0ACAF2581B411E830029ACC9 /* NSData+ImageContentType.m in Sources */,
 				0AFF81021B6390E50009C5C3 /* MZTimerLabel.m in Sources */,

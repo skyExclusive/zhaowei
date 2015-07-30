@@ -78,7 +78,7 @@
     //布局 UIScrollView
     self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, kscrollViewH, kMainWidth, kMainHeight - kscrollViewH)];
     self.myscrollView.contentSize = CGSizeMake(kMainWidth * 2, kMainHeight - kscrollViewH);
-    self.myscrollView.backgroundColor = COLOR(251, 246, 240, 1);
+    self.myscrollView.backgroundColor =COLOR(243, 233, 221, 1);
     
     self.myscrollView.showsVerticalScrollIndicator = NO;
     self.myscrollView.showsVerticalScrollIndicator = NO;
