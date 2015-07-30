@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberLable;
 @property (weak, nonatomic) IBOutlet UILabel *nameLable;
 @property (weak, nonatomic) IBOutlet UILabel *timeLable;
-@property (weak, nonatomic) IBOutlet UIImageView *whatImage;
 @property (weak, nonatomic) IBOutlet UIImageView *thingImage;
+@property (weak, nonatomic) IBOutlet UIButton *baoGao;
 
 @end

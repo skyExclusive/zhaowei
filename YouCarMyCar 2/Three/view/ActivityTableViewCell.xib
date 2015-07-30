@@ -32,13 +32,6 @@
                             <constraint firstAttribute="width" constant="60" id="sPg-q3-4Ay"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u8g-Se-2YW">
-                        <rect key="frame" x="302" y="22" width="65" height="56"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="56" id="ayH-Pm-eBn"/>
-                            <constraint firstAttribute="width" constant="65" id="qgw-zE-Om2"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S600豪华型安全座椅" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-bR-g2E">
                         <rect key="frame" x="111" y="20" width="142" height="18"/>
                         <constraints>
@@ -69,30 +62,43 @@
                         <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E70-4b-1Jb">
+                        <rect key="frame" x="290" y="22" width="77" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="77" id="Jdb-dc-2SO"/>
+                            <constraint firstAttribute="height" constant="55" id="Uh7-Z6-uCA"/>
+                        </constraints>
+                        <state key="normal" image="恭喜中奖.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Y5V-bR-g2E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="3QJ-qN-SXX"/>
+                    <constraint firstItem="E70-4b-1Jb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="4eF-9t-xGc"/>
                     <constraint firstItem="B0j-lJ-nKe" firstAttribute="top" secondItem="Y5V-bR-g2E" secondAttribute="bottom" constant="21" id="Bcr-mD-i9a"/>
                     <constraint firstItem="Ccy-x5-TbR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-3" id="Lhe-ZQ-NgC"/>
-                    <constraint firstItem="u8g-Se-2YW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="14" id="ROJ-9S-zhn"/>
                     <constraint firstItem="Ccy-x5-TbR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="UaV-OR-g35"/>
                     <constraint firstItem="B0j-lJ-nKe" firstAttribute="leading" secondItem="hiw-th-syg" secondAttribute="trailing" constant="18" id="W93-Go-t6g"/>
                     <constraint firstItem="6kj-16-hXg" firstAttribute="leading" secondItem="B0j-lJ-nKe" secondAttribute="trailing" constant="8" id="Y0d-pN-tlR"/>
                     <constraint firstItem="hiw-th-syg" firstAttribute="leading" secondItem="Ccy-x5-TbR" secondAttribute="trailing" constant="8" id="brx-Jm-mR6"/>
-                    <constraint firstItem="u8g-Se-2YW" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="kPJ-Yy-qD5"/>
+                    <constraint firstItem="E70-4b-1Jb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="14" id="jML-Gt-zFo"/>
                     <constraint firstItem="Y5V-bR-g2E" firstAttribute="leading" secondItem="hiw-th-syg" secondAttribute="trailing" constant="18" id="lZ3-m0-Pez"/>
                     <constraint firstItem="6kj-16-hXg" firstAttribute="top" secondItem="Y5V-bR-g2E" secondAttribute="bottom" constant="21" id="qHV-qK-Ldd"/>
                     <constraint firstItem="hiw-th-syg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="wn3-VK-b3t"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="baoGao" destination="E70-4b-1Jb" id="sGS-6V-zFr"/>
                 <outlet property="nameLable" destination="Y5V-bR-g2E" id="ije-Qp-2rQ"/>
                 <outlet property="numberLable" destination="Ccy-x5-TbR" id="j3s-jF-oec"/>
                 <outlet property="thingImage" destination="hiw-th-syg" id="bLx-vH-R6L"/>
                 <outlet property="timeLable" destination="6kj-16-hXg" id="SfZ-uT-IAU"/>
-                <outlet property="whatImage" destination="u8g-Se-2YW" id="ClR-yJ-O2z"/>
             </connections>
             <point key="canvasLocation" x="219.5" y="321"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="恭喜中奖.png" width="77" height="55"/>
+    </resources>
 </document>

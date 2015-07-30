@@ -180,13 +180,15 @@
         
     }else{
         
-        TongyongTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tongCell" forIndexPath:indexPath];;
+        TongyongTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tongCell" forIndexPath:indexPath];
         cell.lableText.text = str;
         cell.iconImage.image = [UIImage imageNamed:imageStr];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         if (indexPath.section == 1  && indexPath.row < 1) {
+            
+            
             
             cell.myView.alpha = 1;
             
