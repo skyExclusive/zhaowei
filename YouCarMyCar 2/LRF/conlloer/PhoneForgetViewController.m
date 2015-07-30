@@ -35,7 +35,7 @@
     
     self.phoneScrollView = [[UIScrollView alloc]initWithFrame:self.view.frame];
     self.phoneScrollView.contentSize = CGSizeMake(self.view.frame.size.width, 640);
-    self.phoneScrollView.backgroundColor = COLOR(251, 246, 240, 1);
+    self.phoneScrollView.backgroundColor = COLOR(243, 233, 221, 1);
     self.phoneScrollView.delegate = self;
     [self.phoneScrollView addGestureRecognizer:tap];
     [self.view addSubview:self.phoneScrollView];

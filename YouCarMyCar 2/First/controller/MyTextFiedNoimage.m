@@ -42,7 +42,7 @@
 
 {
     self.myBigimageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    self.myBigimageView.image = [UIImage imageNamed:@"圆角矩形-1@2x.png"];
+    self.myBigimageView.image = [UIImage imageNamed:@"背景框@2x.png"];
     [self addSubview:self.myBigimageView];
     self.mytextField = [[UITextField alloc]initWithFrame:CGRectMake(10, 0, self.frame.size.width - 20, self.frame.size.height)];
     self.mytextField.delegate = self;

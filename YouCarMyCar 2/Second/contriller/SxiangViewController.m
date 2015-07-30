@@ -84,7 +84,6 @@
     wqCell.mypeoOldLable.text = @"100到1000岁";
     wqCell.delegate = self;
     
-    
     return wqCell;
     
     
@@ -99,7 +98,6 @@
     
     return 200;
     }
-    
 }
 -(void)pop
 {
