@@ -8,7 +8,10 @@
 
 #import "RightButtonViewController.h"
 
-@interface RightButtonViewController ()
+#import "PrefixHeader.pch"
+#import "RightListTableViewCell.h"
+
+@interface RightButtonViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -24,9 +27,64 @@
     [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
+    
+    
+    [self coustom];//布局
 
     // Do any additional setup after loading the view.
 }
+
+-(void)coustom
+{
+    self.myTableview  = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, kMainHeight)];
+    
+    self.myTableview.delegate = self;
+    self.myTableview.dataSource  = self;
+    [self.view addSubview:self.myTableview];
+    self.myTableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
+    
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+    
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *indext = @"indext";
+    RightListTableViewCell *cell = [self.myTableview dequeueReusableCellWithIdentifier:indext];
+//    cell.myliftImageView .image = [UIImage imageNamed:@""];
+//    cell.myliftNameLable.text = @"";
+//    cell.myRightLable.text = @"";
+//    cell.myRightImageView.image = [UIImage imageNamed:@""];
+//    
+    
+    if (!cell) {
+        cell = [[RightListTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:indext];
+        
+    }
+    cell.myliftImageView .image = [UIImage imageNamed:@"2.png"];
+    cell.myliftNameLable.text = @"name1";
+    cell.myRightLable.text = @"name2";
+    cell.myRightImageView.image = [UIImage imageNamed:@"2.png"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    
+    return cell;
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 40;
+    
+}
+
 -(void)pop
 {
     [self.navigationController popViewControllerAnimated:YES];

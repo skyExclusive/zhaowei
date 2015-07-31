@@ -13,6 +13,8 @@
 #import "LiftButtonViewController.h"
 #import "RightButtonViewController.h"
 
+#import "SpeckWqTableViewCell.h"
+
 
 @interface SxiangViewController ()<UITableViewDataSource,UITableViewDelegate,WpDetalTableviewCellDelegate>
 
@@ -30,13 +32,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"往期详细";
-
+    
     [self.view setBackgroundColor:[UIColor whiteColor]];
     self.modalPresentationCapturesStatusBarAppearance = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = NO;
     
-
+    
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
     
@@ -47,20 +49,20 @@
     self.navigationItem.leftBarButtonItem = lift;
     
     
-    self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, kMainHeight )];
+    self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, kMainHeight  - 64)];
     self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
+    
     
     [self.view addSubview:self.myTableView];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     
-
+    
 }
 -(NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 1;
+    return 20;
     
 }
 -(NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
@@ -72,19 +74,44 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *wpindext = @"wp";
-    WqDetalTableViewCell *wqCell = [self.myTableView dequeueReusableCellWithIdentifier:wpindext];
-    if (!wqCell) {
-        wqCell = [[WqDetalTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:wpindext];
+    if (indexPath.row == 0) {
+        static NSString *wpindext = @"wp";
+        WqDetalTableViewCell *wqCell = [self.myTableView dequeueReusableCellWithIdentifier:wpindext];
+        if (!wqCell) {
+            wqCell = [[WqDetalTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:wpindext];
+            
+        }
+        wqCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        wqCell.myGoodsNameLable.text = @"商品的名字 座椅";
+        wqCell.myreportNumberLable .text = @"一共是100万份";
+        wqCell.mypeoOldLable.text = @"100到1000岁";
+        wqCell.delegate = self;
+        return wqCell;
+        
+        
+    }else {
+        static NSString *wpindext1 = @"wp1";
+        SpeckWqTableViewCell *wqCell = [self.myTableView dequeueReusableCellWithIdentifier:wpindext1];
+        if (!wqCell) {
+            wqCell = [[SpeckWqTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:wpindext1];
+            
+        }
+        
+        
+        wqCell.myToImageView.image = [UIImage imageNamed:@"2.png"];
+        wqCell.myNameLable.text  = @"王老五";
+        wqCell.myPriceLableJ.text = @"价格 哪里来的价格 不要钱好不";
+        wqCell.myWeithtLableZ.text = @"质量 质量   很重";
+        wqCell.myAspectLableW.text = @"一个字   就一个字";
+        wqCell.myImageView.image = [UIImage imageNamed:@"2.png"];
+        wqCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        
+        
+        return wqCell;
+        
         
     }
-    wqCell.selectionStyle = UITableViewCellSelectionStyleNone;
-    wqCell.myGoodsNameLable.text = @"商品的名字 座椅";
-    wqCell.myreportNumberLable .text = @"一共是100万份";
-    wqCell.mypeoOldLable.text = @"100到1000岁";
-    wqCell.delegate = self;
-    
-    return wqCell;
     
     
 }
@@ -95,8 +122,8 @@
         return 316;
         
     }else{
-    
-    return 200;
+        
+        return 190;
     }
 }
 -(void)pop
@@ -128,13 +155,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

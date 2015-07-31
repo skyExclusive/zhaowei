@@ -20,7 +20,7 @@
     self.view .backgroundColor = [UIColor whiteColor];
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
+    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState :(UIControlStateNormal)];
     button.frame =CGRectMake(0, 0, 15, 25);
     [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
