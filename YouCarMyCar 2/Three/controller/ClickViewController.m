@@ -34,7 +34,7 @@
     // Do any additional setup after loading the view.
     
     
-          if (self.i == 0) {     //布局我的参与
+          if (self.i == 0) {     //布局活动记录
         
         [self layoutJoinView];
         
@@ -255,9 +255,12 @@
         
         ActivityTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"huodongCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.whatImage.image = [UIImage imageNamed:@"恭喜中奖.png"];
+            [cell.baoGao setImage:[UIImage imageNamed:@"审核中.png"] forState:(UIControlStateNormal)];
+            [cell.baoGao addTarget:self action:@selector(baogao:) forControlEvents:(UIControlEventTouchUpInside)];
+            cell.baoGao.tag = 100  + indexPath.row ;
         cell.thingImage.image = [UIImage imageNamed:@"2.png"];
         cell.selectionStyle = UITableViewCellAccessoryNone;
+            NSLog(@"%ld",(long)indexPath);
         
         cell.superview.superview.backgroundColor = COLOR(251, 246, 240, 1);
 
@@ -267,7 +270,10 @@
 }
 
 
-
+-(void)baogao:(UIButton *)sender
+{
+    NSLog(@"这个是提交报告 %ld",sender.tag);
+}
 
 
 //********************************地址编辑***************************************
@@ -354,6 +360,8 @@
     
 
 }
+
+
 
 //获取验证码
 -(void)verify:(UIButton *)button
