@@ -136,6 +136,7 @@
     } else if (indexPath.section ==2 && indexPath.row == 0 ) {
         
         clichVC.i = 5;
+        
         [self.navigationController pushViewController:clichVC animated:YES];
         
     } else if(indexPath.section ==2 && indexPath.row  == 1 ){

@@ -67,7 +67,7 @@
     
     if (_shouldDrawPlaceholder) {
         [_placeholderColor set];
-        UIFont *font = [UIFont fontWithName:@"Arial"size:16.0f];
+        UIFont *font = [UIFont fontWithName:@"Arial"size:12.0f];
         UIColor *redColor = [UIColor grayColor];
         NSString *myString =_placeholder;
         [myString  drawAtPoint:CGPointMake(8,8) withAttributes:@{NSFontAttributeName:font,NSForegroundColorAttributeName:redColor}];

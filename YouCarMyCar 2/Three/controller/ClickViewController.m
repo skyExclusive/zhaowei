@@ -428,13 +428,13 @@
     self.textView.placeholder = @"你车我车感谢您的支持";
     self.textView.font =  [UIFont fontWithName:@"Arial" size:16.0];
     self.textView.delegate = self;
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake( 10, 9, imageView.frame.size.width - 20, 3)];
-    view.backgroundColor = [UIColor whiteColor];
+    
+    self.textView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.textView.layer.borderWidth =1.0;
     
     
     
     [imageView addSubview:self.textView];
-    [imageView addSubview:view];
     
 
     self.button = [UIButton buttonWithType:(UIButtonTypeCustom)];
