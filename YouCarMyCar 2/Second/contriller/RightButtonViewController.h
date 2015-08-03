@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RightButtonViewController : UIViewController
+@property(nonatomic ,strong)UITableView *myTableview;
 
 @end
