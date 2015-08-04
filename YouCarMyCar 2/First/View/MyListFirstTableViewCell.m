@@ -29,7 +29,7 @@
     
     
     if (self.cellweight == 320) {
-        if (!_mytimeInteger) {
+        if (_mytimeInteger != mytimeInteger) {
             _mytimeInteger = mytimeInteger;
             self.myTimeLable = [[UILabel alloc]initWithFrame:CGRectMake(72+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30, self.cellweight - (self.cellweight / 2 - 20)- 70 , 20)];
             

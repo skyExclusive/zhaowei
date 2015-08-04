@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "MyTextFied.h"
+#import "MBProgressHUD.h"
 
 @interface LoginViewController : UIViewController
 
@@ -25,6 +26,7 @@
 @property (nonatomic ,strong)MyTextFied *userPassWordMy;
 @property (nonatomic ,strong)UIButton *myZibutton;
 @property (nonatomic )BOOL indext;
+@property (nonatomic ,strong)MBProgressHUD *HUD;//加载
 
 
 

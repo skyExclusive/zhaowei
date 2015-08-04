@@ -47,6 +47,30 @@
     pingji.font = [UIFont systemFontOfSize:12];
     [self addSubview:pingji];
     
+   //星星
+    
+    self.my1ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(70, 180, 20, 20)];
+    
+    self.my2ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(95, 180, 20, 20)];
+    self.my3IMageViw = [[UIImageView alloc]initWithFrame:CGRectMake(120, 180, 20, 20)];
+    self.my4ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(145, 180, 20, 20)];
+    self.my5imageView = [[UIImageView alloc]initWithFrame:CGRectMake(170, 180, 20, 20)];
+
+    
+    self.my1ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    self.my2ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    self.my3IMageViw.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    
+    
+    [self addSubview:self.my5imageView];
+    [self addSubview:self.my4ImageView];
+    [self addSubview:self.my3IMageViw];
+    [self addSubview:self.my2ImageView];
+    [self addSubview:self.my1ImageView];
+    
+    //==================
     UILabel *old = [[UILabel alloc]initWithFrame:CGRectMake(10, 210, 70, 20)];
     old.text = @"适用年龄:";
     old.font = [UIFont systemFontOfSize:15];
@@ -102,6 +126,67 @@
     [self.myLooklistButton addTarget:self action:@selector(myLooklistButton:) forControlEvents:(UIControlEventTouchUpInside)];
     
     [self addSubview:self.myLooklistButton];
+    
+    
+}
+//mygoodEvalutinteger的set方法 给星星换image
+-(void)setMyGoodsEvaluteIngeger:(NSInteger)myGoodsEvaluteIngeger
+{
+    if (myGoodsEvaluteIngeger >= 1 && myGoodsEvaluteIngeger <= 5) {
+        if (_myGoodsEvaluteIngeger != myGoodsEvaluteIngeger) {
+            _myGoodsEvaluteIngeger = myGoodsEvaluteIngeger;
+            
+            switch (myGoodsEvaluteIngeger) {
+                    case 1:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    
+                    break;
+                    case 2:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    
+                    break;
+                    case 3:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    
+                    break;
+                    case 4:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    
+                    break;
+                    case 5:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    
+                    break;
+                    
+                    
+                default:
+                    break;
+            }
+            
+            
+        }
+
+    }
     
     
 }

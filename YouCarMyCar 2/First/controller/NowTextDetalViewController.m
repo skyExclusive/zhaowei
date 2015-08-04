@@ -78,7 +78,6 @@
     self.myscrollView.transform = CGAffineTransformScale(self.myscrollView.transform, 1.01, 1.01);
     [UIView commitAnimations];
     
-
     
     
 }

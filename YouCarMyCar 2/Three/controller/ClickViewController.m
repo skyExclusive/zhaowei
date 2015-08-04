@@ -272,7 +272,7 @@
 
 -(void)baogao:(UIButton *)sender
 {
-    NSLog(@"这个是提交报告 %ld",sender.tag);
+    NSLog(@"这个是提交报告 %ld",(long)sender.tag);
 }
 
 
