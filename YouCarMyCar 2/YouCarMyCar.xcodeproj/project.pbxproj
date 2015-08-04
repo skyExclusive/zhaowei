@@ -134,6 +134,7 @@
 		0ADD0FCD1B6B503300A2D95E /* 价格@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD0FCC1B6B503300A2D95E /* 价格@2x.png */; };
 		0ADD51C31B477F4300FADACD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD51C21B477F4300FADACD /* LoginViewController.m */; };
 		0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD51C41B47810800FADACD /* 向左白色箭头.png */; };
+		0ADEA30A1B6F34B700892A6D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADEA3091B6F34B700892A6D /* MBProgressHUD.m */; };
 		0ADEC49B1B65C8C5001C26F1 /* NowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADEC49A1B65C8C5001C26F1 /* NowViewModel.m */; };
 		0ADEC49D1B660673001C26F1 /* 闹铃@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ADEC49C1B660673001C26F1 /* 闹铃@2x.png */; };
 		0ADEC4A01B661B4E001C26F1 /* GoodDetalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADEC49F1B661B4E001C26F1 /* GoodDetalTableViewController.m */; };
@@ -427,6 +428,8 @@
 		0ADD51C11B477F4300FADACD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../../First/controller/LoginViewController.h; sourceTree = "<group>"; };
 		0ADD51C21B477F4300FADACD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../../First/controller/LoginViewController.m; sourceTree = "<group>"; };
 		0ADD51C41B47810800FADACD /* 向左白色箭头.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向左白色箭头.png"; sourceTree = "<group>"; };
+		0ADEA3081B6F34B700892A6D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0ADEA3091B6F34B700892A6D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		0ADEC4991B65C8C5001C26F1 /* NowViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowViewModel.h; sourceTree = "<group>"; };
 		0ADEC49A1B65C8C5001C26F1 /* NowViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowViewModel.m; sourceTree = "<group>"; };
 		0ADEC49C1B660673001C26F1 /* 闹铃@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "闹铃@2x.png"; sourceTree = "<group>"; };
@@ -642,8 +645,8 @@
 				0AE06C371B68C1F300EE6B22 /* 未选评分@2x.png */,
 				0AE06C351B68C1ED00EE6B22 /* 形状-3@2x.png */,
 				0AE06C311B68C1E100EE6B22 /* 评分@2x.png */,
-				0AE06C331B68C1E600EE6B22 /* truck@2x.png */,
 				0AE06C2F1B68C1DC00EE6B22 /* 矩形-16@2x.png */,
+				0AE06C331B68C1E600EE6B22 /* truck@2x.png */,
 				0A2603ED1B6771610013262A /* 发表@2x.png */,
 				0A2603EB1B67708B0013262A /* 产品详情未选中@2x.png */,
 				0A2603E91B6770860013262A /* 产品详情@2x(1).png */,
@@ -802,6 +805,8 @@
 		0ACAF1D71B411E820029ACC9 /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				0ADEA3081B6F34B700892A6D /* MBProgressHUD.h */,
+				0ADEA3091B6F34B700892A6D /* MBProgressHUD.m */,
 				0AFF81001B6390E50009C5C3 /* MZTimerLabel.h */,
 				0AFF81011B6390E50009C5C3 /* MZTimerLabel.m */,
 				0A0E460D1B6226A000A52286 /* HEInfiniteScrollView */,
@@ -1400,8 +1405,6 @@
 				0AD9C2851B60C72900188AE8 /* 邮箱找回@2x.png in Resources */,
 				0A4A042E1B5F6F2D005C0E3B /* 选中手机注册@2x.png in Resources */,
 				95C7BA841B5E2E09009604D7 /* 关于我们@2x.png in Resources */,
-				0A2603DE1B675EE80013262A /* 参与评论未选中@2x.png in Resources */,
-				954F0A4E1B4B5E46002598C5 /* 5.png in Resources */,
 				0AE3C75A1B5CDDA6007153A3 /* 微信@2x.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
 				95D2035C1B579BB700BCD63F /* addressTableViewCell.xib in Resources */,
@@ -1517,6 +1520,7 @@
 				0ACAF2401B411E830029ACC9 /* AFURLConnectionOperation.m in Sources */,
 				0ADEC49B1B65C8C5001C26F1 /* NowViewModel.m in Sources */,
 				0ADEC4A31B661B67001C26F1 /* SpeckTableViewController.m in Sources */,
+				0ADEA30A1B6F34B700892A6D /* MBProgressHUD.m in Sources */,
 				0ACAF2541B411E830029ACC9 /* UIScrollView+MJExtension.m in Sources */,
 				0ACAF23F1B411E830029ACC9 /* AFSecurityPolicy.m in Sources */,
 				958178311B4BB1BD001AA514 /* ClickViewController.m in Sources */,

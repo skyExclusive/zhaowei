@@ -64,7 +64,6 @@
 //    cell.myRightLable.text = @"";
 //    cell.myRightImageView.image = [UIImage imageNamed:@""];
 //    
-    
     if (!cell) {
         cell = [[RightListTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:indext];
         

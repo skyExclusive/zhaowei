@@ -86,6 +86,8 @@
         wqCell.myreportNumberLable .text = @"一共是100万份";
         wqCell.mypeoOldLable.text = @"100到1000岁";
         wqCell.delegate = self;
+        wqCell.myGoodsEvaluteIngeger = 3;
+        
         return wqCell;
         
         
@@ -105,6 +107,7 @@
         wqCell.myAspectLableW.text = @"一个字   就一个字";
         wqCell.myImageView.image = [UIImage imageNamed:@"2.png"];
         wqCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        wqCell.mySpeckXingNumberInteger = 2;
         
         
         

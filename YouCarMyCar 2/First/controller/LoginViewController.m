@@ -13,7 +13,9 @@
 #import "RegistViewController.h"
 #import "PrefixHeader.pch"
 
-@interface LoginViewController ()<UIActionSheetDelegate,UITextFieldDelegate,MyTextFiedDelegete>
+
+
+@interface LoginViewController ()<UIActionSheetDelegate,UITextFieldDelegate,MyTextFiedDelegete,MBProgressHUDDelegate>
 
 @end
 @implementation LoginViewController
@@ -423,7 +425,29 @@
 {
     NSLog(@"登录");
     
+    self.HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:self.HUD];
+    
+    self.HUD.delegate = self;
+    self.HUD.labelText = @"正在登录";
+    
+    //[self.HUD showWhileExecuting:@selector(myTask) onTarget:self withObject:nil animated:YES];
+    
+    
+    [self.HUD show:YES];
+    
+    
+    
+     
+
+    
 }
+- (void)hudWasHidden:(MBProgressHUD *)hud;
+{
+    NSLog(@"就是这个");
+    
+}
+
 //点击注册走的方法
 
 -(void)registerButton:(UIButton *)button
@@ -435,6 +459,8 @@
     
     
 }
+
+
 //忘记密码的点击事件
 -(void)forget
 {

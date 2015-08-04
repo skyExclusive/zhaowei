@@ -24,7 +24,12 @@
 @property (nonatomic ,strong)UIButton *myLooklistButton;//查看中奖名单
 @property (nonatomic ,strong)UILabel * myreportNumberLable;//报告的份数;
 @property (nonatomic ,assign)id<WpDetalTableviewCellDelegate>delegate;
-
+@property (nonatomic )NSInteger myGoodsEvaluteIngeger;//商品的评价的星星数量
+@property (nonatomic ,strong)UIImageView *my1ImageView;//第一个 星星
+@property (nonatomic ,strong)UIImageView *my2ImageView;
+@property (nonatomic ,strong)UIImageView *my3IMageViw;
+@property (nonatomic ,strong)UIImageView *my4ImageView;
+@property (nonatomic ,strong)UIImageView *my5imageView;
 
 
 @end

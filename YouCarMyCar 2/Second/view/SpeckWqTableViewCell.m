@@ -66,6 +66,33 @@
     
     
     
+    //星星
+    
+    self.my1ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(45, 40, 20, 20)];
+    
+    self.my2ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(70, 40, 20, 20)];
+    self.my3IMageViw = [[UIImageView alloc]initWithFrame:CGRectMake(95, 40, 20, 20)];
+    self.my4ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(120, 40, 20, 20)];
+    self.my5imageView = [[UIImageView alloc]initWithFrame:CGRectMake(145, 40, 20, 20)];
+    
+    
+    self.my1ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    self.my2ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    self.my3IMageViw.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+    
+    
+    [self addSubview:self.my5imageView];
+    [self addSubview:self.my4ImageView];
+    [self addSubview:self.my3IMageViw];
+    [self addSubview:self.my2ImageView];
+    [self addSubview:self.my1ImageView];
+    
+
+    
+    
+    
     self.myImageView = [[UIImageView alloc]initWithFrame:CGRectMake(kMainWidth / 2 - 25, 135, 50, 50)];
     
     [self addSubview:self.myImageView];
@@ -79,6 +106,67 @@
     
 }
 
+-(void)setMySpeckXingNumberInteger:(NSInteger)mySpeckXingNumberInteger
+{
+    if (mySpeckXingNumberInteger >= 1 && mySpeckXingNumberInteger <= 5) {
+        if (_mySpeckXingNumberInteger != mySpeckXingNumberInteger) {
+            _mySpeckXingNumberInteger = mySpeckXingNumberInteger;
+            
+            switch (mySpeckXingNumberInteger) {
+                case 1:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    
+                    break;
+                case 2:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    
+                    break;
+                case 3:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    
+                    break;
+                case 4:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
+                    
+                    break;
+                case 5:
+                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my3IMageViw.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my4ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    self.my5imageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
+                    
+                    break;
+                    
+                    
+                default:
+                    break;
+            }
+            
+            
+        }
+        
+    }
+    
+
+    
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
