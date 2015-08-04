@@ -84,7 +84,7 @@
 
 // 定时器执行的方法
 - (void)timerFireMethod:(NSTimer *)paramTimer{
-
+    
     self.i--;
     self.timeLable.textAlignment = NSTextAlignmentCenter;
     self.str = [NSString stringWithFormat:@"%d秒后自动返回 >>",self.i];
@@ -96,6 +96,8 @@
         [self.timer invalidate];
         
         [self.navigationController popToRootViewControllerAnimated:YES];
+       [self.timer invalidate];
+        
     }
 
 }
