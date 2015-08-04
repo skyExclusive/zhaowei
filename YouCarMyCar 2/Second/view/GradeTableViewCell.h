@@ -19,4 +19,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *xingxing4;
 @property (weak, nonatomic) IBOutlet UIButton *xingxing5;
 
+@property (nonatomic)BOOL isOne;
+@property (nonatomic)BOOL isTow;
+@property (nonatomic)BOOL isThree;
+@property (nonatomic)BOOL isFour;
+@property (nonatomic)BOOL isFive;
+
+
+
 @end
