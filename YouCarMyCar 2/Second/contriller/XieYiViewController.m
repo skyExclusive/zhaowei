@@ -9,7 +9,10 @@
 #import "XieYiViewController.h"
 #import "PrefixHeader.pch"
 @interface XieYiViewController ()
-
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic)NSInteger i;
+@property (nonatomic,strong)UILabel *timeLable;
+@property (nonatomic,copy)NSString *str;
 @end
 
 @implementation XieYiViewController
@@ -56,12 +59,18 @@
     lable.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:lable];
     
-    UILabel *timeLable = [[UILabel alloc]initWithFrame:CGRectMake(kMainWidth/2 - 100, imageView.frame.size.height + 180, 200, 60)];
+    self.timeLable = [[UILabel alloc]initWithFrame:CGRectMake(kMainWidth/2 - 100, imageView.frame.size.height + 180, 200, 60)];
+    self.i = 4;
+    self.timeLable.textAlignment = NSTextAlignmentCenter;
+    NSString *str = [NSString stringWithFormat:@"3秒后自动返回 >>"];
+    self.timeLable.text = str;
+    self.timeLable.font = [UIFont fontWithName:@"DBLCDTempBlack" size:12];
+    [self.view addSubview:self.timeLable];
     
-    timeLable.textAlignment = NSTextAlignmentCenter;
     
-    timeLable.text = @"秒后自动返回 >>";
-    [self.view addSubview:timeLable];
+    //首先定义NSTimer
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
+    [self.timer fire];
     
     
 }
@@ -70,6 +79,20 @@
 //布局协议页面
 -(void)layoutXieYi
 {
+
+}
+
+// 定时器执行的方法
+- (void)timerFireMethod:(NSTimer *)paramTimer{
+    
+    self.i --;
+    NSLog(@"%ld",self.i);
+    self.str = [NSString stringWithFormat:@"%ld秒后自动返回 >>",self.i];
+    self.timeLable.text = self.str;
+    
+    if (self.i == 0) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
     
 }
 

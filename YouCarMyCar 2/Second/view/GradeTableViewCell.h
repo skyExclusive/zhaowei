@@ -13,5 +13,10 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *changeButton;
 @property (weak, nonatomic) IBOutlet UIButton *xieyiButton;
+@property (weak, nonatomic) IBOutlet UIButton *xingxing1;
+@property (weak, nonatomic) IBOutlet UIButton *xingxing2;
+@property (weak, nonatomic) IBOutlet UIButton *xingxing3;
+@property (weak, nonatomic) IBOutlet UIButton *xingxing4;
+@property (weak, nonatomic) IBOutlet UIButton *xingxing5;
 
 @end

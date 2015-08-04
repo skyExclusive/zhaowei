@@ -44,7 +44,6 @@
     self.myAspectLableW = [[UILabel alloc]initWithFrame:CGRectMake(45, 65,kMainWidth - 80, 20)];
     UIImageView *image3 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 90, 25, 20 )];
     self.myWeithtLableZ = [[UILabel alloc]initWithFrame:CGRectMake(45, 90,kMainWidth - 80, 20)];
-
     UIImageView *image4 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 115, 25, 20 )];
     self.myPriceLableJ = [[UILabel alloc]initWithFrame:CGRectMake(45, 115,kMainWidth - 80, 20)];
 
