@@ -25,9 +25,17 @@
     if (self.isOne == YES) {
         [self.xingxing1 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
         self.isOne = NO;
+        self.isTow = YES;
+        self.isThree = YES;
+        self.isFour = YES;
+        self.isFive = YES;
     }else if (self.isOne == NO) {
         [self.xingxing1 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
         self.isOne = YES;
+        self.isTow = YES;
+        self.isThree = YES;
+        self.isFour = YES;
+        self.isFive = YES;
     }
     
     [self.xingxing2 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
@@ -42,9 +50,17 @@
     if (self.isTow == YES) {
         [self.xingxing2 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
         self.isTow = NO;
+        self.isOne = YES;
+        self.isThree = YES;
+        self.isFour = YES;
+        self.isFive = YES;
     }else if (self.isTow == NO) {
         [self.xingxing2 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
+        self.isOne = YES;
         self.isTow = YES;
+        self.isThree = YES;
+        self.isFour = YES;
+        self.isFive = YES;
     }
     
     [self.xingxing1 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
@@ -57,9 +73,17 @@
     if (self.isThree == YES) {
         [self.xingxing3 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
         self.isThree = NO;
+        self.isOne = YES;
+        self.isTow = YES;
+        self.isFour = YES;
+        self.isFive = YES;
     }else if (self.isThree == NO) {
         [self.xingxing3 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
+        self.isOne = YES;
+        self.isTow = YES;
         self.isThree = YES;
+        self.isFour = YES;
+        self.isFive = YES;
     }
     
     [self.xingxing1 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
@@ -72,9 +96,18 @@
     if (self.isFour== YES) {
         [self.xingxing4 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
         self.isFour = NO;
+        self.isTow = YES;
+        self.isThree = YES;
+        self.isOne = YES;
+        self.isFive = YES;
+        
     }else if (self.isFour == NO) {
         [self.xingxing4 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
+        self.isOne = YES;
+        self.isTow = YES;
+        self.isThree = YES;
         self.isFour = YES;
+        self.isFive = YES;
     }
     
     [self.xingxing1 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
@@ -87,8 +120,16 @@
     if (self.isFive== YES) {
         [self.xingxing5 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
         self.isFive = NO;
+        self.isOne = YES;
+        self.isTow = YES;
+        self.isThree = YES;
+        self.isFour = YES;
     }else if (self.isFive == NO) {
         [self.xingxing5 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
+        self.isOne = YES;
+        self.isTow = YES;
+        self.isThree = YES;
+        self.isFour = YES;
         self.isFive = YES;
     }
     
