@@ -27,6 +27,7 @@
         self.isOne = NO;
     }else if (self.isOne == NO) {
         [self.xingxing1 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
+        self.isOne = YES;
     }
     
     [self.xingxing2 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
