@@ -19,6 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    self.miao = [dat timeIntervalSince1970];
+    NSLog(@"%f",self.miao);
+    
+    
+//    NSString *timeString = [NSString stringWithFormat:@"%f", a];//转为字符型
+    
+
+    
     // Do any additional setup after loading the view.
     self.mytable = [[UITableView alloc]initWithFrame:CGRectMake(kMainX, kMainY, kMainWidth, kMainHeight-150)];
     self.mytable.delegate = self;
@@ -71,16 +81,25 @@
         
         
         
-        
     }
     
-
+    
+    
     mycell.mybutton.tag = 100 + indexPath.row;
     
     mycell.delegagate = self;
     
-    mycell.mytimeInteger = 1000 + indexPath.row;
     
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a = [dat timeIntervalSince1970];
+    
+    NSLog(@"%f", a - self.miao);
+    
+    mycell.mytimeInteger = 1000 - (a - self.miao) ;
+    
+    NSLog(@"我擦");
+
+
     
     return mycell;
     
