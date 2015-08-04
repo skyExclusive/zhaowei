@@ -86,12 +86,16 @@
 - (void)timerFireMethod:(NSTimer *)paramTimer{
     
     self.i --;
-    NSLog(@"%ld",self.i);
-    self.str = [NSString stringWithFormat:@"%ld秒后自动返回 >>",self.i];
+
+    self.str = [NSString stringWithFormat:@"%ld秒后自动返回 >>",(long)self.i];
     self.timeLable.text = self.str;
+    
+    NSLog(@"%d",self.i);
     
     if (self.i == 0) {
         [self.navigationController popToRootViewControllerAnimated:YES];
+       [self.timer invalidate];
+        
     }
     
 }
