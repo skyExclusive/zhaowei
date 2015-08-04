@@ -8,9 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GradeTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIView *xingxingView;
 
+
+@protocol GradeTableViewCellDelegate <NSObject>
+
+-(void)buttonAction1:(UIButton *)button;
+-(void)buttonAction2:(UIButton *)button;
+-(void)buttonAction3:(UIButton *)button;
+-(void)buttonAction4:(UIButton *)button;
+-(void)buttonAction5:(UIButton *)button;
+
+
+@end
+
+
+@interface GradeTableViewCell : UITableViewCell
+
+
+@property (weak, nonatomic) IBOutlet UIView *xingxingView;
 @property (weak, nonatomic) IBOutlet UIButton *changeButton;
 @property (weak, nonatomic) IBOutlet UIButton *xieyiButton;
 @property (weak, nonatomic) IBOutlet UIButton *xingxing1;
@@ -20,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *xingxing5;
 
 
+@property (nonatomic ,assign)id<GradeTableViewCellDelegate>delegate;
 
 
 @end

@@ -15,27 +15,46 @@
     
 
 }
+
 - (IBAction)xingxing1:(id)sender {
-    
-    
+    if ([self.delegate respondsToSelector:@selector(buttonAction1:)]) {
+        [self.delegate buttonAction1:sender];
+        
+    }
     
     
 }
 - (IBAction)xingxing2:(id)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(buttonAction2:)]) {
+        [self.delegate buttonAction2:sender];
+        
+    }
     
 }
+
+
 - (IBAction)xingxing3:(id)sender {
     
-    
+    if ([self.delegate respondsToSelector:@selector(buttonAction3:)]) {
+        [self.delegate buttonAction3:sender];
+        
+    }
+
 }
 - (IBAction)xingxing4:(id)sender {
-    
-    
+    if ([self.delegate respondsToSelector:@selector(buttonAction4:)]) {
+        [self.delegate buttonAction4:sender];
+        
+    }
+
 }
 - (IBAction)xingxing5:(id)sender {
-    
-    
+    if ([self.delegate respondsToSelector:@selector(buttonAction5:)]) {
+        [self.delegate buttonAction5:sender];
+        
+    }
+
+
 }
 - (IBAction)change:(id)sender {
     
