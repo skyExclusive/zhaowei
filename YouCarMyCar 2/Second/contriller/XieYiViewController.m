@@ -41,10 +41,7 @@
 
 }
 
--(void)pop
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 
 //布局谢谢提交
 -(void)layoutXieXie
@@ -72,14 +69,43 @@
     [self.timer fire];
     
     
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
     
+    button.frame =CGRectMake(0, 0, 15, 25);
+    [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = lift;
+    
+}
+
+-(void)pop
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
 //布局协议页面
 -(void)layoutXieYi
 {
+    
+    
+    
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
+    
+    button.frame =CGRectMake(0, 0, 15, 25);
+    [button addTarget:self action:@selector(pop2) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = lift;
 
+}
+
+-(void)pop2
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 // 定时器执行的方法
