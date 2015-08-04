@@ -30,81 +30,68 @@
     
     if (self.cellweight == 320) {
         if (_mytimeInteger != mytimeInteger) {
+            
+            
+            if (self.myTimeLable) {
+                
+                [self.myTimeLable removeFromSuperview];
+                self.myTimeLable = nil;
+                [self.timLable removeFromSuperview];
+                self.timLable = nil;
+
+            }
             _mytimeInteger = mytimeInteger;
+
+            
             self.myTimeLable = [[UILabel alloc]initWithFrame:CGRectMake(72+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30, self.cellweight - (self.cellweight / 2 - 20)- 70 , 20)];
             
             [self addSubview:self.myTimeLable];
-            MZTimerLabel *timer3 = [[MZTimerLabel alloc] initWithLabel:self.myTimeLable andTimerType:MZTimerLabelTypeTimer];
-            [timer3 setCountDownTime:self.mytimeInteger];
-            timer3.timeLabel.textColor = [UIColor brownColor];
-            [timer3 start];
-            timer3.timeLabel.textAlignment = NSTextAlignmentCenter;
-            
-            
-
-            
-            
-            UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(38+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30,60, 20)];
-            lable.text = @"剩余时间:";
-            
-            [self addSubview:lable];
-            lable.font = [UIFont systemFontOfSize:12];
-            
-            UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30,20 , 20)];
-            image.image = [UIImage imageNamed:@"闹铃@2x.png"];
-            [self addSubview:image];
+            self.timLable = [[MZTimerLabel alloc] initWithLabel:self.myTimeLable andTimerType:MZTimerLabelTypeTimer];
+            [self.timLable setCountDownTime:self.mytimeInteger];
+            self.timLable.timeLabel.textColor = [UIColor brownColor];
+            [self.timLable start];
+            self.timLable.timeLabel.textAlignment = NSTextAlignmentCenter;
             
             
             
         }
-
+        
         
     }else {
         
         
-        if (!_mytimeInteger) {
+        
+        
+        if (_mytimeInteger != mytimeInteger) {
+            
+            
+            if (self.myTimeLable) {
+                
+                [self.myTimeLable removeFromSuperview];
+                self.myTimeLable = nil;
+                [self.timLable removeFromSuperview];
+                self.timLable = nil;
+                
+            }
+
             _mytimeInteger = mytimeInteger;
             self.myTimeLable = [[UILabel alloc]initWithFrame:CGRectMake(72+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30, self.cellweight - (self.cellweight / 2 - 20)- 70 , 20)];
-            
             [self addSubview:self.myTimeLable];
-            MZTimerLabel *timer3 = [[MZTimerLabel alloc] initWithLabel:self.myTimeLable andTimerType:MZTimerLabelTypeTimer];
-            [timer3 setCountDownTime:self.mytimeInteger];
-            timer3.timeLabel.textColor = [UIColor brownColor];
-            [timer3 start];
-            timer3.timeLabel.textAlignment = NSTextAlignmentCenter;
-            
-            UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(50+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30,60 , 20)];
-            lable.text = @"剩余时间:";
-            
-            [self addSubview:lable];
-            lable.font = [UIFont systemFontOfSize:12];
-            
-            UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(25+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30,20 , 20)];
-            image.image = [UIImage imageNamed:@"闹铃@2x.png"];
-            [self addSubview:image];
-            UILabel *lable1 = [[UILabel alloc]initWithFrame:CGRectMake(125+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 29, 20 , 20)];
-            
-            lable1.text = @":";
-            lable1.textColor = [UIColor blackColor];
-            [self addSubview:lable1];
-            UILabel *lable2 = [[UILabel alloc]initWithFrame:CGRectMake(152+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 29, 20 , 20)];
-            
-            lable2.text = @":";
-            lable2.textColor = [UIColor blackColor];
-            [self addSubview:lable2];
-            
-
-
+            self.timLable= [[MZTimerLabel alloc] initWithLabel:self.myTimeLable andTimerType:MZTimerLabelTypeTimer];
+            [self.timLable setCountDownTime:self.mytimeInteger];
+            self.timLable.timeLabel.textColor = [UIColor brownColor];
+            [self.timLable start];
+            self.timLable.timeLabel.textAlignment = NSTextAlignmentCenter;
             
             
-
+            
             
         }
-
+        
     }
     
     
-
+    
     
 }
 -(void)costom
@@ -177,7 +164,20 @@
         self.myGoodName.text = @"商品的名称是啥呢";
         
         
-
+        
+        
+        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(38+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30,60, 20)];
+        lable.text = @"剩余时间:";
+        
+        [self addSubview:lable];
+        lable.font = [UIFont systemFontOfSize:12];
+        
+        UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30,20 , 20)];
+        image.image = [UIImage imageNamed:@"闹铃@2x.png"];
+        [self addSubview:image];
+        
+        
+        
         
     }else{
         
@@ -243,11 +243,25 @@
         [self addSubview:personNumber];
         
         
-
+        
         self.myGoodName = [[UILabel alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44 + 5, 28, self.cellweight -(self.cellheight - 12 )/51 *44 + 5  , 20)];
         self.myGoodName.font = [UIFont systemFontOfSize:20];
         [self addSubview:self.myGoodName];
         self.myGoodName.text = @"商品的名称是啥呢";
+        
+        
+        
+        
+        
+        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(50+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30,60 , 20)];
+        lable.text = @"剩余时间:";
+        
+        [self addSubview:lable];
+        lable.font = [UIFont systemFontOfSize:12];
+        
+        UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(25+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 2 + 30,20 , 20)];
+        image.image = [UIImage imageNamed:@"闹铃@2x.png"];
+        [self addSubview:image];
         
         
         

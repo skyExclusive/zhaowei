@@ -196,14 +196,7 @@
     
     if ([_timeFormat length] == 0) {
         
-        
-        NSString *str1 = @"HH";
-        NSString *str2 = @"mm";
-        NSString *str3 = @"ss";
-        
-        
-        
-        _timeFormat = [NSString stringWithFormat:@"%@  %@  %@",str1 ,str2,str3];
+        _timeFormat = kDefaultTimeFormat;
         
         
     }

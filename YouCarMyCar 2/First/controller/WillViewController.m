@@ -42,14 +42,16 @@
     MyListFirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
         cell = [[MyListFirstTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellIdentifier];
+      
+        
+
     }
-    
     cell.mydescritionLable.text = @"即将开启的商品的 描述";
     cell.myGoodImageVeiw.image = [UIImage   imageNamed:@"3.jpg"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.mybutton.tag = 100 + indexPath.row;
     cell.delegagate = self;
-    cell.mytimeInteger = 1000 + indexPath.row;
+    cell.mytimeInteger = 1000 ;
     
     
     

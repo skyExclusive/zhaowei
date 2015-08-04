@@ -33,6 +33,7 @@
 @property (nonatomic ,strong)UILabel *myGoodName;//商品名称
 
 
+@property (nonatomic  ,strong)MZTimerLabel *timLable;
 
 
 @end
