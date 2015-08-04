@@ -10,7 +10,7 @@
 #import "PrefixHeader.pch"
 @interface XieYiViewController ()
 @property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic)NSInteger i;
+@property (nonatomic)int i;
 @property (nonatomic,strong)UILabel *timeLable;
 @property (nonatomic,copy)NSString *str;
 @end
@@ -59,6 +59,7 @@
     lable.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:lable];
     
+    
     self.timeLable = [[UILabel alloc]initWithFrame:CGRectMake(kMainWidth/2 - 100, imageView.frame.size.height + 180, 200, 60)];
     self.i = 4;
     self.timeLable.textAlignment = NSTextAlignmentCenter;
@@ -67,10 +68,9 @@
     self.timeLable.font = [UIFont fontWithName:@"DBLCDTempBlack" size:12];
     [self.view addSubview:self.timeLable];
     
-    
-    //首先定义NSTimer
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
     [self.timer fire];
+    
     
     
 }
@@ -85,20 +85,25 @@
 // 定时器执行的方法
 - (void)timerFireMethod:(NSTimer *)paramTimer{
     
-    self.i --;
-
-    self.str = [NSString stringWithFormat:@"%ld秒后自动返回 >>",(long)self.i];
+    self.i--;
+    self.timeLable.textAlignment = NSTextAlignmentCenter;
+    self.str = [NSString stringWithFormat:@"%d秒后自动返回 >>",self.i];
     self.timeLable.text = self.str;
-    
-    NSLog(@"%d",self.i);
-    
+
+
     if (self.i == 0) {
+        
+        [self.timer invalidate];
+        
         [self.navigationController popToRootViewControllerAnimated:YES];
        [self.timer invalidate];
         
     }
-    
+
 }
+
+
+
 
 
 
