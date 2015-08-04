@@ -208,14 +208,11 @@
 		95BF4B101B6F12CE00F1CACF /* 谢谢@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BF4B0F1B6F12CE00F1CACF /* 谢谢@2x.png */; };
 		95C7BA831B5E2E09009604D7 /* 版本更新@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA7E1B5E2E09009604D7 /* 版本更新@2x.png */; };
 		95C7BA841B5E2E09009604D7 /* 关于我们@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA7F1B5E2E09009604D7 /* 关于我们@2x.png */; };
-		95C7BA851B5E2E09009604D7 /* 活动记录@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA801B5E2E09009604D7 /* 活动记录@2x.png */; };
-		95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA811B5E2E09009604D7 /* 活动介绍@2x.png */; };
 		95C7BA871B5E2E09009604D7 /* 意见反馈@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA821B5E2E09009604D7 /* 意见反馈@2x.png */; };
 		95C7BA891B5E381F009604D7 /* 设置@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA881B5E381F009604D7 /* 设置@2x.png */; };
 		95C7BA8D1B5E4116009604D7 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C7BA8B1B5E4116009604D7 /* ActivityTableViewCell.m */; };
 		95C7BA8E1B5E4116009604D7 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA8C1B5E4116009604D7 /* ActivityTableViewCell.xib */; };
 		95C7BA921B5E4771009604D7 /* 恭喜中奖@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA8F1B5E4771009604D7 /* 恭喜中奖@2x.png */; };
-		95C7BA931B5E4771009604D7 /* 审核中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA901B5E4771009604D7 /* 审核中@2x.png */; };
 		95C7BA941B5E4771009604D7 /* 再接再厉@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA911B5E4771009604D7 /* 再接再厉@2x.png */; };
 		95CB4C8D1B60C6E2002090B9 /* 性别选择@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95CB4C8C1B60C6E2002090B9 /* 性别选择@2x.png */; };
 		95D08E181B5F7D7A00A2CA2F /* 第几几期@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D08E171B5F7D7A00A2CA2F /* 第几几期@2x.png */; };
@@ -237,6 +234,9 @@
 		95D661BD1B44D44500E9992E /* TongyongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D661B41B44D44500E9992E /* TongyongTableViewCell.xib */; };
 		95D661BE1B44D44500E9992E /* TouxiangTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D661B61B44D44500E9992E /* TouxiangTableViewCell.m */; };
 		95D661C11B44D46600E9992E /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D661C01B44D46600E9992E /* ThreeViewController.m */; };
+		95D6B3681B708C0000529907 /* 审核中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA901B5E4771009604D7 /* 审核中@2x.png */; };
+		95D6B3691B708C0000529907 /* 活动记录@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA801B5E2E09009604D7 /* 活动记录@2x.png */; };
+		95D6B36A1B708C0000529907 /* 活动介绍@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA811B5E2E09009604D7 /* 活动介绍@2x.png */; };
 		95DAF6DE1B4F60ED00B891DC /* 形状 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DAF6DD1B4F60ED00B891DC /* 形状 1.png */; };
 		95DF43741B65CF8D00A25CFD /* 地址详情@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DF43731B65CF8D00A25CFD /* 地址详情@2x.png */; };
 		95DF43761B65D5A100A25CFD /* 编辑@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DF43751B65D5A100A25CFD /* 编辑@2x.png */; };
@@ -246,9 +246,6 @@
 		95DFE73C1B6B0753000B03EE /* TiJiaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DFE73A1B6B0753000B03EE /* TiJiaoTableViewCell.xib */; };
 		95DFE73E1B6B0F9B000B03EE /* 短@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DFE73D1B6B0F9B000B03EE /* 短@2x.png */; };
 		95DFE7401B6B0FA1000B03EE /* 长@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DFE73F1B6B0FA1000B03EE /* 长@2x.png */; };
-		95DFE77C1B6B5D1D000B03EE /* b27_icon_star_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DFE77A1B6B5D1D000B03EE /* b27_icon_star_gray@2x.png */; };
-		95DFE77D1B6B5D1D000B03EE /* b27_icon_star_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DFE77B1B6B5D1D000B03EE /* b27_icon_star_yellow@2x.png */; };
-		95DFE7801B6B5D31000B03EE /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DFE77F1B6B5D31000B03EE /* CWStarRateView.m */; };
 		95DFE7831B6B65BA000B03EE /* XieYiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DFE7821B6B65BA000B03EE /* XieYiViewController.m */; };
 		95DFE7861B6B67A5000B03EE /* CommonHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DFE7851B6B67A5000B03EE /* CommonHandle.m */; };
 		95E5AC911B437D4600904602 /* NowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E5AC901B437D4600904602 /* NowViewController.m */; };
@@ -613,10 +610,6 @@
 		95DFE73A1B6B0753000B03EE /* TiJiaoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiJiaoTableViewCell.xib; sourceTree = "<group>"; };
 		95DFE73D1B6B0F9B000B03EE /* 短@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "短@2x.png"; sourceTree = "<group>"; };
 		95DFE73F1B6B0FA1000B03EE /* 长@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "长@2x.png"; sourceTree = "<group>"; };
-		95DFE77A1B6B5D1D000B03EE /* b27_icon_star_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b27_icon_star_gray@2x.png"; sourceTree = "<group>"; };
-		95DFE77B1B6B5D1D000B03EE /* b27_icon_star_yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b27_icon_star_yellow@2x.png"; sourceTree = "<group>"; };
-		95DFE77E1B6B5D31000B03EE /* CWStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStarRateView.h; sourceTree = "<group>"; };
-		95DFE77F1B6B5D31000B03EE /* CWStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStarRateView.m; sourceTree = "<group>"; };
 		95DFE7811B6B65BA000B03EE /* XieYiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XieYiViewController.h; sourceTree = "<group>"; };
 		95DFE7821B6B65BA000B03EE /* XieYiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XieYiViewController.m; sourceTree = "<group>"; };
 		95DFE7841B6B67A5000B03EE /* CommonHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHandle.h; sourceTree = "<group>"; };
@@ -701,8 +694,6 @@
 			isa = PBXGroup;
 			children = (
 				95BF4B0F1B6F12CE00F1CACF /* 谢谢@2x.png */,
-				95DFE77A1B6B5D1D000B03EE /* b27_icon_star_gray@2x.png */,
-				95DFE77B1B6B5D1D000B03EE /* b27_icon_star_yellow@2x.png */,
 				959281D61B6A2BDE00F122B8 /* 产品价格@2x.png */,
 				959281D71B6A2BDE00F122B8 /* 产品外观@2x.png */,
 				959281D81B6A2BDE00F122B8 /* 产品质量@2x.png */,
@@ -1309,8 +1300,6 @@
 		95D4A4431B44DDA5005F5ABF /* view */ = {
 			isa = PBXGroup;
 			children = (
-				95DFE77E1B6B5D31000B03EE /* CWStarRateView.h */,
-				95DFE77F1B6B5D31000B03EE /* CWStarRateView.m */,
 				95D4A44B1B44DDB5005F5ABF /* CollectionCell.h */,
 				95D4A44C1B44DDB5005F5ABF /* CollectionCell.m */,
 				0AE06C2C1B68AD4F00EE6B22 /* WqDetalTableViewCell.h */,
@@ -1417,7 +1406,7 @@
 		0ACAF1A31B411E300029ACC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = LLY;
 				TargetAttributes = {
 					0ACAF1AA1B411E300029ACC9 = {
@@ -1456,10 +1445,10 @@
 			files = (
 				959281B11B6A1FD400F122B8 /* ShiYongTitleTableViewCell.xib in Resources */,
 				95DF437A1B65DA2400A25CFD /* 删除@2x.png in Resources */,
-				95C7BA931B5E4771009604D7 /* 审核中@2x.png in Resources */,
+				95D6B3681B708C0000529907 /* 审核中@2x.png in Resources */,
 				0AE06C341B68C1E600EE6B22 /* truck@2x.png in Resources */,
-				95C7BA851B5E2E09009604D7 /* 活动记录@2x.png in Resources */,
-				95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */,
+				95D6B3691B708C0000529907 /* 活动记录@2x.png in Resources */,
+				95D6B36A1B708C0000529907 /* 活动介绍@2x.png in Resources */,
 				0AE06C361B68C1ED00EE6B22 /* 形状-3@2x.png in Resources */,
 				959281EE1B6A2C0B00F122B8 /* Evaluate2TableViewCell.xib in Resources */,
 				959281E21B6A2BDE00F122B8 /* 产品质量@2x.png in Resources */,
@@ -1468,12 +1457,8 @@
 				956CE17E1B6864A200545644 /* 获取验证码框@2x.png in Resources */,
 				0AD9C29A1B60FDB000188AE8 /* 微博@2x.png in Resources */,
 				0AD9C29C1B60FDB000188AE8 /* TouxiangTableViewCell.xib in Resources */,
-				95C7BA931B5E4771009604D7 /* 审核中@2x.png in Resources */,
 				959281E61B6A2BDE00F122B8 /* 星星选中@2x.png in Resources */,
 				0AE06C3A1B68CD6F00EE6B22 /* 提交试用报告@2x.png in Resources */,
-				95C7BA851B5E2E09009604D7 /* 活动记录@2x.png in Resources */,
-				95C7BA861B5E2E09009604D7 /* 活动介绍@2x.png in Resources */,
-				95DFE77D1B6B5D1D000B03EE /* b27_icon_star_yellow@2x.png in Resources */,
 				0ADD0FC91B6B502600A2D95E /* 质量@2x.png in Resources */,
 				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
@@ -1483,7 +1468,6 @@
 				95D203541B57931700BCD63F /* 确定按钮.png in Resources */,
 				0A4A04301B5F6F35005C0E3B /* 获取验证码@2x.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
-				95DFE77C1B6B5D1D000B03EE /* b27_icon_star_gray@2x.png in Resources */,
 				959281E91B6A2BDE00F122B8 /* 综合评分@2x.png in Resources */,
 				0AE06C3C1B68CD7600EE6B22 /* 查看中奖名单@2x.png in Resources */,
 				0A4A04281B5F6F11005C0E3B /* 手机注册@2x.png in Resources */,
@@ -1618,7 +1602,6 @@
 				0ADD0FC51B6B4CC100A2D95E /* SpeckWqTableViewCell.m in Sources */,
 				95D203501B57448500BCD63F /* ClickTViewController.m in Sources */,
 				95D661C11B44D46600E9992E /* ThreeViewController.m in Sources */,
-				95DFE7801B6B5D31000B03EE /* CWStarRateView.m in Sources */,
 				95E5AC911B437D4600904602 /* NowViewController.m in Sources */,
 				0ACAF2621B411E830029ACC9 /* UIImage+MultiFormat.m in Sources */,
 				0ACAF2591B411E830029ACC9 /* SDImageCache.m in Sources */,
@@ -1761,6 +1744,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1843,6 +1827,7 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = nichewoche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7d665d26-cc37-405f-be18-936b3b1fb247";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1872,6 +1857,7 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = nichewoche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7d665d26-cc37-405f-be18-936b3b1fb247";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1892,6 +1878,7 @@
 				);
 				INFOPLIST_FILE = YouCarMyCarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nichewoche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YouCarMyCar.app/YouCarMyCar";
 			};
@@ -1907,6 +1894,7 @@
 				);
 				INFOPLIST_FILE = YouCarMyCarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nichewoche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YouCarMyCar.app/YouCarMyCar";
 			};

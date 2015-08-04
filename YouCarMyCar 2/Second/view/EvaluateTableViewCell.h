@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZWTextView.h"
+#import "PrefixHeader.pch"
 @interface EvaluateTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *shiyongIcon;
 @property (weak, nonatomic) IBOutlet UILabel *shiyongLable;
 @property (weak, nonatomic) IBOutlet UIImageView *textImage;
 @property (weak, nonatomic) IBOutlet UIButton *zhaoxiangButton;
-
+@property (nonatomic,strong)ZWTextView *zwTextView;
 @end

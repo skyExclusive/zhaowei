@@ -12,6 +12,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.zwTextView = [[ZWTextView alloc]initWithFrame:CGRectMake(7, 1, kMainWidth - 40, self.shiyongImage.frame.size.height - 2)];
+    self.zwTextView.placeholder = @"请您写下您使用该产品的价格的满意程度...";
+    self.zwTextView.tag = 103;
+    [self.shiyongImage addSubview:self.zwTextView];
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

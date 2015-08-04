@@ -19,14 +19,11 @@
 #import "Evaluate2TableViewCell.h"
 #import "TiJiaoTableViewCell.h"
 #import "ZWTextView.h"
-#import "CWStarRateView.h"
-#import "XieYiViewController.h"
 #import "XieYiViewController.h"
 @interface LiftButtonViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic,strong)UITableView *shiYongTableView;
 @property (nonatomic,strong)ZWTextView *zwTextView;
 @property (nonatomic,strong)UIImageView *zhaoxiangImage;
-@property (strong, nonatomic) CWStarRateView *starRateView;
 @property (nonatomic)BOOL change;
 @property (nonatomic ,strong)EvaluateTableViewCell *myCell;
 
@@ -36,8 +33,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.title = @"试用报告";
-    self.view .backgroundColor = [UIColor whiteColor];
+    self.view .backgroundColor = MainBackGround;
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState :(UIControlStateNormal)];
@@ -104,14 +102,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 5) {
-        //        if (self.zwTextView.tag == 101 && [self.zwTextView.text  isEqual: @""]) {
-        //            UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(kZwTextViewWidth - 60, -20, 60, 20)];
-        //            lable.font = [UIFont fontWithName:@"Arial"size:10.0f];
-        //            lable.text = @"请对产品外观做出评价";
-        //            [self.zwTextView addSubview:lable];
-        //            NSLog(@"============================");
-        //
-        //        }
+
         XieYiViewController *xiexieVC= [[XieYiViewController alloc]init];
         xiexieVC.k = 1;
         
@@ -131,13 +122,6 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         
-        self.zwTextView = [[ZWTextView alloc]initWithFrame:CGRectMake(7, 1, kMainWidth /4 *3 - 20, cell.textImage.frame.size.height - 2)];
-        self.zwTextView.layer.borderColor = [UIColor whiteColor].CGColor;
-        self.zwTextView.layer.borderWidth =1.0;
-        cell.textImage.userInteractionEnabled = YES;
-        self.zwTextView.placeholder = @"请您写下您使用该产品的美观程度...";
-        self.zwTextView.tag = 101;
-        [cell.textImage addSubview:self.zwTextView];
         cell.backgroundColor = MainBackGround;
         [cell.zhaoxiangButton addTarget:self action:@selector(zhaoxiang) forControlEvents:(UIControlEventTouchUpInside)];
         return cell;
@@ -147,17 +131,10 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.shiyongImage.userInteractionEnabled = YES;
         if (indexPath.row == 2) {
-            self.zwTextView = [[ZWTextView alloc]initWithFrame:CGRectMake(7, 1, kMainWidth - 40, cell.shiyongImage.frame.size.height - 2)];
             self.zwTextView.placeholder = @"请您写下您使用该产品的质量问题和建议...";
-            self.zwTextView.tag = 102 ;
-            [cell.shiyongImage addSubview:self.zwTextView];
         }else{
             cell.shiyongIcon.image = [UIImage imageNamed:@"产品价格.png"];
             cell.shiyongTitle.text = @"产品价格";
-            self.zwTextView = [[ZWTextView alloc]initWithFrame:CGRectMake(7, 1, kMainWidth - 40, cell.shiyongImage.frame.size.height - 2)];
-            self.zwTextView.placeholder = @"请您写下您使用该产品的价格的满意程度...";
-            self.zwTextView.tag = 103;
-            [cell.shiyongImage addSubview:self.zwTextView];
         }
         cell.backgroundColor = MainBackGround;
         return cell;
@@ -165,12 +142,8 @@
         GradeTableViewCell *cell = [self.shiYongTableView dequeueReusableCellWithIdentifier:@"gradeCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell.xieyiButton addTarget:self action:@selector(xieyi) forControlEvents:(UIControlEventTouchUpInside)];
-        self.starRateView = [[CWStarRateView alloc] initWithFrame:CGRectMake(0, 0, cell.xingxingView.frame.size.width-10, 27) numberOfStars:5];
-        self.starRateView.scorePercent = 0.3;
-        self.starRateView.allowIncompleteStar = YES;
-        self.starRateView.hasAnimation = YES;
+        
         cell.xingxingView.backgroundColor = [UIColor clearColor];
-        [cell.xingxingView addSubview:self.starRateView];
         cell.backgroundColor = MainBackGround;
         return cell;
         
@@ -287,7 +260,6 @@
     }else{
         self.zhaoxiangImage.image = image;
     }
-//    [self.shiYongTableView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
     
     
