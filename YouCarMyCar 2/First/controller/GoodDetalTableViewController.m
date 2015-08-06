@@ -32,49 +32,100 @@
 -(CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     
-    
-    if (section == 1) {
-        return 30;
+    if (kMainHeight == 480) {
         
+        if (section == 1) {
+            return 30;
+            
+        }else {
+            
+            
+            return 0;
+            
+        }
+        
+
     }else {
         
-        
-        return 0;
+        if (section == 1) {
+            return 40;
+            
+        }else {
+            
+            
+            return 0;
+            
+        }
+
         
     }
-    
-    
     
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if (section == 1) {
-        self.myView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 30)];
-        self.myView.backgroundColor = COLOR(253, 246, 240, 1);
+    if (kMainHeight == 480) {
+        if (section == 1) {
+            self.myView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 30)];
+            self.myView.backgroundColor = COLOR(253, 246, 240, 1);
+            
+            self.myliftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myliftButton.frame = CGRectMake(0, 0, 80, 30);
+            
+            [self.myliftButton setBackgroundImage:[UIImage imageNamed:@"产品详情@2x(1).png"] forState:(UIControlStateNormal)];
+            
+            [self.myView addSubview:self.myliftButton];
+            
+            self.myRignth = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myRignth.frame = CGRectMake(80, 0, 80, 30);
+            [self.myRignth addTarget:self action:@selector(myRignth:) forControlEvents:(UIControlEventTouchUpInside)];
+            
+            [self.myRignth setBackgroundImage:[UIImage imageNamed:@"参与评论未选中@2x(1).png"] forState:(UIControlStateNormal)];
+            [self.myView addSubview:self.myRignth];
+            
+            
+            
+            
+            return self.myView;
+            
+            
+        }
+        
+        return nil;
 
-        self.myliftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        self.myliftButton.frame = CGRectMake(0, 0, 80, 30);
-        
-        [self.myliftButton setBackgroundImage:[UIImage imageNamed:@"产品详情@2x(1).png"] forState:(UIControlStateNormal)];
-        
-        [self.myView addSubview:self.myliftButton];
-        
-        self.myRignth = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        self.myRignth.frame = CGRectMake(80, 0, 80, 30);
-        [self.myRignth addTarget:self action:@selector(myRignth:) forControlEvents:(UIControlEventTouchUpInside)];
-        
-        [self.myRignth setBackgroundImage:[UIImage imageNamed:@"参与评论未选中@2x(1).png"] forState:(UIControlStateNormal)];
-        [self.myView addSubview:self.myRignth];
+    }else {
         
         
         
+        if (section == 1) {
+            self.myView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 40)];
+            self.myView.backgroundColor = COLOR(253, 246, 240, 1);
+            
+            self.myliftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myliftButton.frame = CGRectMake(0, 0, 100, 40);
+            
+            [self.myliftButton setBackgroundImage:[UIImage imageNamed:@"产品详情@2x(1).png"] forState:(UIControlStateNormal)];
+            
+            [self.myView addSubview:self.myliftButton];
+            
+            self.myRignth = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myRignth.frame = CGRectMake(100, 0, 100, 40);
+            [self.myRignth addTarget:self action:@selector(myRignth:) forControlEvents:(UIControlEventTouchUpInside)];
+            
+            [self.myRignth setBackgroundImage:[UIImage imageNamed:@"参与评论未选中@2x(1).png"] forState:(UIControlStateNormal)];
+            [self.myView addSubview:self.myRignth];
+            
+            
+            
+            
+            return self.myView;
+            
+            
+        }
         
-               return self.myView;
-
+        return nil;
 
     }
     
-    return nil;
     
 }
 -(void)myRignth:(UIButton *)button
@@ -169,7 +220,16 @@
 -(CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 170;
+    
+    if (indexPath.section == 0) {
+        return 170;
+        
+    }else {
+        return 170 * kMainWidth / 320;
+        
+    
+    }
+    
     
 }
 //点击的方法

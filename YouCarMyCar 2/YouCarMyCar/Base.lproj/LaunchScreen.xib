@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eze-rk-shw">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="741027_1272707694.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eze-rk-shw">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
             </subviews>
@@ -24,10 +24,10 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="343" y="381"/>
+            <point key="canvasLocation" x="-78" y="30"/>
         </view>
     </objects>
     <resources>
-        <image name="1.jpg" width="640" height="887"/>
+        <image name="741027_1272707694.jpg" width="2564" height="3884"/>
     </resources>
 </document>

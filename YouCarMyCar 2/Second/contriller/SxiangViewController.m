@@ -122,7 +122,7 @@
 {
     
     if (indexPath.row == 0) {
-        return 316;
+        return 316 * kMainWidth / 320;
         
     }else{
         

@@ -33,28 +33,28 @@
     NSArray *images = @[ [UIImage imageNamed:@"Untitled2.jpg"],
                          [UIImage imageNamed:@"33.jpg"],
                          [UIImage imageNamed:@"45.jpg"],];
-    HEInfiniteScrollView *infiniteScrollView = [[HEInfiniteScrollView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, 150)];
+    HEInfiniteScrollView *infiniteScrollView = [[HEInfiniteScrollView alloc] initWithFrame:CGRectMake(0, 0, kMainWidth, 150 * kMainWidth / 320)];
     [self addSubview:infiniteScrollView];
     [infiniteScrollView setContentObjs:images Placeholder:nil];
     infiniteScrollView.pageControlContentMode = kHEPageControlContentModeBottomCenter;
     infiniteScrollView.switchType = kHESwitchTypeFadeOut;
 
-    self.myGoodsNameLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 150, kMainWidth, 20)];
+    self.myGoodsNameLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 150 * kMainWidth / 320, kMainWidth, 20)];
     [self addSubview:self.myGoodsNameLable];
     
-    UILabel *pingji = [[UILabel alloc]initWithFrame:CGRectMake(10, 180, 60, 20)];
+    UILabel *pingji = [[UILabel alloc]initWithFrame:CGRectMake(10, 180 * kMainWidth / 320, 60, 20)];
     pingji.text = @"商品评分";
     pingji.font = [UIFont systemFontOfSize:12];
     [self addSubview:pingji];
     
    //星星
     
-    self.my1ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(70, 180, 20, 20)];
+    self.my1ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(70, 180 * kMainWidth / 320, 20, 20)];
     
-    self.my2ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(95, 180, 20, 20)];
-    self.my3IMageViw = [[UIImageView alloc]initWithFrame:CGRectMake(120, 180, 20, 20)];
-    self.my4ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(145, 180, 20, 20)];
-    self.my5imageView = [[UIImageView alloc]initWithFrame:CGRectMake(170, 180, 20, 20)];
+    self.my2ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(95, 180 * kMainWidth / 320, 20, 20)];
+    self.my3IMageViw = [[UIImageView alloc]initWithFrame:CGRectMake(120, 180 * kMainWidth / 320, 20, 20)];
+    self.my4ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(145, 180 * kMainWidth / 320, 20, 20)];
+    self.my5imageView = [[UIImageView alloc]initWithFrame:CGRectMake(170, 180 * kMainWidth / 320, 20, 20)];
 
     
     self.my1ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
@@ -71,18 +71,18 @@
     [self addSubview:self.my1ImageView];
     
     //==================
-    UILabel *old = [[UILabel alloc]initWithFrame:CGRectMake(10, 210, 70, 20)];
+    UILabel *old = [[UILabel alloc]initWithFrame:CGRectMake(10, 210 * kMainWidth / 320, 70, 20)];
     old.text = @"适用年龄:";
     old.font = [UIFont systemFontOfSize:15];
     [self addSubview:old];
     
-    self.mypeoOldLable = [[UILabel alloc]initWithFrame:CGRectMake(73 , 210, 118, 20)];
+    self.mypeoOldLable = [[UILabel alloc]initWithFrame:CGRectMake(73 , 210 * kMainWidth / 320, 118, 20)];
     self.mypeoOldLable.textColor = [UIColor redColor];
     [self addSubview:self.mypeoOldLable];
     
     
     self.mySureAddressButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    self.mySureAddressButton.frame = CGRectMake(200, 190, kMainWidth - 210, 40);
+    self.mySureAddressButton.frame = CGRectMake(200, 190 * kMainWidth / 320, kMainWidth - 210, 40 * kMainWidth / 320);
     [self.mySureAddressButton setBackgroundImage:[UIImage imageNamed:@"truck@2x.png"] forState:(UIControlStateNormal)];
     
     [self.mySureAddressButton addTarget:self action:@selector(mySureAddressButton:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -92,27 +92,27 @@
     
     
     //===========可以不管 /// 是画的线
-    UILabel *xian = [[UILabel alloc]initWithFrame:CGRectMake(0, 235, kMainWidth, 1)];
+    UILabel *xian = [[UILabel alloc]initWithFrame:CGRectMake(0, 235 * kMainWidth / 320, kMainWidth, 1)];
     [self addSubview:xian];
     xian.backgroundColor = [UIColor grayColor];
     xian.alpha = 0.4;
-    UILabel *xian2 = [[UILabel alloc]initWithFrame:CGRectMake(0, 275, kMainWidth, 1)];
+    UILabel *xian2 = [[UILabel alloc]initWithFrame:CGRectMake(0, 275 * kMainWidth / 320, kMainWidth, 1)];
     [self addSubview:xian2];
     xian2.backgroundColor = [UIColor grayColor];
     xian2.alpha = 0.4;
-    UILabel *xian3 = [[UILabel alloc]initWithFrame:CGRectMake(0, 315, kMainWidth, 1)];
+    UILabel *xian3 = [[UILabel alloc]initWithFrame:CGRectMake(0, 315 * kMainWidth / 320, kMainWidth, 1)];
     [self addSubview:xian3];
     xian3.backgroundColor = [UIColor grayColor];
     xian3.alpha = 0.3;
     //=========
 
-    self.myreportNumberLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 275, kMainWidth, 40)];
+    self.myreportNumberLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 275 * kMainWidth / 320, kMainWidth, 40 * kMainWidth / 320)];
     [self addSubview:self.myreportNumberLable];
     self.myreportNumberLable.textColor = [UIColor redColor];
     self.myreportNumberLable.textAlignment = NSTextAlignmentCenter;
     
     self.myReportButton = [UIButton  buttonWithType:(UIButtonTypeCustom)];
-    self.myReportButton.frame = CGRectMake(15, 240, (kMainWidth - 45) / 2, 30);
+    self.myReportButton.frame = CGRectMake(15, 240 * kMainWidth / 320, (kMainWidth - 45) / 2, 30 * kMainWidth / 320);
     [self addSubview:self.myReportButton];
     [self.myReportButton addTarget:self action:@selector(myReportButton:) forControlEvents:(UIControlEventTouchUpInside)];
     
@@ -121,7 +121,7 @@
     
     
     self.myLooklistButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    self.myLooklistButton.frame = CGRectMake((kMainWidth - 45) / 2 + 30, 240, (kMainWidth - 45) / 2, 30);
+    self.myLooklistButton.frame = CGRectMake((kMainWidth - 45) / 2 + 30, 240 * kMainWidth / 320, (kMainWidth - 45) / 2, 30 * kMainWidth / 320);
     [self.myLooklistButton setBackgroundImage:[UIImage imageNamed:@"查看中奖名单@2x.png"] forState:(UIControlStateNormal)];
     [self.myLooklistButton addTarget:self action:@selector(myLooklistButton:) forControlEvents:(UIControlEventTouchUpInside)];
     
