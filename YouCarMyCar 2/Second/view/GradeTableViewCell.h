@@ -34,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *xingxing4;
 @property (weak, nonatomic) IBOutlet UIButton *xingxing5;
 
+
 @property (nonatomic ,assign)id<GradeTableViewCellDelegate>delegate;
 
 

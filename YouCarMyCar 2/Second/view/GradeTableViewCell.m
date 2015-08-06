@@ -13,7 +13,9 @@
 - (void)awakeFromNib {
     // Initialization code
     
+
 }
+
 - (IBAction)xingxing1:(id)sender {
     if ([self.delegate respondsToSelector:@selector(buttonAction1:)]) {
         [self.delegate buttonAction1:sender];
@@ -27,8 +29,10 @@
         [self.delegate buttonAction2:sender];
         
     }
-
+    
 }
+
+
 - (IBAction)xingxing3:(id)sender {
     
     if ([self.delegate respondsToSelector:@selector(buttonAction3:)]) {
