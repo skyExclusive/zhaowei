@@ -26,7 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-      self.view.backgroundColor = [UIColor redColor];
     
     
 //布局view
@@ -41,25 +40,27 @@
     self.navigationItem.title = @"个人信息";
   
     self.dic = [[NSMutableDictionary alloc]init];
+    self.imagedic = [[NSMutableDictionary alloc]init];
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    
     NSArray *array1 = [[NSArray alloc]initWithObjects:@"活动记录",@"活动介绍", nil];
     NSArray *array2 = [[NSArray alloc]initWithObjects:@"关于我们",@"用户反馈",@"版本更新", nil];
-    [self.dic  setValue:array1 forKey:@"1"];
-    [self.dic  setValue:array2 forKey:@"2"];
-    
-    self.imagedic = [[NSMutableDictionary alloc]init];
     NSArray *imageArr1 = [[NSArray alloc]initWithObjects:@"活动记录.png",@"活动介绍.png", nil];
     NSArray *imageArr2 = [[NSArray alloc]initWithObjects:@"关于我们.png",@"意见反馈.png",@"版本更新.png", nil];
+    
+    [self.dic      setValue:array1    forKey:@"1"];
+    [self.dic      setValue:array2    forKey:@"2"];
     [self.imagedic setValue:imageArr1 forKey:@"1"];
     [self.imagedic setValue:imageArr2 forKey:@"2"];
     
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
-    self.tableView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.tableView];
+
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"TouxiangTableViewCell" bundle:nil] forCellReuseIdentifier:@"imageCell"];
+    [self.view addSubview:self.tableView];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"TouxiangTableViewCell" bundle:nil]                                        forCellReuseIdentifier:@"imageCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TongyongTableViewCell" bundle:nil] forCellReuseIdentifier:@"tongCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -89,6 +90,7 @@
     return 3;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     if (section == 0) {
@@ -100,6 +102,8 @@
     }
     
 }
+
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0 && indexPath.section == 0) {
@@ -110,6 +114,8 @@
         return 50;
     }
 }
+
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 1 || section  ==0) {
@@ -118,6 +124,8 @@
         return 10;
     }
 }
+
+
 //cell 的点击事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -152,6 +160,8 @@
     }
     
 }
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
@@ -169,11 +179,12 @@
         
         //毛玻璃效果
         UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-        visualEfView.frame = CGRectMake(cell.backimage.frame.origin.x, cell.backimage.frame.origin.y-2, cell.backimage.frame.size.width, cell.backimage.frame.size.height+2);
+        visualEfView.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y-2, cell.frame.size.width, cell.frame.size.height+2);
+        [cell.backimage setFrame:cell.frame];
         visualEfView.alpha = 1.0;
         [cell.backimage addSubview:visualEfView];
         cell.photoImage.userInteractionEnabled = YES;
-        cell.superview.superview.backgroundColor = COLOR(251, 246, 240, 1);
+        cell.superview.superview.backgroundColor = MainBackGround;
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
@@ -188,8 +199,6 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         if (indexPath.section == 1  && indexPath.row < 1) {
-            
-            
             
             cell.myView.alpha = 1;
             

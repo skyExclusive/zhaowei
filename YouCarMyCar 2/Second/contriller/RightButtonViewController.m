@@ -58,12 +58,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *indext = @"indext";
-    RightListTableViewCell *cell = [self.myTableview dequeueReusableCellWithIdentifier:indext];
-//    cell.myliftImageView .image = [UIImage imageNamed:@""];
-//    cell.myliftNameLable.text = @"";
-//    cell.myRightLable.text = @"";
-//    cell.myRightImageView.image = [UIImage imageNamed:@""];
-//    
+    RightListTableViewCell *cell = [self.myTableview dequeueReusableCellWithIdentifier:indext];   
     if (!cell) {
         cell = [[RightListTableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:indext];
         

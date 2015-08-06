@@ -45,8 +45,9 @@
     self.view .backgroundColor = MainBackGround;
     
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState :(UIControlStateNormal)];
-    button.frame =CGRectMake(0, 0, 15, 25);
+    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"]
+                         forState :(UIControlStateNormal)];
+    [button setFrame:CGRectMake(0, 0, 15, 25)];
     [button addTarget:self action:@selector(pop) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = lift;
@@ -60,7 +61,9 @@
 //布局试用报告
 -(void)layoutshiYongTableView
 {
-    self.shiYongTableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    self.shiYongTableView = [[UITableView alloc]
+                             initWithFrame:self.view.bounds];
+    
     self.shiYongTableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.shiYongTableView];
     
@@ -69,14 +72,33 @@
     self.shiYongTableView.backgroundColor = MainBackGround;
     
     
-    [self.shiYongTableView registerNib:[UINib nibWithNibName:@"ShiYongTitleTableViewCell" bundle:nil] forCellReuseIdentifier:@"shiyongCell"];
-    [self.shiYongTableView registerNib:[UINib nibWithNibName:@"EvaluateTableViewCell" bundle:nil] forCellReuseIdentifier:@"evaluateCell"];
-    [self.shiYongTableView registerNib:[UINib nibWithNibName:@"GradeTableViewCell" bundle:nil] forCellReuseIdentifier:@"gradeCell"];
-    [self.shiYongTableView registerNib:[UINib nibWithNibName:@"Evaluate2TableViewCell" bundle:nil] forCellReuseIdentifier:@"evaluate2Cell"];
-    [self.shiYongTableView registerNib:[UINib nibWithNibName:@"TiJiaoTableViewCell" bundle:nil] forCellReuseIdentifier:@"tijiaoCell"];
-    self.zhaoxiangImage = [[UIImageView alloc]initWithFrame:CGRectMake(kMainWidth - 64, 174, 48, 43)];
-    self.zhaoxiangImage.image = [UIImage imageNamed: @""];
+    [self.shiYongTableView registerNib:[UINib
+                                        nibWithNibName:@"ShiYongTitleTableViewCell"
+                                        bundle:nil]
+                                        forCellReuseIdentifier:@"shiyongCell"];
+    [self.shiYongTableView registerNib:[UINib
+                                        nibWithNibName:@"EvaluateTableViewCell"
+                                        bundle:nil]
+                                        forCellReuseIdentifier:@"evaluateCell"];
+    [self.shiYongTableView registerNib:[UINib
+                                        nibWithNibName:@"GradeTableViewCell"
+                                        bundle:nil]
+                                        forCellReuseIdentifier:@"gradeCell"];
+    [self.shiYongTableView registerNib:[UINib
+                                        nibWithNibName:@"Evaluate2TableViewCell"
+                                        bundle:nil]
+                                        forCellReuseIdentifier:@"evaluate2Cell"];
+    [self.shiYongTableView registerNib:[UINib
+                                        nibWithNibName:@"TiJiaoTableViewCell"
+                                        bundle:nil]
+                                        forCellReuseIdentifier:@"tijiaoCell"];
     
+    self.zhaoxiangImage = [[UIImageView alloc]
+                           initWithFrame:
+                           CGRectMake(kMainWidth - 64, 174, 48, 43)];
+    
+    
+    self.zhaoxiangImage.image = [UIImage imageNamed: @""];
     self.shiYongTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.zhaoxiangImage.userInteractionEnabled = NO;
     [self.shiYongTableView addSubview:self.zhaoxiangImage];
@@ -114,35 +136,52 @@
         [self.navigationController   pushViewController:xiexieVC animated:YES];
     }
 }
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0 ) {
+        
+        
         ShiYongTitleTableViewCell *cell = [self.shiYongTableView dequeueReusableCellWithIdentifier:@"shiyongCell" forIndexPath:indexPath];
         cell.backgroundColor = MainBackGround;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
+        
+        
     }else if (indexPath.row == 1) {
         
-        EvaluateTableViewCell *cell = [self.shiYongTableView dequeueReusableCellWithIdentifier:@"evaluateCell" forIndexPath:indexPath];
+        
+        EvaluateTableViewCell *cell = [self.shiYongTableView dequeueReusableCellWithIdentifier:@"evaluateCell"
+                                                                                  forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        
         cell.backgroundColor = MainBackGround;
         [cell.zhaoxiangButton addTarget:self action:@selector(zhaoxiang) forControlEvents:(UIControlEventTouchUpInside)];
         return cell;
         
+        
     }else if (indexPath.row > 1 && indexPath.row <4) {
+        
+        
         Evaluate2TableViewCell *cell = [self.shiYongTableView dequeueReusableCellWithIdentifier:@"evaluate2Cell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.shiyongImage.userInteractionEnabled = YES;
+        
+        
         if (indexPath.row == 2) {
+            
             self.zwTextView.placeholder = @"请您写下您使用该产品的质量问题和建议...";
         }else{
             cell.shiyongIcon.image = [UIImage imageNamed:@"产品价格.png"];
             cell.shiyongTitle.text = @"产品价格";
+            
         }
+        
         cell.backgroundColor = MainBackGround;
         return cell;
+        
+        
     }else if (indexPath.row == 4){
         GradeTableViewCell *cell = [self.shiYongTableView dequeueReusableCellWithIdentifier:@"gradeCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -155,7 +194,7 @@
         self.xingxing3 = cell.xingxing3;
         self.xingxing4 = cell.xingxing4;
         self.xingxing5 = cell.xingxing5;
-        cell.delegate = self;
+        cell.delegate  = self;
         
         
         return cell;
@@ -210,10 +249,10 @@
         
         [self.xingxing2 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
         // self.isOne = YES;
-        self.isTow = YES;
+        self.isTow   = YES;
         self.isThree = YES;
-        self.isFour = YES;
-        self.isFive = YES;
+        self.isFour  = YES;
+        self.isFive  = YES;
         
     }
     
@@ -230,16 +269,16 @@
     if (self.isThree == YES) {
         [self.xingxing3 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
         self.isThree = NO;
-        self.isOne = NO;
-        self.isTow = NO;
+        self.isOne   = NO;
+        self.isTow   = NO;
         
     }else if (self.isThree == NO) {
         
         
         [self.xingxing3 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
         self.isThree = YES;
-        self.isFour = YES;
-        self.isFive = YES;
+        self.isFour  = YES;
+        self.isFive  = YES;
         
     }
     
@@ -253,10 +292,10 @@
 {
     if (self.isFour== YES) {
         [self.xingxing4 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
-        self.isFour = NO;
-        self.isTow = NO;
+        self.isFour  = NO;
+        self.isTow   = NO;
         self.isThree = NO;
-        self.isOne = NO;
+        self.isOne   = NO;
         
     }else if (self.isFour == NO) {
         [self.xingxing4 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
@@ -274,11 +313,11 @@
 {
     if (self.isFive== YES) {
         [self.xingxing5 setImage:[UIImage imageNamed:@"星星选中.png"] forState:(UIControlStateNormal)];
-        self.isFive = NO;
-        self.isOne = NO;
-        self.isTow = NO;
+        self.isFive  = NO;
+        self.isOne   = NO;
+        self.isTow   = NO;
         self.isThree = NO;
-        self.isFour = NO;
+        self.isFour  = NO;
     }else if (self.isFive == NO) {
         [self.xingxing5 setImage:[UIImage imageNamed:@"星星未选中.png"] forState:(UIControlStateNormal)];
         self.isFive = YES;
@@ -309,22 +348,25 @@
 //照相的点击事件
 -(void)zhaoxiang
 {
-    UIAlertController  *view=   [UIAlertController
-                                 alertControllerWithTitle:nil
-                                 message:nil
-                                 preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertController  *view=     [UIAlertController
+                                   alertControllerWithTitle:nil
+                                   message:nil
+                                   preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:@"取消"
+                                   style:UIAlertActionStyleCancel
+                                   handler:nil];
     
     UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
             UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-            picker.delegate = self;//设置UIImagePickerController的代理，同时要遵循UIImagePickerControllerDelegate，UINavigationControllerDelegate协议
-            picker.allowsEditing = YES;//设置拍照之后图片是否可编辑，如果设置成可编辑的话会在代理方法返回的字典里面多一些键值。PS：如果在调用相机的时候允许照片可编辑，那么用户能编辑的照片的位置并不包括边角。
-            picker.sourceType = UIImagePickerControllerSourceTypeCamera;//UIImagePicker选择器的类型，UIImagePickerControllerSourceTypeCamera调用系统相机
+            picker.delegate = self;
+            picker.allowsEditing = YES;
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;//
             [self presentViewController:picker animated:YES completion:nil];
         }
         else{
-            //如果当前设备没有摄像头
+            
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"哎呀，当前设备没有摄像头。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alertView show];
         }
@@ -335,9 +377,7 @@
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
             UIImagePickerController * picker = [[UIImagePickerController alloc]init];
             picker.delegate = self;
-            picker.allowsEditing = YES;//是否可以对原图进行编辑
-            
-            //打开相册选择照片
+            picker.allowsEditing = YES;
             picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             [self presentViewController:picker animated:YES completion:nil];
         }
@@ -364,9 +404,7 @@
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
         UIImagePickerController * picker = [[UIImagePickerController alloc]init];
         picker.delegate = self;
-        picker.allowsEditing = YES;//是否可以对原图进行编辑
-        
-        //打开相册选择照片
+        picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:picker animated:YES completion:nil];
     }
@@ -381,21 +419,16 @@
 // 点击图片触发
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSLog(@"如果允许编辑%@",info);//picker.allowsEditing= YES允许编辑的时候 字典会多一些键值。
-    //获取图片
-    //    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];//原始图片
-    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];//编辑后的图片
-    
+    NSLog(@"如果允许编辑%@",info);
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera)
     {
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);//把图片存到图片库
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
         self.zhaoxiangImage.image = image;
     }else{
         self.zhaoxiangImage.image = image;
     }
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    
 }
 
 

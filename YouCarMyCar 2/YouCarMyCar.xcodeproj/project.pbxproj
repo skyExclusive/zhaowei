@@ -1818,7 +1818,7 @@
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = YouCarMyCar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1829,7 +1829,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = nichewoche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7d665d26-cc37-405f-be18-936b3b1fb247";
+				PROVISIONING_PROFILE = "e56030b6-b5d5-4677-bbd7-fe60cba529d9";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1848,7 +1848,7 @@
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = YouCarMyCar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1859,7 +1859,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = nichewoche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7d665d26-cc37-405f-be18-936b3b1fb247";
+				PROVISIONING_PROFILE = "e56030b6-b5d5-4677-bbd7-fe60cba529d9";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
