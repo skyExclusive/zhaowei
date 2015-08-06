@@ -27,9 +27,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     //布局view
-    
-    
     [self layoutView];
 
     
@@ -72,21 +72,20 @@
     self.navigationItem.title = @"个人信息";
     
     self.dic = [[NSMutableDictionary alloc]init];
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     NSArray *array1 = [[NSArray alloc]initWithObjects:@"用户名",@"手机号",@"邮箱",@"性别",@"地址管理",@"密码服务", nil];
     
-    [self.dic  setValue:array1 forKey:@"1"];
-    
-    
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
-    self.tableView.backgroundColor = [UIColor whiteColor];
+    [self.dic setValue:array1 forKey:@"1"];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-     [self.tableView registerNib:[UINib nibWithNibName:@"TouxiangTableViewCell" bundle:nil] forCellReuseIdentifier:@"imageCell"];
-    
-    [self.tableView registerNib:[UINib nibWithNibName:@"DataNameTableViewCell" bundle:nil] forCellReuseIdentifier:@"nameCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"DataSexTableViewCell" bundle:nil] forCellReuseIdentifier:@"sexCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TouxiangTableViewCell" bundle:nil]
+                               forCellReuseIdentifier:@"imageCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"DataNameTableViewCell" bundle:nil]
+                               forCellReuseIdentifier:@"nameCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"DataSexTableViewCell" bundle:nil]
+                               forCellReuseIdentifier:@"sexCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.myimage = [UIImage imageNamed:@"2.png"];
@@ -95,9 +94,10 @@
     
     //右item
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        button.frame =CGRectMake(0, 0, 45, 25);
+    [button setFrame:CGRectMake(0, 0, 45, 25)];
     [button setTitle:@"完成" forState:(UIControlStateNormal)];
-    [button addTarget:self action:@selector(wancheng) forControlEvents:(UIControlEventTouchUpInside)];
+    [button addTarget:self action:@selector(wancheng)
+                       forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = right;
     
@@ -112,10 +112,12 @@
     
 }
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return 3;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -125,6 +127,8 @@
         return 1;
     }
 }
+
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0 && indexPath.section == 0) {
@@ -135,6 +139,7 @@
     }
 }
 
+
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 2) {
@@ -143,6 +148,8 @@
         return 0;
     }
 }
+
+
 //cell的点击事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -160,39 +167,36 @@
     }else if (indexPath.section == 1 && indexPath.row == 1){
         clichVC.i = 14;
         [self.navigationController pushViewController:clichVC animated:YES];
-    }else if (indexPath.section ==1 && indexPath.row == 2) {
+    }else if (indexPath.section == 1 && indexPath.row == 2) {
         clichVC.i = 15;
         [self.navigationController pushViewController:clichVC animated:YES];
     }else if (indexPath.section == 2 && indexPath.row == 0) {
         
         NSLog(@"退出登录");
     }
-
-    
     
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     
-    NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
-    
+    NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",
+                                               (long)indexPath.section]];
     NSString *str = array[indexPath.row];
-    
-    
     
     if (indexPath.row == 0 && indexPath.section == 0) {
         
         TouxiangTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
         cell.photoImage.layer.cornerRadius = cell.photoImage.frame.size.height/2;
         cell.photoImage.layer.masksToBounds = YES;
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
-    
         cell.photoImage.image = self.myimage;
         cell.backimage.image = self.myimage;
+        cell.superview.superview.backgroundColor = MainBackGround;
+        
         
         [cell.xiaoImage removeFromSuperview];
         [cell.rankLable removeFromSuperview];
@@ -200,15 +204,18 @@
         [cell.dengLable removeFromSuperview];
         [cell.jiLable removeFromSuperview];
         
-        cell.superview.superview.backgroundColor = MainBackGround;
         
-        UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-        visualEfView.frame = CGRectMake(cell.backimage.frame.origin.x, cell.backimage.frame.origin.y-2, cell.backimage.frame.size.width, cell.backimage.frame.size.height+2);
+        
+        UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:
+                                            [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+       visualEfView.frame = cell.frame;
         visualEfView.alpha = 1.0;
+        [cell.backimage setFrame:cell.frame];
         [cell.backimage addSubview:visualEfView];
         cell.photoImage.userInteractionEnabled = YES;
         //轻怕手势
-        UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(push:)];
+        UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                              action:@selector(push:)];
         self.view.userInteractionEnabled = YES;
         [cell.photoImage addGestureRecognizer:tap1];
         
@@ -223,6 +230,8 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.nameField.text = @"你车我车";
         return cell;
+        
+        
     }else if (indexPath.section == 1 && indexPath.row > 0 && indexPath.row < 6){
         
         
@@ -248,11 +257,12 @@
     }else  {
         
         DataNameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell" forIndexPath:indexPath];
+        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 50)];
         
         [cell.nameLable removeFromSuperview];
         [cell.nameField removeFromSuperview];
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 50)];
         lable.textAlignment = NSTextAlignmentCenter;
         lable.text = @"退出登录";
         lable.backgroundColor = COLOR(233, 42, 48, 1);

@@ -18,7 +18,7 @@
                 </userGuides>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cMi-5R-t5i">
-                        <rect key="frame" x="0.0" y="1" width="375" height="153"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="形状 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="daZ-Id-IGx">
                         <rect key="frame" x="51" y="99" width="272" height="50"/>
