@@ -42,31 +42,53 @@
     self.myGoodsNameLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 150 * kMainWidth / 320, kMainWidth, 20)];
     [self addSubview:self.myGoodsNameLable];
     
-    self.myGoodDescritionLable= [[UILabel alloc]initWithFrame:CGRectMake(10, 165 * kMainWidth / 320, 190, 50)];
+    self.myGoodDescritionLable= [[UILabel alloc]initWithFrame:CGRectMake(10, 168 * kMainWidth / 320, 190, 40)];
     self.myGoodDescritionLable.font = [UIFont systemFontOfSize:12];
     self.myGoodDescritionLable.textColor = [UIColor grayColor];
     self.myGoodDescritionLable.numberOfLines = 0;
     [self addSubview:self.myGoodDescritionLable];
     
+    self.myGoodDescritionLable.text = @"我打算打发阿萨德飞机阿道夫阿里山东方大神阿斯顿发生大发撒旦法阿斯达发";
     
     //==================
-    UILabel *mian = [[UILabel alloc]initWithFrame:CGRectMake(10, 210 * kMainWidth / 320, 55, 20)];
+    UILabel *mian = [[UILabel alloc]initWithFrame:CGRectMake(20, 200 * kMainWidth / 320, 55, 20)];
     mian.text = @"免费提供:";
     mian.font = [UIFont systemFontOfSize:12];
     [self addSubview:mian];
     
     
-    self.myGoodNumberLable = [[UILabel alloc]initWithFrame:CGRectMake(65, 210 * kMainWidth / 320, 38, 20)];
+    self.myGoodNumberLable = [[UILabel alloc]initWithFrame:CGRectMake(75, 200 * kMainWidth / 320, 38, 20)];
     self.myGoodNumberLable.text = @"2000";
     self.myGoodNumberLable.textColor = [UIColor redColor];
     self.myGoodNumberLable.font = [UIFont systemFontOfSize:15];
     [self addSubview:self.myGoodNumberLable];
     
     
-    UILabel *fen = [[UILabel alloc]initWithFrame:CGRectMake(102, 210 * kMainWidth / 320, 55, 20)];
+    UILabel *fen = [[UILabel alloc]initWithFrame:CGRectMake(112, 200 * kMainWidth / 320, 55, 20)];
     fen.text = @"份";
     fen.font = [UIFont systemFontOfSize:12];
     [self addSubview:fen];
+    
+
+    
+    
+    UILabel *per = [[UILabel alloc]initWithFrame:CGRectMake(20, 215 * kMainWidth / 320, 55, 20)];
+    per.text = @"参与人数:";
+    per.font = [UIFont systemFontOfSize:12];
+    [self addSubview:per];
+    
+    
+    self.myPeopleNumberLable = [[UILabel alloc]initWithFrame:CGRectMake(75, 215 * kMainWidth / 320, 45, 20)];
+    self.myPeopleNumberLable.text = @"20000";
+    self.myPeopleNumberLable.textColor = [UIColor redColor];
+    self.myPeopleNumberLable.font = [UIFont systemFontOfSize:15];
+    [self addSubview:self.myPeopleNumberLable];
+    
+    
+    UILabel *ren = [[UILabel alloc]initWithFrame:CGRectMake(120, 215 * kMainWidth / 320, 55, 20)];
+    ren.text = @"人";
+    ren.font = [UIFont systemFontOfSize:12];
+    [self addSubview:ren];
     
 
     
@@ -79,11 +101,20 @@
     
     
     
-    
-    
-    
     self.mySureAddressButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    self.mySureAddressButton.frame = CGRectMake(200, 190 * kMainWidth / 320, kMainWidth - 210, 40 * kMainWidth / 320);
+    
+    
+    if (kMainWidth == 320) {
+        self.mySureAddressButton.frame = CGRectMake(200, 190 * kMainWidth / 320, kMainWidth - 210, 40 * kMainWidth / 320);
+
+        
+    }else {
+        self.mySureAddressButton.frame = CGRectMake(220, 195 * kMainWidth / 320, kMainWidth - 240, 46);
+        
+
+        
+    }
+    
     [self.mySureAddressButton setBackgroundImage:[UIImage imageNamed:@"truck@2x.png"] forState:(UIControlStateNormal)];
     
     [self.mySureAddressButton addTarget:self action:@selector(mySureAddressButton:) forControlEvents:(UIControlEventTouchUpInside)];

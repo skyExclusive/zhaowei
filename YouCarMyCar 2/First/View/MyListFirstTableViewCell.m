@@ -8,6 +8,8 @@
 
 #import "MyListFirstTableViewCell.h"
 
+#import "PrefixHeader.pch"
+
 @implementation MyListFirstTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -96,6 +98,9 @@
 }
 -(void)costom
 {
+    
+    CGFloat imagewith = (self.cellheight - 12 )/51 *44;
+    
     if (self.cellweight == 320) {
         
         //俩个底背景
@@ -119,7 +124,7 @@
         
         [self addSubview:self.mydescritionLable];
         
-        self.mybutton = [[UIButton alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 3 + 10, self.cellweight - (self.cellweight / 2 - 20) - 20 , self.cellheight / 4 - 10)];
+        self.mybutton = [[UIButton alloc]initWithFrame:CGRectMake((kMainWidth - imagewith ) / 2 +imagewith - 60, self.cellheight / 4 * 3 + 10, 120 , self.cellheight / 4 - 10)];
         [self.mybutton setBackgroundImage:[UIImage imageNamed:@"免费试用@2x.png"] forState:(UIControlStateNormal)];
         [self.mybutton setBackgroundImage:[UIImage imageNamed:@"免费试用dianji@2x.png"] forState:(UIControlStateSelected)];
         
@@ -205,7 +210,9 @@
         
         [self addSubview:self.mydescritionLable];
         
-        self.mybutton = [[UIButton alloc]initWithFrame:CGRectMake(15+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 3 + 10, self.cellweight - (self.cellweight / 2 - 20) - 20 , self.cellheight / 4 - 10)];
+                self.mybutton = [[UIButton alloc]initWithFrame:CGRectMake((kMainWidth - imagewith ) / 2 +imagewith - 60, self.cellheight / 4 * 3 + 10, 120 , self.cellheight / 4 - 10)];
+        
+        self.mybutton = [[UIButton alloc]initWithFrame:CGRectMake((kMainWidth - imagewith ) / 2 +imagewith - 75, self.cellheight / 4 * 3 + 10, 150 , self.cellheight / 4 - 10)];
         [self.mybutton setBackgroundImage:[UIImage imageNamed:@"免费试用@2x.png"] forState:(UIControlStateNormal)];
         [self.mybutton setBackgroundImage:[UIImage imageNamed:@"免费试用dianji@2x.png"] forState:(UIControlStateSelected)];
         
