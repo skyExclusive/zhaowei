@@ -30,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = COLOR(251, 246, 240, 1);
+    self.view.backgroundColor = MainBackGround;
     // Do any additional setup after loading the view.
     
     
