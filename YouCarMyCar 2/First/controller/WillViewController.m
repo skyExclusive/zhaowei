@@ -9,19 +9,73 @@
 #import "WillViewController.h"
 #import "PrefixHeader.pch"
 #import "MyListFirstTableViewCell.h"
+
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "NowViewModel.h"
+
 @interface WillViewController ()<UITableViewDataSource,UITableViewDelegate,MylistFirstbleDelegate>
-@property (nonatomic,strong)UITableView *willtable;
+@property (nonatomic,strong)UITableView *mytableview;
 @end
 @implementation WillViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.willtable = [[UITableView alloc]initWithFrame:CGRectMake(kMainX, kMainY, kMainWidth, kMainHeight-150)];
-    self.willtable.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.willtable.delegate = self;
-    self.willtable.dataSource = self;
-    [self.view addSubview:self.willtable];
+    
+
+    
+    self.mytableview = [[UITableView alloc]initWithFrame:CGRectMake(kMainX, kMainY, kMainWidth, kMainHeight-150)];
+    self.mytableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.mytableview.delegate = self;
+    self.mytableview.dataSource = self;
+    [self.view addSubview:self.mytableview];
+    
+    
+    [self coustom];//获取数据
+    
 }
 
+-(void)coustom
+{
+    self.myArray = [[NSMutableArray alloc]init];
+    
+    
+    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=list&type=2&eachNum=5&curpage=1",httpGet];
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+    
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+        self.miao = [dat timeIntervalSince1970];
+        
+        
+        
+        NSMutableArray *array = [responseObject valueForKey:@"list"];
+        for (NSDictionary *dic in array) {
+            NowViewModel *model = [[NowViewModel alloc]init];
+            [model setValuesForKeysWithDictionary:dic];
+            [self.myArray addObject:model];
+            
+            
+        }
+        
+        
+        
+        [self.mytableview reloadData];//刷新;
+        
+        
+        
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"%@",error);
+        
+        
+    }];
+    
+    
+    
+
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return 1;
@@ -29,7 +83,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 20;
+    return self.myArray.count;
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -46,13 +100,22 @@
         
 
     }
-    cell.mydescritionLable.text = @"即将开启的商品的 描述";
-    cell.myGoodImageVeiw.image = [UIImage   imageNamed:@"3.jpg"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.mybutton.tag = 100 + indexPath.row;
     cell.delegagate = self;
-    cell.mytimeInteger = 1000 ;
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a = [dat timeIntervalSince1970];
     
+    
+    cell.mytimeInteger = 1000 - (a - self.miao) ;
+    NowViewModel *model = self.myArray[indexPath.row];
+    cell.mydescritionLable.text = model.small_info;
+    cell.myallGoodsCount.text = model.number;
+    cell.mynowPerson.text = model.try_people;
+    cell.myGoodName.text = model.title;
+    [cell.myGoodImageVeiw sd_setImageWithURL:[NSURL URLWithString:model.img]];
+    
+    NSLog(@"--------------%@",model.img);
     
     
     return cell;

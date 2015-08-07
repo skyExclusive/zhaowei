@@ -221,7 +221,7 @@
     // 布局登录
     
     //1photo
-    self.photoImabeView  = [[UIImageView alloc]initWithFrame:CGRectMake(120 *self.indextX, 84 * self.indextY, 80, 80)];
+    self.photoImabeView  = [[UIImageView alloc]initWithFrame:CGRectMake(kMainWidth / 2 - 40, 84 * self.indextY, 80, 80)];
     
     self.photoImabeView.image = [UIImage imageNamed:@"头像@2x.png"];
     self.photoImabeView.layer.cornerRadius = 40;

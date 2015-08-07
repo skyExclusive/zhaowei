@@ -47,61 +47,121 @@
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if (section == 1) {
-        self.myView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 200)];
-        self.myView.backgroundColor = COLOR(253, 246, 240, 1);
+    if (kMainHeight == 480) {
+        if (section == 1) {
+            self.myView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 200)];
+            self.myView.backgroundColor = COLOR(253, 246, 240, 1);
+            
+            self.myliftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myliftButton.frame = CGRectMake(0, 0, 80, 30);
+            
+            [self.myliftButton setBackgroundImage:[UIImage imageNamed:@"产品详情未选中@2x.png"] forState:(UIControlStateNormal)];
+            [self.myliftButton addTarget:self action:@selector(myliftButton:) forControlEvents:(UIControlEventTouchUpInside)];
+            
+            
+            
+            [self.myView addSubview:self.myliftButton];
+            
+            self.myRignth = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myRignth.frame = CGRectMake(80, 0, 80, 30);
+            
+            [self.myRignth setBackgroundImage:[UIImage imageNamed:@"参与评论@2x(1).png"] forState:(UIControlStateNormal)];
+            [self.myView addSubview:self.myRignth];
+            
+            
+            
+            
+            UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(15, 35, kMainWidth - 30, 15)];
+            lable.text = @"小提示:积极参与用户活动与反馈用户使用报告,及可提高免费试用的成功率!";
+            
+            lable.textColor = [UIColor redColor];
+            lable.font = [UIFont systemFontOfSize:8];
+            [self.myView addSubview:lable];
+            
+            
+            
+            self.myTextView = [[ZWTextView alloc]initWithFrame:CGRectMake(10, 50, kMainWidth - 80, 50)];
+            
+            
+            [self.myView addSubview:self.myTextView];
+            self.myTextView.backgroundColor = COLOR(233, 233, 233, 1);
+            self.myTextView.placeholder = @"请在这里输入您想说的话...";
+            
+            
+            self.myspeckButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myspeckButton.frame = CGRectMake(kMainWidth - 60, 50, 50, 50);
+            [self.myspeckButton setBackgroundImage:[UIImage imageNamed:@"发表@2x.png"] forState:(UIControlStateNormal)];
+            [self.myspeckButton addTarget:self action:@selector(myspeckButton:) forControlEvents:(UIControlEventTouchUpInside)];
+            
+            
+            [self.myView addSubview:self.myspeckButton];
+            
+            
+            return self.myView;
+            
+            
+        }
         
-        self.myliftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        self.myliftButton.frame = CGRectMake(0, 0, 80, 30);
+        return nil;
+
+    }else {
+        if (section == 1) {
+            self.myView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 200)];
+            self.myView.backgroundColor = COLOR(253, 246, 240, 1);
+            
+            self.myliftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myliftButton.frame = CGRectMake(0, 0, 100, 40);
+            
+            [self.myliftButton setBackgroundImage:[UIImage imageNamed:@"产品详情未选中@2x.png"] forState:(UIControlStateNormal)];
+            [self.myliftButton addTarget:self action:@selector(myliftButton:) forControlEvents:(UIControlEventTouchUpInside)];
+            
+            
+            
+            [self.myView addSubview:self.myliftButton];
+            
+            self.myRignth = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myRignth.frame = CGRectMake(100, 0, 100, 40);
+            
+            [self.myRignth setBackgroundImage:[UIImage imageNamed:@"参与评论@2x(1).png"] forState:(UIControlStateNormal)];
+            [self.myView addSubview:self.myRignth];
+            
+            
+            
+            
+            UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(15, 45, kMainWidth - 30, 15)];
+            lable.text = @"小提示:积极参与用户活动与反馈用户使用报告,及可提高免费试用的成功率!";
+            
+            lable.textColor = [UIColor redColor];
+            lable.font = [UIFont systemFontOfSize:8];
+            [self.myView addSubview:lable];
+            
+            
+            
+            self.myTextView = [[ZWTextView alloc]initWithFrame:CGRectMake(10, 60, kMainWidth - 80, 50)];
+            
+            
+            [self.myView addSubview:self.myTextView];
+            self.myTextView.backgroundColor = COLOR(233, 233, 233, 1);
+            self.myTextView.placeholder = @"请在这里输入您想说的话...";
+            
+            
+            self.myspeckButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            self.myspeckButton.frame = CGRectMake(kMainWidth - 60, 60, 50, 50);
+            [self.myspeckButton setBackgroundImage:[UIImage imageNamed:@"发表@2x.png"] forState:(UIControlStateNormal)];
+            [self.myspeckButton addTarget:self action:@selector(myspeckButton:) forControlEvents:(UIControlEventTouchUpInside)];
+            
+            
+            [self.myView addSubview:self.myspeckButton];
+            
+            
+            return self.myView;
+            
+            
+        }
         
-        [self.myliftButton setBackgroundImage:[UIImage imageNamed:@"产品详情未选中@2x.png"] forState:(UIControlStateNormal)];
-        [self.myliftButton addTarget:self action:@selector(myliftButton:) forControlEvents:(UIControlEventTouchUpInside)];
-        
-        
-        
-        [self.myView addSubview:self.myliftButton];
-        
-        self.myRignth = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        self.myRignth.frame = CGRectMake(80, 0, 80, 30);
-        
-        [self.myRignth setBackgroundImage:[UIImage imageNamed:@"参与评论@2x(1).png"] forState:(UIControlStateNormal)];
-        [self.myView addSubview:self.myRignth];
-        
-        
-        
-        
-        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(15, 35, kMainWidth - 30, 15)];
-        lable.text = @"小提示:积极参与用户活动与反馈用户使用报告,及可提高免费试用的成功率!";
-        
-        lable.textColor = [UIColor redColor];
-        lable.font = [UIFont systemFontOfSize:8];
-        [self.myView addSubview:lable];
-        
-        
-        
-        self.myTextView = [[ZWTextView alloc]initWithFrame:CGRectMake(10, 50, kMainWidth - 80, 50)];
-        
-        
-        [self.myView addSubview:self.myTextView];
-        self.myTextView.backgroundColor = COLOR(233, 233, 233, 1);
-        self.myTextView.placeholder = @"请在这里输入您想说的话...";
-        
-        
-        self.myspeckButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        self.myspeckButton.frame = CGRectMake(kMainWidth - 60, 50, 50, 50);
-        [self.myspeckButton setBackgroundImage:[UIImage imageNamed:@"发表@2x.png"] forState:(UIControlStateNormal)];
-        [self.myspeckButton addTarget:self action:@selector(myspeckButton:) forControlEvents:(UIControlEventTouchUpInside)];
-        
-        
-        [self.myView addSubview:self.myspeckButton];
-        
-        
-        return self.myView;
-        
-        
+        return nil;
+
     }
-    
-    return nil;
     
 }
 

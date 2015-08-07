@@ -13,4 +13,14 @@
 {
     
 }
+-(void)setValue:(id)value forKey:(NSString *)key
+{
+    [super setValue:value forKey:key];
+    
+    if ([key isEqual:@"id"]) {
+        self.myid = value;
+        
+    }
+    
+}
 @end

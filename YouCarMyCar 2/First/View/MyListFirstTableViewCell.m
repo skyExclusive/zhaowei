@@ -111,7 +111,7 @@
         [self addSubview:self.myGoodImageVeiw];
         
         //描述的lable
-        self.mydescritionLable = [[UILabel alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44, self.cellheight / 3, self.cellweight - (10+(self.cellheight - 12 )/51 *44) - 6 , self.cellheight / 3)];
+        self.mydescritionLable = [[UILabel alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 3, self.cellweight - (10+(self.cellheight - 12 )/51 *44) - 6 , self.cellheight / 3)];
         self.mydescritionLable.text = @"这是描述商品的";
         self.mydescritionLable.numberOfLines = 0;
         self.mydescritionLable.font = [UIFont fontWithName:@"DBLCDTempBlack" size:self.cellheight / 3 / 3 - 3];
@@ -195,7 +195,7 @@
         [self addSubview:self.myGoodImageVeiw];
         
         //描述的lable
-        self.mydescritionLable = [[UILabel alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44, self.cellheight / 3, self.cellweight - (10+(self.cellheight - 12 )/51 *44) - 6 , self.cellheight / 3)];
+        self.mydescritionLable = [[UILabel alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 3, self.cellweight - (10+(self.cellheight - 12 )/51 *44) - 6 , self.cellheight / 3)];
         self.mydescritionLable.text = @"这是描述商品的";
         self.mydescritionLable.numberOfLines = 0;
         self.mydescritionLable.font = [UIFont fontWithName:@"DBLCDTempBlack" size:self.cellheight / 3 / 3 - 3];

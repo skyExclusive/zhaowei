@@ -39,7 +39,7 @@
 //    image2.image = [UIImage imageNamed:@"白背景.png"];
 //    [self addSubview:image2];
     
-    self.myImageView = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, self.cellWeight - 10 ,self.cellHeight - 10 )];
+    self.myImageView = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, self.cellWeight - 10 ,(self.cellHeight - 10 )* kMainWidth / 320)];
     [self addSubview:self.myImageView];
     
     

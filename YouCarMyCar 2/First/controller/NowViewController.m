@@ -10,6 +10,10 @@
 #import "PrefixHeader.pch"
 #import "MyListFirstTableViewCell.h"
 #import "NowTextDetalViewController.h"
+#import "NowViewModel.h"
+
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
 
 @interface NowViewController ()<UITableViewDataSource,UITableViewDelegate,MylistFirstbleDelegate>
 @property (nonatomic,strong)UITableView *mytable;
@@ -20,13 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
-    self.miao = [dat timeIntervalSince1970];
-    NSLog(@"%f",self.miao);
+
     
-    
-//    NSString *timeString = [NSString stringWithFormat:@"%f", a];//转为字符型
-    
+    [self cuostom];//获取数据
 
     
     // Do any additional setup after loading the view.
@@ -38,7 +38,6 @@
     self.mytable.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     
-    [self cuostom];//获取数据
     
     
 
@@ -46,6 +45,42 @@
 -(void)cuostom
 {
     
+    self.myArray = [[NSMutableArray alloc]init];
+    
+    
+    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=list&type=1&eachNum=5&curpage=1",httpGet];
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+    
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+        self.miao = [dat timeIntervalSince1970];
+         
+
+        
+        NSMutableArray *array = [responseObject valueForKey:@"list"];
+        for (NSDictionary *dic in array) {
+            NowViewModel *model = [[NowViewModel alloc]init];
+            [model setValuesForKeysWithDictionary:dic];
+            [self.myArray addObject:model];
+            
+            
+        }
+        
+        
+        
+        [self.mytable reloadData];//刷新;
+        
+
+        
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"%@",error);
+        
+        
+    }];
+
     
     
     
@@ -56,7 +91,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     
-    return 15;
+    return self.myArray.count;
 
     
 }
@@ -86,19 +121,22 @@
     
     
     mycell.mybutton.tag = 100 + indexPath.row;
-    
     mycell.delegagate = self;
-    
-    
     NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
     NSTimeInterval a = [dat timeIntervalSince1970];
-    
-    NSLog(@"%f", a - self.miao);
-    
     mycell.mytimeInteger = 1000 - (a - self.miao) ;
     
-    NSLog(@"我擦");
-
+    
+    NowViewModel *model = self.myArray[indexPath.row];
+    
+    
+    mycell.mydescritionLable.text = model.small_info;
+    mycell.myallGoodsCount.text = model.number;
+    mycell.mynowPerson.text = model.try_people;
+    mycell.myGoodName.text = model.title;
+    [mycell.myGoodImageVeiw sd_setImageWithURL:[NSURL URLWithString:model.img]];
+    
+    NSLog(@"--------------%@",model.img);
 
     
     return mycell;

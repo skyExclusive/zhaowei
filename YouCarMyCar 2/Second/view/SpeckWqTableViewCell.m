@@ -39,15 +39,15 @@
     [self addSubview:self.myToImageView];
     
     
-    UIImageView *image1 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 40, 25, 20 )];
-    UIImageView *image2 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 65, 25, 20 )];
-    self.myAspectLableW = [[UILabel alloc]initWithFrame:CGRectMake(45, 65,kMainWidth - 80, 20)];
-    UIImageView *image3 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 90, 25, 20 )];
-    self.myWeithtLableZ = [[UILabel alloc]initWithFrame:CGRectMake(45, 90,kMainWidth - 80, 20)];
-    UIImageView *image4 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 115, 25, 20 )];
-    self.myPriceLableJ = [[UILabel alloc]initWithFrame:CGRectMake(45, 115,kMainWidth - 80, 20)];
-
-
+    UIImageView *image1 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 40, 35, 20 )];
+    UIImageView *image2 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 65, 35, 20 )];
+    self.myAspectLableW = [[UILabel alloc]initWithFrame:CGRectMake(55, 65,kMainWidth - 80, 20)];
+    UIImageView *image3 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 90, 35, 20 )];
+    self.myWeithtLableZ = [[UILabel alloc]initWithFrame:CGRectMake(55, 90,kMainWidth - 80, 20)];
+    UIImageView *image4 = [[UIImageView alloc]initWithFrame:CGRectMake(15, 115, 35, 20 )];
+    self.myPriceLableJ = [[UILabel alloc]initWithFrame:CGRectMake(55, 115,kMainWidth - 80, 20)];
+    
+    
     
     image1.image = [UIImage imageNamed:@"综合@2x.png"];
     image2.image = [UIImage imageNamed:@"外观@2x.png"];
@@ -67,12 +67,12 @@
     
     //星星
     
-    self.my1ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(45, 40, 20, 20)];
+    self.my1ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(55, 40, 20, 20)];
     
-    self.my2ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(70, 40, 20, 20)];
-    self.my3IMageViw = [[UIImageView alloc]initWithFrame:CGRectMake(95, 40, 20, 20)];
-    self.my4ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(120, 40, 20, 20)];
-    self.my5imageView = [[UIImageView alloc]initWithFrame:CGRectMake(145, 40, 20, 20)];
+    self.my2ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(80, 40, 20, 20)];
+    self.my3IMageViw = [[UIImageView alloc]initWithFrame:CGRectMake(105, 40, 20, 20)];
+    self.my4ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(130, 40, 20, 20)];
+    self.my5imageView = [[UIImageView alloc]initWithFrame:CGRectMake(155, 40, 20, 20)];
     
     
     self.my1ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
@@ -88,11 +88,11 @@
     [self addSubview:self.my2ImageView];
     [self addSubview:self.my1ImageView];
     
-
     
     
     
-    self.myImageView = [[UIImageView alloc]initWithFrame:CGRectMake(kMainWidth / 2 - 25, 135, 50, 50)];
+    
+    self.myImageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 139, 50, 50)];
     
     [self addSubview:self.myImageView];
     
@@ -163,13 +163,13 @@
         
     }
     
-
+    
     
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

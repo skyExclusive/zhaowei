@@ -11,16 +11,45 @@
 @interface NowViewModel : NSObject
 
 /*
- "goods_id": "100722",
- "goods_image": "http://img.nichewoche.com/shop/store/goods/2/2_04714398542545832_240.jpg",
- "goods_name": "瑞驰通用雨刷 R-018  单只装雨刷 刮刮乐瑞驰 正品保障更静音 其它 26寸 通用",
- "goods_promotion_price": "25.00"
+
+ "": "1438741549",
+ "": "测试8-5",
+ "": "0",
+ "": "100",
+ "": "1"
+ "": -6,
+ "": "100",
+ ": "60",
+ ": "600.00",
+ "": "5",
+ "": -40,
+ ""
+ ": "04920856293597216.jpg",
+ "": -1,
+ "": -6,
+ "": "26",
+ "": "04920856234257237.jpg",
+ ""
+
  */
 
-@property (nonatomic ,strong)NSString *goods_id;
-@property (nonatomic ,strong)NSString  *goods_image;
-@property (nonatomic ,strong)NSString *goods_name;
-@property(nonatomic ,strong)NSString *goods_promotion_price;
+@property (nonatomic ,strong)NSString *start_time;
+@property (nonatomic ,strong)NSString *title;
+@property (nonatomic ,strong)NSString *try_limit_people;
+@property (nonatomic ,strong)NSString *try_people;
+@property (nonatomic ,strong)NSString *type;
+@property (nonatomic ,strong)NSString *minutes;
+@property (nonatomic ,strong)NSString *number;
+@property (nonatomic ,strong)NSString *period_no;
+@property (nonatomic ,strong)NSString *priceseconds;
+@property (nonatomic ,strong)NSString *score;
+@property (nonatomic ,strong)NSString *small_info;
+@property (nonatomic ,strong)NSString *big_img;
+@property (nonatomic ,strong)NSString *date;
+@property (nonatomic ,strong)NSString *hours;
+@property (nonatomic ,strong)NSString *myid;
+@property (nonatomic ,strong)NSString *img;
+@property (nonatomic ,strong)NSString *info;
 
 
 @end
