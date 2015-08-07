@@ -12,7 +12,6 @@
 #import "addressTableViewCell.h"
 #import "ZWTextView.h"
 #import "ActivityTableViewCell.h"
-#import "DiJiQiTableViewCell.h"
 #import "SureViewController.h"
 @interface ClickViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
@@ -30,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = COLOR(251, 246, 240, 1);
+    self.view.backgroundColor = MainBackGround;
     // Do any additional setup after loading the view.
     
     
@@ -117,16 +116,15 @@
     [self.view addSubview:self.tableView];
     
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.backgroundColor = MainBackGround;
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];;
+    [self.tableView setBackgroundColor:MainBackGround];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
 
     self.choiceImage = [[UIImageView alloc]
                         initWithFrame:CGRectMake(kMainWidth - 40, 25, 20, 20)];
-    self.choiceImage.image = [UIImage imageNamed:@"性别选择.png"];
-    
+    [self.choiceImage setImage:[UIImage imageNamed:@"性别选择.png"]];
     [self.tableView addSubview:self.choiceImage];
     
 }
@@ -155,31 +153,23 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.i == 11) {
+        
         return 150;
+        
     }else if (self.i == 13) {
+
         if (indexPath.row == 0) {
             return 10;
         }else{
         return 50;
-            
         }
+        
     }else{
-        if (indexPath.row == 0) {
-            return 35;
-        }else{
         return 100;
-        }
+        
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (self.i == 0) {
-        return 7;
-    }else {
-        return 0;
-    }
-}
 
 //cell 的点击事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -190,29 +180,24 @@
     }else if (self.i == 13){
         
         if (indexPath.row == 1) {
-            self.choiceImage.frame = CGRectMake(kMainWidth - 40, 25, 20, 20);
+            [self.choiceImage setFrame:CGRectMake(kMainWidth - 40, 25, 20, 20)];
             [self.tableView addSubview:self.choiceImage];
         }else if (indexPath.row == 2) {
-            self.choiceImage.frame = CGRectMake(kMainWidth - 40, 75, 20, 20);
+            [self.choiceImage setFrame:CGRectMake(kMainWidth - 40, 75, 20, 20)];
             [self.tableView addSubview:self.choiceImage];
-
         }else if (indexPath.row == 3) {
-            self.choiceImage.frame = CGRectMake(kMainWidth - 40, 125, 20, 20);
+            [self.choiceImage setFrame:CGRectMake(kMainWidth - 40, 125, 20, 20)];
             [self.tableView addSubview:self.choiceImage];
         }
-
-        
     }
-    
-    
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
     if (self.i == 11) {
-        
-        
+
         addressTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"addressCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.backgroundColor = MainBackGround;
@@ -225,7 +210,6 @@
         NSString *cellString  =arr[indexPath.row];
         UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:tag];
         
-
         if (cell==nil ) {
             cell=[[ UITableViewCell alloc]init];
             if (indexPath.row == 1 || indexPath.row == 2) {
@@ -243,32 +227,24 @@
         lable.textAlignment = NSTextAlignmentCenter;
         [cell addSubview:lable];
         cell.selectionStyle = UITableViewCellAccessoryNone;
-        
-        
-        
         return cell;
-    }else{
         
-        if (indexPath.row == 0) {
-            DiJiQiTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"dijiqiCell" forIndexPath:indexPath];
-            return cell;
-        }else{
+    }else{
         
         ActivityTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"huodongCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            [cell.baoGao setImage:[UIImage imageNamed:@"审核中.png"] forState:(UIControlStateNormal)];
-            [cell.baoGao addTarget:self action:@selector(baogao:) forControlEvents:(UIControlEventTouchUpInside)];
-            cell.baoGao.tag = 100  + indexPath.row ;
+        [cell.baoGao setImage:[UIImage imageNamed:@"审核中.png"] forState:(UIControlStateNormal)];
+        [cell.baoGao addTarget:self action:@selector(baogao:) forControlEvents:(UIControlEventTouchUpInside)];
+        cell.baoGao.tag = 100  + indexPath.row ;
         cell.thingImage.image = [UIImage imageNamed:@"2.png"];
         cell.selectionStyle = UITableViewCellAccessoryNone;
             NSLog(@"%ld",(long)indexPath);
-        
         cell.superview.superview.backgroundColor = COLOR(251, 246, 240, 1);
 
         return cell;
        }
     }
-}
+
 
 
 -(void)baogao:(UIButton *)sender
@@ -290,8 +266,7 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"addressTableViewCell" bundle:nil] forCellReuseIdentifier:@"addressCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    self.tableView.backgroundColor = MainBackGround;
+    [self.tableView setBackgroundColor:MainBackGround];;
     
     //返回的箭头
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -318,45 +293,43 @@
     
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 80, kMainWidth - 20, 50)];
-    imageView.image = [UIImage imageNamed: @"+86框.png"];
-    imageView.userInteractionEnabled = YES;
+    [imageView setImage:[UIImage imageNamed: @"+86框.png"]];
+    [imageView setUserInteractionEnabled:YES];;
     [self.view addSubview:imageView];
     
     self.phoneField = [[UITextField alloc]initWithFrame:CGRectMake(imageView.frame.size.width/7 , 0, imageView.frame.size.width - imageView.frame.size.width/7 , 50)];
-    self.phoneField.attributedPlaceholder = KMainPlaceholder(@"请输入您的手机号");
-    self.phoneField.keyboardType = UIKeyboardTypeNumberPad;
-    self.phoneField.delegate = self;
+    [self.phoneField setAttributedPlaceholder:KMainPlaceholder(@"请输入您的手机号")];;
+    [self.phoneField setKeyboardType:UIKeyboardTypeNumberPad];;
+    [self.phoneField setDelegate:self];;
     [imageView addSubview:self.phoneField];
     
     
-    UIButton *verifyButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+     UIButton *verifyButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
     [verifyButton setTitle:@"获取验证码" forState:(UIControlStateNormal)];
-    verifyButton.titleLabel.font = [UIFont systemFontOfSize:13];
+    [verifyButton.titleLabel setFont:[UIFont systemFontOfSize:13]];;
     [verifyButton addTarget:self action:@selector(verify:) forControlEvents:(UIControlEventTouchUpInside)];
-    verifyButton.frame = CGRectMake(kMainWidth - 20 -90, 80, 90, 50);
+    [verifyButton setFrame:CGRectMake(kMainWidth - 20 -90, 80, 90, 50)];;
     [self.view addSubview:verifyButton];
     
     
-    UIImageView *codeimageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y +70, kMainWidth - 20, 50)];
-    codeimageView.image = [UIImage imageNamed: @"背景框.png"];
-    codeimageView.userInteractionEnabled = YES;
+     UIImageView *codeimageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, imageView.frame.origin.y +70, kMainWidth - 20, 50)];
+    [codeimageView setImage:[UIImage imageNamed: @"背景框.png"]];
+    [codeimageView setUserInteractionEnabled:YES];;
     [self.view addSubview:codeimageView];
     
-    self.codeField = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, kMainWidth - 40, 50)];
-    
-    self.codeField.attributedPlaceholder = KMainPlaceholder(@"请输入验证码");
-    self.codeField.delegate = self;
-    self.codeField.keyboardType = UIKeyboardTypeNumberPad;
+     self.codeField = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, kMainWidth - 40, 50)];
+    [self.codeField setAttributedPlaceholder:KMainPlaceholder(@"请输入验证码")];
+    [self.codeField setDelegate:self];;
+    [self.codeField setKeyboardType:UIKeyboardTypeNumberPad];
     [codeimageView addSubview:self.codeField];
     
-    self.nextButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+     self.nextButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
     [self.nextButton setTitle:@"确定" forState:(UIControlStateNormal)];
     [self.nextButton addTarget:self action:@selector(sure) forControlEvents:(UIControlEventTouchUpInside)];
-    self.nextButton.titleLabel.font = MyButtonFont;
-    self.nextButton.frame = CGRectMake(10, codeimageView.frame.origin.y + 100, kMainWidth - 20, 50);
-    self.nextButton.backgroundColor = COLOR(49, 219, 224, 1);
+    [self.nextButton.titleLabel setFont:MyButtonFont];
+    [self.nextButton setFrame:CGRectMake(10, codeimageView.frame.origin.y + 100, kMainWidth - 20, 50)];
+    [self.nextButton setBackgroundColor:COLOR(49, 219, 224, 1)];;
     [self.nextButton setTintColor:[UIColor whiteColor]];
-    
     [self.view addSubview:self.nextButton];
     
 
@@ -408,16 +381,17 @@
 -(void)layoutOurs
 {
     self.title = @"关于我们";
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     UIView *view = [[UIView alloc]initWithFrame:self.view.frame];
     [self.view addSubview:view];
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, kMainWidth, kMainHeight*2)];
     scrollView.backgroundColor = MainBackGround;
     
     scrollView.contentSize = CGSizeMake(0, kMainHeight*2);
-
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.pagingEnabled = YES;
+
     scrollView.delegate = self;
     
     [view addSubview:scrollView];
@@ -428,11 +402,15 @@
     lable.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:lable];
     
-   UITextView *textView = [[UITextView alloc]initWithFrame:CGRectMake(10, 30, kMainWidth-20, kMainHeight )];
-    textView.font = [UIFont systemFontOfSize:12];
-    textView.backgroundColor = MainBackGround;
-    textView.text = @"    北京你车我车电子商务股份有限公司所创建的你车我车是中国最大的汽车用品网购平台，也是中国最专业的汽车用品信息发布平台。这里汇聚了上千家世界一流的汽车用品厂商和5万余家汽车用品线下服务商，并通过便捷的平台操作使B2B、B2C、O2O等多种商业模式的融合成为可能。——你车我车顺势而生！数据显示：2013年，中国汽车保有量达到1.4亿量，由此产生的汽车用品消费高达5025亿人民币。专家预测，2015年中国的汽车用品带来的产值将达到6300亿。然而，这一庞大的数字的背后，却是中国汽车用品行业电商化发展的严重不足。其根本原因在于中国至今没有一家专业的汽车用品垂直电商平台。在社会消费品电商化的大趋势下,你车我车，专业车品领导者！                                       电子商务的迅猛发展为人们的生活带来了极大的便利，很多时候足不出户便可购遍全球。然而，任何事物都有两面，电商同样也是一把双刃剑：在便利、实惠的背后，是商品质量的不确定性。在非专业领域，如服饰、书籍等商品，由于假货并不影响其适用性，为了方便消费者大可以睁一只眼闭一只眼。然而，在汽车用品这种专业商品领域，消费者几乎对假货“零容忍”——无论多小的纰漏，都会对行车安全造成巨大威胁。汽车用品的专业性决定了其不能和一般社会消费品混为一谈，只能走垂直电商模式。而中国这么大的汽车用品市场，却没有诞生一家具有全国影响力的垂直电商。                                                                                                                     专业的车品，需要具有专业素质的电商平台来运作。你车我车来了！我们汇聚了1000多家世界一流的汽车用品厂商，同时建立了庞大的线下加盟服务体系，将中国汽车用品流通渠道彻底电商化升级，实现汽车用品销售、安装一体化。你车我车平台上所有汽车用品均来自厂家直销，在保障专业货源的同时，真正做到了正品低价。你车我车，专业车品领导者！你车我车，开启电商3.0时代！                                                                                                                              电商1.0时代，企业与企业之间通过B2B电商平台（如阿里巴巴）进行交易，开拓了中国的电商蓝海。电商2.0时代，消费者（C）作为独立的电商角色被加入进来，产生了B2C、C2C，甚至C2B的商业模式，让中国电商真正繁荣起来。而在你车我车，无论B2B、B2C，还是新兴的O2O，都只是商业模式的环节之一。你车我车，开启中国电商3.0时代。你车我车，将线下流通渠道彻底电商化升级，开启中国电商3.0时代！";
-    [scrollView addSubview:textView];
+    UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake(10, 30, kMainWidth-20, kMainHeight )];
+    label1.font = [UIFont systemFontOfSize:12];
+    label1.numberOfLines = 0;
+    label1.lineBreakMode = NSLineBreakByWordWrapping;
+    label1.backgroundColor = MainBackGround;
+    label1.text = @"    北京你车我车电子商务股份有限公司所创建的你车我车是中国最大的汽车用品网购平台，也是中国最专业的汽车用品信息发布平台。这里汇聚了上千家世界一流的汽车用品厂商和5万余家汽车用品线下服务商，并通过便捷的平台操作使B2B、B2C、O2O等多种商业模式的融合成为可能。——你车我车顺势而生！数据显示：2013年，中国汽车保有量达到1.4亿量，由此产生的汽车用品消费高达5025亿人民币。专家预测，2015年中国的汽车用品带来的产值将达到6300亿。然而，这一庞大的数字的背后，却是中国汽车用品行业电商化发展的严重不足。其根本原因在于中国至今没有一家专业的汽车用品垂直电商平台。在社会消费品电商化的大趋势下,你车我车，专业车品领导者！                                                                                        电子商务的迅猛发展为人们的生活带来了极大的便利，很多时候足不出户便可购遍全球。然而，任何事物都有两面，电商同样也是一把双刃剑：在便利、实惠的背后，是商品质量的不确定性。在非专业领域，如服饰、书籍等商品，由于假货并不影响其适用性，为了方便消费者大可以睁一只眼闭一只眼。然而，在汽车用品这种专业商品领域，消费者几乎对假货“零容忍”——无论多小的纰漏，都会对行车安全造成巨大威胁。汽车用品的专业性决定了其不能和一般社会消费品混     为一谈，只能走垂直电商模式。而中国这么大的汽车用品市场，却没有诞生一家具有全国影响力的垂直电商。                                                                                                                     专业的车品，需要具有专业素质的电商平台来运作。你车我车来了！我们汇聚了1000多家世界一流的汽车用品厂商，同时建立了庞大的线下加盟服务体系，将中国汽车用品流通渠道彻底电商化升级，实现汽车用品销售、安装一体化。你车我车平台上所有汽车用品均来自厂家直销，在保障专业货源的同时，真正做到了正品低价。你车我车，专业车品领导者！你车我车，开启电商3.0时代！                                                                                                                              电商1.0时代，企业与企业之间通过B2B电商平台（如阿里巴巴）进行交易，开拓了中国的电商蓝海。电商2.0时代，消费者（C）作为独立的电商角色被加入进来，产生了B2C、C2C，甚至C2B的商业模式，让中国电商真正繁荣起来。而在你车我车，无论B2B、B2C，还是新兴的O2O，都只是商业模式的环节之一。你车我车，开启中国电商3.0时代。你车我车，将线下流通渠道彻底电商化升级，开启中国电商3.0时代！";
+    CGSize size = [label1 sizeThatFits:CGSizeMake(label1.frame.size.width, MAXFLOAT)];
+    label1.frame =CGRectMake(10, 30, kMainWidth-20, size.height);
+       [scrollView addSubview:label1];
     
     
     

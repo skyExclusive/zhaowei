@@ -199,16 +199,14 @@
         
         
         [cell.xiaoImage removeFromSuperview];
-        [cell.rankLable removeFromSuperview];
-        [cell.integralLable removeFromSuperview];
-        [cell.dengLable removeFromSuperview];
-        [cell.jiLable removeFromSuperview];
+        [cell.nameLable removeFromSuperview];
+        
         
         
         
         UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:
                                             [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-       visualEfView.frame = cell.frame;
+           visualEfView.frame = cell.frame;
         visualEfView.alpha = 1.0;
         [cell.backimage setFrame:cell.frame];
         [cell.backimage addSubview:visualEfView];

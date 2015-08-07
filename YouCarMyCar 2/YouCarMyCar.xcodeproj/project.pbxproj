@@ -226,9 +226,8 @@
 		95C7BA921B5E4771009604D7 /* 恭喜中奖@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA8F1B5E4771009604D7 /* 恭喜中奖@2x.png */; };
 		95C7BA941B5E4771009604D7 /* 再接再厉@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C7BA911B5E4771009604D7 /* 再接再厉@2x.png */; };
 		95CB4C8D1B60C6E2002090B9 /* 性别选择@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95CB4C8C1B60C6E2002090B9 /* 性别选择@2x.png */; };
+		95CFF3921B744E02006115B0 /* 徽标@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95CFF3911B744E02006115B0 /* 徽标@2x.png */; };
 		95D08E181B5F7D7A00A2CA2F /* 第几几期@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D08E171B5F7D7A00A2CA2F /* 第几几期@2x.png */; };
-		95D08E1C1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D08E1A1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m */; };
-		95D08E1D1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D08E1B1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib */; };
 		95D08E1F1B5F97FB00A2CA2F /* 密码设置成功@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D08E1E1B5F97FB00A2CA2F /* 密码设置成功@2x.png */; };
 		95D203501B57448500BCD63F /* ClickTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D2034F1B57448500BCD63F /* ClickTViewController.m */; };
 		95D203521B5789CB00BCD63F /* 白色背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 95D203511B5789CB00BCD63F /* 白色背景.png */; };
@@ -601,10 +600,8 @@
 		95C7BA911B5E4771009604D7 /* 再接再厉@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "再接再厉@2x.png"; path = "../Three/view/再接再厉@2x.png"; sourceTree = "<group>"; };
 		95C8DED31B42413200FA1FDD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		95CB4C8C1B60C6E2002090B9 /* 性别选择@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "性别选择@2x.png"; path = "../Three/view/性别选择@2x.png"; sourceTree = "<group>"; };
+		95CFF3911B744E02006115B0 /* 徽标@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "徽标@2x.png"; sourceTree = "<group>"; };
 		95D08E171B5F7D7A00A2CA2F /* 第几几期@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "第几几期@2x.png"; path = "../Three/view/第几几期@2x.png"; sourceTree = "<group>"; };
-		95D08E191B5F7EF700A2CA2F /* DiJiQiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiJiQiTableViewCell.h; sourceTree = "<group>"; };
-		95D08E1A1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiJiQiTableViewCell.m; sourceTree = "<group>"; };
-		95D08E1B1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiJiQiTableViewCell.xib; sourceTree = "<group>"; };
 		95D08E1E1B5F97FB00A2CA2F /* 密码设置成功@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "密码设置成功@2x.png"; sourceTree = "<group>"; };
 		95D2034E1B57448500BCD63F /* ClickTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickTViewController.h; sourceTree = "<group>"; };
 		95D2034F1B57448500BCD63F /* ClickTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickTViewController.m; sourceTree = "<group>"; };
@@ -725,6 +722,7 @@
 			isa = PBXGroup;
 			children = (
 				0A9CF5871B747E2500B9C7D2 /* 图层-1@2x.png */,
+				95CFF3911B744E02006115B0 /* 徽标@2x.png */,
 				0ADC039A1B73316800E72F51 /* 741027_1272707694.jpg */,
 				0AE25F4F1B7459C3001C2FB9 /* 启动背景.png */,
 				95BF4B0F1B6F12CE00F1CACF /* 谢谢@2x.png */,
@@ -1416,9 +1414,6 @@
 				95C7BA8A1B5E4116009604D7 /* ActivityTableViewCell.h */,
 				95C7BA8B1B5E4116009604D7 /* ActivityTableViewCell.m */,
 				95C7BA8C1B5E4116009604D7 /* ActivityTableViewCell.xib */,
-				95D08E191B5F7EF700A2CA2F /* DiJiQiTableViewCell.h */,
-				95D08E1A1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m */,
-				95D08E1B1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1524,9 +1519,9 @@
 				0ADD0FC91B6B502600A2D95E /* 质量@2x.png in Resources */,
 				95D203521B5789CB00BCD63F /* 白色背景.png in Resources */,
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
-				95D08E1D1B5F7EF700A2CA2F /* DiJiQiTableViewCell.xib in Resources */,
 				0ADD51C51B47810800FADACD /* 向左白色箭头.png in Resources */,
 				0AE40E9F1B5E218B00676E49 /* 已选择@2x.png in Resources */,
+				95CFF3921B744E02006115B0 /* 徽标@2x.png in Resources */,
 				95D203541B57931700BCD63F /* 确定按钮.png in Resources */,
 				0A4A04301B5F6F35005C0E3B /* 获取验证码@2x.png in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
@@ -1738,7 +1733,6 @@
 				95D4A4491B44DDAB005F5ABF /* SecondViewController.m in Sources */,
 				0ADC1A7F1B72090A00368248 /* AFURLRequestSerialization.m in Sources */,
 				0ACAF2601B411E830029ACC9 /* UIButton+WebCache.m in Sources */,
-				95D08E1C1B5F7EF700A2CA2F /* DiJiQiTableViewCell.m in Sources */,
 				0ACAF1B41B411E300029ACC9 /* AppDelegate.m in Sources */,
 				0ADC1A961B72091900368248 /* UIAlertView+AFNetworking.m in Sources */,
 				0AE3F2601B578F6F00ECA9BC /* ForgetViewController.m in Sources */,

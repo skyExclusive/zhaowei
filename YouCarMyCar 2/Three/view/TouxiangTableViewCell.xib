@@ -27,30 +27,6 @@
                             <constraint firstAttribute="width" constant="272" id="xxy-6W-cTd"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等级:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZ0-1C-TOm">
-                        <rect key="frame" x="84" y="114" width="39" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10级" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-7P-VHb">
-                        <rect key="frame" x="131" y="115" width="37" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="积分:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7W-Kb-2DF">
-                        <rect key="frame" x="201" y="115" width="39" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="15分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOg-Nk-k2q">
-                        <rect key="frame" x="266" y="121" width="52" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fEj-A9-p8R">
                         <rect key="frame" x="147" y="15" width="80" height="80"/>
                         <constraints>
@@ -58,29 +34,30 @@
                             <constraint firstAttribute="height" constant="80" id="sle-lZ-LP5"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你车我车" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IF-nm-5Zx">
+                        <rect key="frame" x="133" y="113" width="109" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="GFy-96-rM9"/>
+                            <constraint firstAttribute="width" constant="109" id="uXV-nO-0FN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="fEj-A9-p8R" secondAttribute="centerY" constant="22" id="9ho-CA-dGx"/>
-                    <constraint firstAttribute="centerX" secondItem="T7W-Kb-2DF" secondAttribute="centerX" constant="-33" id="DTJ-2k-nwR"/>
-                    <constraint firstAttribute="centerX" secondItem="5NE-7P-VHb" secondAttribute="centerX" constant="38" id="KSO-vI-uQl"/>
                     <constraint firstAttribute="centerX" secondItem="daZ-Id-IGx" secondAttribute="centerX" id="MIK-Jd-czS"/>
+                    <constraint firstAttribute="centerX" secondItem="1IF-nm-5Zx" secondAttribute="centerX" id="N2k-5e-XDF"/>
                     <constraint firstAttribute="centerX" secondItem="fEj-A9-p8R" secondAttribute="centerX" id="PcU-I5-F9B"/>
-                    <constraint firstAttribute="centerY" secondItem="KZ0-1C-TOm" secondAttribute="centerY" constant="-48" id="ToZ-7I-tRf"/>
-                    <constraint firstAttribute="centerX" secondItem="KZ0-1C-TOm" secondAttribute="centerX" constant="84" id="cOt-CH-4M4"/>
                     <constraint firstItem="daZ-Id-IGx" firstAttribute="top" secondItem="fEj-A9-p8R" secondAttribute="bottom" constant="4" id="cRb-nA-lqF"/>
-                    <constraint firstAttribute="centerX" secondItem="AOg-Nk-k2q" secondAttribute="centerX" constant="-90" id="gHM-8r-lx5"/>
-                    <constraint firstAttribute="centerY" secondItem="5NE-7P-VHb" secondAttribute="centerY" constant="-48" id="tUB-Ip-RRf"/>
-                    <constraint firstAttribute="centerY" secondItem="T7W-Kb-2DF" secondAttribute="centerY" constant="-48" id="u0d-Hn-ytX"/>
-                    <constraint firstAttribute="centerY" secondItem="AOg-Nk-k2q" secondAttribute="centerY" constant="-48" id="ztY-B9-33y"/>
+                    <constraint firstItem="daZ-Id-IGx" firstAttribute="top" secondItem="1IF-nm-5Zx" secondAttribute="bottom" constant="-35" id="dgs-Vl-xpp"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="backimage" destination="cMi-5R-t5i" id="Y7B-qA-TJj"/>
-                <outlet property="dengLable" destination="KZ0-1C-TOm" id="lCq-52-VIg"/>
-                <outlet property="integralLable" destination="AOg-Nk-k2q" id="uQ7-YL-37i"/>
-                <outlet property="jiLable" destination="T7W-Kb-2DF" id="6dq-VA-dXg"/>
+                <outlet property="nameLable" destination="1IF-nm-5Zx" id="3bw-g5-R9G"/>
                 <outlet property="photoImage" destination="fEj-A9-p8R" id="yxC-bk-QST"/>
-                <outlet property="rankLable" destination="5NE-7P-VHb" id="O4N-3a-TAT"/>
                 <outlet property="xiaoImage" destination="daZ-Id-IGx" id="TyP-Ew-lev"/>
             </connections>
             <point key="canvasLocation" x="16.5" y="-31.5"/>
