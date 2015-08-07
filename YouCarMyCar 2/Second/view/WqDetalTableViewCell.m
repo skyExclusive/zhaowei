@@ -38,47 +38,48 @@
     [infiniteScrollView setContentObjs:images Placeholder:nil];
     infiniteScrollView.pageControlContentMode = kHEPageControlContentModeBottomCenter;
     infiniteScrollView.switchType = kHESwitchTypeFadeOut;
-
+    
     self.myGoodsNameLable = [[UILabel alloc]initWithFrame:CGRectMake(10, 150 * kMainWidth / 320, kMainWidth, 20)];
     [self addSubview:self.myGoodsNameLable];
     
-    UILabel *pingji = [[UILabel alloc]initWithFrame:CGRectMake(10, 180 * kMainWidth / 320, 60, 20)];
-    pingji.text = @"商品评分";
-    pingji.font = [UIFont systemFontOfSize:12];
-    [self addSubview:pingji];
+    self.myGoodDescritionLable= [[UILabel alloc]initWithFrame:CGRectMake(10, 165 * kMainWidth / 320, 190, 50)];
+    self.myGoodDescritionLable.font = [UIFont systemFontOfSize:12];
+    self.myGoodDescritionLable.textColor = [UIColor grayColor];
+    self.myGoodDescritionLable.numberOfLines = 0;
+    [self addSubview:self.myGoodDescritionLable];
     
-   //星星
-    
-    self.my1ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(70, 180 * kMainWidth / 320, 20, 20)];
-    
-    self.my2ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(95, 180 * kMainWidth / 320, 20, 20)];
-    self.my3IMageViw = [[UIImageView alloc]initWithFrame:CGRectMake(120, 180 * kMainWidth / 320, 20, 20)];
-    self.my4ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(145, 180 * kMainWidth / 320, 20, 20)];
-    self.my5imageView = [[UIImageView alloc]initWithFrame:CGRectMake(170, 180 * kMainWidth / 320, 20, 20)];
-
-    
-    self.my1ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-    self.my2ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-    self.my3IMageViw.image = [UIImage imageNamed:@"未选评分@2x.png"];
-    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-    
-    
-    [self addSubview:self.my5imageView];
-    [self addSubview:self.my4ImageView];
-    [self addSubview:self.my3IMageViw];
-    [self addSubview:self.my2ImageView];
-    [self addSubview:self.my1ImageView];
     
     //==================
-    UILabel *old = [[UILabel alloc]initWithFrame:CGRectMake(10, 210 * kMainWidth / 320, 70, 20)];
-    old.text = @"适用年龄:";
-    old.font = [UIFont systemFontOfSize:15];
-    [self addSubview:old];
+    UILabel *mian = [[UILabel alloc]initWithFrame:CGRectMake(10, 210 * kMainWidth / 320, 55, 20)];
+    mian.text = @"免费提供:";
+    mian.font = [UIFont systemFontOfSize:12];
+    [self addSubview:mian];
     
-    self.mypeoOldLable = [[UILabel alloc]initWithFrame:CGRectMake(73 , 210 * kMainWidth / 320, 118, 20)];
-    self.mypeoOldLable.textColor = [UIColor redColor];
-    [self addSubview:self.mypeoOldLable];
+    
+    self.myGoodNumberLable = [[UILabel alloc]initWithFrame:CGRectMake(65, 210 * kMainWidth / 320, 38, 20)];
+    self.myGoodNumberLable.text = @"2000";
+    self.myGoodNumberLable.textColor = [UIColor redColor];
+    self.myGoodNumberLable.font = [UIFont systemFontOfSize:15];
+    [self addSubview:self.myGoodNumberLable];
+    
+    
+    UILabel *fen = [[UILabel alloc]initWithFrame:CGRectMake(102, 210 * kMainWidth / 320, 55, 20)];
+    fen.text = @"份";
+    fen.font = [UIFont systemFontOfSize:12];
+    [self addSubview:fen];
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     self.mySureAddressButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -88,7 +89,7 @@
     [self.mySureAddressButton addTarget:self action:@selector(mySureAddressButton:) forControlEvents:(UIControlEventTouchUpInside)];
     
     [self addSubview:self.mySureAddressButton];
-
+    
     
     
     //===========可以不管 /// 是画的线
@@ -105,7 +106,7 @@
     xian3.backgroundColor = [UIColor grayColor];
     xian3.alpha = 0.3;
     //=========
-
+    
     self.myreportNumberLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 275 * kMainWidth / 320, kMainWidth, 40 * kMainWidth / 320)];
     [self addSubview:self.myreportNumberLable];
     self.myreportNumberLable.textColor = [UIColor redColor];
@@ -130,66 +131,6 @@
     
 }
 //mygoodEvalutinteger的set方法 给星星换image
--(void)setMyGoodsEvaluteIngeger:(NSInteger)myGoodsEvaluteIngeger
-{
-    if (myGoodsEvaluteIngeger >= 1 && myGoodsEvaluteIngeger <= 5) {
-        if (_myGoodsEvaluteIngeger != myGoodsEvaluteIngeger) {
-            _myGoodsEvaluteIngeger = myGoodsEvaluteIngeger;
-            
-            switch (myGoodsEvaluteIngeger) {
-                    case 1:
-                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my2ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    self.my3IMageViw.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    
-                    break;
-                    case 2:
-                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my3IMageViw.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    
-                    break;
-                    case 3:
-                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my3IMageViw.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my4ImageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    
-                    break;
-                    case 4:
-                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my3IMageViw.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my4ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my5imageView.image = [UIImage imageNamed:@"未选评分@2x.png"];
-                    
-                    break;
-                    case 5:
-                    self.my1ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my2ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my3IMageViw.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my4ImageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    self.my5imageView.image = [UIImage imageNamed:@"形状-3@2x.png"];
-                    
-                    break;
-                    
-                    
-                default:
-                    break;
-            }
-            
-            
-        }
-
-    }
-    
-    
-}
 -(void)mySureAddressButton:(UIButton *)button
 {
     if ([self.delegate respondsToSelector:@selector(sureAddress:)]) {
@@ -213,7 +154,7 @@
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

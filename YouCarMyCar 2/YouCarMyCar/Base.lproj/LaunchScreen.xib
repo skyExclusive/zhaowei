@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -11,20 +12,20 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="741027_1272707694.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eze-rk-shw">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="741027_1272707694.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="q4F-oC-83x">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottomMargin" secondItem="eze-rk-shw" secondAttribute="bottom" constant="-8" id="PMF-YZ-uWM"/>
-                <constraint firstItem="eze-rk-shw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="-8" id="YcT-IF-NHA"/>
-                <constraint firstAttribute="trailingMargin" secondItem="eze-rk-shw" secondAttribute="trailing" constant="-8" id="vOc-6i-shk"/>
-                <constraint firstItem="eze-rk-shw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="-8" id="yJM-Vg-hRN"/>
+                <constraint firstItem="q4F-oC-83x" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="-8" id="DEO-rZ-M7b"/>
+                <constraint firstAttribute="trailingMargin" secondItem="q4F-oC-83x" secondAttribute="trailing" constant="-8" id="E4t-cC-ark"/>
+                <constraint firstItem="q4F-oC-83x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="-8" id="Vrx-ZQ-TEU"/>
+                <constraint firstAttribute="bottomMargin" secondItem="q4F-oC-83x" secondAttribute="bottom" constant="-8" id="lVC-jK-qrg"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-78" y="30"/>
+            <point key="canvasLocation" x="99" y="62"/>
         </view>
     </objects>
     <resources>

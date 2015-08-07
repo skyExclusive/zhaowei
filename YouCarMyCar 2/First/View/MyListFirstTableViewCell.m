@@ -114,7 +114,9 @@
         self.mydescritionLable = [[UILabel alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 3, self.cellweight - (10+(self.cellheight - 12 )/51 *44) - 6 , self.cellheight / 3)];
         self.mydescritionLable.text = @"这是描述商品的";
         self.mydescritionLable.numberOfLines = 0;
-        self.mydescritionLable.font = [UIFont fontWithName:@"DBLCDTempBlack" size:self.cellheight / 3 / 3 - 3];
+        self.mydescritionLable.font = [UIFont fontWithName:@"DBLCDTempBlack" size:12];
+        self.mydescritionLable.textColor = [UIColor grayColor];
+        
         [self addSubview:self.mydescritionLable];
         
         self.mybutton = [[UIButton alloc]initWithFrame:CGRectMake(10+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 3 + 10, self.cellweight - (self.cellweight / 2 - 20) - 20 , self.cellheight / 4 - 10)];
@@ -199,6 +201,8 @@
         self.mydescritionLable.text = @"这是描述商品的";
         self.mydescritionLable.numberOfLines = 0;
         self.mydescritionLable.font = [UIFont fontWithName:@"DBLCDTempBlack" size:self.cellheight / 3 / 3 - 3];
+        self.mydescritionLable.textColor = [UIColor grayColor];
+        
         [self addSubview:self.mydescritionLable];
         
         self.mybutton = [[UIButton alloc]initWithFrame:CGRectMake(15+(self.cellheight - 12 )/51 *44 + 5, self.cellheight / 4 * 3 + 10, self.cellweight - (self.cellweight / 2 - 20) - 20 , self.cellheight / 4 - 10)];
@@ -226,7 +230,7 @@
         goodnumber.font = [UIFont systemFontOfSize:10];
         [self addSubview:goodnumber];
         
-        UILabel *person = [[UILabel alloc]initWithFrame:CGRectMake(self.cellweight - 120, 6, 60, 12)];
+        UILabel *person = [[UILabel alloc]initWithFrame:CGRectMake(self.cellweight - 125, 6, 60, 12)];
         person.text = @"申请人数:";
         person.font = [UIFont systemFontOfSize:12];
         [self addSubview:person];

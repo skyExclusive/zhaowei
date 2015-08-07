@@ -84,9 +84,7 @@
         wqCell.selectionStyle = UITableViewCellSelectionStyleNone;
         wqCell.myGoodsNameLable.text = @"商品的名字 座椅";
         wqCell.myreportNumberLable .text = @"一共是100万份";
-        wqCell.mypeoOldLable.text = @"100到1000岁";
         wqCell.delegate = self;
-        wqCell.myGoodsEvaluteIngeger = 3;
         
         return wqCell;
         
