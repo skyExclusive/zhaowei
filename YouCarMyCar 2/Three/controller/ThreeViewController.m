@@ -20,6 +20,7 @@
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableDictionary *dic;
 @property (nonatomic,strong)NSMutableDictionary *imagedic;
+@property (nonatomic,strong)UILabel *versionbLabel;
 @end
 
 @implementation ThreeViewController
@@ -179,7 +180,7 @@
         
         //毛玻璃效果
         UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-        visualEfView.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y-2, cell.frame.size.width, cell.frame.size.height+2);
+        visualEfView.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height);
         [cell.backimage setFrame:cell.frame];
         visualEfView.alpha = 1.0;
         [cell.backimage addSubview:visualEfView];
@@ -208,7 +209,16 @@
             cell.myView.alpha = 1;
         }
         
-        
+        if (indexPath.section == 2  && indexPath.row == 2) {
+            
+            self.versionbLabel = [[UILabel alloc]initWithFrame:CGRectMake(kMainWidth - 150, 0, 120, 50)];
+            self.versionbLabel.text = @"已是最新版本";
+            self.versionbLabel.textColor = [UIColor grayColor];
+            self.versionbLabel.font = [UIFont systemFontOfSize:14];
+            self.versionbLabel.textAlignment = NSTextAlignmentRight;
+            [cell addSubview: self.versionbLabel];
+            
+        }
         return cell;
     }
 }

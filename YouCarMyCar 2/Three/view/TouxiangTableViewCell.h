@@ -12,9 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImage;
 @property (weak, nonatomic) IBOutlet UIImageView *backimage;
 @property (weak, nonatomic) IBOutlet UIImageView *xiaoImage;
-@property (weak, nonatomic) IBOutlet UILabel *rankLable;
-@property (weak, nonatomic) IBOutlet UILabel *integralLable;
-@property (weak, nonatomic) IBOutlet UILabel *dengLable;
-@property (weak, nonatomic) IBOutlet UILabel *jiLable;
+@property (weak, nonatomic) IBOutlet UILabel *nameLable;
 
 @end

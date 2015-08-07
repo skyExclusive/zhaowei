@@ -10,4 +10,5 @@
 
 @interface ClickViewController : UIViewController
 @property (nonatomic)int i;
+@property (nonatomic,copy)NSString *sexStr;
 @end
