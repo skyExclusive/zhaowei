@@ -89,17 +89,19 @@
 //布局协议页面
 -(void)layoutXieYi
 {
+    self.title = @"试用协议";
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 20, kMainWidth - 30, kMainHeight - 40)];
+    imageView.image = [UIImage imageNamed:@"用户协议.png"];
+    [self.view addSubview:imageView];
+
     
     
     
-    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
     
-    button.frame =CGRectMake(0, 0, 15, 25);
-    [button addTarget:self action:@selector(pop2) forControlEvents:(UIControlEventTouchUpInside)];
     
-    UIBarButtonItem *lift = [[UIBarButtonItem alloc]initWithCustomView:button];
-    self.navigationItem.leftBarButtonItem = lift;
+    
+    
 
 }
 
