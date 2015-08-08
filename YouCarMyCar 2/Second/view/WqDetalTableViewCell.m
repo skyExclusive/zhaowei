@@ -69,7 +69,7 @@
     fen.font = [UIFont systemFontOfSize:12];
     [self addSubview:fen];
     
-
+    
     
     
     UILabel *per = [[UILabel alloc]initWithFrame:CGRectMake(20, 215 * kMainWidth / 320, 55, 20)];
@@ -90,7 +90,7 @@
     ren.font = [UIFont systemFontOfSize:12];
     [self addSubview:ren];
     
-
+    
     
     
     
@@ -106,12 +106,12 @@
     
     if (kMainWidth == 320) {
         self.mySureAddressButton.frame = CGRectMake(200, 190 * kMainWidth / 320, kMainWidth - 210, 40 * kMainWidth / 320);
-
+        
         
     }else {
         self.mySureAddressButton.frame = CGRectMake(220, 195 * kMainWidth / 320, kMainWidth - 240, 46);
         
-
+        
         
     }
     

@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NowViewModel.h"
 
 @interface NowTextDetalViewController : UIViewController
 @property (nonatomic ,strong)UIScrollView *myscrollView;
 @property (nonatomic,strong)UIButton *liftButton;
 @property (nonatomic ,strong)UIButton *rightButton;
+@property (nonatomic ,strong)NowViewModel *myModelnoW;
+
 
 
 

@@ -10,17 +10,39 @@
 
 #import "PrefixHeader.pch"
 #import "GoodTableTableViewCell.h"
+#import "UIImageView+WebCache.h"
+
 
 
 
 @interface GoodDetalTableViewController ()<MylistFirstbleDelegate>
+@property (nonatomic ,strong)NowViewModel *myModelnoW;
 
 @end
 
 @implementation GoodDetalTableViewController
 
+
+-(id)initWithModel:(NowViewModel *)model
+
+{
+    
+    if ([super init]) {
+        
+        self.myModelnoW = model;
+        
+        
+    }
+    return self;
+    
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self coustom]; // 获取数据
     
     self.modalPresentationCapturesStatusBarAppearance = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -59,6 +81,15 @@
 
         
     }
+    
+}
+
+//获取数据
+-(void)coustom
+{
+    
+    
+    
     
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -179,14 +210,18 @@
 
 
         }
-        mycell.mybutton.tag = 100 + indexPath.row;
-        
         mycell.delegagate = self;
-        
-        mycell.mytimeInteger = 1000 + indexPath.row;
-        
+        NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+        NSTimeInterval a = [dat timeIntervalSince1970];
+        mycell.mytimeInteger = 1000; //- (a - self.miao) ;
+        mycell.mydescritionLable.text = self.myModelnoW.small_info;
+        mycell.myallGoodsCount.text = self.myModelnoW.number;
+        mycell.mynowPerson.text = self.myModelnoW.try_people;
+        mycell.myGoodName.text = self.myModelnoW.title;
+        [mycell.myGoodImageVeiw sd_setImageWithURL:[NSURL URLWithString:self.myModelnoW.img]];
         mycell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+     
+        
         
         return mycell;
 

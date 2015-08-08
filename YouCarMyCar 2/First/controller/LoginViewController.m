@@ -492,11 +492,11 @@
     id<ISSContent> publishContent = [ShareSDK content:@"Hello,nichewoche.com" defaultContent:nil image:[ShareSDK imageWithPath:path] title:@"This is title" url:@"http://nichewoche.com" description:@"This is description" mediaType:SSPublishContentMediaTypeNews];
     
     
-    NSArray *shareList = [ShareSDK customShareListWithType:
-                          SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),SHARE_TYPE_NUMBER(ShareTypeQQ),SHARE_TYPE_NUMBER(ShareTypeWeixiTimeline),nil];
+//    NSArray *shareList = [ShareSDK customShareListWithType:
+//                          SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),SHARE_TYPE_NUMBER(ShareTypeQQ),SHARE_TYPE_NUMBER(ShareTypeWeixiTimeline),nil];
     
     //2.调用分享菜单分享
-    [ShareSDK showShareActionSheet:nil shareList:shareList content:publishContent statusBarTips:YES authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+    [ShareSDK showShareActionSheet:nil shareList:nil content:publishContent statusBarTips:YES authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
         //如果分享成功
         
         if (state == SSResponseStateSuccess) {

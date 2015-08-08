@@ -16,6 +16,8 @@
 #import "DismissKeyboard.h"
 #import "PrefixHeader.pch"
 
+#import "ViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -25,8 +27,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    RootTaBarViewController *root = [[RootTaBarViewController alloc]init];
-    self.window.rootViewController = root;
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"message"]==nil){
+        
+        ViewController *root = [[ViewController alloc]init];
+        self.window.rootViewController = root;
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"This_is_my_default_message" forKey:@"message"];
+        
+    }else {
+        
+        RootTaBarViewController *root = [[RootTaBarViewController alloc]init];
+        self.window.rootViewController = root;
+        
+    }
+    
+    
+    
     //title 字体白色
 //    NSDictionary * dict=[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
 //    [[UINavigationBar appearance] setTitleTextAttributes:dict];

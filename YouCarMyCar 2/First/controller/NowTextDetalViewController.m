@@ -11,6 +11,7 @@
 #import "PrefixHeader.pch"
 #import "GoodDetalTableViewController.h"
 #import "SpeckTableViewController.h"
+#import "UIImageView+WebCache.h"
 
 
 @interface NowTextDetalViewController ()<UIScrollViewDelegate,MylistFirstbleDelegate,GoodDetalTableviewDelegate,SpeckTableviewDelegate>
@@ -53,8 +54,8 @@
     
     
 //    
-    self.nowVC = [[GoodDetalTableViewController alloc]init];
-    self.willVC = [[SpeckTableViewController alloc]init];
+    self.nowVC = [[GoodDetalTableViewController alloc]initWithModel:self.myModelnoW];
+    self.willVC = [[SpeckTableViewController alloc]initWithModel:self.myModelnoW];
     self.nowVC.tableView.frame = CGRectMake(0, -64, kMainWidth, kMainHeight - 64 -44);
     self.willVC.tableView.frame = CGRectMake(kMainWidth, -64, kMainWidth, kMainHeight - 64 - 44);
     self.nowVC.delegate = self;

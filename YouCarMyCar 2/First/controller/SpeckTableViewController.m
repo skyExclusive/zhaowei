@@ -7,16 +7,40 @@
 //
 
 #import "SpeckTableViewController.h"
-
 #import "PrefixHeader.pch"
-
 #import "SpeckTableViewCell.h"
+#import "UIImageView+WebCache.h"
+#import "AFNetworking.h"
+
+#import "SpeckModel.h"
+
 
 @interface SpeckTableViewController ()<MylistFirstbleDelegate>
+@property (nonatomic ,strong)NowViewModel *myModelnow;
+@property (nonatomic ,strong)NSMutableArray *myArray;
+@property (nonatomic )CGFloat miao;
+
+
+
 
 @end
 
 @implementation SpeckTableViewController
+-(id)initWithModel:(NowViewModel *)model
+
+{
+    
+    if ([super init]) {
+        
+        self.myModelnow = model;
+        
+        
+    }
+    return self;
+    
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,10 +48,41 @@
     self.modalPresentationCapturesStatusBarAppearance = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = NO;
+    
+    [self coustom];//获取数据;
+    
 
     
 }
+//获取数据
+-(void)coustom
+{
+    self.myArray = [[NSMutableArray alloc]init];
+    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=getComment&tryId=%@",httpGet,self.myModelnow.myid];
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+    
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+        self.miao = [dat timeIntervalSince1970];
+//        NSMutableArray *array = [responseObject valueForKey:@"list"];
+        for (NSDictionary *dic in responseObject) {
+            SpeckModel *model = [[SpeckModel alloc]init];
+            [model setValuesForKeysWithDictionary:dic];
+            [self.myArray addObject:model];
+            
+        }
+        
+        [self.tableView reloadData];//刷新;
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"%@",error);
+        
+        
+    }];
 
+    
+}
 -(CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     
@@ -203,7 +258,7 @@
         
     }else {
         
-        return 20;
+        return self.myArray.count;
     }
 }
 
@@ -221,13 +276,17 @@
             
             
         }
-        mycell.mybutton.tag = 100 + indexPath.row;
-        
         mycell.delegagate = self;
-        
-        mycell.mytimeInteger = 1000 + indexPath.row;
-        
+        NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+        NSTimeInterval a = [dat timeIntervalSince1970];
+        mycell.mytimeInteger = 1000- (a - self.miao) ;
+        mycell.mydescritionLable.text = self.myModelnow.small_info;
+        mycell.myallGoodsCount.text = self.myModelnow.number;
+        mycell.mynowPerson.text = self.myModelnow.try_people;
+        mycell.myGoodName.text = self.myModelnow.title;
+        [mycell.myGoodImageVeiw sd_setImageWithURL:[NSURL URLWithString:self.myModelnow.img]];
         mycell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         
 
         
@@ -235,6 +294,9 @@
         
 
     }else {
+        
+        SpeckModel *model = self.myArray[indexPath.row];
+        
         
        static NSString *speckindext = @"indext";
         SpeckTableViewCell *speckCell = [self.tableView dequeueReusableCellWithIdentifier:speckindext];
@@ -246,10 +308,11 @@
         
         speckCell.myPersonTimageView.layer.cornerRadius = 15;
         speckCell.myPersonTimageView.layer.masksToBounds = YES;
-        speckCell.myPersonTimageView.image = [UIImage imageNamed:@"2.png"];
-        speckCell.myNameLable.text = @"无敌老五";
+        [speckCell.myPersonTimageView sd_setImageWithURL:[NSURL URLWithString:model.member_avatar]];
+        speckCell.myNameLable.text = model.member_name;//昵称
         speckCell.myNameLable.textColor = [UIColor brownColor];
-        speckCell.mySpeckLable .text  = @"爽歪歪的商品  相当的adsfa asdf asdfalsfasdfaslfjadfjas dfaldskfa dfalsdfasdkfa好用";
+        speckCell.mySpeckLable .text  = model.content;//评论的内容赋值
+        
         
         
         speckCell.selectionStyle = UITableViewCellSelectionStyleNone;

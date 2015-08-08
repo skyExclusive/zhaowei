@@ -12,9 +12,13 @@
 
 #import "ZWTextView.h"
 
+#import "NowViewModel.h"
+
 @protocol GoodDetalTableviewDelegate <NSObject>
 
 -(void)ringhtButtonAction:(UIButton *)button;
+
+
 
 
 @end
@@ -26,5 +30,9 @@
 @property (nonatomic ,strong)UIButton *myRignth;
 @property (nonatomic ,strong)UIView *myView;
 @property (nonatomic ,assign)id<GoodDetalTableviewDelegate>delegate;
+
+-(id)initWithModel:(NowViewModel *)model;//重写初始化方法;
+
+
 
 @end

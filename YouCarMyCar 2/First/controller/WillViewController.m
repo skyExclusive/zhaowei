@@ -21,14 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
-    
     self.mytableview = [[UITableView alloc]initWithFrame:CGRectMake(kMainX, kMainY, kMainWidth, kMainHeight-150)];
     self.mytableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.mytableview.delegate = self;
     self.mytableview.dataSource = self;
     [self.view addSubview:self.mytableview];
-    
     
     [self coustom];//获取数据
     
@@ -57,11 +54,7 @@
             
         }
         
-        
-        
         [self.mytableview reloadData];//刷新;
-        
-        
         
         
         
