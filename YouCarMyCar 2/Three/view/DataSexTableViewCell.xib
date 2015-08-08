@@ -42,7 +42,7 @@
                     </label>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HjN-3q-ioO">
                         <rect key="frame" x="-63" y="49" width="500" height="1"/>
-                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.96470588235294119" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </subviews>
                 <constraints>

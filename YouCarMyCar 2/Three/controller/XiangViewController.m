@@ -12,6 +12,7 @@
 #import "ClickViewController.h"
 #import "DataNameTableViewCell.h"
 #import "DataSexTableViewCell.h"
+#import "TuiChuTableViewCell.h"
 @interface XiangViewController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableDictionary *dic;
@@ -33,6 +34,8 @@
     [self layoutView];
 
     
+    self.tabBarController.tabBar.hidden = YES;
+    
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [button setImage:[UIImage imageNamed:@"向左白色箭头.png"] forState:(UIControlStateNormal)];
     
@@ -47,6 +50,10 @@
 
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = NO;
+}
 
 - (void)keyboardWillShow:(NSNotification *)notification
 {
@@ -86,6 +93,8 @@
                                forCellReuseIdentifier:@"nameCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"DataSexTableViewCell" bundle:nil]
                                forCellReuseIdentifier:@"sexCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TuiChuTableViewCell" bundle:nil]
+                               forCellReuseIdentifier:@"tuichuCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.myimage = [UIImage imageNamed:@"2.png"];
@@ -206,11 +215,11 @@
         
         UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:
                                             [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-           visualEfView.frame = cell.frame;
-        visualEfView.alpha = 1.0;
+        [visualEfView setFrame:cell.frame];
+        [visualEfView setAlpha:1];
         [cell.backimage setFrame:cell.frame];
         [cell.backimage addSubview:visualEfView];
-        cell.photoImage.userInteractionEnabled = YES;
+        [cell.photoImage setUserInteractionEnabled:YES];
         //轻怕手势
         UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self
                                                                               action:@selector(push:)];
@@ -238,15 +247,16 @@
         cell.sexLable.text = str;
         cell.sexLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
+        cell.myLable.font = [UIFont systemFontOfSize:15];
         if ( indexPath.row == 1) {
+            
             cell.myLable.text = @"13811111111";
         }else if ( indexPath.row == 2 ) {
             cell.myLable.text = @"zw_mting@126.com";
         }else if ( indexPath.row == 3 ){
             cell.myLable.text = @"男";
         }else if ( indexPath.row == 4 ) {
-            cell.myLable.text = @"北京市 房山区 拱辰街";
+            cell.myLable.text = @"北京市房山区拱辰街";
         }else if ( indexPath.row == 5 ) {
             cell.myLable.text = @"修改密码";
         }
@@ -254,21 +264,10 @@
         
     }else  {
         
-        DataNameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell" forIndexPath:indexPath];
-        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kMainWidth, 50)];
-        
-        [cell.nameLable removeFromSuperview];
-        [cell.nameField removeFromSuperview];
-        
+        TuiChuTableViewCell *cell = [self.tableView
+                                     dequeueReusableCellWithIdentifier:@"tuichuCell"
+                                     forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        lable.textAlignment = NSTextAlignmentCenter;
-        lable.text = @"退出登录";
-        lable.backgroundColor = COLOR(233, 42, 48, 1);
-        lable.font = MyButtonFont;
-        lable.textColor = [UIColor whiteColor];
-        [cell addSubview:lable];
-        
-        
         return cell;
 
     }
