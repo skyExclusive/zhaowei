@@ -38,6 +38,8 @@
       "minimum-system-version" : "7.0",
       "subtype" : "retina4",
       "scale" : "2x"
+<<<<<<< HEAD
+=======
     },
     {
       "orientation" : "portrait",
@@ -133,6 +135,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "scale" : "2x"
+>>>>>>> 5fca4dc65e31b7fe14eda0ce566f6a0f587e7eb7
     }
   ],
   "info" : {
