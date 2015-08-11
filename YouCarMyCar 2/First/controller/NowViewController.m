@@ -11,7 +11,7 @@
 #import "MyListFirstTableViewCell.h"
 #import "NowTextDetalViewController.h"
 #import "NowViewModel.h"
-
+#import "TsGoodViewController.h"
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
 
@@ -38,7 +38,9 @@
 {
     
     self.myArray = [[NSMutableArray alloc]init];
-    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=list&type=1&eachNum=5&curpage=1",httpGet];
+    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=list&type=1&eachNum=5&curpage=1",kMainHttp];
+    
+//    ?act=try&op=list&type=2&eachNum=5&curpage=2
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
     
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -117,6 +119,13 @@
     NSInteger aa = button.tag - 100;
     NSLog(@"%ld",(long)aa);
     
+    NowTextDetalViewController *detal = [[NowTextDetalViewController alloc]init];
+    detal.iSbutton  = YES;
+
+    [[super navigationController] pushViewController:detal animated:NO];
+    detal.myModelnoW = self.myArray[aa];
+    
+
     
 }
 
@@ -124,8 +133,11 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NowTextDetalViewController *detal = [[NowTextDetalViewController alloc]init];
-    [[super navigationController] pushViewController:detal animated:YES];
+    detal.iSbutton = NO;
+    
+    [self.navigationController pushViewController:detal animated:YES];
     detal.myModelnoW = self.myArray[indexPath.row];
+    
     
     
 }

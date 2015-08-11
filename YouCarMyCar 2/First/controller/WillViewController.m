@@ -36,7 +36,7 @@
     self.myArray = [[NSMutableArray alloc]init];
     
     
-    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=list&type=2&eachNum=5&curpage=1",httpGet];
+    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=list&type=2&eachNum=5&curpage=1",kMainHttp];
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
     
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {

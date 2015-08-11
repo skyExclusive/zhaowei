@@ -9,7 +9,7 @@
 #import "PhoneRegisterViewController.h"
 #import "PrefixHeader.pch"
 
-
+#import "AFNetworking.h"
 
 @interface PhoneRegisterViewController ()<MyTextFiedNoimageDelegete,UIScrollViewDelegate,MyTextFiedDelegete>
 
@@ -114,15 +114,101 @@
     
 }
 //========点击事件==============
+//点击获取验证码
 -(void)numberButton:(UIButton *)button
 {
     NSLog(@"获取验证码");
+    [self.nickNameMY.mytextField resignFirstResponder];
+    [self.userNameMY.mytextField resignFirstResponder];
+    [self.numberMY.mytextField resignFirstResponder];
+    [self.pasWordMY1.mytextField resignFirstResponder];
+    [self.psaWordMY2.mytextField resignFirstResponder];
+    
+    
+    NSString *url = [NSString stringWithFormat:@"%@?act=member_security&op=send_modify_mobile&mobile=%@",kMainHttp,self.userNameMY.mytextField.text];
+    NSLog(@"  wode url = = %@",url);
+     
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+    
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSLog(@"%@",[responseObject valueForKey:@"code"]);
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"%@",error);
+        
+        
+    }];
+    
+    
+    
+    
     
 }
 //注册点击事件
 -(void)registerButton:(UIButton *)button
 {
-    NSLog(@"注册成功");
+
+//    act=login
+//    •	op=register
+//    •	username 用户名
+//    •	mobile 手机号【手机号注册存在】
+//    •	code 验证码【手机号、邮箱注册存在】
+//    •	type 注册类型1、普通类型，2手机号注册、3邮箱注册
+//    •	password 密码
+//    •	password_confirm 密码确认
+//    •	email 邮箱
+//    •	client 客户端类型(android wap ios wechat)
+//
+    
+    
+    NSDictionary *dic = @{@"act":@"login",@"op":@"register",@"username":self.nickNameMY.mytextField.text,@"mobile":self.userNameMY.mytextField.text,@"code":self.numberMY.mytextField.text,@"type":@"1",@"password":self.pasWordMY1.mytextField.text,@"password_confirm":self.psaWordMY2.mytextField.text,@"email":@"q1",@"client":@"wechat"};
+    
+    
+    
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+    
+    [manager POST:kMainHttp parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSLog(@"%@",[[responseObject valueForKey:@"datas"] valueForKey:@"error"]);
+        
+        
+        if (![[responseObject valueForKey:@"datas"] valueForKey:@"error"]) {
+            NSLog(@"注册成功");
+            
+        }
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     [self.navigationController popViewControllerAnimated:YES];
     
     

@@ -12,9 +12,10 @@
 #import "GoodDetalTableViewController.h"
 #import "SpeckTableViewController.h"
 #import "UIImageView+WebCache.h"
+#import "TsGoodViewController.h"
 
 
-@interface NowTextDetalViewController ()<UIScrollViewDelegate,MylistFirstbleDelegate,GoodDetalTableviewDelegate,SpeckTableviewDelegate>
+@interface NowTextDetalViewController ()<UIScrollViewDelegate,GoodDetalTableviewDelegate,SpeckTableviewDelegate>
 @property (nonatomic ,strong)GoodDetalTableViewController *nowVC;
 @property (nonatomic ,strong)SpeckTableViewController *willVC;
 
@@ -22,7 +23,18 @@
 
 @implementation NowTextDetalViewController
 
+
+
 - (void)viewDidLoad {
+    
+    
+    if (self.iSbutton) {
+        TsGoodViewController *ts = [[TsGoodViewController  alloc]init];
+        [self.navigationController pushViewController:ts animated:NO];
+        
+        
+    }
+
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"商品详情";
@@ -38,6 +50,10 @@
     [self coustom];
     // Do any additional setup after loading the view.
 }
+
+
+
+
 -(void)coustom
 {
     self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, kMainWidth * 2, kMainHeight - 44)];

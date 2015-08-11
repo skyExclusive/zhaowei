@@ -11,7 +11,7 @@
 #import "SpeckTableViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "AFNetworking.h"
-
+#import "TsGoodViewController.h"
 #import "SpeckModel.h"
 
 
@@ -58,7 +58,7 @@
 -(void)coustom
 {
     self.myArray = [[NSMutableArray alloc]init];
-    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=getComment&tryId=%@",httpGet,self.myModelnow.myid];
+    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=getComment&tryId=%@",kMainHttp,self.myModelnow.myid];
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
     
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -80,6 +80,34 @@
         
         
     }];
+    
+    
+    
+    
+    
+//    [manager POST:@"" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+//        
+//        UIImage *image = [UIImage imageNamed:@"头像1"];
+//     NSData *data = UIImagePNGRepresentation([UIImage imageNamed:@"1.gph"]);
+//        
+//        
+//        
+//        [formData appendPartWithFileData:data name:@"123" fileName:@"32" mimeType:nil];
+//        
+//        
+//    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//    }];
+//    
+    
+    
+    
+    
+    
+    
+    
 
     
 }
@@ -341,6 +369,8 @@
 
 -(void)actionButton:(UIButton *)button
 {
+    TsGoodViewController *ts = [[TsGoodViewController  alloc]init];
+    [self.navigationController pushViewController:ts animated:NO];
     
     
 }

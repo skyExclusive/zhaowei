@@ -15,6 +15,8 @@
 @property (nonatomic ,strong)UIButton *rightButton;
 @property (nonatomic ,strong)NowViewModel *myModelnoW;
 
+@property (nonatomic)BOOL iSbutton;
+
 
 
 

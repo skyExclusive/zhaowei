@@ -40,6 +40,9 @@
 		0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68511B43BDDC00A71D88 /* 白背景.png */; };
 		0A9E68541B43BDDC00A71D88 /* 首页cell背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */; };
 		0AA638E71B75F11300755F9F /* SpeckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA638E61B75F11300755F9F /* SpeckModel.m */; };
+		0AB1324F1B787C420026E7F2 /* TsGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB1324E1B787C420026E7F2 /* TsGoodViewController.m */; };
+		0AB132511B7887CD0026E7F2 /* check@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB132501B7887CD0026E7F2 /* check@2x(1).png */; };
+		0AB132531B7887D40026E7F2 /* bulbs@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB132521B7887D40026E7F2 /* bulbs@2x(1).png */; };
 		0AB91FA71B46171300552824 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AB91FA61B46171300552824 /* 3.jpg */; };
 		0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */; };
 		0ACAF1B11B411E300029ACC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B01B411E300029ACC9 /* main.m */; };
@@ -329,6 +332,10 @@
 		0A9E68521B43BDDC00A71D88 /* 首页cell背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页cell背景.png"; sourceTree = "<group>"; };
 		0AA638E51B75F11300755F9F /* SpeckModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeckModel.h; sourceTree = "<group>"; };
 		0AA638E61B75F11300755F9F /* SpeckModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeckModel.m; sourceTree = "<group>"; };
+		0AB1324D1B787C420026E7F2 /* TsGoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TsGoodViewController.h; sourceTree = "<group>"; };
+		0AB1324E1B787C420026E7F2 /* TsGoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TsGoodViewController.m; sourceTree = "<group>"; };
+		0AB132501B7887CD0026E7F2 /* check@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x(1).png"; sourceTree = "<group>"; };
+		0AB132521B7887D40026E7F2 /* bulbs@2x(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bulbs@2x(1).png"; sourceTree = "<group>"; };
 		0AB91FA61B46171300552824 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		0AC346481B450D25005D6A39 /* MyListFirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyListFirstTableViewCell.h; sourceTree = "<group>"; };
 		0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyListFirstTableViewCell.m; sourceTree = "<group>"; };
@@ -760,6 +767,8 @@
 		0A9E68501B43BDDC00A71D88 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				0AB132521B7887D40026E7F2 /* bulbs@2x(1).png */,
+				0AB132501B7887CD0026E7F2 /* check@2x(1).png */,
 				0A6DB7071B74B4E30007C7C2 /* 矩形-2@2x.png */,
 				0A6DB6FF1B74AFF80007C7C2 /* 引导1.jpg */,
 				0A6DB7001B74AFF80007C7C2 /* 引导2.jpg */,
@@ -1136,6 +1145,8 @@
 				0ADEC49F1B661B4E001C26F1 /* GoodDetalTableViewController.m */,
 				0ADEC4A11B661B67001C26F1 /* SpeckTableViewController.h */,
 				0ADEC4A21B661B67001C26F1 /* SpeckTableViewController.m */,
+				0AB1324D1B787C420026E7F2 /* TsGoodViewController.h */,
+				0AB1324E1B787C420026E7F2 /* TsGoodViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1609,6 +1620,7 @@
 				0AD9C28B1B60C73F00188AE8 /* 邮箱找回选中@2x.png in Resources */,
 				0A2603E81B67707F0013262A /* 参与评论@2x(1).png in Resources */,
 				0AE06C321B68C1E100EE6B22 /* 评分@2x.png in Resources */,
+				0AB132531B7887D40026E7F2 /* bulbs@2x(1).png in Resources */,
 				0ADD0FC71B6B501F00A2D95E /* 外观@2x.png in Resources */,
 				95D661B91B44D44500E9992E /* 2.png in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
@@ -1668,6 +1680,7 @@
 				95D08E1F1B5F97FB00A2CA2F /* 密码设置成功@2x.png in Resources */,
 				95DFE73C1B6B0753000B03EE /* TiJiaoTableViewCell.xib in Resources */,
 				95C7BA871B5E2E09009604D7 /* 意见反馈@2x.png in Resources */,
+				0AB132511B7887CD0026E7F2 /* check@2x(1).png in Resources */,
 				959281E01B6A2BDE00F122B8 /* 产品价格@2x.png in Resources */,
 				0A2603EC1B67708B0013262A /* 产品详情未选中@2x.png in Resources */,
 				0A6DB7081B74B4E30007C7C2 /* 矩形-2@2x.png in Resources */,
@@ -1791,6 +1804,7 @@
 				0ACAF25C1B411E830029ACC9 /* SDWebImageDownloader.m in Sources */,
 				0A6DB6FE1B74AD090007C7C2 /* WDGuideScrollView.m in Sources */,
 				0AD9C2801B60C1C900188AE8 /* PhoneForgetViewController.m in Sources */,
+				0AB1324F1B787C420026E7F2 /* TsGoodViewController.m in Sources */,
 				0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */,
 				0ACAF24E1B411E830029ACC9 /* MJRefreshBackStateFooter.m in Sources */,
 				0ADC1A7D1B72090A00368248 /* AFSecurityPolicy.m in Sources */,

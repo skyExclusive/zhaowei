@@ -12,7 +12,7 @@
 #import "GoodTableTableViewCell.h"
 #import "UIImageView+WebCache.h"
 
-
+#import "TsGoodViewController.h"
 
 
 @interface GoodDetalTableViewController ()<MylistFirstbleDelegate>
@@ -21,7 +21,6 @@
 @end
 
 @implementation GoodDetalTableViewController
-
 
 -(id)initWithModel:(NowViewModel *)model
 
@@ -273,6 +272,8 @@
 
 -(void)actionButton:(UIButton *)button
 {
+    TsGoodViewController *ts = [[TsGoodViewController  alloc]init];
+    [self.navigationController pushViewController:ts animated:NO];
     
     
 }
