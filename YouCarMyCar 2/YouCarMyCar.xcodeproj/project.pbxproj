@@ -45,6 +45,7 @@
 		0AB132531B7887D40026E7F2 /* bulbs@2x(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB132521B7887D40026E7F2 /* bulbs@2x(1).png */; };
 		0AB91FA71B46171300552824 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AB91FA61B46171300552824 /* 3.jpg */; };
 		0AC3464A1B450D25005D6A39 /* MyListFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */; };
+		0AC902271B79877500C6EC10 /* CommUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC902261B79877500C6EC10 /* CommUtils.m */; };
 		0ACAF1B11B411E300029ACC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B01B411E300029ACC9 /* main.m */; };
 		0ACAF1B41B411E300029ACC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B31B411E300029ACC9 /* AppDelegate.m */; };
 		0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACAF1B81B411E300029ACC9 /* Main.storyboard */; };
@@ -339,6 +340,8 @@
 		0AB91FA61B46171300552824 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		0AC346481B450D25005D6A39 /* MyListFirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyListFirstTableViewCell.h; sourceTree = "<group>"; };
 		0AC346491B450D25005D6A39 /* MyListFirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyListFirstTableViewCell.m; sourceTree = "<group>"; };
+		0AC902251B79877500C6EC10 /* CommUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommUtils.h; sourceTree = "<group>"; };
+		0AC902261B79877500C6EC10 /* CommUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommUtils.m; sourceTree = "<group>"; };
 		0ACAF1AB1B411E300029ACC9 /* YouCarMyCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouCarMyCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACAF1AF1B411E300029ACC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACAF1B01B411E300029ACC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -968,6 +971,8 @@
 		0ACAF1D71B411E820029ACC9 /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				0AC902251B79877500C6EC10 /* CommUtils.h */,
+				0AC902261B79877500C6EC10 /* CommUtils.m */,
 				0A6DB6F91B74AD090007C7C2 /* UIImage+Color.h */,
 				0A6DB6FA1B74AD090007C7C2 /* UIImage+Color.m */,
 				0A6DB6FB1B74AD090007C7C2 /* WDGuideScrollView.h */,
@@ -1820,6 +1825,7 @@
 				95E5AC941B437D5200904602 /* WillViewController.m in Sources */,
 				0ACAF2441B411E830029ACC9 /* MJRefreshAutoFooter.m in Sources */,
 				0ADC1A9A1B72091900368248 /* UIRefreshControl+AFNetworking.m in Sources */,
+				0AC902271B79877500C6EC10 /* CommUtils.m in Sources */,
 				0ADC1A811B72090A00368248 /* AFURLSessionManager.m in Sources */,
 				95D4A4491B44DDAB005F5ABF /* SecondViewController.m in Sources */,
 				0ADC1A7F1B72090A00368248 /* AFURLRequestSerialization.m in Sources */,
