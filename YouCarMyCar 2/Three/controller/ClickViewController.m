@@ -380,27 +380,28 @@
     scrollView.delegate = self;
     [self.view addSubview:scrollView];
     
-    UIImageView *freeimage = [[UIImageView alloc]initWithFrame:CGRectMake(10, 20, 20, 20)];
+    UIImageView *freeimage = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 20, 20)];
     freeimage.image = [UIImage imageNamed:@"试用流程.png"];
     [scrollView addSubview:freeimage];
     
-    UILabel *freelable = [[UILabel alloc]initWithFrame:CGRectMake(34, 20, 100, 20)];
+    UILabel *freelable = [[UILabel alloc]initWithFrame:CGRectMake(34, 10, 100, 20)];
     freelable.font = [UIFont systemFontOfSize:12];
     freelable.textColor = COLOR(245, 141, 39, 1);
     freelable.text = @"免费试用流程";
     [scrollView addSubview:freelable];
     
-    UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 45, kMainWidth - 20, 100)];
+    UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 35, kMainWidth - 20, 100)];
     textLabel.text = @"    北京你车我车电子商务股份有限公司所创建的你车我车是中国最大的汽车用品网购平台，也是中国最专业的汽车用品信息发布平台。这里汇聚了上千家世界一流的汽车用品厂商和5万余家汽车用品线下服务商，并通过便捷的平台操作使B2B、B2C、O2O等多种商业模式的融合成为可能。——你车我车顺势而生！";
+    textLabel.textColor = COLOR(80, 80, 80, 1);
     textLabel.numberOfLines = 0;
     textLabel.font = [UIFont  systemFontOfSize:10];
     textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     CGSize size = [textLabel sizeThatFits:CGSizeMake(textLabel.frame.size.width, MAXFLOAT)];
-    textLabel.frame =  CGRectMake(10, 40, kMainWidth - 20, size.height);
+    textLabel.frame =  CGRectMake(10, 30, kMainWidth - 20, size.height);
     [scrollView addSubview: textLabel];
     
     
-    UIImageView *shiyongImage = [[UIImageView alloc]initWithFrame:CGRectMake(10, 45 + size.height, kMainWidth - 20, kMainHeight/4)];
+    UIImageView *shiyongImage = [[UIImageView alloc]initWithFrame:CGRectMake(10, 35 + size.height, kMainWidth - 20, kMainHeight/4)];
     shiyongImage.image = [UIImage imageNamed:@"测试结果.png"];
     [scrollView addSubview:shiyongImage];
     
@@ -417,6 +418,7 @@
     
     UILabel *jieguoLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, chakanimage.frame.origin.y + 15, kMainWidth - 20, 100)];
     jieguoLabel.text = @"    北京你车我车电子商务股份有限公司所创建的你车我车是中国最大的汽车用品网购平台，也是中国最专业的汽车用品信息发布平台。这里汇聚了上千家世界一流的汽车用品厂商和5万余家汽车用品线下服务商，并通过便捷的平台操作使B2B、B2C、O2O等多种商业模式的融合成为可能。——你车我车顺势而生！";
+    jieguoLabel.textColor = COLOR(80, 80, 80, 1);
     jieguoLabel.numberOfLines = 0;
     jieguoLabel.font = [UIFont  systemFontOfSize:10];
     jieguoLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -442,13 +444,14 @@
 
     UILabel *tijiaoLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, tijiaoImage.frame.origin.y + 25, kMainWidth - 20, 100)];
     tijiaoLabel.text = @"    北京你车我车电子商务股份有限公司所创建的你车我车是中国最大的汽车用品网购平台，也是中国最专业的汽车用品信息发布平台。这里汇聚了上千家世界一流的汽车用品厂商和5万余家汽车用品线下服务商，并通过便捷的平台操作使B2B、B2C、O2O等多种商业模式的融合成为可能。——你车我车顺势而生！";
+    tijiaoLabel.textColor = COLOR(80, 80, 80, 1);
     tijiaoLabel.numberOfLines = 0;
     tijiaoLabel.font = [UIFont  systemFontOfSize:10];
     tijiaoLabel.lineBreakMode = NSLineBreakByWordWrapping;
     CGSize tijiaoSize = [tijiaoLabel sizeThatFits:CGSizeMake(tijiaoLabel.frame.size.width, MAXFLOAT)];
     tijiaoLabel.frame =  CGRectMake(10, tijiaoImage.frame.origin.y + 20, kMainWidth - 20, tijiaoSize.height);
     [scrollView addSubview: tijiaoLabel];
-    scrollView.contentSize = CGSizeMake(0, size.height + chakanSize.height + tijiaoSize.height + 260 + kMainHeight / 2 );
+    scrollView.contentSize = CGSizeMake(0, size.height + chakanSize.height + tijiaoSize.height + 190 + kMainHeight / 2 );
     
 }
 //********************************关于我们*********************************
@@ -477,6 +480,7 @@
     label1.lineBreakMode = NSLineBreakByWordWrapping;
     label1.backgroundColor = MainBackGround;
     label1.text = @"      北京你车我车电子商务股份有限公司所创建的你车我车是中国最大的汽车用品网购平台，也是中国最专业的汽车用品信息发布平台。这里汇聚了上千家世界一流的汽车用品厂商和5万余家汽车用品线下服务商，并通过便捷的平台操作使B2B、B2C、O2O等多种商业模式的融合成为可能。——你车我车顺势而生！\n      \n      数据显示：2013年，中国汽车保有量达到1.4亿量，由此产生的汽车用品消费高达5025亿人民币。专家预测，2015年中国的汽车用品带来的产值将达到6300亿。然而，这一庞大的数字的背后，却是中国汽车用品行业电商化发展的严重不足。其根本原因在于中国至今没有一家专业的汽车用品垂直电商平台。在社会消费品电商化的大趋势下,你车我车，专业车品领导者！\n     \n      电子商务的迅猛发展为人们的生活带来了极大的便利，很多时候足不出户便可购遍全球。然而，任何事物都有两面，电商同样也是一把双刃剑：在便利、实惠的背后，是商品质量的不确定性。在非专业领域，如服饰、书籍等商品，由于假货并不影响其适用性，为了方便消费者大可以睁一只眼闭一只眼。然而，在汽车用品这种专业商品领域，消费者几乎对假货“零容忍”——无论多小的纰漏，都会对行车安全造成巨大威胁。汽车用品的专业性决定了其不能和一般社会消费品混     为一谈，只能走垂直电商模式。而中国这么大的汽车用品市场，却没有诞生一家具有全国影响力的垂直电商。\n   \n      专业的车品，需要具有专业素质的电商平台来运作。你车我车来了！我们汇聚了1000多家世界一流的汽车用品厂商，同时建立了庞大的线下加盟服务体系，将中国汽车用品流通渠道彻底电商化升级，实现汽车用品销售、安装一体化。你车我车平台上所有汽车用品均来自厂家直销，在保障专业货源的同时，真正做到了正品低价。你车我车，专业车品领导者！你车我车，开启电商3.0时代！\n    \n      电商1.0时代，企业与企业之间通过B2B电商平台（如阿里巴巴）进行交易，开拓了中国的电商蓝海。\n    \n      电商2.0时代，消费者（C）作为独立的电商角色被加入进来，产生了B2C、C2C，甚至C2B的商业模式，让中国电商真正繁荣起来。而在你车我车，无论B2B、B2C，还是新兴的O2O，都只是商业模式的环节之一。\n        \n      你车我车，开启中国电商3.0时代。你车我车，将线下流通渠道彻底电商化升级，开启中国电商3.0时代！";
+    label1.textColor = COLOR(80, 80, 80, 1);
      CGSize size = [label1 sizeThatFits:CGSizeMake(label1.frame.size.width, MAXFLOAT)];
      label1.frame =CGRectMake(10, 60, kMainWidth-20, size.height);
      scrollView.contentSize = CGSizeMake(0, size.height + 150);
