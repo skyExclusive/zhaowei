@@ -14,6 +14,7 @@
 #import "PrefixHeader.pch"
 
 
+#import "AFNetworking.h"
 
 @interface LoginViewController ()<UIActionSheetDelegate,UITextFieldDelegate,MyTextFiedDelegete,MBProgressHUDDelegate>
 
@@ -160,17 +161,17 @@
     self.loginButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.loginButton.frame = CGRectMake(10, 290 *self.indextY, 300 *self.indextX, 40);
     [self.loginButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x.png"] forState:(UIControlStateNormal)];
-//    self.loginButton.backgroundColor = [UIColor colorWithRed:95 / 255 green:220 / 255 blue:225 / 255 alpha:1];
-//    
+    //    self.loginButton.backgroundColor = [UIColor colorWithRed:95 / 255 green:220 / 255 blue:225 / 255 alpha:1];
+    //
     [self.loginButton setTitle:@"登录" forState:(UIControlStateNormal)];
     [self.loginButton  setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
     [self.loginButton addTarget:self action:@selector(loginButton:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.loginButton];
     
-//
-//    
-//    //注册按钮
-//    
+    //
+    //
+    //    //注册按钮
+    //
     self.registerButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.registerButton.frame = CGRectMake(10, 290 *self.indextY + 55, 300 *self.indextX, 40);
     [self.registerButton setTitle:@"注册" forState:(UIControlStateNormal)];
@@ -296,7 +297,7 @@
     [self.registerButton setBackgroundImage:[UIImage imageNamed:@"登录注册按钮背景@2x.png"] forState:(UIControlStateNormal)];
     [self.registerButton addTarget:self action:@selector(registerButton:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.registerButton];
-//    // 第三方登录
+    //    // 第三方登录
     
     //
     
@@ -423,25 +424,65 @@
 //点击登录按钮走的方法
 -(void)loginButton:(UIButton *)button
 {
-    NSLog(@"登录");
-    
+    // 加载圈圈 (登录成功后移除 登录失败也移除)
     self.HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
     [self.navigationController.view addSubview:self.HUD];
     
     self.HUD.delegate = self;
     self.HUD.labelText = @"正在登录";
     
-    //[self.HUD showWhileExecuting:@selector(myTask) onTarget:self withObject:nil animated:YES];
-    
-    
     [self.HUD show:YES];
     
-    
-    
-     
+       NSDictionary *dic = @{@"act":@"login",@"username":self.userNameMy.mytextField.text,@"password":self.userPassWordMy.mytextField.text,@"client":@"wechat"};
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+    [manager POST:kMainHttp parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        
+        NSLog(@"%@",[[responseObject valueForKey:@"datas"] valueForKey:@"key"]);
+        
+        
+        if ([[responseObject valueForKey:@"datas"] valueForKey:@"key"]) {
+            //存入用户的信息
+             [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"key"] forKey:@"key"];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"avatar"] forKey:@"avatar"];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"email"] forKey:@"email"];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"sex"] forKey:@"sex"];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"address"] forKey:@"address"];
+            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"username"] forKey:@"username"];
+            
 
+            
+            
+            
+            [[NSUserDefaults standardUserDefaults] setObject:self.userPassWordMy.mytextField.text forKey:@"userPassWord"];
+            
+
+            
+            
+            
+            UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您已成功登录" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [aller show];
+            
+            
+            
+            
+            [self.HUD removeFromSuperview];
+        }
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        [self.HUD removeFromSuperview];
+
+        
+        
+    }];
     
-}
+ }
 - (void)hudWasHidden:(MBProgressHUD *)hud;
 {
     NSLog(@"就是这个");
@@ -492,8 +533,8 @@
     id<ISSContent> publishContent = [ShareSDK content:@"Hello,nichewoche.com" defaultContent:nil image:[ShareSDK imageWithPath:path] title:@"This is title" url:@"http://nichewoche.com" description:@"This is description" mediaType:SSPublishContentMediaTypeNews];
     
     
-//    NSArray *shareList = [ShareSDK customShareListWithType:
-//                          SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),SHARE_TYPE_NUMBER(ShareTypeQQ),SHARE_TYPE_NUMBER(ShareTypeWeixiTimeline),nil];
+    //    NSArray *shareList = [ShareSDK customShareListWithType:
+    //                          SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),SHARE_TYPE_NUMBER(ShareTypeQQ),SHARE_TYPE_NUMBER(ShareTypeWeixiTimeline),nil];
     
     //2.调用分享菜单分享
     [ShareSDK showShareActionSheet:nil shareList:nil content:publishContent statusBarTips:YES authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
