@@ -56,7 +56,12 @@
     //布局试用报告
     [self layoutshiYongTableView];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
 }
+
+
 
 //布局试用报告
 -(void)layoutshiYongTableView
@@ -75,23 +80,23 @@
     [self.shiYongTableView registerNib:[UINib
                                         nibWithNibName:@"ShiYongTitleTableViewCell"
                                         bundle:nil]
-                                        forCellReuseIdentifier:@"shiyongCell"];
+                forCellReuseIdentifier:@"shiyongCell"];
     [self.shiYongTableView registerNib:[UINib
                                         nibWithNibName:@"EvaluateTableViewCell"
                                         bundle:nil]
-                                        forCellReuseIdentifier:@"evaluateCell"];
+                forCellReuseIdentifier:@"evaluateCell"];
     [self.shiYongTableView registerNib:[UINib
                                         nibWithNibName:@"GradeTableViewCell"
                                         bundle:nil]
-                                        forCellReuseIdentifier:@"gradeCell"];
+                forCellReuseIdentifier:@"gradeCell"];
     [self.shiYongTableView registerNib:[UINib
                                         nibWithNibName:@"Evaluate2TableViewCell"
                                         bundle:nil]
-                                        forCellReuseIdentifier:@"evaluate2Cell"];
+                forCellReuseIdentifier:@"evaluate2Cell"];
     [self.shiYongTableView registerNib:[UINib
                                         nibWithNibName:@"TiJiaoTableViewCell"
                                         bundle:nil]
-                                        forCellReuseIdentifier:@"tijiaoCell"];
+                forCellReuseIdentifier:@"tijiaoCell"];
     
     self.zhaoxiangImage = [[UIImageView alloc]
                            initWithFrame:
@@ -107,6 +112,23 @@
     
     
     
+}
+
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGRect keyboardBounds = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    self.shiYongTableView.contentInset = UIEdgeInsetsMake(self.shiYongTableView.contentInset.top, 0, keyboardBounds.size.height, 0);
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    self.shiYongTableView.contentInset = UIEdgeInsetsMake(self.shiYongTableView.contentInset.top, 0, 0, 0);
+}
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -139,7 +161,8 @@
 
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
     if (indexPath.row == 0 ) {
         

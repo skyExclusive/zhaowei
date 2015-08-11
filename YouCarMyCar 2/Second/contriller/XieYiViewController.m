@@ -8,6 +8,7 @@
 
 #import "XieYiViewController.h"
 #import "PrefixHeader.pch"
+#import <CoreText/CoreText.h>
 @interface XieYiViewController ()
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic)int i;
@@ -89,19 +90,9 @@
 //布局协议页面
 -(void)layoutXieYi
 {
-    self.title = @"试用协议";
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 20, kMainWidth - 30, kMainHeight - 40)];
-    imageView.image = [UIImage imageNamed:@"用户协议.png"];
-    [self.view addSubview:imageView];
-
     
     
-    
-    
-    
-    
-    
+   
 
 }
 
