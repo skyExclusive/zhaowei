@@ -40,6 +40,40 @@
              ] lowercaseString];
 }
 
+//判断手机号
++(BOOL)validatePhoneNumber:(NSString *)str
+
+{
+    
+    if ([str length] == 0) {
+        
+        
+        return NO;
+        
+    }
+    
+    NSString *regex = @"^((13[0-9])|(147)|(15[^4,\\D])|(18[0,5-9]))\\d{8}$";
+    
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    BOOL isMatch = [pred evaluateWithObject:str];
+    
+    if (!isMatch) {
+        
+        return NO;
+        
+    }
+    
+    
+    
+    return YES;
+    
+}
+
+
+
+
+
 //+ (void)showWaitWithTitle:(NSString *)title{
 //	WaitNotView * waitNote = [self appDeletegate].waitView;
 //	[waitNote setString:title];

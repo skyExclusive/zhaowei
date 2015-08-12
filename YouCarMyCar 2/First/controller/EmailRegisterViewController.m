@@ -12,6 +12,9 @@
 
 #import "AFNetworking.h"
 
+
+#import "CommUtils.h"
+
 @interface EmailRegisterViewController ()<UIScrollViewDelegate,MyTextFiedNoimageDelegete,MyTextFiedDelegete>
 
 @end
@@ -118,57 +121,74 @@
     
     
     
-    NSString *url = [NSString stringWithFormat:@"%@?act=member_security&op=op=send_bind_email&email=%@",kMainHttp,self.userNameMY.mytextField.text];
-    NSLog(@"  wode url = = %@",url);
-    
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
-    
-    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    if ([CommUtils validateEmail:self.userNameMY.mytextField.text] ) {
+        NSString *url = [NSString stringWithFormat:@"%@?act=member_security&op=op=send_bind_email&email=%@",kMainHttp,self.userNameMY.mytextField.text];
+        NSLog(@"  wode url = = %@",url);
+        
+        AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+        
+        [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            
+            
+            NSLog(@"%@",[responseObject valueForKey:@"code"]);
+            
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+            NSLog(@"%@",error);
+            
+            
+        }];
         
         
-        NSLog(@"%@",[responseObject valueForKey:@"code"]);
+        
+    }else {
+        
+        UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"邮箱不正确 " delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        
+        [aller show];
         
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
-        NSLog(@"%@",error);
-        
-        
-    }];
-    
-    
-    
+    }
     
     
 }
 //注册点击事件
 -(void)registerButton:(UIButton *)button
 {
-    
-    
-    NSDictionary *dic = @{@"act":@"login",@"op":@"register",@"username":self.nickNameMY.mytextField.text,@"mobile":@"",@"code":self.numberMY.mytextField.text,@"type":@"1",@"password":self.pasWordMY1.mytextField.text,@"password_confirm":self.psaWordMY2.mytextField.text,@"email":self.userNameMY.mytextField.text,@"client":@"wechat"};
-    
-    
-    
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
-    
-    [manager POST:kMainHttp parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    if ([CommUtils validatePwd:self.pasWordMY1.mytextField.text]&&[CommUtils validatePwd:self.psaWordMY2.mytextField.text]) {
+        
+        NSDictionary *dic = @{@"act":@"login",@"op":@"register",@"username":self.nickNameMY.mytextField.text,@"mobile":@"",@"code":self.numberMY.mytextField.text,@"type":@"1",@"password":self.pasWordMY1.mytextField.text,@"password_confirm":self.psaWordMY2.mytextField.text,@"email":self.userNameMY.mytextField.text,@"client":@"wechat"};
         
         
-        NSLog(@"%@",[[responseObject valueForKey:@"datas"] valueForKey:@"error"]);
         
+        AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
         
-        if (![[responseObject valueForKey:@"datas"] valueForKey:@"error"]) {
-            [self.navigationController popViewControllerAnimated:YES];
+        [manager POST:kMainHttp parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
             
-        }
+            
+            NSLog(@"%@",[[responseObject valueForKey:@"datas"] valueForKey:@"error"]);
+            
+            
+            if (![[responseObject valueForKey:@"datas"] valueForKey:@"error"]) {
+                [self.navigationController popViewControllerAnimated:YES];
+                
+            }
+            
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+        }];
+        
+    }else {
+        
+        UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您输入的密码格式有误" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [aller show];
         
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
-    }];
-    
-    
+    }
     
     
 }

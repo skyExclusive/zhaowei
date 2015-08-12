@@ -16,7 +16,7 @@
 
 #import "AFNetworking.h"
 
-@interface LoginViewController ()<UIActionSheetDelegate,UITextFieldDelegate,MyTextFiedDelegete,MBProgressHUDDelegate>
+@interface LoginViewController ()<UIActionSheetDelegate,UITextFieldDelegate,MyTextFiedDelegete,MBProgressHUDDelegate,UIAlertViewDelegate>
 
 @end
 @implementation LoginViewController
@@ -424,65 +424,101 @@
 //点击登录按钮走的方法
 -(void)loginButton:(UIButton *)button
 {
-    // 加载圈圈 (登录成功后移除 登录失败也移除)
-    self.HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-    [self.navigationController.view addSubview:self.HUD];
-    
-    self.HUD.delegate = self;
-    self.HUD.labelText = @"正在登录";
-    
-    [self.HUD show:YES];
-    
-       NSDictionary *dic = @{@"act":@"login",@"username":self.userNameMy.mytextField.text,@"password":self.userPassWordMy.mytextField.text,@"client":@"wechat"};
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
-    [manager POST:kMainHttp parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    if (self.userNameMy.mytextField.text !=nil&&![self.userNameMy.mytextField.text isEqualToString:@""]&&self.userPassWordMy.mytextField.text !=nil&&![self.userPassWordMy.mytextField.text isEqualToString:@""]) {
         
+        // 加载圈圈 (登录成功后移除 登录失败也移除)
+        self.HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:self.HUD];
         
-        NSLog(@"%@",[[responseObject valueForKey:@"datas"] valueForKey:@"key"]);
+        self.HUD.delegate = self;
+        self.HUD.labelText = @"正在登录";
         
+        [self.HUD show:YES];
         
-        if ([[responseObject valueForKey:@"datas"] valueForKey:@"key"]) {
-            //存入用户的信息
-            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"key"] forKey:@"key"];
-            
-            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"avatar"] forKey:@"avatar"];
-            
-            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"email"] forKey:@"email"];
-            
-            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"sex"] forKey:@"sex"];
-            
-            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"address"] forKey:@"address"];
-            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"username"] forKey:@"username"];
-            [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"mobile"]  forKey : @"mobile"];
+        NSDictionary *dic = @{@"act":@"login",@"username":self.userNameMy.mytextField.text,@"password":self.userPassWordMy.mytextField.text,@"client":@"wechat"};
+        AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+        [manager POST:kMainHttp parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
             
+            if ([[responseObject valueForKey:@"datas"] valueForKey:@"error"]) {
+                UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:[[responseObject valueForKey:@"datas"] valueForKey:@"error"] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                aller.tag = 100;
+                
+                
+                [aller show];
+                
+                
+            }
             
-            
-            [[NSUserDefaults standardUserDefaults] setObject:self.userPassWordMy.mytextField.text forKey:@"userPassWord"];
-            
-
-            
-            
-            
-            UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您已成功登录" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [aller show];
-            
-            
-            
+            if ([[responseObject valueForKey:@"datas"] valueForKey:@"key"]) {
+                //存入用户的信息
+                [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"key"] forKey:@"key"];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"avatar"] forKey:@"avatar"];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"email"] forKey:@"email"];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"sex"] forKey:@"sex"];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"address"] forKey:@"address"];
+                [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"username"] forKey:@"username"];
+                
+                 [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"member_id"] forKey:@"member_id"];
+                [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"mobile"]  forKey : @"mobile"];
+                
+                
+                //存入 用户的密码 以备不时之需
+                [[NSUserDefaults standardUserDefaults] setObject:self.userPassWordMy.mytextField.text forKey:@"userPassWord"];
+                
+                UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您已成功登录" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                aller.tag = 101;
+                
+                [aller show];
+                
+                
+                
+                
+            }
             
             [self.HUD removeFromSuperview];
-        }
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        [self.HUD removeFromSuperview];
+            
+            
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+            [self.HUD removeFromSuperview];
+            
+            
+            
+        }];
 
+    }else {
         
         
-    }];
-    
+        UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"用户名和密码不能为空" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        
+        [aller show];
+        
+        
+        
+    }
+         
+         
+      
  }
+         
+         
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 101) {
+        if (buttonIndex == 0) {
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }
+
+    }
+    
+}
 - (void)hudWasHidden:(MBProgressHUD *)hud;
 {
     NSLog(@"就是这个");
