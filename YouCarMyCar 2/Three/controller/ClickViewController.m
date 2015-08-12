@@ -540,16 +540,20 @@
 -(void)tijiao:(UIButton *)button
 {
     
+    NSString *key = [[NSUserDefaults  standardUserDefaults] valueForKey:@"key"];
     
+    NSLog(@"%@",key);
     //上传数据
     
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    NSDictionary *params = @{@"act":@"member_feedback",@"op":@"feedback_add",@"key":key,@"feedbook":self.textView.text};
     
-    params[@"feedbook"] = self.textView.text;
+
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    NSString *url = [NSString stringWithFormat:@"%@?act=member_feedback&p=apk_version",kMainHttp];
-    [mgr POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [mgr POST:kMainHttp parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"成功");
+        
+        NSLog(@"%@",[responseObject valueForKey:@"datas"]);
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"失败");
     }];
