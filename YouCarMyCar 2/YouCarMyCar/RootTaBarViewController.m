@@ -36,7 +36,6 @@
     self.viewControllers = @[firstVC , secondVC , threeVC];
     
     
-    
     UITabBarItem *item0 = self.tabBar.items[0];
     UITabBarItem *item1 = self.tabBar.items[1];
     UITabBarItem *item2 = self.tabBar.items[2];
