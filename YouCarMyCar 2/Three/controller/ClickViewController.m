@@ -13,6 +13,7 @@
 #import "ZWTextView.h"
 #import "ActivityTableViewCell.h"
 #import "SureViewController.h"
+#import "AFHTTPRequestOperationManager.h"
 @interface ClickViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate,UIScrollViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)ZWTextView *textView;
@@ -31,7 +32,7 @@
     
     self.view.backgroundColor = MainBackGround;
     
-     self.automaticallyAdjustsScrollViewInsets = NO;
+    
     
     
           if (self.i == 0) {     //布局活动记录
@@ -372,6 +373,7 @@
 {
     self.title = @"活动介绍";
     self.tabBarController.tabBar.hidden = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
 
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, kMainWidth, kMainHeight)];
     scrollView.backgroundColor = [UIColor whiteColor];
@@ -459,6 +461,7 @@
 {
     self.title = @"关于我们";
     self.tabBarController.tabBar.hidden = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, kMainWidth, kMainHeight)];
     scrollView.backgroundColor = MainBackGround;
@@ -529,7 +532,29 @@
     [self.button setTintColor:[UIColor whiteColor]];
     
     [self.view addSubview:self.button];
+
     
+    
+}
+
+-(void)tijiao:(UIButton *)button
+{
+    
+    
+    //上传数据
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    params[@"feedbook"] = self.textView.text;
+    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    NSString *url = [NSString stringWithFormat:@"%@?act=member_feedback&p=apk_version",kMainHttp];
+    [mgr POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"成功");
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"失败");
+    }];
+
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
@@ -666,10 +691,7 @@
     NSLog(@"改变邮箱");
 }
 
--(void)tijiao:(UIButton *)button
-{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

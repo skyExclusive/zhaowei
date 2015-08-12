@@ -23,9 +23,9 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="bYV-Zi-UfJ" secondAttribute="trailing" constant="-8" id="D90-Xd-xwr"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="bYV-Zi-UfJ" secondAttribute="trailing" constant="-16" id="D90-Xd-xwr"/>
                     <constraint firstItem="bYV-Zi-UfJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Mg7-3E-4IF"/>
-                    <constraint firstItem="bYV-Zi-UfJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="WMO-lo-37W"/>
+                    <constraint firstItem="bYV-Zi-UfJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-16" id="WMO-lo-37W"/>
                     <constraint firstAttribute="bottomMargin" secondItem="bYV-Zi-UfJ" secondAttribute="bottom" constant="-8" id="h5r-cR-p44"/>
                 </constraints>
             </tableViewCellContentView>

@@ -144,7 +144,7 @@
         return 155;
         
     }else{
-        return 50;
+        return 40;
     }
 }
 
@@ -209,16 +209,6 @@
         
         [cell.xiaoImage removeFromSuperview];
         [cell.nameLable removeFromSuperview];
-        
-        
-        
-        
-        UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:
-                                            [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-        [visualEfView setFrame:cell.frame];
-        [visualEfView setAlpha:1];
-        [cell.backimage setFrame:cell.frame];
-        [cell.backimage addSubview:visualEfView];
         [cell.photoImage setUserInteractionEnabled:YES];
         //轻怕手势
         UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self
@@ -235,7 +225,7 @@
         DataNameTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"nameCell" forIndexPath:indexPath];
         cell.nameLable.text = str;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.nameField.text = @"你车我车";
+        cell.nameField.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"userName"];
         return cell;
         
         
@@ -246,17 +236,22 @@
         DataSexTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"sexCell" forIndexPath:indexPath];
         cell.sexLable.text = str;
         cell.sexLable.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.myLable.font = [UIFont systemFontOfSize:15];
         if ( indexPath.row == 1) {
-            
-            cell.myLable.text = @"13811111111";
+            if ([[NSUserDefaults standardUserDefaults]objectForKey:@"mobile"] == nil) {
+                cell.myLable.text = @"请绑定手机号";
+                cell.myLable.textColor = COLOR(200, 200, 200, 1);
+            }else{
+            cell.myLable.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"mobile"];
+            }
         }else if ( indexPath.row == 2 ) {
-            cell.myLable.text = @"zw_mting@126.com";
-        }else if ( indexPath.row == 3 ){
-            cell.myLable.text = @"男";
+//            cell.myLable.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"email"];
+        }else if ( indexPath.row == 3 ) {
+//            cell.myLable.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"sex"];
         }else if ( indexPath.row == 4 ) {
-            cell.myLable.text = @"北京市房山区拱辰街";
+//            cell.myLable.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"address"];
         }else if ( indexPath.row == 5 ) {
             cell.myLable.text = @"修改密码";
         }
@@ -268,6 +263,7 @@
                                      dequeueReusableCellWithIdentifier:@"tuichuCell"
                                      forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor clearColor];
         return cell;
 
     }

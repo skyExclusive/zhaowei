@@ -18,6 +18,7 @@
 }
 - (IBAction)shanchuButton:(id)sender {
      NSLog(@"这个是删除");
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

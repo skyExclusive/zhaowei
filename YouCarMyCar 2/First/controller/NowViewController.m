@@ -137,7 +137,6 @@
     detal.myModelnoW = self.myArray[indexPath.row];
     
     
-    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

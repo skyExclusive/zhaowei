@@ -438,10 +438,7 @@
         NSDictionary *dic = @{@"act":@"login",@"username":self.userNameMy.mytextField.text,@"password":self.userPassWordMy.mytextField.text,@"client":@"wechat"};
         AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
         [manager POST:kMainHttp parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            
-            NSLog(@"%@",[[responseObject valueForKey:@"datas"] valueForKey:@"key"]);
-            
+
             
             if ([[responseObject valueForKey:@"datas"] valueForKey:@"error"]) {
                 UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:[[responseObject valueForKey:@"datas"] valueForKey:@"error"] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
@@ -452,7 +449,6 @@
                 
                 
             }
-            
             
             if ([[responseObject valueForKey:@"datas"] valueForKey:@"key"]) {
                 //存入用户的信息
@@ -468,14 +464,11 @@
                 [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"username"] forKey:@"username"];
                 
                  [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"member_id"] forKey:@"member_id"];
+                [[NSUserDefaults standardUserDefaults] setObject:[[responseObject valueForKey:@"datas"] valueForKey:@"mobile"]  forKey : @"mobile"];
                 
                 
                 //存入 用户的密码 以备不时之需
                 [[NSUserDefaults standardUserDefaults] setObject:self.userPassWordMy.mytextField.text forKey:@"userPassWord"];
-                
-                
-                
-                
                 
                 UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您已成功登录" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                 aller.tag = 101;
@@ -509,9 +502,12 @@
         
         
     }
+         
+         
       
  }
-
+         
+         
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (alertView.tag == 101) {
