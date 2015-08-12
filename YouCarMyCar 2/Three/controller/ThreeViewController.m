@@ -177,13 +177,6 @@
         cell.photoImage.layer.masksToBounds = YES;
         cell.photoImage.image = [UIImage imageNamed:@"2.png"];
         cell.backimage.image = [UIImage imageNamed:@"2.png"];
-        
-        //毛玻璃效果
-        UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-        visualEfView.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height);
-        [cell.backimage setFrame:cell.frame];
-        visualEfView.alpha = 1.0;
-        [cell.backimage addSubview:visualEfView];
         cell.photoImage.userInteractionEnabled = YES;
         cell.superview.superview.backgroundColor = MainBackGround;
         

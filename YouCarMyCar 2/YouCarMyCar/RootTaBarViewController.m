@@ -22,23 +22,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self..backgroundColor = [UIColor redColor];
-         FirstViewController *first = [[FirstViewController alloc]init];
+    FirstViewController *first = [[FirstViewController alloc]init];
     UINavigationController *firstVC = [[UINavigationController alloc]initWithRootViewController:first];
-    
     firstVC.tabBarItem.title = @"免费体验";
     
     
     SecondViewController *second = [[SecondViewController alloc]init];
     UINavigationController *secondVC = [[UINavigationController alloc]initWithRootViewController:second];
     secondVC.tabBarItem.title = @"往期商品";
+    
+    
     ThreeViewController *three = [[ThreeViewController alloc]init];
     UINavigationController *threeVC = [[UINavigationController alloc]initWithRootViewController:three];
-    
     threeVC.tabBarItem.title = @"我的";
     self.viewControllers = @[firstVC , secondVC , threeVC];
-    
-       // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
