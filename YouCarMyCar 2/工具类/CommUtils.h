@@ -27,4 +27,7 @@
 +(BOOL)validateRi:(NSString *)string;
 +(NSString *)imsgeUrlWith:(NSString *)_imageurl;
 + (NSString *)decodeFromPercentEscapeString: (NSString *) input;
++(BOOL)validatePhoneNumber:(NSString *)str;
+
+
 @end

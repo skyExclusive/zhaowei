@@ -36,7 +36,7 @@
     self.myArray = [[NSMutableArray alloc]init];
     
     
-    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=list&type=2&eachNum=5&curpage=1",kMainHttp];
+    NSString *url = [NSString stringWithFormat:@"%@?act=try&op=list&curpage=1&eachNum=5type=3",kMainHttp];
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
     
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -45,7 +45,7 @@
         
         
         
-        NSMutableArray *array = [responseObject valueForKey:@"list"];
+        NSMutableArray *array = [[responseObject valueForKey:@"datas"] valueForKey:@"list"];
         for (NSDictionary *dic in array) {
             NowViewModel *model = [[NowViewModel alloc]init];
             [model setValuesForKeysWithDictionary:dic];

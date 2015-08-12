@@ -11,7 +11,9 @@
 
 #import "AFNetworking.h"
 
-@interface PhoneRegisterViewController ()<MyTextFiedNoimageDelegete,UIScrollViewDelegate,MyTextFiedDelegete>
+#import "CommUtils.h"
+
+@interface PhoneRegisterViewController ()<MyTextFiedNoimageDelegete,UIScrollViewDelegate,MyTextFiedDelegete,UIAlertViewDelegate>
 
 @end
 
@@ -117,102 +119,105 @@
 //点击获取验证码
 -(void)numberButton:(UIButton *)button
 {
-    NSLog(@"获取验证码");
     [self.nickNameMY.mytextField resignFirstResponder];
     [self.userNameMY.mytextField resignFirstResponder];
     [self.numberMY.mytextField resignFirstResponder];
     [self.pasWordMY1.mytextField resignFirstResponder];
     [self.psaWordMY2.mytextField resignFirstResponder];
-    
-    
-    NSString *url = [NSString stringWithFormat:@"%@?act=member_security&op=send_modify_mobile&mobile=%@",kMainHttp,self.userNameMY.mytextField.text];
-    NSLog(@"  wode url = = %@",url);
-     
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
-    
-    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    if ([CommUtils validatePhoneNumber:self.userNameMY.mytextField.text]) {
+        
+        NSString *url = [NSString stringWithFormat:@"%@?act=member_security&op=send_modify_mobile&mobile=%@",kMainHttp,self.userNameMY.mytextField.text];
+        NSLog(@"  wode url = = %@",url);
+        
+        AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+        
+        [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            
+            NSLog(@"%@",[responseObject valueForKey:@"code"]);
+            
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+            NSLog(@"%@",error);
+            
+            
+        }];
         
         
-        NSLog(@"%@",[responseObject valueForKey:@"code"]);
+        
+    }else {
+        
+        UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"手机号有误 " delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        
+        [aller show];
         
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
-        NSLog(@"%@",error);
-        
-        
-    }];
+    }
     
     
     
     
+    
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+{
+    if (alertView.tag == 101) {
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }
     
 }
 //注册点击事件
 -(void)registerButton:(UIButton *)button
 {
-
-//    act=login
-//    •	op=register
-//    •	username 用户名
-//    •	mobile 手机号【手机号注册存在】
-//    •	code 验证码【手机号、邮箱注册存在】
-//    •	type 注册类型1、普通类型，2手机号注册、3邮箱注册
-//    •	password 密码
-//    •	password_confirm 密码确认
-//    •	email 邮箱
-//    •	client 客户端类型(android wap ios wechat)
-//
     
-    
-    NSDictionary *dic = @{@"act":@"login",@"op":@"register",@"username":self.nickNameMY.mytextField.text,@"mobile":self.userNameMY.mytextField.text,@"code":self.numberMY.mytextField.text,@"type":@"1",@"password":self.pasWordMY1.mytextField.text,@"password_confirm":self.psaWordMY2.mytextField.text,@"email":@"q1",@"client":@"wechat"};
-    
-    
-    
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
-    
-    [manager POST:kMainHttp parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    if ([CommUtils validatePwd:self.pasWordMY1.mytextField.text]&&[CommUtils validatePwd:self.psaWordMY2.mytextField.text]) {
+        NSDictionary *dic = @{@"act":@"login",@"op":@"register",@"username":self.nickNameMY.mytextField.text,@"mobile":self.userNameMY.mytextField.text,@"code":self.numberMY.mytextField.text,@"type":@"1",@"password":self.pasWordMY1.mytextField.text,@"password_confirm":self.psaWordMY2.mytextField.text,@"email":@"q1",@"client":@"wechat"};
         
         
-        NSLog(@"%@",[[responseObject valueForKey:@"datas"] valueForKey:@"error"]);
         
+        AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
         
-        if (![[responseObject valueForKey:@"datas"] valueForKey:@"error"]) {
-            NSLog(@"注册成功");
+        [manager POST:kMainHttp parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
             
-        }
+            
+            NSLog(@"%@",[[responseObject valueForKey:@"datas"] valueForKey:@"error"]);
+            
+            
+            if (![[responseObject valueForKey:@"datas"] valueForKey:@"error"]) {
+                
+                
+                UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"恭喜您注册成功" delegate:self cancelButtonTitle:@"马上去登陆" otherButtonTitles:nil, nil];
+                
+                aller.tag = 101;
+                
+                [aller show];
+                
+                
+                
+            }
+            
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+        }];
         
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    }else {
         
-    }];
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    [self.navigationController popViewControllerAnimated:YES];
+        
+        
+        UIAlertView *aller = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您输入的密码格式有误" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [aller show];
+        
+        
+        
+    }
     
     
 }
+
 
 //键盘出来走的方法
 -(void) keyboardWillShow:(NSNotification *)note

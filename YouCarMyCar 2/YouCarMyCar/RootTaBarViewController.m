@@ -27,8 +27,6 @@
     UINavigationController *firstVC = [[UINavigationController alloc]initWithRootViewController:first];
     
     firstVC.tabBarItem.title = @"免费体验";
-    
-    
     SecondViewController *second = [[SecondViewController alloc]init];
     UINavigationController *secondVC = [[UINavigationController alloc]initWithRootViewController:second];
     secondVC.tabBarItem.title = @"往期商品";
@@ -38,6 +36,18 @@
     threeVC.tabBarItem.title = @"我的";
     self.viewControllers = @[firstVC , secondVC , threeVC];
     
+    
+    
+    UITabBarItem *item0 = self.tabBar.items[0];
+    UITabBarItem *item1 = self.tabBar.items[1];
+    UITabBarItem *item2 = self.tabBar.items[2];
+    
+
+    item0.image = [UIImage imageNamed:@"未选@2x.png"];
+    item1.image = [UIImage imageNamed:@"shape-396@2x(1).png"];
+    item2.image = [UIImage imageNamed:@"shape-203@2x(1).png"];
+
+
        // Do any additional setup after loading the view.
 }
 
