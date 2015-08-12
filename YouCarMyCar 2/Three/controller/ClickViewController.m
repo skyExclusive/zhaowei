@@ -546,7 +546,6 @@
     //上传数据
     
     NSDictionary *params = @{@"act":@"member_feedback",@"op":@"feedback_add",@"key":key,@"feedbook":self.textView.text};
-    
 
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     [mgr POST:kMainHttp parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
